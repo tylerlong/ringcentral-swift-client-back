@@ -13,13 +13,20 @@ let config = Config.getInstance()
 let rc = RestClient(appKey: config.appKey!, appSecret: config.appSecret!, production: config.production!)
 
 class BaseTest: XCTestCase {
-    
-    override func setUp() {
+
+    override class func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        print("setUp")
+        let temp = BaseTest()
+        let expectation1 = temp.expectation(description: "expectation1")
+        rc.authorize(config.username!, ext: config.extension!, password: config.password!) { token, error in
+            XCTAssertNil(error)
+            expectation1.fulfill()
+        }
+        temp.waitForExpectations(timeout: 10) { error in
+            XCTAssertNil(error)
+        }
     }
-    
+
     override func tearDown() {
         print("tearDown")
         // Put teardown code here. This method is called after the invocation of each test method in the class.

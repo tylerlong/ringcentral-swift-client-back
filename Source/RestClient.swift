@@ -34,7 +34,7 @@ open class RestClient {
         return "Basic \(base64Token)"
     }
 
-    open func authorize(_ username: String, ext: String, password: String, callback: @escaping (_ token: Token?, _ error: HTTPError?) -> Void) {
+    open func authorize(_ username: String, ext: String, password: String, callback: ((_ token: Token?, _ error: HTTPError?) -> Void)? = nil) {
         let parameters = [
             "username": username,
             "extension": ext,
@@ -43,13 +43,15 @@ open class RestClient {
         ]
         let headers = ["Authorization": basicAuthToken()]
         postString("/restapi/oauth/token", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
-            if error == nil {
-                self.token = Token(JSONString: string!)
-                callback(self.token, nil)
-            } else {
-                callback(nil, error)
+            if let callback = callback {
+                if error == nil {
+                    self.token = Token(JSONString: string!)
+                    callback(self.token, nil)
+                } else {
+                    callback(nil, error)
+                }
             }
         }
     }
-    
+
 }

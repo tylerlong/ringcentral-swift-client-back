@@ -23,12 +23,7 @@ class RestClientTest: BaseTest {
             XCTAssertNil(error)
             XCTAssertNotNil(token)
             XCTAssertTrue(token!.access_token!.characters.count > 0)
-            rc.authorize(config.username!, ext: config.extension!, password: config.password!) { token, error in // again, this time token != nil
-                XCTAssertNil(error)
-                XCTAssertNotNil(token)
-                XCTAssertTrue(token!.access_token!.characters.count > 0)
-                expectation1.fulfill()
-            }
+            expectation1.fulfill()
         }
 
         let expectation2 = expectation(description: "expectation2")
