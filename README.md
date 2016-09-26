@@ -38,6 +38,4 @@ Alamofire is released under the MIT license.
 
 ## todo
 
-1. remove credentials from code
-1. targets should have unique name
 1. Swift Pacakge Manager

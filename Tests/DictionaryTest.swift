@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import RingCentral_macOS
+@testable import RingCentral
 
 class DictionaryTest: BaseTest {
 

@@ -16,7 +16,7 @@
 		879ADEF21D98C4C0008E7735 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEF1D98C4C0008E7735 /* RestClient.swift */; };
 		879ADEFD1D98C7D6008E7735 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEFB1D98C7D6008E7735 /* Alamofire.framework */; };
 		879ADEFE1D98C7D6008E7735 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; };
-		879ADF081D98E646008E7735 /* RingCentral_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEBD1D98C409008E7735 /* RingCentral_macOS.framework */; };
+		879ADF081D98E646008E7735 /* RingCentral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEBD1D98C409008E7735 /* RingCentral.framework */; };
 		879ADF161D98EF01008E7735 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF0E1D98E754008E7735 /* BaseTest.swift */; };
 		879ADF171D98EF01008E7735 /* DictionaryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF0F1D98E754008E7735 /* DictionaryTest.swift */; };
 		879ADF181D98EF01008E7735 /* RestClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF101D98E754008E7735 /* RestClientTest.swift */; };
@@ -53,16 +53,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		879ADEBD1D98C409008E7735 /* RingCentral_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		879ADEBD1D98C409008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEC01D98C409008E7735 /* RingCentral_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_macOS.h; sourceTree = "<group>"; };
 		879ADEC11D98C409008E7735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		879ADECB1D98C41C008E7735 /* RingCentral_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		879ADECB1D98C41C008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADECD1D98C41C008E7735 /* RingCentral_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_iOS.h; sourceTree = "<group>"; };
 		879ADECE1D98C41C008E7735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		879ADED81D98C42B008E7735 /* RingCentral_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		879ADED81D98C42B008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEDA1D98C42B008E7735 /* RingCentral_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_watchOS.h; sourceTree = "<group>"; };
 		879ADEDB1D98C42B008E7735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		879ADEE51D98C439008E7735 /* RingCentral_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		879ADEE51D98C439008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEE71D98C43A008E7735 /* RingCentral_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_tvOS.h; sourceTree = "<group>"; };
 		879ADEE81D98C43A008E7735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879ADEED1D98C4C0008E7735 /* _Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _Definitions.swift; path = Source/_Definitions.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879ADF081D98E646008E7735 /* RingCentral_macOS.framework in Frameworks */,
+				879ADF081D98E646008E7735 /* RingCentral.framework in Frameworks */,
 				879ADF191D98F4D7008E7735 /* Alamofire.framework in Frameworks */,
 				879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */,
 			);
@@ -147,10 +147,10 @@
 		879ADEBE1D98C409008E7735 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				879ADEBD1D98C409008E7735 /* RingCentral_macOS.framework */,
-				879ADECB1D98C41C008E7735 /* RingCentral_iOS.framework */,
-				879ADED81D98C42B008E7735 /* RingCentral_watchOS.framework */,
-				879ADEE51D98C439008E7735 /* RingCentral_tvOS.framework */,
+				879ADEBD1D98C409008E7735 /* RingCentral.framework */,
+				879ADECB1D98C41C008E7735 /* RingCentral.framework */,
+				879ADED81D98C42B008E7735 /* RingCentral.framework */,
+				879ADEE51D98C439008E7735 /* RingCentral.framework */,
 				879ADF031D98E646008E7735 /* RingCentral_macOS_Tests.xctest */,
 			);
 			name = Products;
@@ -292,7 +292,7 @@
 			);
 			name = RingCentral_macOS;
 			productName = RingCentral_macOS;
-			productReference = 879ADEBD1D98C409008E7735 /* RingCentral_macOS.framework */;
+			productReference = 879ADEBD1D98C409008E7735 /* RingCentral.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		879ADECA1D98C41C008E7735 /* RingCentral_iOS */ = {
@@ -310,7 +310,7 @@
 			);
 			name = RingCentral_iOS;
 			productName = RingCentral_iOS;
-			productReference = 879ADECB1D98C41C008E7735 /* RingCentral_iOS.framework */;
+			productReference = 879ADECB1D98C41C008E7735 /* RingCentral.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		879ADED71D98C42B008E7735 /* RingCentral_watchOS */ = {
@@ -328,7 +328,7 @@
 			);
 			name = RingCentral_watchOS;
 			productName = RingCentral_watchOS;
-			productReference = 879ADED81D98C42B008E7735 /* RingCentral_watchOS.framework */;
+			productReference = 879ADED81D98C42B008E7735 /* RingCentral.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		879ADEE41D98C439008E7735 /* RingCentral_tvOS */ = {
@@ -346,7 +346,7 @@
 			);
 			name = RingCentral_tvOS;
 			productName = RingCentral_tvOS;
-			productReference = 879ADEE51D98C439008E7735 /* RingCentral_tvOS.framework */;
+			productReference = 879ADEE51D98C439008E7735 /* RingCentral.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		879ADF021D98E646008E7735 /* RingCentral_macOS_Tests */ = {
@@ -594,8 +594,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ringcentral.RingCentral-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ringcentral.RingCentral;
+				PRODUCT_NAME = RingCentral;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -656,8 +656,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ringcentral.RingCentral-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ringcentral.RingCentral;
+				PRODUCT_NAME = RingCentral;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -720,7 +720,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ringcentral.RingCentral-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RingCentral;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -778,7 +778,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ringcentral.RingCentral-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RingCentral;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -842,7 +842,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ringcentral.RingCentral-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RingCentral;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -900,7 +900,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ringcentral.RingCentral-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RingCentral;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -964,7 +964,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ringcentral.RingCentral-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RingCentral;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1021,7 +1021,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ringcentral.RingCentral-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RingCentral;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1161,6 +1161,7 @@
 				879ADEC51D98C409008E7735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879ADED01D98C41C008E7735 /* Build configuration list for PBXNativeTarget "RingCentral_iOS" */ = {
 			isa = XCConfigurationList;
@@ -1169,6 +1170,7 @@
 				879ADED21D98C41C008E7735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879ADEDD1D98C42B008E7735 /* Build configuration list for PBXNativeTarget "RingCentral_watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1177,6 +1179,7 @@
 				879ADEDF1D98C42B008E7735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879ADEEA1D98C43A008E7735 /* Build configuration list for PBXNativeTarget "RingCentral_tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1185,6 +1188,7 @@
 				879ADEEC1D98C43A008E7735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879ADF0B1D98E646008E7735 /* Build configuration list for PBXNativeTarget "RingCentral_macOS_Tests" */ = {
 			isa = XCConfigurationList;
@@ -1193,6 +1197,7 @@
 				879ADF0D1D98E646008E7735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

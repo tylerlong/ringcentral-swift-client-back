@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import RingCentral_macOS
+import RingCentral
 
 let config = Config.getInstance()
 let rc = RestClient(appKey: config.appKey!, appSecret: config.appSecret!, production: config.production!)
