@@ -54,30 +54,3 @@ open class RestApi: Mappable {
         versionString <- map["versionString"]
     }
 }
-
-
-open class Country: Mappable {
-    var id: String?
-    var uri: String?
-    var callingCode: String?
-    var emergencyCalling: Bool?
-    var isoCode: String?
-    var name: String?
-    var numberSelling: Bool?
-    var loginAllowed: Bool?
-
-    required public init?(map: Map) {
-
-    }
-
-    open func mapping(map: Map) {
-        id               <- map["id"]
-        uri              <- map["uri"]
-        callingCode      <- map["callingCode"]
-        emergencyCalling <- map["emergencyCalling"]
-        isoCode          <- map["isoCode"]
-        name             <- map["name"]
-        numberSelling    <- map["numberSelling"]
-        loginAllowed     <- map["loginAllowed"]
-    }
-}

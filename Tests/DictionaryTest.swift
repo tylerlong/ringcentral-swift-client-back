@@ -14,15 +14,15 @@ class DictionaryTest: BaseTest {
     func testCountry() {
         let expectation1 = expectation(description: "expectation1")
         let expectation2 = expectation(description: "expectation2")
-        rc.authorize("17322764403", ext: "", password: "RNG94405") { token, error in
+        rc.authorize(config.username!, ext: config.extension!, password: config.password!) { token, error in
             XCTAssertNil(error)
             rc.getString("/restapi/v1.0/dictionary/country/46") { string, error in
                 XCTAssertNil(error)
-                let country = Country(JSONString: string!)
+                let country = FullCountryInfo(JSONString: string!)
                 XCTAssertTrue("China" == country!.name)
                 expectation1.fulfill()
             }
-            rc.get("/restapi/v1.0/dictionary/country/46") { (country: Country?, error) in
+            rc.get("/restapi/v1.0/dictionary/country/46") { (country: FullCountryInfo?, error) in
                 XCTAssertNil(error)
                 XCTAssertTrue("China" == country!.name)
                 XCTAssertNotNil(country!.loginAllowed)

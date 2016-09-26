@@ -11,7 +11,7 @@
 		879ADECF1D98C41C008E7735 /* RingCentral_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADECD1D98C41C008E7735 /* RingCentral_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADEDC1D98C42B008E7735 /* RingCentral_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEDA1D98C42B008E7735 /* RingCentral_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADEE91D98C43A008E7735 /* RingCentral_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEE71D98C43A008E7735 /* RingCentral_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		879ADEF01D98C4C0008E7735 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEED1D98C4C0008E7735 /* Definitions.swift */; };
+		879ADEF01D98C4C0008E7735 /* _Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEED1D98C4C0008E7735 /* _Definitions.swift */; };
 		879ADEF11D98C4C0008E7735 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEE1D98C4C0008E7735 /* Http.swift */; };
 		879ADEF21D98C4C0008E7735 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEF1D98C4C0008E7735 /* RestClient.swift */; };
 		879ADEFD1D98C7D6008E7735 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEFB1D98C7D6008E7735 /* Alamofire.framework */; };
@@ -25,6 +25,7 @@
 		879ADF1D1D98F53A008E7735 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		879ADF1F1D98FCD1008E7735 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFB1D98C7D6008E7735 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		879ADF211D990D1A008E7735 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF201D990D1A008E7735 /* Config.swift */; };
+		879ADF231D991E8B008E7735 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF221D991E8B008E7735 /* Definitions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,7 @@
 		879ADEE51D98C439008E7735 /* RingCentral_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEE71D98C43A008E7735 /* RingCentral_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_tvOS.h; sourceTree = "<group>"; };
 		879ADEE81D98C43A008E7735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		879ADEED1D98C4C0008E7735 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Definitions.swift; path = Source/Definitions.swift; sourceTree = "<group>"; };
+		879ADEED1D98C4C0008E7735 /* _Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _Definitions.swift; path = Source/_Definitions.swift; sourceTree = "<group>"; };
 		879ADEEE1D98C4C0008E7735 /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Http.swift; path = Source/Http.swift; sourceTree = "<group>"; };
 		879ADEEF1D98C4C0008E7735 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestClient.swift; path = Source/RestClient.swift; sourceTree = "<group>"; };
 		879ADEF41D98C6E5008E7735 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		879ADF0F1D98E754008E7735 /* DictionaryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryTest.swift; path = Tests/DictionaryTest.swift; sourceTree = "<group>"; };
 		879ADF101D98E754008E7735 /* RestClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestClientTest.swift; path = Tests/RestClientTest.swift; sourceTree = "<group>"; };
 		879ADF201D990D1A008E7735 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		879ADF221D991E8B008E7735 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Definitions.swift; path = Source/Generated/Definitions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +195,8 @@
 		879ADEF31D98C4C5008E7735 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				879ADEED1D98C4C0008E7735 /* Definitions.swift */,
+				879ADF241D991E93008E7735 /* Generated */,
+				879ADEED1D98C4C0008E7735 /* _Definitions.swift */,
 				879ADEEE1D98C4C0008E7735 /* Http.swift */,
 				879ADEEF1D98C4C0008E7735 /* RestClient.swift */,
 			);
@@ -226,6 +229,14 @@
 				879ADF201D990D1A008E7735 /* Config.swift */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		879ADF241D991E93008E7735 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				879ADF221D991E8B008E7735 /* Definitions.swift */,
+			);
+			name = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,9 +465,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879ADEF01D98C4C0008E7735 /* Definitions.swift in Sources */,
+				879ADEF01D98C4C0008E7735 /* _Definitions.swift in Sources */,
 				879ADF211D990D1A008E7735 /* Config.swift in Sources */,
 				879ADEF21D98C4C0008E7735 /* RestClient.swift in Sources */,
+				879ADF231D991E8B008E7735 /* Definitions.swift in Sources */,
 				879ADEF11D98C4C0008E7735 /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

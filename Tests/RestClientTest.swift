@@ -19,11 +19,11 @@ class RestClientTest: BaseTest {
 
     func testAuthorize() {
         let expectation1 = expectation(description: "expectation1")
-        rc.authorize("17322764403", ext: "", password: "RNG94405") { token, error in
+        rc.authorize(config.username!, ext: config.extension!, password: config.password!) { token, error in
             XCTAssertNil(error)
             XCTAssertNotNil(token)
             XCTAssertTrue(token!.access_token!.characters.count > 0)
-            rc.authorize("17322764403", ext: "", password: "RNG94405") { token, error in // again, this time token != nil
+            rc.authorize(config.username!, ext: config.extension!, password: config.password!) { token, error in // again, this time token != nil
                 XCTAssertNil(error)
                 XCTAssertNotNil(token)
                 XCTAssertTrue(token!.access_token!.characters.count > 0)
@@ -32,7 +32,7 @@ class RestClientTest: BaseTest {
         }
 
         let expectation2 = expectation(description: "expectation2")
-        rc.authorize("17322764403", ext: "", password: "wrong password") { token, error in
+        rc.authorize(config.username!, ext: "", password: "wrong password") { token, error in
             XCTAssertNotNil(error)
             XCTAssertNil(token)
             XCTAssertTrue(error?.statusCode == 400)
