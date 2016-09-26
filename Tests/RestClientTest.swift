@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import RingCentral
+import RingCentral
 
 class RestClientTest: BaseTest {
 

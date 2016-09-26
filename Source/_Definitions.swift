@@ -11,14 +11,14 @@ import ObjectMapper
 
 
 open class Token: Mappable {
-    var access_token: String?
-    var expires_in: Int?
-    var refresh_token: String?
-    var refresh_token_expires_in: Int?
-    var scope: String?
-    var token_type: String?
-    var owner_id: String?
-    var endpoint_id: String?
+    open var access_token: String?
+    open var expires_in: Int?
+    open var refresh_token: String?
+    open var refresh_token_expires_in: Int?
+    open var scope: String?
+    open var token_type: String?
+    open var owner_id: String?
+    open var endpoint_id: String?
 
     required public init?(map: Map) {
 
@@ -38,10 +38,10 @@ open class Token: Mappable {
 
 
 open class RestApi: Mappable {
-    var releaseDate: String?
-    var uri: String?
-    var uriString: String?
-    var versionString: String?
+    open var releaseDate: String?
+    open var uri: String?
+    open var uriString: String?
+    open var versionString: String?
 
     required public init?(map: Map) {
 
