@@ -77,18 +77,14 @@ open class RestClient {
 
     open func revoke(callback: ((Bool) -> Void)? = nil) {
         if let token = token {
-            let parameters = [ "token": token.access_token ]
+            let parameters = ["token": token.access_token]
             let headers = ["Authorization": basicAuthToken()]
             postString("/restapi/oauth/revoke", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
-                if error == nil {
-                    callback?(true)
-                } else {
-                    callback?(false)
-                }
+                callback?(error == nil)
             }
         } else {
             callback?(true)
         }
     }
-    
+
 }
