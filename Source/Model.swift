@@ -32,26 +32,44 @@ func <= (left: String, right: String) -> String {
 }
 
 
-public protocol Model {
+public protocol iModel {
     var _id: String? {get set}
-    var parent: Model {get set}
-    var rc: RestClient {get}
+    var parent: iModel? {get set}
+    var rc: RestClient {get set}
     var pathSegment: String {get}
     func endpoint(withId: Bool) -> String
 }
 
-extension Model {
-    func endpoint(withId: Bool = true) -> String {
-        var url = parent.endpoint() <= pathSegment
+extension iModel {
+    public func endpoint(withId: Bool = true) -> String {
+        if parent == nil {
+            return ""
+        }
+        var url = parent!.endpoint() <= pathSegment
         if withId && _id != nil {
             url = url <= _id!
         }
         return "/" + url.trimLeft("/")
     }
+}
 
-    var rc: RestClient {
-        get {
-            return parent.rc
+
+open class Model: iModel {
+    public var pathSegment: String = ""
+
+    public var parent: iModel?
+
+    public var _id: String?
+
+    public var rc: RestClient
+
+    public init(parent: iModel?, _id: String?, rc: RestClient? = nil) {
+        self.parent = parent
+        self._id = _id
+        if rc == nil {
+            self.rc = parent!.rc
+        } else {
+            self.rc = rc!
         }
     }
 }
