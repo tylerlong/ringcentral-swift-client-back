@@ -41,7 +41,13 @@ open class Token {
 }
 
 
-open class RestApi {
+open class RestApi: Model {
+
+    public override var pathSegment: String {
+        get{
+            return "restapi"
+        }
+    }
 
     open class GetRestponse: Mappable {
         open var releaseDate: String?

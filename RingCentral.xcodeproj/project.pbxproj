@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87410DA31D9A8FCD00AD2DE7 /* UrlBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */; };
+		87410DA41D9A8FE500AD2DE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF201D990D1A008E7735 /* Config.swift */; };
 		8760261F1D9A4E7B002A7850 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Model.swift */; };
 		879ADEC21D98C409008E7735 /* RingCentral_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEC01D98C409008E7735 /* RingCentral_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADECF1D98C41C008E7735 /* RingCentral_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADECD1D98C41C008E7735 /* RingCentral_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,7 +27,6 @@
 		879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; };
 		879ADF1D1D98F53A008E7735 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		879ADF1F1D98FCD1008E7735 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFB1D98C7D6008E7735 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		879ADF211D990D1A008E7735 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF201D990D1A008E7735 /* Config.swift */; };
 		879ADF231D991E8B008E7735 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF221D991E8B008E7735 /* Definitions.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlBuilderTest.swift; path = Tests/UrlBuilderTest.swift; sourceTree = "<group>"; };
 		8760261E1D9A4E7B002A7850 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/Model.swift; sourceTree = "<group>"; };
 		879ADEBD1D98C409008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEC01D98C409008E7735 /* RingCentral_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_macOS.h; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		879ADF141D98E759008E7735 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */,
 				879ADF0E1D98E754008E7735 /* BaseTest.swift */,
 				879ADF0F1D98E754008E7735 /* DictionaryTest.swift */,
 				879ADF101D98E754008E7735 /* RestClientTest.swift */,
@@ -469,7 +472,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				879ADEF01D98C4C0008E7735 /* _Definitions.swift in Sources */,
-				879ADF211D990D1A008E7735 /* Config.swift in Sources */,
 				879ADEF21D98C4C0008E7735 /* RestClient.swift in Sources */,
 				8760261F1D9A4E7B002A7850 /* Model.swift in Sources */,
 				879ADF231D991E8B008E7735 /* Definitions.swift in Sources */,
@@ -502,6 +504,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87410DA41D9A8FE500AD2DE7 /* Config.swift in Sources */,
+				87410DA31D9A8FCD00AD2DE7 /* UrlBuilderTest.swift in Sources */,
 				879ADF161D98EF01008E7735 /* BaseTest.swift in Sources */,
 				879ADF171D98EF01008E7735 /* DictionaryTest.swift in Sources */,
 				879ADF181D98EF01008E7735 /* RestClientTest.swift in Sources */,

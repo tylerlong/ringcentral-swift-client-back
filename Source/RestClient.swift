@@ -87,9 +87,9 @@ open class RestClient {
         }
     }
 
-    open func restapi(_id: String = "v1.0") -> RestApi
+    open func restapi(_ _id: String = "v1.0") -> RestApi
     {
-        return RestApi()
+        return RestApi(parent: Model(parent: nil, _id: nil, rc: self), _id: _id)
     }
 
 }
