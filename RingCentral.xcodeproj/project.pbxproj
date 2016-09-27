@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8760261F1D9A4E7B002A7850 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Model.swift */; };
 		879ADEC21D98C409008E7735 /* RingCentral_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEC01D98C409008E7735 /* RingCentral_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADECF1D98C41C008E7735 /* RingCentral_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADECD1D98C41C008E7735 /* RingCentral_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADEDC1D98C42B008E7735 /* RingCentral_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEDA1D98C42B008E7735 /* RingCentral_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8760261E1D9A4E7B002A7850 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/Model.swift; sourceTree = "<group>"; };
 		879ADEBD1D98C409008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEC01D98C409008E7735 /* RingCentral_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_macOS.h; sourceTree = "<group>"; };
 		879ADEC11D98C409008E7735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				879ADEED1D98C4C0008E7735 /* _Definitions.swift */,
 				879ADEEE1D98C4C0008E7735 /* Http.swift */,
 				879ADEEF1D98C4C0008E7735 /* RestClient.swift */,
+				8760261E1D9A4E7B002A7850 /* Model.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				879ADEF01D98C4C0008E7735 /* _Definitions.swift in Sources */,
 				879ADF211D990D1A008E7735 /* Config.swift in Sources */,
 				879ADEF21D98C4C0008E7735 /* RestClient.swift in Sources */,
+				8760261F1D9A4E7B002A7850 /* Model.swift in Sources */,
 				879ADF231D991E8B008E7735 /* Definitions.swift in Sources */,
 				879ADEF11D98C4C0008E7735 /* Http.swift in Sources */,
 			);
