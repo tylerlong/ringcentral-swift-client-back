@@ -12,10 +12,7 @@ import Foundation
 extension String {
     func trimLeft(_ c: Character = " ") -> String {
         var str = self
-        if str.characters.count == 0 {
-            return str
-        }
-        while str.characters.last! == c {
+        while str.characters.last == c {
             str = str.substring(to: str.index(str.endIndex, offsetBy: -1))
         }
         return str
@@ -23,10 +20,7 @@ extension String {
 
     func trimRight(_ c: Character = " ") -> String {
         var str = self
-        if str.characters.count == 0 {
-            return str
-        }
-        while str.characters.first! == c {
+        while str.characters.first == c {
             str = str.substring(from: str.index(str.startIndex, offsetBy: 1))
         }
         return str
