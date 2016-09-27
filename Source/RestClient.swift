@@ -17,7 +17,7 @@ open class RestClient {
     open var appKey: String
     open var appSecret: String
     open var server: String
-    open var token: Token?
+    open var token: Token.PostResponse?
 
     public init(appKey: String, appSecret: String, server: String) {
         self.appKey = appKey
@@ -34,7 +34,7 @@ open class RestClient {
         return "Basic \(base64Token)"
     }
 
-    open func authorize(_ username: String, ext: String, password: String, callback: ((_ token: Token?, _ error: HTTPError?) -> Void)? = nil) {
+    open func authorize(_ username: String, ext: String, password: String, callback: ((_ token: Token.PostResponse?, _ error: HTTPError?) -> Void)? = nil) {
         let parameters = [
             "username": username,
             "extension": ext,
@@ -45,7 +45,7 @@ open class RestClient {
         postString("/restapi/oauth/token", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
             if let callback = callback {
                 if error == nil {
-                    self.token = Token(JSONString: string!)
+                    self.token = Token.PostResponse(JSONString: string!)
                     callback(self.token, nil)
                 } else {
                     callback(nil, error)
@@ -54,7 +54,7 @@ open class RestClient {
         }
     }
 
-    open func refresh(callback: ((_ token: Token?, _ error: HTTPError?) -> Void)? = nil) {
+    open func refresh(callback: ((_ token: Token.PostResponse?, _ error: HTTPError?) -> Void)? = nil) {
         if let token = token {
             let parameters = [
                 "grant_type": "refresh_token",
@@ -65,7 +65,7 @@ open class RestClient {
             postString("/restapi/oauth/token", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
                 if let callback = callback {
                     if error == nil {
-                        self.token = Token(JSONString: string!)
+                        self.token = Token.PostResponse(JSONString: string!)
                         callback(self.token, nil)
                     } else {
                         callback(nil, error)
@@ -85,6 +85,11 @@ open class RestClient {
         } else {
             callback?(true)
         }
+    }
+
+    open func restapi(_id: String = "v1.0") -> RestApi
+    {
+        return RestApi()
     }
 
 }
