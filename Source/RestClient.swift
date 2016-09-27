@@ -54,4 +54,41 @@ open class RestClient {
         }
     }
 
+    open func refresh(callback: ((_ token: Token?, _ error: HTTPError?) -> Void)? = nil) {
+        if let token = token {
+            let parameters = [
+                "grant_type": "refresh_token",
+                "refresh_token": token.refresh_token,
+                "endpoint_id": token.endpoint_id
+            ]
+            let headers = ["Authorization": basicAuthToken()]
+            postString("/restapi/oauth/token", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
+                if let callback = callback {
+                    if error == nil {
+                        self.token = Token(JSONString: string!)
+                        callback(self.token, nil)
+                    } else {
+                        callback(nil, error)
+                    }
+                }
+            }
+        }
+    }
+
+    open func revoke(callback: ((Bool) -> Void)? = nil) {
+        if let token = token {
+            let parameters = [ "token": token.access_token ]
+            let headers = ["Authorization": basicAuthToken()]
+            postString("/restapi/oauth/revoke", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
+                if error == nil {
+                    callback?(true)
+                } else {
+                    callback?(false)
+                }
+            }
+        } else {
+            callback?(true)
+        }
+    }
+    
 }
