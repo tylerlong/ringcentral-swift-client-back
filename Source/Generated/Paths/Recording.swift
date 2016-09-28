@@ -6,6 +6,9 @@ open class Recording: Model {
             return "recording"
         }
     }
+    func `content`(_id: String? = nil) -> Content {
+        return Content(parent: self, _id: _id)
+    }
     // Get Call Recording Metadata
     func get() -> GetResponse {
         return GetResponse(JSONString: "")!

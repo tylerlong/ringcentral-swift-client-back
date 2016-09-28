@@ -6,6 +6,12 @@ open class Meeting: Model {
             return "meeting"
         }
     }
+    func `serviceInfo`() -> ServiceInfo {
+        return ServiceInfo(parent: self)
+    }
+    func `end`() -> End {
+        return End(parent: self)
+    }
     // Delete Meeting
     func delete() {
     }

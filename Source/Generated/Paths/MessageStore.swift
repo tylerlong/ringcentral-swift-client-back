@@ -6,6 +6,9 @@ open class MessageStore: Model {
             return "message-store"
         }
     }
+    func `content`(_id: String? = nil) -> Content {
+        return Content(parent: self, _id: _id)
+    }
     // Delete Message by ID
     func delete() {
     }

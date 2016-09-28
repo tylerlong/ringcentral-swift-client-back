@@ -6,4 +6,7 @@ open class ClientInfo: Model {
             return "client-info"
         }
     }
+    func `customData`(_id: String? = nil) -> CustomData {
+        return CustomData(parent: self, _id: _id)
+    }
 }

@@ -65,7 +65,7 @@ open class Model: iModel {
 
     public var rc: RestClient
 
-    public init(parent: iModel?, _id: String?, rc: RestClient? = nil) {
+    public init(parent: iModel?, _id: String? = nil, rc: RestClient? = nil) {
         self.parent = parent
         self._id = _id
         if rc == nil {

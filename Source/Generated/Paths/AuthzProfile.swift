@@ -6,6 +6,9 @@ open class AuthzProfile: Model {
             return "authz-profile"
         }
     }
+    func `check`() -> Check {
+        return Check(parent: self)
+    }
     // Get User Permissions
     func get() -> GetResponse {
         return GetResponse(JSONString: "")!
