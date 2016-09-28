@@ -48,7 +48,7 @@ class RestClientTest: BaseTest {
 
         let expectation2 = expectation(description: "expectation2")
         rc.getString("/restapi/v1.0") { string, error in
-            let restApi = RestApi.GetRestponse(JSONString: string!)!
+            let restApi = VersionInfo(JSONString: string!)!
             XCTAssertTrue(restApi.uri == "https://platform.devtest.ringcentral.com/restapi/v1.0")
             expectation2.fulfill()
         }

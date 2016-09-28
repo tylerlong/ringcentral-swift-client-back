@@ -35,13 +35,13 @@ open class RestClient {
     }
 
     open func authorize(_ username: String, ext: String, password: String, callback: ((_ token: Token.PostResponse?, _ error: HTTPError?) -> Void)? = nil) {
-        let parameters = [
+        let parameters: [String: String] = [
             "username": username,
             "extension": ext,
             "password": password,
             "grant_type": "password"
         ]
-        let headers = ["Authorization": basicAuthToken()]
+        let headers: [String: String] = ["Authorization": basicAuthToken()]
         postString("/restapi/oauth/token", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
             if let callback = callback {
                 if error == nil {
@@ -56,12 +56,12 @@ open class RestClient {
 
     open func refresh(callback: ((_ token: Token.PostResponse?, _ error: HTTPError?) -> Void)? = nil) {
         if let token = token {
-            let parameters = [
+            let parameters: [String: String] = [
                 "grant_type": "refresh_token",
-                "refresh_token": token.refresh_token,
-                "endpoint_id": token.endpoint_id
+                "refresh_token": token.refresh_token!,
+                "endpoint_id": token.endpoint_id!
             ]
-            let headers = ["Authorization": basicAuthToken()]
+            let headers: [String: String] = ["Authorization": basicAuthToken()]
             postString("/restapi/oauth/token", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
                 if let callback = callback {
                     if error == nil {
@@ -77,8 +77,8 @@ open class RestClient {
 
     open func revoke(callback: ((Bool) -> Void)? = nil) {
         if let token = token {
-            let parameters = ["token": token.access_token]
-            let headers = ["Authorization": basicAuthToken()]
+            let parameters: [String: String] = ["token": token.access_token!]
+            let headers: [String: String] = ["Authorization": basicAuthToken()]
             postString("/restapi/oauth/revoke", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
                 callback?(error == nil)
             }
@@ -87,9 +87,9 @@ open class RestClient {
         }
     }
 
-    open func restapi(_ _id: String = "v1.0") -> RestApi
+    open func restapi(_ _id: String = "v1.0") -> Restapi
     {
-        return RestApi(parent: Model(parent: nil, _id: nil, rc: self), _id: _id)
+        return Restapi(parent: Model(parent: nil, _id: nil, rc: self), _id: _id)
     }
 
 }

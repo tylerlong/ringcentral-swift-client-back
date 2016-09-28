@@ -7,6 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871940D21D9AA17A00078E57 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940991D9AA17A00078E57 /* Account.swift */; };
+		871940D31D9AA17A00078E57 /* ActiveCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719409A1D9AA17A00078E57 /* ActiveCalls.swift */; };
+		871940D41D9AA17A00078E57 /* AddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719409B1D9AA17A00078E57 /* AddressBook.swift */; };
+		871940D51D9AA17A00078E57 /* AddressBookSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719409C1D9AA17A00078E57 /* AddressBookSync.swift */; };
+		871940D61D9AA17A00078E57 /* AnsweringRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719409D1D9AA17A00078E57 /* AnsweringRule.swift */; };
+		871940D71D9AA17A00078E57 /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719409E1D9AA17A00078E57 /* Authorize.swift */; };
+		871940D81D9AA17A00078E57 /* AuthzProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719409F1D9AA17A00078E57 /* AuthzProfile.swift */; };
+		871940D91D9AA17A00078E57 /* BlockedNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A01D9AA17A00078E57 /* BlockedNumber.swift */; };
+		871940DA1D9AA17A00078E57 /* BusinessAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A11D9AA17A00078E57 /* BusinessAddress.swift */; };
+		871940DB1D9AA17A00078E57 /* BusinessHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A21D9AA17A00078E57 /* BusinessHours.swift */; };
+		871940DC1D9AA17A00078E57 /* CallLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A31D9AA17A00078E57 /* CallLog.swift */; };
+		871940DD1D9AA17A00078E57 /* CallLogSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A41D9AA17A00078E57 /* CallLogSync.swift */; };
+		871940DE1D9AA17A00078E57 /* Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A51D9AA17A00078E57 /* Check.swift */; };
+		871940DF1D9AA17A00078E57 /* ClientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A61D9AA17A00078E57 /* ClientInfo.swift */; };
+		871940E01D9AA17A00078E57 /* CompanyPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A71D9AA17A00078E57 /* CompanyPager.swift */; };
+		871940E11D9AA17A00078E57 /* Conferencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A81D9AA17A00078E57 /* Conferencing.swift */; };
+		871940E21D9AA17A00078E57 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940A91D9AA17A00078E57 /* Contact.swift */; };
+		871940E31D9AA17A00078E57 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940AA1D9AA17A00078E57 /* Content.swift */; };
+		871940E41D9AA17A00078E57 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940AB1D9AA17A00078E57 /* Country.swift */; };
+		871940E51D9AA17A00078E57 /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940AC1D9AA17A00078E57 /* CustomData.swift */; };
+		871940E61D9AA17A00078E57 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940AD1D9AA17A00078E57 /* Department.swift */; };
+		871940E71D9AA17A00078E57 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940AE1D9AA17A00078E57 /* Device.swift */; };
+		871940E81D9AA17A00078E57 /* DialingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940AF1D9AA17A00078E57 /* DialingPlan.swift */; };
+		871940E91D9AA17A00078E57 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B01D9AA17A00078E57 /* Dictionary.swift */; };
+		871940EA1D9AA17A00078E57 /* End.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B11D9AA17A00078E57 /* End.swift */; };
+		871940EB1D9AA17A00078E57 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B21D9AA17A00078E57 /* Extension.swift */; };
+		871940EC1D9AA17A00078E57 /* Fax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B31D9AA17A00078E57 /* Fax.swift */; };
+		871940ED1D9AA17A00078E57 /* ForwardingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B41D9AA17A00078E57 /* ForwardingNumber.swift */; };
+		871940EE1D9AA17A00078E57 /* Grant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B51D9AA17A00078E57 /* Grant.swift */; };
+		871940EF1D9AA17A00078E57 /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B61D9AA17A00078E57 /* Greeting.swift */; };
+		871940F01D9AA17A00078E57 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B71D9AA17A00078E57 /* Group.swift */; };
+		871940F11D9AA17A00078E57 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B81D9AA17A00078E57 /* Language.swift */; };
+		871940F21D9AA17A00078E57 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940B91D9AA17A00078E57 /* Location.swift */; };
+		871940F31D9AA17A00078E57 /* Lookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940BA1D9AA17A00078E57 /* Lookup.swift */; };
+		871940F41D9AA17A00078E57 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940BB1D9AA17A00078E57 /* Meeting.swift */; };
+		871940F51D9AA17A00078E57 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940BC1D9AA17A00078E57 /* Members.swift */; };
+		871940F61D9AA17A00078E57 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940BD1D9AA17A00078E57 /* MessageStore.swift */; };
+		871940F71D9AA17A00078E57 /* MessageSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940BE1D9AA17A00078E57 /* MessageSync.swift */; };
+		871940F81D9AA17A00078E57 /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940BF1D9AA17A00078E57 /* NumberParser.swift */; };
+		871940F91D9AA17A00078E57 /* NumberPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C01D9AA17A00078E57 /* NumberPool.swift */; };
+		871940FA1D9AA17A00078E57 /* Oauth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C11D9AA17A00078E57 /* Oauth.swift */; };
+		871940FB1D9AA17A00078E57 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C21D9AA17A00078E57 /* Order.swift */; };
+		871940FC1D9AA17A00078E57 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C31D9AA17A00078E57 /* Parse.swift */; };
+		871940FD1D9AA17A00078E57 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C41D9AA17A00078E57 /* PhoneNumber.swift */; };
+		871940FE1D9AA17A00078E57 /* Presence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C51D9AA17A00078E57 /* Presence.swift */; };
+		871940FF1D9AA17A00078E57 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C61D9AA17A00078E57 /* ProfileImage.swift */; };
+		871941001D9AA17A00078E57 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C71D9AA17A00078E57 /* Recording.swift */; };
+		871941011D9AA17A00078E57 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C81D9AA17A00078E57 /* Reserve.swift */; };
+		871941021D9AA17A00078E57 /* Restapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940C91D9AA17A00078E57 /* Restapi.swift */; };
+		871941031D9AA17A00078E57 /* Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940CA1D9AA17A00078E57 /* Revoke.swift */; };
+		871941041D9AA17A00078E57 /* Ringout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940CB1D9AA17A00078E57 /* Ringout.swift */; };
+		871941051D9AA17A00078E57 /* ServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940CC1D9AA17A00078E57 /* ServiceInfo.swift */; };
+		871941061D9AA17A00078E57 /* Sms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940CD1D9AA17A00078E57 /* Sms.swift */; };
+		871941071D9AA17A00078E57 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940CE1D9AA17A00078E57 /* State.swift */; };
+		871941081D9AA17A00078E57 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940CF1D9AA17A00078E57 /* Subscription.swift */; };
+		871941091D9AA17A00078E57 /* Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940D01D9AA17A00078E57 /* Timezone.swift */; };
+		8719410A1D9AA17A00078E57 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871940D11D9AA17A00078E57 /* Token.swift */; };
 		87410DA31D9A8FCD00AD2DE7 /* UrlBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */; };
 		87410DA41D9A8FE500AD2DE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF201D990D1A008E7735 /* Config.swift */; };
 		8760261F1D9A4E7B002A7850 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Model.swift */; };
@@ -55,6 +112,63 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		871940991D9AA17A00078E57 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Source/Generated/Account.swift; sourceTree = "<group>"; };
+		8719409A1D9AA17A00078E57 /* ActiveCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveCalls.swift; path = Source/Generated/ActiveCalls.swift; sourceTree = "<group>"; };
+		8719409B1D9AA17A00078E57 /* AddressBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressBook.swift; path = Source/Generated/AddressBook.swift; sourceTree = "<group>"; };
+		8719409C1D9AA17A00078E57 /* AddressBookSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressBookSync.swift; path = Source/Generated/AddressBookSync.swift; sourceTree = "<group>"; };
+		8719409D1D9AA17A00078E57 /* AnsweringRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnsweringRule.swift; path = Source/Generated/AnsweringRule.swift; sourceTree = "<group>"; };
+		8719409E1D9AA17A00078E57 /* Authorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authorize.swift; path = Source/Generated/Authorize.swift; sourceTree = "<group>"; };
+		8719409F1D9AA17A00078E57 /* AuthzProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthzProfile.swift; path = Source/Generated/AuthzProfile.swift; sourceTree = "<group>"; };
+		871940A01D9AA17A00078E57 /* BlockedNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockedNumber.swift; path = Source/Generated/BlockedNumber.swift; sourceTree = "<group>"; };
+		871940A11D9AA17A00078E57 /* BusinessAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessAddress.swift; path = Source/Generated/BusinessAddress.swift; sourceTree = "<group>"; };
+		871940A21D9AA17A00078E57 /* BusinessHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessHours.swift; path = Source/Generated/BusinessHours.swift; sourceTree = "<group>"; };
+		871940A31D9AA17A00078E57 /* CallLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallLog.swift; path = Source/Generated/CallLog.swift; sourceTree = "<group>"; };
+		871940A41D9AA17A00078E57 /* CallLogSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallLogSync.swift; path = Source/Generated/CallLogSync.swift; sourceTree = "<group>"; };
+		871940A51D9AA17A00078E57 /* Check.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Check.swift; path = Source/Generated/Check.swift; sourceTree = "<group>"; };
+		871940A61D9AA17A00078E57 /* ClientInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientInfo.swift; path = Source/Generated/ClientInfo.swift; sourceTree = "<group>"; };
+		871940A71D9AA17A00078E57 /* CompanyPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompanyPager.swift; path = Source/Generated/CompanyPager.swift; sourceTree = "<group>"; };
+		871940A81D9AA17A00078E57 /* Conferencing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conferencing.swift; path = Source/Generated/Conferencing.swift; sourceTree = "<group>"; };
+		871940A91D9AA17A00078E57 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Source/Generated/Contact.swift; sourceTree = "<group>"; };
+		871940AA1D9AA17A00078E57 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Content.swift; path = Source/Generated/Content.swift; sourceTree = "<group>"; };
+		871940AB1D9AA17A00078E57 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Country.swift; path = Source/Generated/Country.swift; sourceTree = "<group>"; };
+		871940AC1D9AA17A00078E57 /* CustomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomData.swift; path = Source/Generated/CustomData.swift; sourceTree = "<group>"; };
+		871940AD1D9AA17A00078E57 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Department.swift; path = Source/Generated/Department.swift; sourceTree = "<group>"; };
+		871940AE1D9AA17A00078E57 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Source/Generated/Device.swift; sourceTree = "<group>"; };
+		871940AF1D9AA17A00078E57 /* DialingPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialingPlan.swift; path = Source/Generated/DialingPlan.swift; sourceTree = "<group>"; };
+		871940B01D9AA17A00078E57 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Source/Generated/Dictionary.swift; sourceTree = "<group>"; };
+		871940B11D9AA17A00078E57 /* End.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = End.swift; path = Source/Generated/End.swift; sourceTree = "<group>"; };
+		871940B21D9AA17A00078E57 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Source/Generated/Extension.swift; sourceTree = "<group>"; };
+		871940B31D9AA17A00078E57 /* Fax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fax.swift; path = Source/Generated/Fax.swift; sourceTree = "<group>"; };
+		871940B41D9AA17A00078E57 /* ForwardingNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForwardingNumber.swift; path = Source/Generated/ForwardingNumber.swift; sourceTree = "<group>"; };
+		871940B51D9AA17A00078E57 /* Grant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grant.swift; path = Source/Generated/Grant.swift; sourceTree = "<group>"; };
+		871940B61D9AA17A00078E57 /* Greeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Greeting.swift; path = Source/Generated/Greeting.swift; sourceTree = "<group>"; };
+		871940B71D9AA17A00078E57 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = Source/Generated/Group.swift; sourceTree = "<group>"; };
+		871940B81D9AA17A00078E57 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Language.swift; path = Source/Generated/Language.swift; sourceTree = "<group>"; };
+		871940B91D9AA17A00078E57 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Source/Generated/Location.swift; sourceTree = "<group>"; };
+		871940BA1D9AA17A00078E57 /* Lookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lookup.swift; path = Source/Generated/Lookup.swift; sourceTree = "<group>"; };
+		871940BB1D9AA17A00078E57 /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meeting.swift; path = Source/Generated/Meeting.swift; sourceTree = "<group>"; };
+		871940BC1D9AA17A00078E57 /* Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Members.swift; path = Source/Generated/Members.swift; sourceTree = "<group>"; };
+		871940BD1D9AA17A00078E57 /* MessageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageStore.swift; path = Source/Generated/MessageStore.swift; sourceTree = "<group>"; };
+		871940BE1D9AA17A00078E57 /* MessageSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageSync.swift; path = Source/Generated/MessageSync.swift; sourceTree = "<group>"; };
+		871940BF1D9AA17A00078E57 /* NumberParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberParser.swift; path = Source/Generated/NumberParser.swift; sourceTree = "<group>"; };
+		871940C01D9AA17A00078E57 /* NumberPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberPool.swift; path = Source/Generated/NumberPool.swift; sourceTree = "<group>"; };
+		871940C11D9AA17A00078E57 /* Oauth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Oauth.swift; path = Source/Generated/Oauth.swift; sourceTree = "<group>"; };
+		871940C21D9AA17A00078E57 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = Source/Generated/Order.swift; sourceTree = "<group>"; };
+		871940C31D9AA17A00078E57 /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parse.swift; path = Source/Generated/Parse.swift; sourceTree = "<group>"; };
+		871940C41D9AA17A00078E57 /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumber.swift; path = Source/Generated/PhoneNumber.swift; sourceTree = "<group>"; };
+		871940C51D9AA17A00078E57 /* Presence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Presence.swift; path = Source/Generated/Presence.swift; sourceTree = "<group>"; };
+		871940C61D9AA17A00078E57 /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileImage.swift; path = Source/Generated/ProfileImage.swift; sourceTree = "<group>"; };
+		871940C71D9AA17A00078E57 /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recording.swift; path = Source/Generated/Recording.swift; sourceTree = "<group>"; };
+		871940C81D9AA17A00078E57 /* Reserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reserve.swift; path = Source/Generated/Reserve.swift; sourceTree = "<group>"; };
+		871940C91D9AA17A00078E57 /* Restapi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restapi.swift; path = Source/Generated/Restapi.swift; sourceTree = "<group>"; };
+		871940CA1D9AA17A00078E57 /* Revoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Revoke.swift; path = Source/Generated/Revoke.swift; sourceTree = "<group>"; };
+		871940CB1D9AA17A00078E57 /* Ringout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ringout.swift; path = Source/Generated/Ringout.swift; sourceTree = "<group>"; };
+		871940CC1D9AA17A00078E57 /* ServiceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceInfo.swift; path = Source/Generated/ServiceInfo.swift; sourceTree = "<group>"; };
+		871940CD1D9AA17A00078E57 /* Sms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sms.swift; path = Source/Generated/Sms.swift; sourceTree = "<group>"; };
+		871940CE1D9AA17A00078E57 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = Source/Generated/State.swift; sourceTree = "<group>"; };
+		871940CF1D9AA17A00078E57 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = Source/Generated/Subscription.swift; sourceTree = "<group>"; };
+		871940D01D9AA17A00078E57 /* Timezone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timezone.swift; path = Source/Generated/Timezone.swift; sourceTree = "<group>"; };
+		871940D11D9AA17A00078E57 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Token.swift; path = Source/Generated/Token.swift; sourceTree = "<group>"; };
 		87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlBuilderTest.swift; path = Tests/UrlBuilderTest.swift; sourceTree = "<group>"; };
 		8760261E1D9A4E7B002A7850 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/Model.swift; sourceTree = "<group>"; };
 		879ADEBD1D98C409008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +354,63 @@
 		879ADF241D991E93008E7735 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				871940991D9AA17A00078E57 /* Account.swift */,
+				8719409A1D9AA17A00078E57 /* ActiveCalls.swift */,
+				8719409B1D9AA17A00078E57 /* AddressBook.swift */,
+				8719409C1D9AA17A00078E57 /* AddressBookSync.swift */,
+				8719409D1D9AA17A00078E57 /* AnsweringRule.swift */,
+				8719409E1D9AA17A00078E57 /* Authorize.swift */,
+				8719409F1D9AA17A00078E57 /* AuthzProfile.swift */,
+				871940A01D9AA17A00078E57 /* BlockedNumber.swift */,
+				871940A11D9AA17A00078E57 /* BusinessAddress.swift */,
+				871940A21D9AA17A00078E57 /* BusinessHours.swift */,
+				871940A31D9AA17A00078E57 /* CallLog.swift */,
+				871940A41D9AA17A00078E57 /* CallLogSync.swift */,
+				871940A51D9AA17A00078E57 /* Check.swift */,
+				871940A61D9AA17A00078E57 /* ClientInfo.swift */,
+				871940A71D9AA17A00078E57 /* CompanyPager.swift */,
+				871940A81D9AA17A00078E57 /* Conferencing.swift */,
+				871940A91D9AA17A00078E57 /* Contact.swift */,
+				871940AA1D9AA17A00078E57 /* Content.swift */,
+				871940AB1D9AA17A00078E57 /* Country.swift */,
+				871940AC1D9AA17A00078E57 /* CustomData.swift */,
+				871940AD1D9AA17A00078E57 /* Department.swift */,
+				871940AE1D9AA17A00078E57 /* Device.swift */,
+				871940AF1D9AA17A00078E57 /* DialingPlan.swift */,
+				871940B01D9AA17A00078E57 /* Dictionary.swift */,
+				871940B11D9AA17A00078E57 /* End.swift */,
+				871940B21D9AA17A00078E57 /* Extension.swift */,
+				871940B31D9AA17A00078E57 /* Fax.swift */,
+				871940B41D9AA17A00078E57 /* ForwardingNumber.swift */,
+				871940B51D9AA17A00078E57 /* Grant.swift */,
+				871940B61D9AA17A00078E57 /* Greeting.swift */,
+				871940B71D9AA17A00078E57 /* Group.swift */,
+				871940B81D9AA17A00078E57 /* Language.swift */,
+				871940B91D9AA17A00078E57 /* Location.swift */,
+				871940BA1D9AA17A00078E57 /* Lookup.swift */,
+				871940BB1D9AA17A00078E57 /* Meeting.swift */,
+				871940BC1D9AA17A00078E57 /* Members.swift */,
+				871940BD1D9AA17A00078E57 /* MessageStore.swift */,
+				871940BE1D9AA17A00078E57 /* MessageSync.swift */,
+				871940BF1D9AA17A00078E57 /* NumberParser.swift */,
+				871940C01D9AA17A00078E57 /* NumberPool.swift */,
+				871940C11D9AA17A00078E57 /* Oauth.swift */,
+				871940C21D9AA17A00078E57 /* Order.swift */,
+				871940C31D9AA17A00078E57 /* Parse.swift */,
+				871940C41D9AA17A00078E57 /* PhoneNumber.swift */,
+				871940C51D9AA17A00078E57 /* Presence.swift */,
+				871940C61D9AA17A00078E57 /* ProfileImage.swift */,
+				871940C71D9AA17A00078E57 /* Recording.swift */,
+				871940C81D9AA17A00078E57 /* Reserve.swift */,
+				871940C91D9AA17A00078E57 /* Restapi.swift */,
+				871940CA1D9AA17A00078E57 /* Revoke.swift */,
+				871940CB1D9AA17A00078E57 /* Ringout.swift */,
+				871940CC1D9AA17A00078E57 /* ServiceInfo.swift */,
+				871940CD1D9AA17A00078E57 /* Sms.swift */,
+				871940CE1D9AA17A00078E57 /* State.swift */,
+				871940CF1D9AA17A00078E57 /* Subscription.swift */,
+				871940D01D9AA17A00078E57 /* Timezone.swift */,
+				871940D11D9AA17A00078E57 /* Token.swift */,
 				879ADF221D991E8B008E7735 /* Definitions.swift */,
 			);
 			name = Generated;
@@ -471,11 +642,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871940DA1D9AA17A00078E57 /* BusinessAddress.swift in Sources */,
+				871940FC1D9AA17A00078E57 /* Parse.swift in Sources */,
+				871941071D9AA17A00078E57 /* State.swift in Sources */,
+				871940D31D9AA17A00078E57 /* ActiveCalls.swift in Sources */,
+				871940E11D9AA17A00078E57 /* Conferencing.swift in Sources */,
+				871940F61D9AA17A00078E57 /* MessageStore.swift in Sources */,
+				871940F31D9AA17A00078E57 /* Lookup.swift in Sources */,
+				871940EC1D9AA17A00078E57 /* Fax.swift in Sources */,
+				871940FF1D9AA17A00078E57 /* ProfileImage.swift in Sources */,
+				871941021D9AA17A00078E57 /* Restapi.swift in Sources */,
+				871940E71D9AA17A00078E57 /* Device.swift in Sources */,
+				871940DE1D9AA17A00078E57 /* Check.swift in Sources */,
+				871940E41D9AA17A00078E57 /* Country.swift in Sources */,
 				879ADEF01D98C4C0008E7735 /* _Definitions.swift in Sources */,
+				871940EF1D9AA17A00078E57 /* Greeting.swift in Sources */,
+				871940FE1D9AA17A00078E57 /* Presence.swift in Sources */,
+				871941051D9AA17A00078E57 /* ServiceInfo.swift in Sources */,
+				871940ED1D9AA17A00078E57 /* ForwardingNumber.swift in Sources */,
+				871940EB1D9AA17A00078E57 /* Extension.swift in Sources */,
 				879ADEF21D98C4C0008E7735 /* RestClient.swift in Sources */,
+				871940E21D9AA17A00078E57 /* Contact.swift in Sources */,
+				871940FB1D9AA17A00078E57 /* Order.swift in Sources */,
+				871940E31D9AA17A00078E57 /* Content.swift in Sources */,
+				871940F21D9AA17A00078E57 /* Location.swift in Sources */,
+				871941031D9AA17A00078E57 /* Revoke.swift in Sources */,
+				8719410A1D9AA17A00078E57 /* Token.swift in Sources */,
+				871940E61D9AA17A00078E57 /* Department.swift in Sources */,
 				8760261F1D9A4E7B002A7850 /* Model.swift in Sources */,
+				871940F51D9AA17A00078E57 /* Members.swift in Sources */,
 				879ADF231D991E8B008E7735 /* Definitions.swift in Sources */,
+				871940DF1D9AA17A00078E57 /* ClientInfo.swift in Sources */,
+				871940DC1D9AA17A00078E57 /* CallLog.swift in Sources */,
+				871940EE1D9AA17A00078E57 /* Grant.swift in Sources */,
+				871940EA1D9AA17A00078E57 /* End.swift in Sources */,
+				871940D91D9AA17A00078E57 /* BlockedNumber.swift in Sources */,
+				871941041D9AA17A00078E57 /* Ringout.swift in Sources */,
+				871940DD1D9AA17A00078E57 /* CallLogSync.swift in Sources */,
+				871941061D9AA17A00078E57 /* Sms.swift in Sources */,
+				871940F41D9AA17A00078E57 /* Meeting.swift in Sources */,
+				871940D41D9AA17A00078E57 /* AddressBook.swift in Sources */,
+				871940D81D9AA17A00078E57 /* AuthzProfile.swift in Sources */,
+				871940F11D9AA17A00078E57 /* Language.swift in Sources */,
+				871941011D9AA17A00078E57 /* Reserve.swift in Sources */,
+				871940D51D9AA17A00078E57 /* AddressBookSync.swift in Sources */,
+				871940E91D9AA17A00078E57 /* Dictionary.swift in Sources */,
+				871940F01D9AA17A00078E57 /* Group.swift in Sources */,
+				871940E51D9AA17A00078E57 /* CustomData.swift in Sources */,
 				879ADEF11D98C4C0008E7735 /* Http.swift in Sources */,
+				871940F71D9AA17A00078E57 /* MessageSync.swift in Sources */,
+				871940E01D9AA17A00078E57 /* CompanyPager.swift in Sources */,
+				871940D61D9AA17A00078E57 /* AnsweringRule.swift in Sources */,
+				871940F91D9AA17A00078E57 /* NumberPool.swift in Sources */,
+				871940D71D9AA17A00078E57 /* Authorize.swift in Sources */,
+				871940FD1D9AA17A00078E57 /* PhoneNumber.swift in Sources */,
+				871940DB1D9AA17A00078E57 /* BusinessHours.swift in Sources */,
+				871941081D9AA17A00078E57 /* Subscription.swift in Sources */,
+				871941091D9AA17A00078E57 /* Timezone.swift in Sources */,
+				871940D21D9AA17A00078E57 /* Account.swift in Sources */,
+				871940FA1D9AA17A00078E57 /* Oauth.swift in Sources */,
+				871940E81D9AA17A00078E57 /* DialingPlan.swift in Sources */,
+				871940F81D9AA17A00078E57 /* NumberParser.swift in Sources */,
+				871941001D9AA17A00078E57 /* Recording.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
