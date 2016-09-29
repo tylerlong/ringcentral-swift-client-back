@@ -78,6 +78,27 @@ open class Extension: Model {
     open func `sms`() -> Sms {
         return Sms(parent: self)
     }
+    // Get Extension List
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+            callback(t, error)
+        }
+    }
+    open class ListResponse: Mappable {
+        // List of extensions with extension information
+        open var `records`: [ExtensionInfo]?
+        // Information on navigation
+        open var `navigation`: NavigationInfo?
+        // Information on paging
+        open var `paging`: PagingInfo?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `records` <- map["records"]
+            `navigation` <- map["navigation"]
+            `paging` <- map["paging"]
+        }
+    }
     // Get Extension Info by ID
     open func get(callback: @escaping (_ t: ExtensionInfo?, _ error: HTTPError?) -> Void) {
         rc.get(self.endpoint()) { (t: ExtensionInfo?, error) in

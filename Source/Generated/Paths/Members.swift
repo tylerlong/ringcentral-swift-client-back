@@ -7,12 +7,12 @@ open class Members: Model {
         }
     }
     // Get Department Members
-    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
-    open class GetResponse: Mappable {
+    open class ListResponse: Mappable {
         // List of extensions belonging to a given department
         open var `records`: [Department_Response_ExtensionInfo]?
         // Information on navigation

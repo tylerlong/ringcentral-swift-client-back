@@ -7,12 +7,12 @@ open class Location: Model {
         }
     }
     // Get Location List
-    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
-    open class GetResponse: Mappable {
+    open class ListResponse: Mappable {
         // List of locations
         open var `records`: [LocationInfo]?
         // Information on navigation

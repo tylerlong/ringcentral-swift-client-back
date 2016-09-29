@@ -6,6 +6,12 @@ open class Subscription: Model {
             return "subscription"
         }
     }
+    // Create New Subscription
+    open func post(callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: SubscriptionInfo?, error) in
+            callback(t, error)
+        }
+    }
     // Cancel Subscription by ID
     open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
         rc.deleteString(self.endpoint()) { string, error in

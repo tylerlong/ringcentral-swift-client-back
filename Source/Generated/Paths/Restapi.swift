@@ -27,6 +27,12 @@ open class Restapi: Model {
     open func `subscription`(_ _id: String? = nil) -> Subscription {
         return Subscription(parent: self, _id: _id)
     }
+    // Get Server Info
+    open func list(callback: @escaping (_ t: ServerInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ServerInfo?, error) in
+            callback(t, error)
+        }
+    }
     // Get API Version Info
     open func get(callback: @escaping (_ t: VersionInfo?, _ error: HTTPError?) -> Void) {
         rc.get(self.endpoint()) { (t: VersionInfo?, error) in

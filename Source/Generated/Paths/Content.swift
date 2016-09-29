@@ -6,6 +6,10 @@ open class Content: Model {
             return "content"
         }
     }
+    // Get Message Attachment
+    open func get() -> NSData {
+        return NSData()
+    }
     // Get Call Recording Content
     open func get() -> NSData {
         return NSData()

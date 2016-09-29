@@ -7,12 +7,12 @@ open class DialingPlan: Model {
         }
     }
     // Get IBO Dialing Plans
-    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
-    open class GetResponse: Mappable {
+    open class ListResponse: Mappable {
         // List of countries which can be selected for a dialing plan
         open var `records`: [DialingPlanCountryInfo]?
         // Information on paging

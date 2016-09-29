@@ -12,7 +12,7 @@ open class AccountInfo: Mappable {
     // Additional account identifier, developed and applied by the client
     open var `partnerId`: String?
     // Account service information, including brand, service plan and billing plan
-    open var `serviceInfo`: AccountServiceInfo?
+    open var `serviceInfo`: Account_ServiceInfo?
     // Specifies account configuration wizard state (web service setup). The default value is 'NotStarted'
     open var `setupWizardState`: String?
     // Status of the current account

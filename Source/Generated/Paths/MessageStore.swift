@@ -9,6 +9,27 @@ open class MessageStore: Model {
     open func `content`(_ _id: String? = nil) -> Content {
         return Content(parent: self, _id: _id)
     }
+    // Get Message List
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+            callback(t, error)
+        }
+    }
+    open class ListResponse: Mappable {
+        // List of records with message information
+        open var `records`: [MessageInfo]?
+        // Information on navigation
+        open var `navigation`: NavigationInfo?
+        // Information on paging
+        open var `paging`: PagingInfo?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `records` <- map["records"]
+            `navigation` <- map["navigation"]
+            `paging` <- map["paging"]
+        }
+    }
     // Delete Message by ID
     open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
         rc.deleteString(self.endpoint()) { string, error in

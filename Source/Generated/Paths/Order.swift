@@ -6,6 +6,21 @@ open class Order: Model {
             return "order"
         }
     }
+    // Create New Order
+    open func post(callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: PostResponse?, error) in
+            callback(t, error)
+        }
+    }
+    open class PostResponse: Mappable {
+        // List of the ordered devices
+        open var `devices`: [DeviceInfo]?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `devices` <- map["devices"]
+        }
+    }
     // Get Order by ID
     open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
         rc.get(self.endpoint()) { (t: GetResponse?, error) in
