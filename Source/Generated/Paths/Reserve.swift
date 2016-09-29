@@ -7,8 +7,10 @@ open class Reserve: Model {
         }
     }
     // Reserve Phone Number
-    open func post() -> PostResponse {
-        return PostResponse(JSONString: "")!
+    open func post(callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: PostResponse?, error) in
+            callback(t, error)
+        }
     }
     open class PostResponse: Mappable {
         // Phone numbers to be reserved/un-reserved

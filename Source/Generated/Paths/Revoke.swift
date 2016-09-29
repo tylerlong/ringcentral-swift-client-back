@@ -7,6 +7,9 @@ open class Revoke: Model {
         }
     }
     // OAuth2 Revoke Token
-    open func post() {
+    open func post(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.postString(self.endpoint()) { string, error in
+            callback(error)
+        }
     }
 }

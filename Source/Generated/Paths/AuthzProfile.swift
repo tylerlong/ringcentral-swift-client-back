@@ -10,8 +10,10 @@ open class AuthzProfile: Model {
         return Check(parent: self)
     }
     // Get User Permissions
-    open func get() -> GetResponse {
-        return GetResponse(JSONString: "")!
+    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+            callback(t, error)
+        }
     }
     open class GetResponse: Mappable {
         // Canonical URI of an authorization profile resource

@@ -7,7 +7,9 @@ open class Fax: Model {
         }
     }
     // Create and Send Fax Message
-    open func post() -> MessageInfo {
-        return MessageInfo(JSONString: "")!
+    open func post(callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: MessageInfo?, error) in
+            callback(t, error)
+        }
     }
 }

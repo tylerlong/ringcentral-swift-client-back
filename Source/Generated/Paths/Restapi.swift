@@ -28,7 +28,9 @@ open class Restapi: Model {
         return Subscription(parent: self, _id: _id)
     }
     // Get API Version Info
-    open func get() -> VersionInfo {
-        return VersionInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: VersionInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: VersionInfo?, error) in
+            callback(t, error)
+        }
     }
 }

@@ -7,8 +7,10 @@ open class Token: Model {
         }
     }
     // OAuth2 Get Token
-    open func post() -> PostResponse {
-        return PostResponse(JSONString: "")!
+    open func post(callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: PostResponse?, error) in
+            callback(t, error)
+        }
     }
     open class PostResponse: Mappable {
         // Access token to pass to subsequent API requests

@@ -7,7 +7,9 @@ open class Group: Model {
         }
     }
     // Get Contact Group by ID
-    open func get() -> GroupInfo {
-        return GroupInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: GroupInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GroupInfo?, error) in
+            callback(t, error)
+        }
     }
 }

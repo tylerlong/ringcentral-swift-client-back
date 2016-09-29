@@ -7,7 +7,9 @@ open class Presence: Model {
         }
     }
     // Get Extension Presence
-    open func get() -> PresenceInfo {
-        return PresenceInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: PresenceInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: PresenceInfo?, error) in
+            callback(t, error)
+        }
     }
 }

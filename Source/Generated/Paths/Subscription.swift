@@ -7,14 +7,21 @@ open class Subscription: Model {
         }
     }
     // Cancel Subscription by ID
-    open func delete() {
+    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint()) { string, error in
+            callback(error)
+        }
     }
     // Get Subscription by ID
-    open func get() -> SubscriptionInfo {
-        return SubscriptionInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: SubscriptionInfo?, error) in
+            callback(t, error)
+        }
     }
     // Update/Renew Subscription by ID
-    open func put() -> SubscriptionInfo {
-        return SubscriptionInfo(JSONString: "")!
+    open func put(callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: SubscriptionInfo?, error) in
+            callback(t, error)
+        }
     }
 }

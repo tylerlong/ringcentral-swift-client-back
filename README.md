@@ -33,9 +33,11 @@ Then you can compile the project in XCode.
 
 ## License
 
-Alamofire is released under the MIT license.
+This project is released under the MIT license.
 
 
 ## todo
 
 1. Swift Pacakge Manager
+1. Support list method
+1. support request body and query params

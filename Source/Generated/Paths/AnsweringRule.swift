@@ -7,14 +7,21 @@ open class AnsweringRule: Model {
         }
     }
     // Delete Answering Rule by ID
-    open func delete() {
+    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint()) { string, error in
+            callback(error)
+        }
     }
     // Get Custom Answering Rule by ID
-    open func get() -> AnsweringRuleInfo {
-        return AnsweringRuleInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: AnsweringRuleInfo?, error) in
+            callback(t, error)
+        }
     }
     // Update Answering Rule by ID
-    open func put() -> AnsweringRuleInfo {
-        return AnsweringRuleInfo(JSONString: "")!
+    open func put(callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: AnsweringRuleInfo?, error) in
+            callback(t, error)
+        }
     }
 }

@@ -7,8 +7,10 @@ open class Authorize: Model {
         }
     }
     // OAuth2 Authorize
-    open func post() -> PostResponse {
-        return PostResponse(JSONString: "")!
+    open func post(callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: PostResponse?, error) in
+            callback(t, error)
+        }
     }
     open class PostResponse: Mappable {
         // The authorization code returned for your application

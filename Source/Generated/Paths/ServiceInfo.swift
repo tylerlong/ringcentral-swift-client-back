@@ -7,8 +7,10 @@ open class ServiceInfo: Model {
         }
     }
     // Get Account Service Info
-    open func get() -> GetResponse {
-        return GetResponse(JSONString: "")!
+    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+            callback(t, error)
+        }
     }
     open class GetResponse: Mappable {
         // Canonical URI of the account Service Info resource

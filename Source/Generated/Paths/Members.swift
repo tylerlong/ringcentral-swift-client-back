@@ -7,8 +7,10 @@ open class Members: Model {
         }
     }
     // Get Department Members
-    open func get() -> GetResponse {
-        return GetResponse(JSONString: "")!
+    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+            callback(t, error)
+        }
     }
     open class GetResponse: Mappable {
         // List of extensions belonging to a given department

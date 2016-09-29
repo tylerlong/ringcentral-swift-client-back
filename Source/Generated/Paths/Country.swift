@@ -7,7 +7,9 @@ open class Country: Model {
         }
     }
     // Get Country by ID
-    open func get() -> FullCountryInfo {
-        return FullCountryInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: FullCountryInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: FullCountryInfo?, error) in
+            callback(t, error)
+        }
     }
 }

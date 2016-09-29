@@ -40,7 +40,9 @@ open class Account: Model {
         return ServiceInfo(parent: self)
     }
     // Get Account Info by ID
-    open func get() -> AccountInfo {
-        return AccountInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: AccountInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: AccountInfo?, error) in
+            callback(t, error)
+        }
     }
 }

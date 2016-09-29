@@ -7,8 +7,10 @@ open class BusinessAddress: Model {
         }
     }
     // Get Company Business Address
-    open func get() -> GetResponse {
-        return GetResponse(JSONString: "")!
+    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+            callback(t, error)
+        }
     }
     open class GetResponse: Mappable {
         // Canonical URI of the business address resource
@@ -29,8 +31,10 @@ open class BusinessAddress: Model {
         }
     }
     // Update Company Business Address
-    open func put() -> PutResponse {
-        return PutResponse(JSONString: "")!
+    open func put(callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: PutResponse?, error) in
+            callback(t, error)
+        }
     }
     open class PutResponse: Mappable {
         // Canonical URI of the business address resource

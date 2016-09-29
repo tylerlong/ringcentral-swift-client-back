@@ -7,7 +7,9 @@ open class Language: Model {
         }
     }
     // Get Language by ID
-    open func get() -> LanguageInfo {
-        return LanguageInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: LanguageInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: LanguageInfo?, error) in
+            callback(t, error)
+        }
     }
 }

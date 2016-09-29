@@ -7,8 +7,10 @@ open class CustomData: Model {
         }
     }
     // Update Custom Data by Key
-    open func put() -> PutResponse {
-        return PutResponse(JSONString: "")!
+    open func put(callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: PutResponse?, error) in
+            callback(t, error)
+        }
     }
     open class PutResponse: Mappable {
         // Custom data access key

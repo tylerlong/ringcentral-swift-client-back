@@ -10,8 +10,10 @@ open class Recording: Model {
         return Content(parent: self, _id: _id)
     }
     // Get Call Recording Metadata
-    open func get() -> GetResponse {
-        return GetResponse(JSONString: "")!
+    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+            callback(t, error)
+        }
     }
     open class GetResponse: Mappable {
         // Internal identifier of the call recording

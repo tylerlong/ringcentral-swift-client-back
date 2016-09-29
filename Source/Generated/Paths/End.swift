@@ -7,6 +7,9 @@ open class End: Model {
         }
     }
     // End Current Meeting
-    open func post() {
+    open func post(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.postString(self.endpoint()) { string, error in
+            callback(error)
+        }
     }
 }

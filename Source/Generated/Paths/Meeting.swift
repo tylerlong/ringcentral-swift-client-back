@@ -13,14 +13,21 @@ open class Meeting: Model {
         return End(parent: self)
     }
     // Delete Meeting
-    open func delete() {
+    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint()) { string, error in
+            callback(error)
+        }
     }
     // Get Meeting
-    open func get() -> MeetingInfo {
-        return MeetingInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: MeetingInfo?, error) in
+            callback(t, error)
+        }
     }
     // Update Meeting
-    open func put() -> MeetingInfo {
-        return MeetingInfo(JSONString: "")!
+    open func put(callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: MeetingInfo?, error) in
+            callback(t, error)
+        }
     }
 }

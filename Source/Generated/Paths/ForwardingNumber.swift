@@ -7,12 +7,16 @@ open class ForwardingNumber: Model {
         }
     }
     // Add New Forwarding Number
-    open func post() -> ForwardingNumberInfo {
-        return ForwardingNumberInfo(JSONString: "")!
+    open func post(callback: @escaping (_ t: ForwardingNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: ForwardingNumberInfo?, error) in
+            callback(t, error)
+        }
     }
     // Get Forwarding Numbers
-    open func get() -> GetResponse {
-        return GetResponse(JSONString: "")!
+    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+            callback(t, error)
+        }
     }
     open class GetResponse: Mappable {
         // List of forwarding phone numbers

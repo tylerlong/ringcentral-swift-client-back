@@ -7,14 +7,21 @@ open class BlockedNumber: Model {
         }
     }
     // Delete Blocked Number by ID
-    open func delete() {
+    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint()) { string, error in
+            callback(error)
+        }
     }
     // Get Blocked Number by ID
-    open func get() -> BlockedNumberInfo {
-        return BlockedNumberInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: BlockedNumberInfo?, error) in
+            callback(t, error)
+        }
     }
     // Update Blocked Number Label
-    open func put() -> BlockedNumberInfo {
-        return BlockedNumberInfo(JSONString: "")!
+    open func put(callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: BlockedNumberInfo?, error) in
+            callback(t, error)
+        }
     }
 }

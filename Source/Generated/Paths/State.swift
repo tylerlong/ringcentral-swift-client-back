@@ -7,7 +7,9 @@ open class State: Model {
         }
     }
     // Get State/Province by ID
-    open func get() -> StateInfo {
-        return StateInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: StateInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: StateInfo?, error) in
+            callback(t, error)
+        }
     }
 }

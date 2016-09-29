@@ -7,7 +7,9 @@ open class CallLog: Model {
         }
     }
     // Get Extension Call Log Record by ID
-    open func get() -> CallLogInfo {
-        return CallLogInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: CallLogInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: CallLogInfo?, error) in
+            callback(t, error)
+        }
     }
 }

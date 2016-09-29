@@ -7,10 +7,15 @@ open class Ringout: Model {
         }
     }
     // Cancel RingOut Call
-    open func delete() {
+    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint()) { string, error in
+            callback(error)
+        }
     }
     // Get RingOut Call Status
-    open func get() -> RingOutInfo {
-        return RingOutInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: RingOutInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: RingOutInfo?, error) in
+            callback(t, error)
+        }
     }
 }

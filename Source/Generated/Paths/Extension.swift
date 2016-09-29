@@ -79,11 +79,15 @@ open class Extension: Model {
         return Sms(parent: self)
     }
     // Get Extension Info by ID
-    open func get() -> ExtensionInfo {
-        return ExtensionInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: ExtensionInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ExtensionInfo?, error) in
+            callback(t, error)
+        }
     }
     // Update Extension by ID
-    open func put() -> ExtensionInfo {
-        return ExtensionInfo(JSONString: "")!
+    open func put(callback: @escaping (_ t: ExtensionInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: ExtensionInfo?, error) in
+            callback(t, error)
+        }
     }
 }

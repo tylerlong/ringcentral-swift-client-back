@@ -7,7 +7,9 @@ open class PhoneNumber: Model {
         }
     }
     // Get Phone Number by ID
-    open func get() -> PhoneNumberInfo {
-        return PhoneNumberInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: PhoneNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: PhoneNumberInfo?, error) in
+            callback(t, error)
+        }
     }
 }

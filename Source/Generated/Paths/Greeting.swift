@@ -7,7 +7,9 @@ open class Greeting: Model {
         }
     }
     // Get Custom Greeting by ID
-    open func get() -> CustomGreetingInfo {
-        return CustomGreetingInfo(JSONString: "")!
+    open func get(callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: CustomGreetingInfo?, error) in
+            callback(t, error)
+        }
     }
 }
