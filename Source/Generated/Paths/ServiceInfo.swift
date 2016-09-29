@@ -12,10 +12,4 @@ open class ServiceInfo: Model {
             callback(t, error)
         }
     }
-    // Get Account Service Info
-    open func get(callback: @escaping (_ t: AccountServiceInfo?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: AccountServiceInfo?, error) in
-            callback(t, error)
-        }
-    }
 }

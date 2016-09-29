@@ -33,25 +33,4 @@ open class Device: Model {
             callback(t, error)
         }
     }
-    // Get Extension Device List
-    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
-            callback(t, error)
-        }
-    }
-    open class ListResponse: Mappable {
-        // List of extension devices
-        open var `records`: [DeviceInfo]?
-        // Information on navigation
-        open var `navigation`: NavigationInfo?
-        // Information on paging
-        open var `paging`: PagingInfo?
-        required public init?(map: Map) {
-        }
-        open func mapping(map: Map) {
-            `records` <- map["records"]
-            `navigation` <- map["navigation"]
-            `paging` <- map["paging"]
-        }
-    }
 }

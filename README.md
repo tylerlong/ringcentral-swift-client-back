@@ -39,5 +39,5 @@ This project is released under the MIT license.
 ## todo
 
 1. Swift Pacakge Manager
-1. Support list method
 1. support request body and query params
+1. binary data downloading

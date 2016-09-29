@@ -7,8 +7,10 @@ open class ProfileImage: Model {
         }
     }
     // Get Profile Image
-    open func get() -> NSData {
-        return NSData()
+    open func get(callback: @escaping (_ t: Binary?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: Binary?, error) in
+            callback(t, error)
+        }
     }
     // Update Profile Image
     open func put(callback: @escaping (_ error: HTTPError?) -> Void) {
@@ -21,9 +23,5 @@ open class ProfileImage: Model {
         rc.postString(self.endpoint()) { string, error in
             callback(error)
         }
-    }
-    // Get Scaled Profile Image
-    open func get() -> NSData {
-        return NSData()
     }
 }

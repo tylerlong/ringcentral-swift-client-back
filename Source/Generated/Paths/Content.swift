@@ -7,11 +7,9 @@ open class Content: Model {
         }
     }
     // Get Message Attachment
-    open func get() -> NSData {
-        return NSData()
-    }
-    // Get Call Recording Content
-    open func get() -> NSData {
-        return NSData()
+    open func get(callback: @escaping (_ t: Binary?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: Binary?, error) in
+            callback(t, error)
+        }
     }
 }
