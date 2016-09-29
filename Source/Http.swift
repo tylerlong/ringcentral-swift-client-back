@@ -19,16 +19,34 @@ public struct HTTPError {
 
 extension RestClient {
 
-    // request string
-    open func requestString(_ endpoint: String, method: HTTPMethod, parameters: [String: AnyObject]? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: [String: String]? = nil, callback: @escaping (_ string: String?, _ error: HTTPError?) -> Void) {
+    // create a new Alamofire request object
+    func newRequest(_ endpoint: String, method: HTTPMethod, parameters: [String: AnyObject]? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: [String: String]? = nil) -> DataRequest {
         let urlString = URL(string: server)!.appendingPathComponent(endpoint).absoluteString
         var headers = headers ?? [:]
         if token != nil && headers["Authorization"] == nil {
             headers["Authorization"] = "Bearer \(token!.access_token!)"
         }
         let request = Alamofire.request(urlString, method: method, parameters: parameters, encoding: encoding, headers: headers)
-        request.responseString {
-            response in
+        return request
+    }
+
+    // request Data
+    open func requestData(_ endpoint: String, method: HTTPMethod, parameters: [String: AnyObject]? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: [String: String]? = nil, callback: @escaping (_ data: Data?, _ error: HTTPError?) -> Void) {
+        let request = newRequest(endpoint, method: method, parameters: parameters, encoding: encoding, headers: headers)
+        request.responseData { response in
+            let statusCode = response.response!.statusCode
+            if statusCode >= 200 && statusCode < 300 {
+                callback(response.result.value!, nil)
+            } else {
+                callback(nil, HTTPError(statusCode: statusCode, message: ""))
+            }
+        }
+    }
+
+    // request String
+    open func requestString(_ endpoint: String, method: HTTPMethod, parameters: [String: AnyObject]? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: [String: String]? = nil, callback: @escaping (_ string: String?, _ error: HTTPError?) -> Void) {
+        let request = newRequest(endpoint, method: method, parameters: parameters, encoding: encoding, headers: headers)
+        request.responseString { response in
             let statusCode = response.response!.statusCode
             if statusCode >= 200 && statusCode < 300 {
                 callback(response.result.value!, nil)
