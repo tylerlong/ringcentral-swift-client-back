@@ -15,7 +15,7 @@ open class Account: Model {
     open func `callLog`(_ _id: String? = nil) -> CallLog {
         return CallLog(parent: self, _id: _id)
     }
-    open func `department`(_ _id: String? = nil) -> Department {
+    open func `department`(_ _id: String) -> Department {
         return Department(parent: self, _id: _id)
     }
     open func `device`(_ _id: String? = nil) -> Device {
@@ -33,7 +33,7 @@ open class Account: Model {
     open func `phoneNumber`(_ _id: String? = nil) -> PhoneNumber {
         return PhoneNumber(parent: self, _id: _id)
     }
-    open func `recording`(_ _id: String? = nil) -> Recording {
+    open func `recording`(_ _id: String) -> Recording {
         return Recording(parent: self, _id: _id)
     }
     open func `serviceInfo`() -> ServiceInfo {

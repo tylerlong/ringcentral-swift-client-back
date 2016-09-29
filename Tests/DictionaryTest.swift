@@ -33,14 +33,14 @@ class DictionaryTest: BaseTest {
         }
 
         // test url builder
-        XCTAssertTrue("/restapi/v1.0/dictionary/country/46" == rc.restapi().dictionary().country("46").endpoint())
-        XCTAssertTrue("/restapi/v1.0/dictionary/country" == rc.restapi().dictionary().country().endpoint())
-        XCTAssertTrue("/restapi/v1.0/dictionary/timezone" == rc.restapi().dictionary().timezone().endpoint())
-        XCTAssertTrue("/restapi/v1.0/dictionary/timezone/26" == rc.restapi().dictionary().timezone("26").endpoint())
+        XCTAssertTrue("/restapi/v1.0/dictionary/country/46" == rc.restapi("v1.0").dictionary().country("46").endpoint())
+        XCTAssertTrue("/restapi/v1.0/dictionary/country" == rc.restapi("v1.0").dictionary().country().endpoint())
+        XCTAssertTrue("/restapi/v1.0/dictionary/timezone" == rc.restapi("v1.0").dictionary().timezone().endpoint())
+        XCTAssertTrue("/restapi/v1.0/dictionary/timezone/26" == rc.restapi("v1.0").dictionary().timezone("26").endpoint())
 
         // test final interface
         let expectation3 = expectation(description: "expectation3")
-        rc.restapi().dictionary().country("46").get() { country, error in
+        rc.restapi("v1.0").dictionary().country("46").get() { country, error in
             XCTAssertNil(error)
             XCTAssertTrue("China" == country!.name)
             XCTAssertNotNil(country!.loginAllowed)

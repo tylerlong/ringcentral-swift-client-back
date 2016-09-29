@@ -28,6 +28,7 @@
 		879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; };
 		879ADF1D1D98F53A008E7735 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		879ADF1F1D98FCD1008E7735 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFB1D98C7D6008E7735 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87B128D51D9D3F8F00274F1B /* ContactTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B128D31D9D3F2100274F1B /* ContactTest.swift */; };
 		87EAD4621D9BA69E00BE2FAA /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4291D9BA69E00BE2FAA /* Account.swift */; };
 		87EAD4631D9BA69E00BE2FAA /* ActiveCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42A1D9BA69E00BE2FAA /* ActiveCalls.swift */; };
 		87EAD4641D9BA69E00BE2FAA /* AddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42B1D9BA69E00BE2FAA /* AddressBook.swift */; };
@@ -270,6 +271,7 @@
 		879ADF0E1D98E754008E7735 /* BaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTest.swift; path = Tests/BaseTest.swift; sourceTree = "<group>"; };
 		879ADF0F1D98E754008E7735 /* DictionaryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryTest.swift; path = Tests/DictionaryTest.swift; sourceTree = "<group>"; };
 		879ADF101D98E754008E7735 /* RestClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestClientTest.swift; path = Tests/RestClientTest.swift; sourceTree = "<group>"; };
+		87B128D31D9D3F2100274F1B /* ContactTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTest.swift; path = Tests/ContactTest.swift; sourceTree = "<group>"; };
 		87EAD4291D9BA69E00BE2FAA /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Source/Generated/Paths/Account.swift; sourceTree = "<group>"; };
 		87EAD42A1D9BA69E00BE2FAA /* ActiveCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveCalls.swift; path = Source/Generated/Paths/ActiveCalls.swift; sourceTree = "<group>"; };
 		87EAD42B1D9BA69E00BE2FAA /* AddressBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressBook.swift; path = Source/Generated/Paths/AddressBook.swift; sourceTree = "<group>"; };
@@ -598,6 +600,7 @@
 		879ADF141D98E759008E7735 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				87B128D31D9D3F2100274F1B /* ContactTest.swift */,
 				87EAD59A1D9BAEE200BE2FAA /* Config.swift */,
 				87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */,
 				879ADF0E1D98E754008E7735 /* BaseTest.swift */,
@@ -1262,6 +1265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B128D51D9D3F8F00274F1B /* ContactTest.swift in Sources */,
 				87EAD59C1D9BB07F00BE2FAA /* Config.swift in Sources */,
 				87410DA31D9A8FCD00AD2DE7 /* UrlBuilderTest.swift in Sources */,
 				879ADF161D98EF01008E7735 /* BaseTest.swift in Sources */,

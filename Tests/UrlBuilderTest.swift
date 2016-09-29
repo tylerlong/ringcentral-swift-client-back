@@ -14,7 +14,7 @@ class UrlBuilderTest: BaseTest {
     func testRestapi() {
         let endpoint = rc.restapi("v1.0").endpoint()
         XCTAssertTrue(endpoint == "/restapi/v1.0")
-        let endpoint2 = rc.restapi().endpoint()
+        let endpoint2 = rc.restapi("v1.0").endpoint()
         XCTAssertTrue(endpoint2 == endpoint)
     }
 

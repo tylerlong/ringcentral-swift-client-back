@@ -9,7 +9,7 @@ open class Restapi: Model {
     open func `oauth`() -> Oauth {
         return Oauth(parent: self)
     }
-    open func `account`(_ _id: String? = nil) -> Account {
+    open func `account`(_ _id: String) -> Account {
         return Account(parent: self, _id: _id)
     }
     open func `clientInfo`() -> ClientInfo {
