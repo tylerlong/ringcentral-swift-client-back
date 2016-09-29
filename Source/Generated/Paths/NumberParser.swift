@@ -6,7 +6,7 @@ open class NumberParser: Model {
             return "number-parser"
         }
     }
-    func `parse`() -> Parse {
+    open func `parse`() -> Parse {
         return Parse(parent: self)
     }
 }

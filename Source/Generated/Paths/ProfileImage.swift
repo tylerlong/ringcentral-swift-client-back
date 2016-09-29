@@ -7,7 +7,7 @@ open class ProfileImage: Model {
         }
     }
     // Get Scaled Profile Image
-    func get() -> NSData {
+    open func get() -> NSData {
         return NSData()
     }
 }

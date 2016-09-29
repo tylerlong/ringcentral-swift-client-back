@@ -7,7 +7,7 @@ open class Reserve: Model {
         }
     }
     // Reserve Phone Number
-    func post() -> PostResponse {
+    open func post() -> PostResponse {
         return PostResponse(JSONString: "")!
     }
     open class PostResponse: Mappable {

@@ -7,7 +7,7 @@ open class BusinessHours: Model {
         }
     }
     // Get User Hours Setting
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

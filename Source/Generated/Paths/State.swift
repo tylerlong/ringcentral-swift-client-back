@@ -7,7 +7,7 @@ open class State: Model {
         }
     }
     // Get State/Province by ID
-    func get() -> StateInfo {
+    open func get() -> StateInfo {
         return StateInfo(JSONString: "")!
     }
 }

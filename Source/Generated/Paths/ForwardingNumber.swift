@@ -7,11 +7,11 @@ open class ForwardingNumber: Model {
         }
     }
     // Add New Forwarding Number
-    func post() -> ForwardingNumberInfo {
+    open func post() -> ForwardingNumberInfo {
         return ForwardingNumberInfo(JSONString: "")!
     }
     // Get Forwarding Numbers
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

@@ -7,6 +7,6 @@ open class Revoke: Model {
         }
     }
     // OAuth2 Revoke Token
-    func post() {
+    open func post() {
     }
 }

@@ -7,7 +7,7 @@ open class Fax: Model {
         }
     }
     // Create and Send Fax Message
-    func post() -> MessageInfo {
+    open func post() -> MessageInfo {
         return MessageInfo(JSONString: "")!
     }
 }

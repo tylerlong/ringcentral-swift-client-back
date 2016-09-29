@@ -7,7 +7,7 @@ open class CallLogSync: Model {
         }
     }
     // Call Log Synchronization
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

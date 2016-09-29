@@ -6,7 +6,7 @@ open class Department: Model {
             return "department"
         }
     }
-    func `members`() -> Members {
+    open func `members`() -> Members {
         return Members(parent: self)
     }
 }

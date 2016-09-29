@@ -7,14 +7,14 @@ open class Contact: Model {
         }
     }
     // Delete Contact by ID
-    func delete() {
+    open func delete() {
     }
     // Get Contact by ID
-    func get() -> PersonalContactInfo {
+    open func get() -> PersonalContactInfo {
         return PersonalContactInfo(JSONString: "")!
     }
     // Update Contact by ID
-    func put() -> PersonalContactInfo {
+    open func put() -> PersonalContactInfo {
         return PersonalContactInfo(JSONString: "")!
     }
 }

@@ -7,7 +7,7 @@ open class PhoneNumber: Model {
         }
     }
     // Get Phone Number by ID
-    func get() -> PhoneNumberInfo {
+    open func get() -> PhoneNumberInfo {
         return PhoneNumberInfo(JSONString: "")!
     }
 }

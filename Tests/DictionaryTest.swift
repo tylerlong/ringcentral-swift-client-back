@@ -28,6 +28,11 @@ class DictionaryTest: BaseTest {
             expectation2.fulfill()
         }
 
+        XCTAssertTrue("/restapi/v1.0/dictionary/country/46" == rc.restapi().dictionary().country("46").endpoint())
+        XCTAssertTrue("/restapi/v1.0/dictionary/country" == rc.restapi().dictionary().country().endpoint())
+        XCTAssertTrue("/restapi/v1.0/dictionary/timezone" == rc.restapi().dictionary().timezone().endpoint())
+        XCTAssertTrue("/restapi/v1.0/dictionary/timezone/26" == rc.restapi().dictionary().timezone("26").endpoint())
+
         waitForExpectations(timeout: 10) { error in
             XCTAssertNil(error)
         }

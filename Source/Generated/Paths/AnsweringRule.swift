@@ -7,14 +7,14 @@ open class AnsweringRule: Model {
         }
     }
     // Delete Answering Rule by ID
-    func delete() {
+    open func delete() {
     }
     // Get Custom Answering Rule by ID
-    func get() -> AnsweringRuleInfo {
+    open func get() -> AnsweringRuleInfo {
         return AnsweringRuleInfo(JSONString: "")!
     }
     // Update Answering Rule by ID
-    func put() -> AnsweringRuleInfo {
+    open func put() -> AnsweringRuleInfo {
         return AnsweringRuleInfo(JSONString: "")!
     }
 }

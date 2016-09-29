@@ -7,7 +7,7 @@ open class Content: Model {
         }
     }
     // Get Call Recording Content
-    func get() -> NSData {
+    open func get() -> NSData {
         return NSData()
     }
 }

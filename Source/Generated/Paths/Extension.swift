@@ -6,84 +6,84 @@ open class Extension: Model {
             return "extension"
         }
     }
-    func `activeCalls`() -> ActiveCalls {
+    open func `activeCalls`() -> ActiveCalls {
         return ActiveCalls(parent: self)
     }
-    func `addressBookSync`() -> AddressBookSync {
+    open func `addressBookSync`() -> AddressBookSync {
         return AddressBookSync(parent: self)
     }
-    func `addressBook`() -> AddressBook {
+    open func `addressBook`() -> AddressBook {
         return AddressBook(parent: self)
     }
-    func `answeringRule`(_id: String? = nil) -> AnsweringRule {
+    open func `answeringRule`(_ _id: String? = nil) -> AnsweringRule {
         return AnsweringRule(parent: self, _id: _id)
     }
-    func `authzProfile`() -> AuthzProfile {
+    open func `authzProfile`() -> AuthzProfile {
         return AuthzProfile(parent: self)
     }
-    func `blockedNumber`(_id: String? = nil) -> BlockedNumber {
+    open func `blockedNumber`(_ _id: String? = nil) -> BlockedNumber {
         return BlockedNumber(parent: self, _id: _id)
     }
-    func `businessHours`() -> BusinessHours {
+    open func `businessHours`() -> BusinessHours {
         return BusinessHours(parent: self)
     }
-    func `callLog`(_id: String? = nil) -> CallLog {
+    open func `callLog`(_ _id: String? = nil) -> CallLog {
         return CallLog(parent: self, _id: _id)
     }
-    func `callLogSync`() -> CallLogSync {
+    open func `callLogSync`() -> CallLogSync {
         return CallLogSync(parent: self)
     }
-    func `companyPager`() -> CompanyPager {
+    open func `companyPager`() -> CompanyPager {
         return CompanyPager(parent: self)
     }
-    func `conferencing`() -> Conferencing {
+    open func `conferencing`() -> Conferencing {
         return Conferencing(parent: self)
     }
-    func `device`(_id: String? = nil) -> Device {
+    open func `device`(_ _id: String? = nil) -> Device {
         return Device(parent: self, _id: _id)
     }
-    func `fax`() -> Fax {
+    open func `fax`() -> Fax {
         return Fax(parent: self)
     }
-    func `forwardingNumber`() -> ForwardingNumber {
+    open func `forwardingNumber`() -> ForwardingNumber {
         return ForwardingNumber(parent: self)
     }
-    func `grant`() -> Grant {
+    open func `grant`() -> Grant {
         return Grant(parent: self)
     }
-    func `greeting`(_id: String? = nil) -> Greeting {
+    open func `greeting`(_ _id: String? = nil) -> Greeting {
         return Greeting(parent: self, _id: _id)
     }
-    func `meeting`(_id: String? = nil) -> Meeting {
+    open func `meeting`(_ _id: String? = nil) -> Meeting {
         return Meeting(parent: self, _id: _id)
     }
-    func `messageStore`(_id: String? = nil) -> MessageStore {
+    open func `messageStore`(_ _id: String? = nil) -> MessageStore {
         return MessageStore(parent: self, _id: _id)
     }
-    func `messageSync`() -> MessageSync {
+    open func `messageSync`() -> MessageSync {
         return MessageSync(parent: self)
     }
-    func `phoneNumber`(_id: String? = nil) -> PhoneNumber {
+    open func `phoneNumber`(_ _id: String? = nil) -> PhoneNumber {
         return PhoneNumber(parent: self, _id: _id)
     }
-    func `presence`() -> Presence {
+    open func `presence`() -> Presence {
         return Presence(parent: self)
     }
-    func `profileImage`(_id: String? = nil) -> ProfileImage {
+    open func `profileImage`(_ _id: String? = nil) -> ProfileImage {
         return ProfileImage(parent: self, _id: _id)
     }
-    func `ringout`(_id: String? = nil) -> Ringout {
+    open func `ringout`(_ _id: String? = nil) -> Ringout {
         return Ringout(parent: self, _id: _id)
     }
-    func `sms`() -> Sms {
+    open func `sms`() -> Sms {
         return Sms(parent: self)
     }
     // Get Extension Info by ID
-    func get() -> ExtensionInfo {
+    open func get() -> ExtensionInfo {
         return ExtensionInfo(JSONString: "")!
     }
     // Update Extension by ID
-    func put() -> ExtensionInfo {
+    open func put() -> ExtensionInfo {
         return ExtensionInfo(JSONString: "")!
     }
 }

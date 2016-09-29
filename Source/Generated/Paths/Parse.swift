@@ -7,7 +7,7 @@ open class Parse: Model {
         }
     }
     // Parse Phone Number
-    func post() -> PostResponse {
+    open func post() -> PostResponse {
         return PostResponse(JSONString: "")!
     }
     open class PostResponse: Mappable {

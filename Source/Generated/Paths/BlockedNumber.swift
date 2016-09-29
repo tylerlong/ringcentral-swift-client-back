@@ -7,14 +7,14 @@ open class BlockedNumber: Model {
         }
     }
     // Delete Blocked Number by ID
-    func delete() {
+    open func delete() {
     }
     // Get Blocked Number by ID
-    func get() -> BlockedNumberInfo {
+    open func get() -> BlockedNumberInfo {
         return BlockedNumberInfo(JSONString: "")!
     }
     // Update Blocked Number Label
-    func put() -> BlockedNumberInfo {
+    open func put() -> BlockedNumberInfo {
         return BlockedNumberInfo(JSONString: "")!
     }
 }

@@ -7,7 +7,7 @@ open class Device: Model {
         }
     }
     // Get Extension Device List
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

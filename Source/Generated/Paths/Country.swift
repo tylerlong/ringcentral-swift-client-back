@@ -7,7 +7,7 @@ open class Country: Model {
         }
     }
     // Get Country by ID
-    func get() -> FullCountryInfo {
+    open func get() -> FullCountryInfo {
         return FullCountryInfo(JSONString: "")!
     }
 }

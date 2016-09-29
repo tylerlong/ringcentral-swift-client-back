@@ -7,7 +7,7 @@ open class Sms: Model {
         }
     }
     // Create and Send SMS Message
-    func post() -> MessageInfo {
+    open func post() -> MessageInfo {
         return MessageInfo(JSONString: "")!
     }
 }

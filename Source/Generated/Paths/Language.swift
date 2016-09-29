@@ -7,7 +7,7 @@ open class Language: Model {
         }
     }
     // Get Language by ID
-    func get() -> LanguageInfo {
+    open func get() -> LanguageInfo {
         return LanguageInfo(JSONString: "")!
     }
 }

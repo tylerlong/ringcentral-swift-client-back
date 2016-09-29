@@ -7,7 +7,7 @@ open class CompanyPager: Model {
         }
     }
     // Create and Send Pager Message
-    func post() -> MessageInfo {
+    open func post() -> MessageInfo {
         return MessageInfo(JSONString: "")!
     }
 }

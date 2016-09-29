@@ -7,7 +7,7 @@ open class BusinessAddress: Model {
         }
     }
     // Get Company Business Address
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {
@@ -29,7 +29,7 @@ open class BusinessAddress: Model {
         }
     }
     // Update Company Business Address
-    func put() -> PutResponse {
+    open func put() -> PutResponse {
         return PutResponse(JSONString: "")!
     }
     open class PutResponse: Mappable {

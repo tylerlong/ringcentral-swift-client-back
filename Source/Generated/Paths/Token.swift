@@ -7,7 +7,7 @@ open class Token: Model {
         }
     }
     // OAuth2 Get Token
-    func post() -> PostResponse {
+    open func post() -> PostResponse {
         return PostResponse(JSONString: "")!
     }
     open class PostResponse: Mappable {

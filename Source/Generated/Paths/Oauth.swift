@@ -6,13 +6,13 @@ open class Oauth: Model {
             return "oauth"
         }
     }
-    func `authorize`() -> Authorize {
+    open func `authorize`() -> Authorize {
         return Authorize(parent: self)
     }
-    func `revoke`() -> Revoke {
+    open func `revoke`() -> Revoke {
         return Revoke(parent: self)
     }
-    func `token`() -> Token {
+    open func `token`() -> Token {
         return Token(parent: self)
     }
 }

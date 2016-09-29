@@ -7,7 +7,7 @@ open class CustomData: Model {
         }
     }
     // Update Custom Data by Key
-    func put() -> PutResponse {
+    open func put() -> PutResponse {
         return PutResponse(JSONString: "")!
     }
     open class PutResponse: Mappable {

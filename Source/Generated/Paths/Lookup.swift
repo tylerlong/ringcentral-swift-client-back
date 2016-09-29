@@ -7,7 +7,7 @@ open class Lookup: Model {
         }
     }
     // Look up Phone Number
-    func post() -> PostResponse {
+    open func post() -> PostResponse {
         return PostResponse(JSONString: "")!
     }
     open class PostResponse: Mappable {

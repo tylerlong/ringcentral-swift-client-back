@@ -7,7 +7,7 @@ open class Presence: Model {
         }
     }
     // Get Extension Presence
-    func get() -> PresenceInfo {
+    open func get() -> PresenceInfo {
         return PresenceInfo(JSONString: "")!
     }
 }

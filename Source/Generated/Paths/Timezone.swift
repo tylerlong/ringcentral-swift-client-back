@@ -7,7 +7,7 @@ open class Timezone: Model {
         }
     }
     // Get Time Zone by ID
-    func get() -> TimezoneInfo {
+    open func get() -> TimezoneInfo {
         return TimezoneInfo(JSONString: "")!
     }
 }

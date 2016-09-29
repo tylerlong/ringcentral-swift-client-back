@@ -7,7 +7,7 @@ open class Greeting: Model {
         }
     }
     // Get Custom Greeting by ID
-    func get() -> CustomGreetingInfo {
+    open func get() -> CustomGreetingInfo {
         return CustomGreetingInfo(JSONString: "")!
     }
 }

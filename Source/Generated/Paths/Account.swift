@@ -6,41 +6,41 @@ open class Account: Model {
             return "account"
         }
     }
-    func `activeCalls`() -> ActiveCalls {
+    open func `activeCalls`() -> ActiveCalls {
         return ActiveCalls(parent: self)
     }
-    func `businessAddress`() -> BusinessAddress {
+    open func `businessAddress`() -> BusinessAddress {
         return BusinessAddress(parent: self)
     }
-    func `callLog`(_id: String? = nil) -> CallLog {
+    open func `callLog`(_ _id: String? = nil) -> CallLog {
         return CallLog(parent: self, _id: _id)
     }
-    func `department`(_id: String? = nil) -> Department {
+    open func `department`(_ _id: String? = nil) -> Department {
         return Department(parent: self, _id: _id)
     }
-    func `device`(_id: String? = nil) -> Device {
+    open func `device`(_ _id: String? = nil) -> Device {
         return Device(parent: self, _id: _id)
     }
-    func `dialingPlan`() -> DialingPlan {
+    open func `dialingPlan`() -> DialingPlan {
         return DialingPlan(parent: self)
     }
-    func `extension`(_id: String? = nil) -> Extension {
+    open func `extension`(_ _id: String? = nil) -> Extension {
         return Extension(parent: self, _id: _id)
     }
-    func `order`(_id: String? = nil) -> Order {
+    open func `order`(_ _id: String? = nil) -> Order {
         return Order(parent: self, _id: _id)
     }
-    func `phoneNumber`(_id: String? = nil) -> PhoneNumber {
+    open func `phoneNumber`(_ _id: String? = nil) -> PhoneNumber {
         return PhoneNumber(parent: self, _id: _id)
     }
-    func `recording`(_id: String? = nil) -> Recording {
+    open func `recording`(_ _id: String? = nil) -> Recording {
         return Recording(parent: self, _id: _id)
     }
-    func `serviceInfo`() -> ServiceInfo {
+    open func `serviceInfo`() -> ServiceInfo {
         return ServiceInfo(parent: self)
     }
     // Get Account Info by ID
-    func get() -> AccountInfo {
+    open func get() -> AccountInfo {
         return AccountInfo(JSONString: "")!
     }
 }

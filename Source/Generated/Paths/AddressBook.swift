@@ -6,10 +6,10 @@ open class AddressBook: Model {
             return "address-book"
         }
     }
-    func `contact`(_id: String? = nil) -> Contact {
+    open func `contact`(_ _id: String? = nil) -> Contact {
         return Contact(parent: self, _id: _id)
     }
-    func `group`(_id: String? = nil) -> Group {
+    open func `group`(_ _id: String? = nil) -> Group {
         return Group(parent: self, _id: _id)
     }
 }

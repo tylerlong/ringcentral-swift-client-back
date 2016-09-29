@@ -7,7 +7,7 @@ open class ActiveCalls: Model {
         }
     }
     // Get Extension Active (Recent) Calls
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

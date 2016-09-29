@@ -7,10 +7,10 @@ open class Ringout: Model {
         }
     }
     // Cancel RingOut Call
-    func delete() {
+    open func delete() {
     }
     // Get RingOut Call Status
-    func get() -> RingOutInfo {
+    open func get() -> RingOutInfo {
         return RingOutInfo(JSONString: "")!
     }
 }

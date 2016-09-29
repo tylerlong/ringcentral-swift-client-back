@@ -7,7 +7,7 @@ open class MessageSync: Model {
         }
     }
     // Message Synchronization
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

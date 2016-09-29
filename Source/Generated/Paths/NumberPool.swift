@@ -6,10 +6,10 @@ open class NumberPool: Model {
             return "number-pool"
         }
     }
-    func `lookup`() -> Lookup {
+    open func `lookup`() -> Lookup {
         return Lookup(parent: self)
     }
-    func `reserve`() -> Reserve {
+    open func `reserve`() -> Reserve {
         return Reserve(parent: self)
     }
 }

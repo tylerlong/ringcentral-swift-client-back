@@ -7,14 +7,14 @@ open class Subscription: Model {
         }
     }
     // Cancel Subscription by ID
-    func delete() {
+    open func delete() {
     }
     // Get Subscription by ID
-    func get() -> SubscriptionInfo {
+    open func get() -> SubscriptionInfo {
         return SubscriptionInfo(JSONString: "")!
     }
     // Update/Renew Subscription by ID
-    func put() -> SubscriptionInfo {
+    open func put() -> SubscriptionInfo {
         return SubscriptionInfo(JSONString: "")!
     }
 }

@@ -6,11 +6,11 @@ open class AuthzProfile: Model {
             return "authz-profile"
         }
     }
-    func `check`() -> Check {
+    open func `check`() -> Check {
         return Check(parent: self)
     }
     // Get User Permissions
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

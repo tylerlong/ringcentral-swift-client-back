@@ -7,7 +7,7 @@ open class ServiceInfo: Model {
         }
     }
     // Get Account Service Info
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

@@ -6,21 +6,21 @@ open class Meeting: Model {
             return "meeting"
         }
     }
-    func `serviceInfo`() -> ServiceInfo {
+    open func `serviceInfo`() -> ServiceInfo {
         return ServiceInfo(parent: self)
     }
-    func `end`() -> End {
+    open func `end`() -> End {
         return End(parent: self)
     }
     // Delete Meeting
-    func delete() {
+    open func delete() {
     }
     // Get Meeting
-    func get() -> MeetingInfo {
+    open func get() -> MeetingInfo {
         return MeetingInfo(JSONString: "")!
     }
     // Update Meeting
-    func put() -> MeetingInfo {
+    open func put() -> MeetingInfo {
         return MeetingInfo(JSONString: "")!
     }
 }

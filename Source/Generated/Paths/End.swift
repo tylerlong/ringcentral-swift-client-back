@@ -7,6 +7,6 @@ open class End: Model {
         }
     }
     // End Current Meeting
-    func post() {
+    open func post() {
     }
 }

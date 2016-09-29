@@ -7,7 +7,7 @@ open class CallLog: Model {
         }
     }
     // Get Extension Call Log Record by ID
-    func get() -> CallLogInfo {
+    open func get() -> CallLogInfo {
         return CallLogInfo(JSONString: "")!
     }
 }

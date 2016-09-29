@@ -6,29 +6,29 @@ open class Restapi: Model {
             return "restapi"
         }
     }
-    func `oauth`() -> Oauth {
+    open func `oauth`() -> Oauth {
         return Oauth(parent: self)
     }
-    func `account`(_id: String? = nil) -> Account {
+    open func `account`(_ _id: String? = nil) -> Account {
         return Account(parent: self, _id: _id)
     }
-    func `clientInfo`() -> ClientInfo {
+    open func `clientInfo`() -> ClientInfo {
         return ClientInfo(parent: self)
     }
-    func `dictionary`() -> Dictionary {
+    open func `dictionary`() -> Dictionary {
         return Dictionary(parent: self)
     }
-    func `numberParser`() -> NumberParser {
+    open func `numberParser`() -> NumberParser {
         return NumberParser(parent: self)
     }
-    func `numberPool`() -> NumberPool {
+    open func `numberPool`() -> NumberPool {
         return NumberPool(parent: self)
     }
-    func `subscription`(_id: String? = nil) -> Subscription {
+    open func `subscription`(_ _id: String? = nil) -> Subscription {
         return Subscription(parent: self, _id: _id)
     }
     // Get API Version Info
-    func get() -> VersionInfo {
+    open func get() -> VersionInfo {
         return VersionInfo(JSONString: "")!
     }
 }

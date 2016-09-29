@@ -7,7 +7,7 @@ open class Group: Model {
         }
     }
     // Get Contact Group by ID
-    func get() -> GroupInfo {
+    open func get() -> GroupInfo {
         return GroupInfo(JSONString: "")!
     }
 }

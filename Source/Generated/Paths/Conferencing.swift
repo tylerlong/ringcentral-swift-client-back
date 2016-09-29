@@ -7,11 +7,11 @@ open class Conferencing: Model {
         }
     }
     // Get Conferencing info
-    func get() -> ConferencingInfo {
+    open func get() -> ConferencingInfo {
         return ConferencingInfo(JSONString: "")!
     }
     // Update Conferencing info
-    func put() -> ConferencingInfo {
+    open func put() -> ConferencingInfo {
         return ConferencingInfo(JSONString: "")!
     }
 }

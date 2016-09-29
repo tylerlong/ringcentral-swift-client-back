@@ -7,7 +7,7 @@ open class Grant: Model {
         }
     }
     // Get Extension Grants
-    func get() -> GetResponse {
+    open func get() -> GetResponse {
         return GetResponse(JSONString: "")!
     }
     open class GetResponse: Mappable {

@@ -6,18 +6,18 @@ open class MessageStore: Model {
             return "message-store"
         }
     }
-    func `content`(_id: String? = nil) -> Content {
+    open func `content`(_ _id: String? = nil) -> Content {
         return Content(parent: self, _id: _id)
     }
     // Delete Message by ID
-    func delete() {
+    open func delete() {
     }
     // Get Message by ID
-    func get() -> MessageInfo {
+    open func get() -> MessageInfo {
         return MessageInfo(JSONString: "")!
     }
     // Update Message by ID
-    func put() -> MessageInfo {
+    open func put() -> MessageInfo {
         return MessageInfo(JSONString: "")!
     }
 }

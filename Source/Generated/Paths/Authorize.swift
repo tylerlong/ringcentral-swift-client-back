@@ -7,7 +7,7 @@ open class Authorize: Model {
         }
     }
     // OAuth2 Authorize
-    func post() -> PostResponse {
+    open func post() -> PostResponse {
         return PostResponse(JSONString: "")!
     }
     open class PostResponse: Mappable {
