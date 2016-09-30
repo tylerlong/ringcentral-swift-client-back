@@ -27,6 +27,9 @@ open class Timezone: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get Time Zone by ID
     open func get(callback: @escaping (_ t: TimezoneInfo?, _ error: HTTPError?) -> Void) {

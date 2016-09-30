@@ -27,5 +27,8 @@ open class Authorize: Model {
             `expires_in` <- map["expires_in"]
             `state` <- map["state"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

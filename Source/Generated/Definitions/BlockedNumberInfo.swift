@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class BlockedNumberInfo: Mappable {
     // Standard resource properties ID and canonical URI, see the section called “Resource Identification Properties”
     open var `id`: String?
@@ -16,5 +17,8 @@ open class BlockedNumberInfo: Mappable {
         `uri` <- map["uri"]
         `name` <- map["name"]
         `phoneNumber` <- map["phoneNumber"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

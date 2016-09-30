@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class MessageInfo_CallerInfo: Mappable {
     // Extension short number (usually 3 or 4 digits). This property is filled when parties communicate by means of short internal numbers, for example when calling to other extension or sending/receiving Company Pager message
     open var `extensionNumber`: String?
@@ -22,5 +23,8 @@ open class MessageInfo_CallerInfo: Mappable {
         `faxErrorCode` <- map["faxErrorCode"]
         `name` <- map["name"]
         `phoneNumber` <- map["phoneNumber"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

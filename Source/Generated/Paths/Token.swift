@@ -42,5 +42,8 @@ open class Token: Model {
             `owner_id` <- map["owner_id"]
             `endpoint_id` <- map["endpoint_id"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

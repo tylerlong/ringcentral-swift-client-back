@@ -27,6 +27,9 @@ open class Country: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get Country by ID
     open func get(callback: @escaping (_ t: FullCountryInfo?, _ error: HTTPError?) -> Void) {

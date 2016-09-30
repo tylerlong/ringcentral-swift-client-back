@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class RingOutStatusInfo: Mappable {
     // Status of a call
     open var `callStatus`: String?
@@ -13,5 +14,8 @@ open class RingOutStatusInfo: Mappable {
         `callStatus` <- map["callStatus"]
         `callerStatus` <- map["callerStatus"]
         `calleeStatus` <- map["calleeStatus"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

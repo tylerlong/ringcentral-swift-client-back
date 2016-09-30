@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class NavigationInfo: Mappable {
     // First page of the list
     open var `firstPage`: Page?
@@ -16,5 +17,8 @@ open class NavigationInfo: Mappable {
         `nextPage` <- map["nextPage"]
         `previousPage` <- map["previousPage"]
         `lastPage` <- map["lastPage"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

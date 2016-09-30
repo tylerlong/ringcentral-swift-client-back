@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class LookUpPhoneNumber_PhoneNumberInfo: Mappable {
     // Phone number in E.164 format without a '+'
     open var `phoneNumber`: String?
@@ -16,5 +17,8 @@ open class LookUpPhoneNumber_PhoneNumberInfo: Mappable {
         `formattedNumber` <- map["formattedNumber"]
         `vanityPattern` <- map["vanityPattern"]
         `rank` <- map["rank"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class RecipientInfo: Mappable {
     // Link to a recipient extension resource
     open var `uri`: String?
@@ -10,5 +11,8 @@ open class RecipientInfo: Mappable {
     open func mapping(map: Map) {
         `uri` <- map["uri"]
         `id` <- map["id"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class LinksInfo: Mappable {
     // Link to start a meeting
     open var `startUri`: String?
@@ -10,5 +11,8 @@ open class LinksInfo: Mappable {
     open func mapping(map: Map) {
         `startUri` <- map["startUri"]
         `joinUri` <- map["joinUri"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

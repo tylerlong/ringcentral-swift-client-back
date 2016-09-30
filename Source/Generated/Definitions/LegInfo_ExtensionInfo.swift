@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class LegInfo_ExtensionInfo: Mappable {
     // Internal identifier of an extension
     open var `id`: Int?
@@ -10,5 +11,8 @@ open class LegInfo_ExtensionInfo: Mappable {
     open func mapping(map: Map) {
         `id` <- map["id"]
         `uri` <- map["uri"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

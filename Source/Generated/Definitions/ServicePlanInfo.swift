@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ServicePlanInfo: Mappable {
     // Internal identifier of a service plan
     open var `id`: String?
@@ -13,5 +14,8 @@ open class ServicePlanInfo: Mappable {
         `id` <- map["id"]
         `name` <- map["name"]
         `edition` <- map["edition"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

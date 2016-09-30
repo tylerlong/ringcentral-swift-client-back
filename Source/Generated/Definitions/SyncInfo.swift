@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class SyncInfo: Mappable {
     // Type of synchronization
     open var `syncType`: String?
@@ -13,5 +14,8 @@ open class SyncInfo: Mappable {
         `syncType` <- map["syncType"]
         `syncToken` <- map["syncToken"]
         `syncTime` <- map["syncTime"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -27,6 +27,9 @@ open class Device: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get Device by ID
     open func get(callback: @escaping (_ t: DeviceInfo?, _ error: HTTPError?) -> Void) {

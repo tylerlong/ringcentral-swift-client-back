@@ -27,6 +27,9 @@ open class State: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get State/Province by ID
     open func get(callback: @escaping (_ t: StateInfo?, _ error: HTTPError?) -> Void) {

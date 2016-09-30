@@ -30,5 +30,8 @@ open class Check: Model {
             `details` <- map["details"]
             `scopes` <- map["scopes"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

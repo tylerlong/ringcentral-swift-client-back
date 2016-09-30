@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class PersonalContactInfo: Mappable {
     // Standard resource properties ID
     open var `id`: Int?
@@ -94,5 +95,8 @@ open class PersonalContactInfo: Mappable {
         `birthday` <- map["birthday"]
         `webPage` <- map["webPage"]
         `notes` <- map["notes"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ConferencingInfo_PhoneNumberInfo: Mappable {
     // Information on a home country of a conference phone number
     open var `country`: ConferencingInfo_PhoneNumberInfo_CountryInfo?
@@ -19,5 +20,8 @@ open class ConferencingInfo_PhoneNumberInfo: Mappable {
         `hasGreeting` <- map["hasGreeting"]
         `location` <- map["location"]
         `phoneNumber` <- map["phoneNumber"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

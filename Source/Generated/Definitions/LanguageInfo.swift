@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class LanguageInfo: Mappable {
     // Internal identifier of a language
     open var `id`: String?
@@ -25,5 +26,8 @@ open class LanguageInfo: Mappable {
         `localeCode` <- map["localeCode"]
         `name` <- map["name"]
         `ui` <- map["ui"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

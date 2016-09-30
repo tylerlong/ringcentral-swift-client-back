@@ -21,6 +21,9 @@ open class Order: Model {
         open func mapping(map: Map) {
             `devices` <- map["devices"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get Order by ID
     open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
@@ -41,6 +44,9 @@ open class Order: Model {
             `id` <- map["id"]
             `uri` <- map["uri"]
             `devices` <- map["devices"]
+        }
+        open func toParameters() -> Parameters {
+            return [:]
         }
     }
 }

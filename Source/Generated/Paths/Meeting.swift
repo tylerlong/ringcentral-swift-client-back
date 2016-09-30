@@ -42,6 +42,9 @@ open class Meeting: Model {
             `paging` <- map["paging"]
             `navigation` <- map["navigation"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Delete Meeting
     open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {

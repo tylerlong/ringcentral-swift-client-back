@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class BrandInfo: Mappable {
     // Internal identifier of a brand
     open var `id`: String?
@@ -13,5 +14,8 @@ open class BrandInfo: Mappable {
         `id` <- map["id"]
         `name` <- map["name"]
         `homeCountry` <- map["homeCountry"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

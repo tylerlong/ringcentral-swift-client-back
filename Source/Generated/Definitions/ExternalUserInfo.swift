@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExternalUserInfo: Mappable {
     // User type of a meeting account
     open var `accountId`: String?
@@ -16,5 +17,8 @@ open class ExternalUserInfo: Mappable {
         `userId` <- map["userId"]
         `userToken` <- map["userToken"]
         `userType` <- map["userType"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

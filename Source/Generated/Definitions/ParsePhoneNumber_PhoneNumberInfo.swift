@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ParsePhoneNumber_PhoneNumberInfo: Mappable {
     // Area code of the location (3-digit usually), according to the NANP number format, that can be summarized as NPA-NXX-xxxx and covers Canada, the United States, parts of the Caribbean Sea, and some Atlantic and Pacific islands. See North American Numbering Plan for details
     open var `areaCode`: String?
@@ -31,5 +32,8 @@ open class ParsePhoneNumber_PhoneNumberInfo: Mappable {
         `originalString` <- map["originalString"]
         `special` <- map["special"]
         `normalized` <- map["normalized"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class PhoneNumberInfo: Mappable {
     // Internal identifier of a phone number
     open var `id`: Int?
@@ -34,5 +35,8 @@ open class PhoneNumberInfo: Mappable {
         `status` <- map["status"]
         `type` <- map["type"]
         `usageType` <- map["usageType"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

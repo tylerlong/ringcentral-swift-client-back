@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ServiceFeatureInfo: Mappable {
     // Feature name, see all available values in Service Feature List
     open var `featureName`: String?
@@ -10,5 +11,8 @@ open class ServiceFeatureInfo: Mappable {
     open func mapping(map: Map) {
         `featureName` <- map["featureName"]
         `enabled` <- map["enabled"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

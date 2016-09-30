@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class DeviceInfo: Mappable {
     // Internal identifier of a device
     open var `id`: String?
@@ -43,5 +44,8 @@ open class DeviceInfo: Mappable {
         `phoneLines` <- map["phoneLines"]
         `shipping` <- map["shipping"]
         `boxBillingId` <- map["boxBillingId"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

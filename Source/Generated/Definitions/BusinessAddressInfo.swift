@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class BusinessAddressInfo: Mappable {
     // Name of a country
     open var `country`: String?
@@ -19,5 +20,8 @@ open class BusinessAddressInfo: Mappable {
         `city` <- map["city"]
         `street` <- map["street"]
         `zip` <- map["zip"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

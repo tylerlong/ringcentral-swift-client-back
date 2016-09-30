@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class MeetingScheduleInfo_TimezoneInfo: Mappable {
     // Identifier of a timezone
     open var `id`: String?
@@ -7,5 +8,8 @@ open class MeetingScheduleInfo_TimezoneInfo: Mappable {
     }
     open func mapping(map: Map) {
         `id` <- map["id"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

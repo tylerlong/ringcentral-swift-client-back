@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ImageUri: Mappable {
     // Link to an image.
     open var `uri`: String?
@@ -7,5 +8,8 @@ open class ImageUri: Mappable {
     }
     open func mapping(map: Map) {
         `uri` <- map["uri"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ContactInfo: Mappable {
     // For User extension type only. Extension user first name
     open var `firstName`: String?
@@ -22,5 +23,8 @@ open class ContactInfo: Mappable {
         `email` <- map["email"]
         `businessPhone` <- map["businessPhone"]
         `businessAddress` <- map["businessAddress"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

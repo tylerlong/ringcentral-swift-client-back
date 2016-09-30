@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class BusinessHour_ScheduleInfo: Mappable {
     // Weekly schedule
     open var `weeklyRanges`: WeeklyScheduleInfo?
@@ -7,5 +8,8 @@ open class BusinessHour_ScheduleInfo: Mappable {
     }
     open func mapping(map: Map) {
         `weeklyRanges` <- map["weeklyRanges"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

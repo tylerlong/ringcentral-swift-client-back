@@ -24,5 +24,8 @@ open class CallLogSync: Model {
             `records` <- map["records"]
             `syncInfo` <- map["syncInfo"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class CallLogRecord: Mappable {
     // Internal identifier of a cal log record
     open var `id`: String?
@@ -49,5 +50,8 @@ open class CallLogRecord: Mappable {
         `lastModifiedTime` <- map["lastModifiedTime"]
         `transport` <- map["transport"]
         `legs` <- map["legs"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

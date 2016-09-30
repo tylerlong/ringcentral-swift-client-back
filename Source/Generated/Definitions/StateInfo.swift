@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class StateInfo: Mappable {
     // Internal identifier of a state
     open var `id`: String?
@@ -19,5 +20,8 @@ open class StateInfo: Mappable {
         `country` <- map["country"]
         `isoCode` <- map["isoCode"]
         `name` <- map["name"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

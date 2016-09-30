@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionServiceFeatureInfo: Mappable {
     // Feature status; shows feature availability for an extension
     open var `enabled`: Bool?
@@ -13,5 +14,8 @@ open class ExtensionServiceFeatureInfo: Mappable {
         `enabled` <- map["enabled"]
         `featureName` <- map["featureName"]
         `reason` <- map["reason"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -54,5 +54,8 @@ open class Parse: Model {
             `normalized` <- map["normalized"]
             `country` <- map["country"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

@@ -33,6 +33,9 @@ open class Contact: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Delete Contact by ID
     open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ProfileImageInfo: Mappable {
     // Link to a profile image. If an image is not uploaded for an extension, only uri is returned
     open var `uri`: String?
@@ -19,5 +20,8 @@ open class ProfileImageInfo: Mappable {
         `lastModified` <- map["lastModified"]
         `contentType` <- map["contentType"]
         `scales` <- map["scales"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -30,6 +30,9 @@ open class MessageStore: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Delete Message by ID
     open func delete(parameters: Parameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {

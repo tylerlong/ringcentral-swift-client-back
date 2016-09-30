@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class GroupInfo: Mappable {
     // Internal identifier of a group
     open var `id`: String?
@@ -19,5 +20,8 @@ open class GroupInfo: Mappable {
         `contactsCount` <- map["contactsCount"]
         `groupName` <- map["groupName"]
         `notes` <- map["notes"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

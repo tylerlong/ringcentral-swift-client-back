@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class PhoneNumberInfo_ExtensionInfo: Mappable {
     // Internal identifier of an extension
     open var `id`: String?
@@ -16,5 +17,8 @@ open class PhoneNumberInfo_ExtensionInfo: Mappable {
         `uri` <- map["uri"]
         `extensionNumber` <- map["extensionNumber"]
         `partnerId` <- map["partnerId"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -30,5 +30,8 @@ open class AddressBookSync: Model {
             `nextPageId` <- map["nextPageId"]
             `nextPageUri` <- map["nextPageUri"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

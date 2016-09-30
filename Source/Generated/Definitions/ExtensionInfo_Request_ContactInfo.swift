@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionInfo_Request_ContactInfo: Mappable {
     // Contact information
     open var `contact`: ContactInfo?
@@ -16,5 +17,8 @@ open class ExtensionInfo_Request_ContactInfo: Mappable {
         `regionalSettings` <- map["regionalSettings"]
         `setupWizardState` <- map["setupWizardState"]
         `department` <- map["department"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

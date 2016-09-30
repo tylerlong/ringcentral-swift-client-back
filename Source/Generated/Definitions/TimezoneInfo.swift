@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class TimezoneInfo: Mappable {
     // Internal identifier of a timezone
     open var `id`: String?
@@ -16,5 +17,8 @@ open class TimezoneInfo: Mappable {
         `uri` <- map["uri"]
         `name` <- map["name"]
         `description` <- map["description"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

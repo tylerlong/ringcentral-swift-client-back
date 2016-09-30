@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class DialInNumbers: Mappable {
     // Phone number of the dial-in number for the meeting in e.164 format
     open var `phoneNumber`: String?
@@ -16,5 +17,8 @@ open class DialInNumbers: Mappable {
         `formattedNumber` <- map["formattedNumber"]
         `location` <- map["location"]
         `country` <- map["country"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

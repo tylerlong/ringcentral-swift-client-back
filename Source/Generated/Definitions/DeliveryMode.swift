@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class DeliveryMode: Mappable {
     // Notifications transportation provider name. 'APNS' (Apple Push Notifications Service)
     open var `transportType`: String?
@@ -25,5 +26,8 @@ open class DeliveryMode: Mappable {
         `secretKey` <- map["secretKey"]
         `encryptionAlgorithm` <- map["encryptionAlgorithm"]
         `encryptionKey` <- map["encryptionKey"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

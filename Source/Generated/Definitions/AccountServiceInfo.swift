@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class AccountServiceInfo: Mappable {
     // Canonical URI of the account Service Info resource
     open var `uri`: String?
@@ -25,5 +26,8 @@ open class AccountServiceInfo: Mappable {
         `billingPlan` <- map["billingPlan"]
         `serviceFeatures` <- map["serviceFeatures"]
         `limits` <- map["limits"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

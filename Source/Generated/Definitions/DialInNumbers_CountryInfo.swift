@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class DialInNumbers_CountryInfo: Mappable {
     // Internal identifier of a country
     open var `id`: String?
@@ -19,5 +20,8 @@ open class DialInNumbers_CountryInfo: Mappable {
         `callingCode` <- map["callingCode"]
         `isoCode` <- map["isoCode"]
         `name` <- map["name"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

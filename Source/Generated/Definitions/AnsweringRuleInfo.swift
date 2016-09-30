@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class AnsweringRuleInfo: Mappable {
     // Canonical URI to the answering rule resource
     open var `uri`: String?
@@ -43,5 +44,8 @@ open class AnsweringRuleInfo: Mappable {
         `unconditionalForwarding` <- map["unconditionalForwarding"]
         `voicemail` <- map["voicemail"]
         `greetings` <- map["greetings"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

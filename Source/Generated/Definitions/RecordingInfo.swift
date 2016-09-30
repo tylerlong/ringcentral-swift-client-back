@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class RecordingInfo: Mappable {
     // Internal identifier of the call recording
     open var `id`: Int?
@@ -16,5 +17,8 @@ open class RecordingInfo: Mappable {
         `uri` <- map["uri"]
         `type` <- map["type"]
         `contentUri` <- map["contentUri"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

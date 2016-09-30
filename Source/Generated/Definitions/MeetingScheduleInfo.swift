@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class MeetingScheduleInfo: Mappable {
     // Start time of a meeting in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z
     open var `startTime`: String?
@@ -13,5 +14,8 @@ open class MeetingScheduleInfo: Mappable {
         `startTime` <- map["startTime"]
         `durationInMinutes` <- map["durationInMinutes"]
         `timeZone` <- map["timeZone"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

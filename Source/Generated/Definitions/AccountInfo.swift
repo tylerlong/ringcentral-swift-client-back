@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class AccountInfo: Mappable {
     // Internal identifier of an account
     open var `id`: String?
@@ -31,5 +32,8 @@ open class AccountInfo: Mappable {
         `setupWizardState` <- map["setupWizardState"]
         `status` <- map["status"]
         `statusInfo` <- map["statusInfo"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

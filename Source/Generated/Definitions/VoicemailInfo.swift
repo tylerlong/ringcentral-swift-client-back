@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class VoicemailInfo: Mappable {
     // If 'True' then voicemails are allowed to be received
     open var `enabled`: Bool?
@@ -10,5 +11,8 @@ open class VoicemailInfo: Mappable {
     open func mapping(map: Map) {
         `enabled` <- map["enabled"]
         `recipient` <- map["recipient"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

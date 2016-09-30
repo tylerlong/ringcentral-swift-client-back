@@ -33,5 +33,8 @@ open class Recording: Model {
             `contentType` <- map["contentType"]
             `duration` <- map["duration"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

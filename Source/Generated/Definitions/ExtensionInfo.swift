@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionInfo: Mappable {
     // Internal identifier of an extension
     open var `id`: String?
@@ -52,5 +53,8 @@ open class ExtensionInfo: Mappable {
         `status` <- map["status"]
         `statusInfo` <- map["statusInfo"]
         `type` <- map["type"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

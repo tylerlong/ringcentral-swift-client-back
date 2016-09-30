@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class AccountLimits: Mappable {
     // The maximum number of free softphone digital lines per user extension
     open var `freeSoftPhoneLinesPerExtension`: Int?
@@ -13,5 +14,8 @@ open class AccountLimits: Mappable {
         `freeSoftPhoneLinesPerExtension` <- map["freeSoftPhoneLinesPerExtension"]
         `meetingSize` <- map["meetingSize"]
         `maxMonitoredExtensionsPerUser` <- map["maxMonitoredExtensionsPerUser"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionInfo_Request_StatusInfo: Mappable {
     // Required extension status
     open var `status`: String?
@@ -10,5 +11,8 @@ open class ExtensionInfo_Request_StatusInfo: Mappable {
     open func mapping(map: Map) {
         `status` <- map["status"]
         `statusInfo` <- map["statusInfo"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ServerInfo: Mappable {
     // Canonical URI of the API version
     open var `uri`: String?
@@ -16,5 +17,8 @@ open class ServerInfo: Mappable {
         `apiVersions` <- map["apiVersions"]
         `serverVersion` <- map["serverVersion"]
         `serverRevision` <- map["serverRevision"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

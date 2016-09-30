@@ -33,5 +33,8 @@ open class CustomData: Model {
             `lastModifiedTime` <- map["lastModifiedTime"]
             `attachment` <- map["attachment"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

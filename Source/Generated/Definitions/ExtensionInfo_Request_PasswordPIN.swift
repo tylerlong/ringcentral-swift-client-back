@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionInfo_Request_PasswordPIN: Mappable {
     // Password for extension
     open var `password`: String?
@@ -10,5 +11,8 @@ open class ExtensionInfo_Request_PasswordPIN: Mappable {
     open func mapping(map: Map) {
         `password` <- map["password"]
         `ivrPin` <- map["ivrPin"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

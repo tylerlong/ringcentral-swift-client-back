@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Binary: Mappable {
     // Required. Binary data.
     open var `data`: Data?
@@ -7,5 +8,8 @@ open class Binary: Mappable {
     }
     open func mapping(map: Map) {
         `data` <- map["data"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class AttachmentInfo: Mappable {
     // Link to custom data attachment
     open var `uri`: String?
@@ -10,5 +11,8 @@ open class AttachmentInfo: Mappable {
     open func mapping(map: Map) {
         `uri` <- map["uri"]
         `contentType` <- map["contentType"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

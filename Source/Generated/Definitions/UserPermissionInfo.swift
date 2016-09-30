@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class UserPermissionInfo: Mappable {
     // Internal identifier of a permission
     open var `id`: String?
@@ -10,5 +11,8 @@ open class UserPermissionInfo: Mappable {
     open func mapping(map: Map) {
         `id` <- map["id"]
         `uri` <- map["uri"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

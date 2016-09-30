@@ -27,5 +27,8 @@ open class DialingPlan: Model {
             `paging` <- map["paging"]
             `navigation` <- map["navigation"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

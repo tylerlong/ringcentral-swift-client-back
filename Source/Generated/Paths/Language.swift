@@ -27,6 +27,9 @@ open class Language: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get Language by ID
     open func get(callback: @escaping (_ t: LanguageInfo?, _ error: HTTPError?) -> Void) {

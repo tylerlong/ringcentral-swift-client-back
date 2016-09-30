@@ -21,5 +21,8 @@ open class Reserve: Model {
         open func mapping(map: Map) {
             `records` <- map["records"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

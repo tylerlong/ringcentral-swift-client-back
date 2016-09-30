@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class DepartmentInfo: Mappable {
     // Internal identifier of a department extension
     open var `id`: String?
@@ -13,5 +14,8 @@ open class DepartmentInfo: Mappable {
         `id` <- map["id"]
         `uri` <- map["uri"]
         `extensionNumber` <- map["extensionNumber"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

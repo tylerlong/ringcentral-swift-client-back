@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class LegInfo: Mappable {
     // Action description of the call operation
     open var `action`: String?
@@ -40,5 +41,8 @@ open class LegInfo: Mappable {
         `to` <- map["to"]
         `transport` <- map["transport"]
         `recording` <- map["recording"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

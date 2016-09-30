@@ -27,5 +27,8 @@ open class AuthzProfile: Model {
             `uri` <- map["uri"]
             `permissions` <- map["permissions"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

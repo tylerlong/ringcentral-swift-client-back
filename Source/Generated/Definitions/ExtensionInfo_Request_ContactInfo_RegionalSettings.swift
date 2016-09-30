@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionInfo_Request_ContactInfo_RegionalSettings: Mappable {
     // Timezone data
     open var `timezone`: ExtensionInfo_Request_ContactInfo_RegionalSettings_Timezone?
@@ -16,5 +17,8 @@ open class ExtensionInfo_Request_ContactInfo_RegionalSettings: Mappable {
         `language` <- map["language"]
         `greetingLanguage` <- map["greetingLanguage"]
         `formattingLocale` <- map["formattingLocale"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

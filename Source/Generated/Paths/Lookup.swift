@@ -24,5 +24,8 @@ open class Lookup: Model {
             `uri` <- map["uri"]
             `records` <- map["records"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

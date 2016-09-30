@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class GreetingInfo: Mappable {
     // Type of a greeting, specifying the case when the greeting is played. See also Greeting Types
     open var `type`: String?
@@ -10,5 +11,8 @@ open class GreetingInfo: Mappable {
     open func mapping(map: Map) {
         `type` <- map["type"]
         `preset` <- map["preset"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

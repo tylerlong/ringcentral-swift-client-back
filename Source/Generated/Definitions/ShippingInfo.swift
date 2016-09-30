@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ShippingInfo: Mappable {
     // Shipping status of the order item. It is set to 'Initial' when the order is submitted. Then it is changed to 'Accepted' when a distributor starts processing the order. Finally it is changed to Shipped which means that distributor has shipped the device.
     open var `status`: String?
@@ -19,5 +20,8 @@ open class ShippingInfo: Mappable {
         `trackingNumber` <- map["trackingNumber"]
         `method` <- map["method"]
         `address` <- map["address"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

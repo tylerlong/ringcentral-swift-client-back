@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class RegionalSettings: Mappable {
     // Extension country information
     open var `homeCountry`: CountryInfo?
@@ -19,5 +20,8 @@ open class RegionalSettings: Mappable {
         `language` <- map["language"]
         `greetingLanguage` <- map["greetingLanguage"]
         `formattingLocale` <- map["formattingLocale"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

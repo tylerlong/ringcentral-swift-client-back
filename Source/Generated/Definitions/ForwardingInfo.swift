@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ForwardingInfo: Mappable {
     // Specifies if the user's softphone(s) are notified before forwarding the incoming call to desk phones and forwarding numbers
     open var `notifyMySoftPhones`: Bool?
@@ -19,5 +20,8 @@ open class ForwardingInfo: Mappable {
         `softPhonesRingCount` <- map["softPhonesRingCount"]
         `ringingMode` <- map["ringingMode"]
         `rules` <- map["rules"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

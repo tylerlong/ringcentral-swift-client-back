@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ReservePhoneNumber_Request_ReserveRecord: Mappable {
     // Phone number in E.164 format without a '+'
     open var `phoneNumber`: String?
@@ -10,5 +11,8 @@ open class ReservePhoneNumber_Request_ReserveRecord: Mappable {
     open func mapping(map: Map) {
         `phoneNumber` <- map["phoneNumber"]
         `reservedTill` <- map["reservedTill"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

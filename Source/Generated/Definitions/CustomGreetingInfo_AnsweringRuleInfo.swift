@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class CustomGreetingInfo_AnsweringRuleInfo: Mappable {
     // Internal identifier of an answering rule
     open var `id`: String?
@@ -7,5 +8,8 @@ open class CustomGreetingInfo_AnsweringRuleInfo: Mappable {
     }
     open func mapping(map: Map) {
         `id` <- map["id"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class RangesInfo: Mappable {
     // Date and time in format YYYY-MM-DD hh:mm
     open var `from`: String?
@@ -10,5 +11,8 @@ open class RangesInfo: Mappable {
     open func mapping(map: Map) {
         `from` <- map["from"]
         `to` <- map["to"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class MessageAttachmentInfo: Mappable {
     // Internal identifier of a message attachment
     open var `id`: String?
@@ -19,5 +20,8 @@ open class MessageAttachmentInfo: Mappable {
         `type` <- map["type"]
         `contentType` <- map["contentType"]
         `vmDuration` <- map["vmDuration"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

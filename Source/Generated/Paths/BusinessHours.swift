@@ -24,5 +24,8 @@ open class BusinessHours: Model {
             `uri` <- map["uri"]
             `schedule` <- map["schedule"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ModelInfo: Mappable {
     // Device model identifier. Mandatory when ordering a HardPhone if boxBillingId is not used for ordering
     open var `id`: String?
@@ -13,5 +14,8 @@ open class ModelInfo: Mappable {
         `id` <- map["id"]
         `name` <- map["name"]
         `addons` <- map["addons"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

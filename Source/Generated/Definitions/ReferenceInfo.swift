@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ReferenceInfo: Mappable {
     // Non-RC identifier of an extension
     open var `ref`: String?
@@ -10,5 +11,8 @@ open class ReferenceInfo: Mappable {
     open func mapping(map: Map) {
         `ref` <- map["ref"]
         `type` <- map["type"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

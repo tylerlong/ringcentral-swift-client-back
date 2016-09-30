@@ -27,6 +27,9 @@ open class CallLog: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get Account Call Log Record by ID
     open func get(callback: @escaping (_ t: CallLogInfo?, _ error: HTTPError?) -> Void) {

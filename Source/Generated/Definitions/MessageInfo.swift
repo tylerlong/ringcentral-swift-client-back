@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class MessageInfo: Mappable {
     // Internal identifier of a message
     open var `id`: String?
@@ -70,5 +71,8 @@ open class MessageInfo: Mappable {
         `to` <- map["to"]
         `type` <- map["type"]
         `vmTranscriptionStatus` <- map["vmTranscriptionStatus"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

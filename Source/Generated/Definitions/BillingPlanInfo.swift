@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class BillingPlanInfo: Mappable {
     // Internal identifier of a billing plan
     open var `id`: String?
@@ -19,5 +20,8 @@ open class BillingPlanInfo: Mappable {
         `durationUnit` <- map["durationUnit"]
         `duration` <- map["duration"]
         `type` <- map["type"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

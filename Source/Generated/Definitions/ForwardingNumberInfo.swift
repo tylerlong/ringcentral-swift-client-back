@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ForwardingNumberInfo: Mappable {
     // Internal identifier of a forwarding/call flip phone number
     open var `id`: String?
@@ -22,5 +23,8 @@ open class ForwardingNumberInfo: Mappable {
         `label` <- map["label"]
         `features` <- map["features"]
         `flipNumber` <- map["flipNumber"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Conferencing_Request_PhoneNumber: Mappable {
     // Dial-in phone number to connect to a conference
     open var `phoneNumber`: String?
@@ -10,5 +11,8 @@ open class Conferencing_Request_PhoneNumber: Mappable {
     open func mapping(map: Map) {
         `phoneNumber` <- map["phoneNumber"]
         `default` <- map["default"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

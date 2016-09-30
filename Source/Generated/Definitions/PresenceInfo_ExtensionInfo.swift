@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class PresenceInfo_ExtensionInfo: Mappable {
     // Internal identifier of an extension
     open var `id`: String?
@@ -13,5 +14,8 @@ open class PresenceInfo_ExtensionInfo: Mappable {
         `id` <- map["id"]
         `uri` <- map["uri"]
         `extensionNumber` <- map["extensionNumber"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

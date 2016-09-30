@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale: Mappable {
     // Internal identifier of a formatting language
     open var `id`: String?
@@ -7,5 +8,8 @@ open class ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale: 
     }
     open func mapping(map: Map) {
         `id` <- map["id"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

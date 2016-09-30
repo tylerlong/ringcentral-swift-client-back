@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class UserPermission: Mappable {
     // Information on a permission granted
     open var `permission`: UserPermissionInfo?
@@ -10,5 +11,8 @@ open class UserPermission: Mappable {
     open func mapping(map: Map) {
         `permission` <- map["permission"]
         `scopes` <- map["scopes"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

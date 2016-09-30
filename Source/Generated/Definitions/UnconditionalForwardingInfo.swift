@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class UnconditionalForwardingInfo: Mappable {
     // Phone number to which the call is forwarded
     open var `phoneNumber`: String?
@@ -7,5 +8,8 @@ open class UnconditionalForwardingInfo: Mappable {
     }
     open func mapping(map: Map) {
         `phoneNumber` <- map["phoneNumber"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

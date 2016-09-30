@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionInfo_Request_ContactInfo_RegionalSettings_Language: Mappable {
     // Language identifier. The default value is "1033" (English US)
     open var `id`: String?
@@ -7,5 +8,8 @@ open class ExtensionInfo_Request_ContactInfo_RegionalSettings_Language: Mappable
     }
     open func mapping(map: Map) {
         `id` <- map["id"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -99,6 +99,9 @@ open class Extension: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get Extension Info by ID
     open func get(callback: @escaping (_ t: ExtensionInfo?, _ error: HTTPError?) -> Void) {

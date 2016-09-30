@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class RuleInfo_ForwardingNumberInfo: Mappable {
     // Link to a forwarding number resource
     open var `uri`: String?
@@ -16,5 +17,8 @@ open class RuleInfo_ForwardingNumberInfo: Mappable {
         `id` <- map["id"]
         `phoneNumber` <- map["phoneNumber"]
         `label` <- map["label"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class RingOutInfo: Mappable {
     // Internal identifier of a RingOut call
     open var `id`: String?
@@ -10,5 +11,8 @@ open class RingOutInfo: Mappable {
     open func mapping(map: Map) {
         `id` <- map["id"]
         `status` <- map["status"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class PresenceInfo: Mappable {
     // Canonical URI of a presence info resource
     open var `uri`: String?
@@ -34,5 +35,8 @@ open class PresenceInfo: Mappable {
         `ringOnMonitoredCall` <- map["ringOnMonitoredCall"]
         `telephonyStatus` <- map["telephonyStatus"]
         `userStatus` <- map["userStatus"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

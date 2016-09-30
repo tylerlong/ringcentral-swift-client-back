@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class MeetingServiceInfo: Mappable {
     // Canonical URI of a meeting service info resource
     open var `uri`: String?
@@ -19,5 +20,8 @@ open class MeetingServiceInfo: Mappable {
         `intlDialInNumbersUri` <- map["intlDialInNumbersUri"]
         `externalUserInfo` <- map["externalUserInfo"]
         `dialInNumbers` <- map["dialInNumbers"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class SubscriptionInfo: Mappable {
     // Internal identifier of a subscription
     open var `id`: String?
@@ -28,5 +29,8 @@ open class SubscriptionInfo: Mappable {
         `status` <- map["status"]
         `creationTime` <- map["creationTime"]
         `deliveryMode` <- map["deliveryMode"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

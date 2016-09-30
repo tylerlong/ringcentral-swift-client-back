@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class PresetInfo: Mappable {
     // Link to a greeting resource
     open var `uri`: String?
@@ -13,5 +14,8 @@ open class PresetInfo: Mappable {
         `uri` <- map["uri"]
         `id` <- map["id"]
         `name` <- map["name"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class GrantInfo: Mappable {
     // Canonical URI of a grant
     open var `uri`: String?
@@ -16,5 +17,8 @@ open class GrantInfo: Mappable {
         `extension` <- map["extension"]
         `callPickup` <- map["callPickup"]
         `callMonitoring` <- map["callMonitoring"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

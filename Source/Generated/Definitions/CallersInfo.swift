@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class CallersInfo: Mappable {
     // Phone number of a caller
     open var `callerId`: String?
@@ -10,5 +11,8 @@ open class CallersInfo: Mappable {
     open func mapping(map: Map) {
         `callerId` <- map["callerId"]
         `name` <- map["name"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

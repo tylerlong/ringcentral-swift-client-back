@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ShippingAddress: Mappable {
     // Name of a receiver
     open var `customerName`: String?
@@ -25,5 +26,8 @@ open class ShippingAddress: Mappable {
         `state` <- map["state"]
         `zip` <- map["zip"]
         `country` <- map["country"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class LocationInfo: Mappable {
     // Canonical URI of a location
     open var `uri`: String?
@@ -22,5 +23,8 @@ open class LocationInfo: Mappable {
         `npa` <- map["npa"]
         `nxx` <- map["nxx"]
         `state` <- map["state"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

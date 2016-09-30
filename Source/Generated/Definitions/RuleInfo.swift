@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class RuleInfo: Mappable {
     // Forwarding number (or group) ordinal
     open var `index`: Int?
@@ -13,5 +14,8 @@ open class RuleInfo: Mappable {
         `index` <- map["index"]
         `ringCount` <- map["ringCount"]
         `forwardingNumbers` <- map["forwardingNumbers"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

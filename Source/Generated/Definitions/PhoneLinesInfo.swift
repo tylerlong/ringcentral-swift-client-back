@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class PhoneLinesInfo: Mappable {
     // Type of phone line
     open var `lineType`: String?
@@ -10,5 +11,8 @@ open class PhoneLinesInfo: Mappable {
     open func mapping(map: Map) {
         `lineType` <- map["lineType"]
         `phoneInfo` <- map["phoneInfo"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

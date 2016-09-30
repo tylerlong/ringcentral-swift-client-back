@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionPermissions: Mappable {
     // Admin permission
     open var `admin`: PermissionInfo?
@@ -10,5 +11,8 @@ open class ExtensionPermissions: Mappable {
     open func mapping(map: Map) {
         `admin` <- map["admin"]
         `internationalCalling` <- map["internationalCalling"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

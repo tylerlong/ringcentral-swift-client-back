@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class WeeklyScheduleInfo: Mappable {
     // Time intervals for a particular day
     open var `monday`: [TimeInterval]?
@@ -25,5 +26,8 @@ open class WeeklyScheduleInfo: Mappable {
         `friday` <- map["friday"]
         `saturday` <- map["saturday"]
         `sunday` <- map["sunday"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

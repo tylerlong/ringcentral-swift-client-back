@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class CustomGreetingInfo: Mappable {
     // Link to an extension custom greeting
     open var `uri`: String?
@@ -19,5 +20,8 @@ open class CustomGreetingInfo: Mappable {
         `type` <- map["type"]
         `contentType` <- map["contentType"]
         `contentUri` <- map["contentUri"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

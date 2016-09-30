@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ContactAddressInfo: Mappable {
     // Country name of extension user company. Not returned for Address Book
     open var `country`: String?
@@ -19,5 +20,8 @@ open class ContactAddressInfo: Mappable {
         `city` <- map["city"]
         `street` <- map["street"]
         `zip` <- map["zip"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

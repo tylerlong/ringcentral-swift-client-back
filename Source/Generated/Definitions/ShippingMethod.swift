@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ShippingMethod: Mappable {
     // Method identifier. The default value is "1" (Ground)
     open var `id`: String?
@@ -10,5 +11,8 @@ open class ShippingMethod: Mappable {
     open func mapping(map: Map) {
         `id` <- map["id"]
         `name` <- map["name"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

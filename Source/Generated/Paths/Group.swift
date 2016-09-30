@@ -27,6 +27,9 @@ open class Group: Model {
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Get Contact Group by ID
     open func get(callback: @escaping (_ t: GroupInfo?, _ error: HTTPError?) -> Void) {

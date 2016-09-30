@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class FormattingLocaleInfo: Mappable {
     // Internal identifier of a formatting language
     open var `id`: String?
@@ -13,5 +14,8 @@ open class FormattingLocaleInfo: Mappable {
         `id` <- map["id"]
         `localeCode` <- map["localeCode"]
         `name` <- map["name"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

@@ -36,6 +36,9 @@ open class AnsweringRule: Model {
             `paging` <- map["paging"]
             `navigation` <- map["navigation"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Delete Answering Rule by ID
     open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {

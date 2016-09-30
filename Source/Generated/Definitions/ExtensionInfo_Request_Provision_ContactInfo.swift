@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ExtensionInfo_Request_Provision_ContactInfo: Mappable {
     // Mandatory. Extension user first name
     open var `firstName`: String?
@@ -13,5 +14,8 @@ open class ExtensionInfo_Request_Provision_ContactInfo: Mappable {
         `firstName` <- map["firstName"]
         `lastName` <- map["lastName"]
         `email` <- map["email"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

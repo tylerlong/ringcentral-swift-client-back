@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class AnsweringRule_ScheduleInfo: Mappable {
     // Weekly schedule. If specified, ranges cannot be specified
     open var `weeklyRanges`: WeeklyScheduleInfo?
@@ -10,5 +11,8 @@ open class AnsweringRule_ScheduleInfo: Mappable {
     open func mapping(map: Map) {
         `weeklyRanges` <- map["weeklyRanges"]
         `ranges` <- map["ranges"]
+    }
+    open func toParameters() -> Parameters {
+        return [:]
     }
 }

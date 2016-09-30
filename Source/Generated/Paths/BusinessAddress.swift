@@ -30,6 +30,9 @@ open class BusinessAddress: Model {
             `email` <- map["email"]
             `businessAddress` <- map["businessAddress"]
         }
+        open func toParameters() -> Parameters {
+            return [:]
+        }
     }
     // Update Company Business Address
     open func put(parameters: Parameters? = nil, callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
@@ -53,6 +56,9 @@ open class BusinessAddress: Model {
             `company` <- map["company"]
             `email` <- map["email"]
             `businessAddress` <- map["businessAddress"]
+        }
+        open func toParameters() -> Parameters {
+            return [:]
         }
     }
 }
