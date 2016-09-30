@@ -11,7 +11,7 @@ import RingCentral
 
 class ContactTest: BaseTest {
 
-    func testCountry() {
+    func testContact() {
 
         let phoneNumber = "+15889546648"
         let addressBook = rc.restapi("v1.0").account("~").extension("~").addressBook()
@@ -22,10 +22,8 @@ class ContactTest: BaseTest {
         addressBook.contact().list(parameters: ["phoneNumber": phoneNumber]) { list, error in
             XCTAssertNil(error)
             for item in list!.records! {
-                let expectation2 = self.expectation(description: "expectation2")
                 addressBook.contact("\(item.id!)").delete() { error in
                     XCTAssertNil(error)
-                    expectation2.fulfill()
                 }
             }
             expectation1.fulfill()
@@ -45,7 +43,7 @@ class ContactTest: BaseTest {
         addressBook.contact().post(parameters: [ "firstName": "Tyler", "lastName": "Long", "homePhone": phoneNumber ]) { contact, error in
             XCTAssertNil(error)
             XCTAssertNotNil(contact)
-            XCTAssertTrue("long" == contact!.lastName)
+            XCTAssertTrue("Long" == contact!.lastName)
             expectation4.fulfill()
         }
 

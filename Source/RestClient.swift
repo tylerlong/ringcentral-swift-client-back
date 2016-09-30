@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 
 open class RestClient {
@@ -42,7 +43,7 @@ open class RestClient {
             "grant_type": "password"
         ]
         let headers: [String: String] = ["Authorization": basicAuthToken()]
-        postString("/restapi/oauth/token", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
+        postString("/restapi/oauth/token", parameters: parameters, encoding: URLEncoding.default, headers: headers) { string, error in
             if let callback = callback {
                 if error == nil {
                     self.token = Token.PostResponse(JSONString: string!)
@@ -62,7 +63,7 @@ open class RestClient {
                 "endpoint_id": token.endpoint_id!
             ]
             let headers: [String: String] = ["Authorization": basicAuthToken()]
-            postString("/restapi/oauth/token", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
+            postString("/restapi/oauth/token", parameters: parameters, encoding: URLEncoding.default, headers: headers) { string, error in
                 if let callback = callback {
                     if error == nil {
                         self.token = Token.PostResponse(JSONString: string!)
@@ -79,7 +80,7 @@ open class RestClient {
         if let token = token {
             let parameters: [String: String] = ["token": token.access_token!]
             let headers: [String: String] = ["Authorization": basicAuthToken()]
-            postString("/restapi/oauth/revoke", parameters: parameters as [String : AnyObject]?, headers: headers) { string, error in
+            postString("/restapi/oauth/revoke", parameters: parameters, encoding: URLEncoding.default, headers: headers) { string, error in
                 callback?(error == nil)
             }
         } else {
@@ -87,8 +88,7 @@ open class RestClient {
         }
     }
 
-    open func restapi(_ _id: String? = nil) -> Restapi
-    {
+    open func restapi(_ _id: String? = nil) -> Restapi {
         return Restapi(parent: Model(parent: nil, _id: nil, rc: self), _id: _id)
     }
 
