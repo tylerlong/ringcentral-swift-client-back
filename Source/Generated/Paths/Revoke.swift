@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Revoke: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class Revoke: Model {
         }
     }
     // OAuth2 Revoke Token
-    open func post(callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.postString(self.endpoint()) { string, error in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.postString(self.endpoint(), parameters: parameters) { string, error in
             callback(error)
         }
     }

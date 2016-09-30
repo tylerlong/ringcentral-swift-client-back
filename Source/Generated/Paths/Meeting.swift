@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Meeting: Model {
     public override var pathSegment: String {
         get{
@@ -13,8 +14,8 @@ open class Meeting: Model {
         return End(parent: self)
     }
     // Create Meeting
-    open func post(callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: MeetingInfo?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: MeetingInfo?, error) in
             callback(t, error)
         }
     }
@@ -55,8 +56,8 @@ open class Meeting: Model {
         }
     }
     // Update Meeting
-    open func put(callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: MeetingInfo?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: MeetingInfo?, error) in
             callback(t, error)
         }
     }

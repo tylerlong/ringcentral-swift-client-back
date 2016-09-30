@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Extension: Model {
     public override var pathSegment: String {
         get{
@@ -79,8 +80,8 @@ open class Extension: Model {
         return Sms(parent: self)
     }
     // Get Extension List
-    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+    open func list(parameters: Parameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
@@ -106,8 +107,8 @@ open class Extension: Model {
         }
     }
     // Update Extension by ID
-    open func put(callback: @escaping (_ t: ExtensionInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: ExtensionInfo?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: ExtensionInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: ExtensionInfo?, error) in
             callback(t, error)
         }
     }

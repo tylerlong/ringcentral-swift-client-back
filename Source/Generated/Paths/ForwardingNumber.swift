@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ForwardingNumber: Model {
     public override var pathSegment: String {
         get{
@@ -7,14 +8,14 @@ open class ForwardingNumber: Model {
         }
     }
     // Add New Forwarding Number
-    open func post(callback: @escaping (_ t: ForwardingNumberInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: ForwardingNumberInfo?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: ForwardingNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: ForwardingNumberInfo?, error) in
             callback(t, error)
         }
     }
     // Get Forwarding Numbers
-    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+    open func list(parameters: Parameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }

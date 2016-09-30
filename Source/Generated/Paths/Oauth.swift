@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Oauth: Model {
     public override var pathSegment: String {
         get{

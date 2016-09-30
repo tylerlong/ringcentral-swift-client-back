@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Grant: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class Grant: Model {
         }
     }
     // Get Extension Grants
-    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+    open func list(parameters: Parameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }

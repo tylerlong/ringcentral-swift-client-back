@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class MessageStore: Model {
     public override var pathSegment: String {
         get{
@@ -10,8 +11,8 @@ open class MessageStore: Model {
         return Content(parent: self, _id: _id)
     }
     // Get Message List
-    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+    open func list(parameters: Parameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
@@ -31,8 +32,8 @@ open class MessageStore: Model {
         }
     }
     // Delete Message by ID
-    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.deleteString(self.endpoint()) { string, error in
+    open func delete(parameters: Parameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint(), parameters: parameters) { string, error in
             callback(error)
         }
     }
@@ -43,8 +44,8 @@ open class MessageStore: Model {
         }
     }
     // Update Message by ID
-    open func put(callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: MessageInfo?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: MessageInfo?, error) in
             callback(t, error)
         }
     }

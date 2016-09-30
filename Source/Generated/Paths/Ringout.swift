@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Ringout: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class Ringout: Model {
         }
     }
     // Initiate RingOut Call
-    open func post(callback: @escaping (_ t: RingOutInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: RingOutInfo?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: RingOutInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: RingOutInfo?, error) in
             callback(t, error)
         }
     }

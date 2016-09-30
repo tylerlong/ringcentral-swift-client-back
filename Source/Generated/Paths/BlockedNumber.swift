@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class BlockedNumber: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class BlockedNumber: Model {
         }
     }
     // Add New Blocked Number
-    open func post(callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: BlockedNumberInfo?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: BlockedNumberInfo?, error) in
             callback(t, error)
         }
     }
@@ -46,8 +47,8 @@ open class BlockedNumber: Model {
         }
     }
     // Update Blocked Number Label
-    open func put(callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: BlockedNumberInfo?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: BlockedNumberInfo?, error) in
             callback(t, error)
         }
     }

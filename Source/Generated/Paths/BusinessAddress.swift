@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class BusinessAddress: Model {
     public override var pathSegment: String {
         get{
@@ -31,8 +32,8 @@ open class BusinessAddress: Model {
         }
     }
     // Update Company Business Address
-    open func put(callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: PutResponse?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: PutResponse?, error) in
             callback(t, error)
         }
     }

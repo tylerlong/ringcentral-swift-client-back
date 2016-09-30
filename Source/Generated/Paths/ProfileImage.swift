@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class ProfileImage: Model {
     public override var pathSegment: String {
         get{
@@ -13,14 +14,14 @@ open class ProfileImage: Model {
         }
     }
     // Update Profile Image
-    open func put(callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.putString(self.endpoint()) { string, error in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.putString(self.endpoint(), parameters: parameters) { string, error in
             callback(error)
         }
     }
     // Update Profile Image (same as PUT)
-    open func post(callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.postString(self.endpoint()) { string, error in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.postString(self.endpoint(), parameters: parameters) { string, error in
             callback(error)
         }
     }

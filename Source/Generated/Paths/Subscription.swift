@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Subscription: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class Subscription: Model {
         }
     }
     // Create New Subscription
-    open func post(callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: SubscriptionInfo?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: SubscriptionInfo?, error) in
             callback(t, error)
         }
     }
@@ -25,8 +26,8 @@ open class Subscription: Model {
         }
     }
     // Update/Renew Subscription by ID
-    open func put(callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: SubscriptionInfo?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: SubscriptionInfo?, error) in
             callback(t, error)
         }
     }

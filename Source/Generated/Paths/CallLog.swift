@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class CallLog: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class CallLog: Model {
         }
     }
     // Get Account Call Log
-    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+    open func list(parameters: Parameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
@@ -34,8 +35,8 @@ open class CallLog: Model {
         }
     }
     // Delete Extension Call Log
-    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.deleteString(self.endpoint()) { string, error in
+    open func delete(parameters: Parameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint(), parameters: parameters) { string, error in
             callback(error)
         }
     }

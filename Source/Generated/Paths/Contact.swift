@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Contact: Model {
     public override var pathSegment: String {
         get{
@@ -7,14 +8,14 @@ open class Contact: Model {
         }
     }
     // Create New Contact
-    open func post(callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: PersonalContactInfo?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: PersonalContactInfo?, error) in
             callback(t, error)
         }
     }
     // Get Contact List
-    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+    open func list(parameters: Parameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
@@ -46,8 +47,8 @@ open class Contact: Model {
         }
     }
     // Update Contact by ID
-    open func put(callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: PersonalContactInfo?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: PersonalContactInfo?, error) in
             callback(t, error)
         }
     }

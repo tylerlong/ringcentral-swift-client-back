@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class AnsweringRule: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class AnsweringRule: Model {
         }
     }
     // Create Custom Answering Rule
-    open func post(callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: AnsweringRuleInfo?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: AnsweringRuleInfo?, error) in
             callback(t, error)
         }
     }
@@ -49,8 +50,8 @@ open class AnsweringRule: Model {
         }
     }
     // Update Answering Rule by ID
-    open func put(callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: AnsweringRuleInfo?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: AnsweringRuleInfo?, error) in
             callback(t, error)
         }
     }

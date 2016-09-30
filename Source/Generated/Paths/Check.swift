@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Check: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class Check: Model {
         }
     }
     // Check User Permissions
-    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: GetResponse?, error) in
+    open func get(parameters: Parameters? = nil, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: GetResponse?, error) in
             callback(t, error)
         }
     }

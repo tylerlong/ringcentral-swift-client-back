@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class CustomData: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class CustomData: Model {
         }
     }
     // Update Custom Data by Key
-    open func put(callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint()) { (t: PutResponse?, error) in
+    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: PutResponse?, error) in
             callback(t, error)
         }
     }

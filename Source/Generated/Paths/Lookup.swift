@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Lookup: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class Lookup: Model {
         }
     }
     // Look up Phone Number
-    open func post(callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: PostResponse?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: PostResponse?, error) in
             callback(t, error)
         }
     }

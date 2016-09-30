@@ -1,5 +1,6 @@
 import Foundation
 import ObjectMapper
+import Alamofire
 open class Greeting: Model {
     public override var pathSegment: String {
         get{
@@ -7,8 +8,8 @@ open class Greeting: Model {
         }
     }
     // Create Custom Greeting
-    open func post(callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint()) { (t: CustomGreetingInfo?, error) in
+    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: CustomGreetingInfo?, error) in
             callback(t, error)
         }
     }
