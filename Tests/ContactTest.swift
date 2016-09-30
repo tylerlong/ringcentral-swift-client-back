@@ -18,6 +18,7 @@ class ContactTest: BaseTest {
         let endpoint = addressBook.endpoint()
         XCTAssertTrue("/restapi/v1.0/account/~/extension/~/address-book" == endpoint)
 
+        // remove contacts with my phone number
         let expectation1 = expectation(description: "expectation1")
         addressBook.contact().list(parameters: ["phoneNumber": phoneNumber]) { list, error in
             XCTAssertNil(error)
@@ -28,6 +29,7 @@ class ContactTest: BaseTest {
             }
             expectation1.fulfill()
         }
+        sleep(1)
 
         // list
         let expectation3 = expectation(description: "expectation3")
