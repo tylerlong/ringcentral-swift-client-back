@@ -25,6 +25,13 @@ open class LocationInfo: Mappable {
         `state` <- map["state"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["areaCode"] = self.areaCode
+        result["city"] = self.city
+        result["npa"] = self.npa
+        result["nxx"] = self.nxx
+        result["state"] = self.state
+        return result
     }
 }

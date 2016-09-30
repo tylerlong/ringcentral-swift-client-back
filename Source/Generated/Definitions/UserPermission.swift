@@ -13,6 +13,9 @@ open class UserPermission: Mappable {
         `scopes` <- map["scopes"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["permission"] = self.permission
+        result["scopes"] = self.scopes
+        return result
     }
 }

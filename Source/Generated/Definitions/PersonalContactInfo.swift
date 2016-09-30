@@ -97,6 +97,37 @@ open class PersonalContactInfo: Mappable {
         `notes` <- map["notes"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["url"] = self.url
+        result["availability"] = self.availability
+        result["firstName"] = self.firstName
+        result["lastName"] = self.lastName
+        result["middleName"] = self.middleName
+        result["nickName"] = self.nickName
+        result["company"] = self.company
+        result["jobTitle"] = self.jobTitle
+        result["homePhone"] = self.homePhone
+        result["homePhone2"] = self.homePhone2
+        result["businessPhone"] = self.businessPhone
+        result["businessPhone2"] = self.businessPhone2
+        result["mobilePhone"] = self.mobilePhone
+        result["businessFax"] = self.businessFax
+        result["companyPhone"] = self.companyPhone
+        result["assistantPhone"] = self.assistantPhone
+        result["carPhone"] = self.carPhone
+        result["otherPhone"] = self.otherPhone
+        result["otherFax"] = self.otherFax
+        result["callbackPhone"] = self.callbackPhone
+        result["email"] = self.email
+        result["email2"] = self.email2
+        result["email3"] = self.email3
+        result["homeAddress"] = self.homeAddress
+        result["businessAddress"] = self.businessAddress
+        result["otherAddress"] = self.otherAddress
+        result["birthday"] = self.birthday
+        result["webPage"] = self.webPage
+        result["notes"] = self.notes
+        return result
     }
 }

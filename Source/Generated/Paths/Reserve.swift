@@ -22,7 +22,9 @@ open class Reserve: Model {
             `records` <- map["records"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["records"] = self.records
+            return result
         }
     }
 }

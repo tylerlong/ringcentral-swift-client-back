@@ -16,6 +16,10 @@ open class ExtensionInfo_Request_Provision_ContactInfo: Mappable {
         `email` <- map["email"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["firstName"] = self.firstName
+        result["lastName"] = self.lastName
+        result["email"] = self.email
+        return result
     }
 }

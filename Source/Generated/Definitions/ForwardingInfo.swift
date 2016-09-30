@@ -22,6 +22,12 @@ open class ForwardingInfo: Mappable {
         `rules` <- map["rules"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["notifyMySoftPhones"] = self.notifyMySoftPhones
+        result["notifyAdminSoftPhones"] = self.notifyAdminSoftPhones
+        result["softPhonesRingCount"] = self.softPhonesRingCount
+        result["ringingMode"] = self.ringingMode
+        result["rules"] = self.rules
+        return result
     }
 }

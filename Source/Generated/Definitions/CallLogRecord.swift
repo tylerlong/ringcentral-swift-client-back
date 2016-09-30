@@ -52,6 +52,22 @@ open class CallLogRecord: Mappable {
         `legs` <- map["legs"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["sessionId"] = self.sessionId
+        result["from"] = self.from
+        result["to"] = self.to
+        result["type"] = self.type
+        result["direction"] = self.direction
+        result["action"] = self.action
+        result["result"] = self.result
+        result["startTime"] = self.startTime
+        result["duration"] = self.duration
+        result["recording"] = self.recording
+        result["lastModifiedTime"] = self.lastModifiedTime
+        result["transport"] = self.transport
+        result["legs"] = self.legs
+        return result
     }
 }

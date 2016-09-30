@@ -13,6 +13,9 @@ open class VoicemailInfo: Mappable {
         `recipient` <- map["recipient"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["enabled"] = self.enabled
+        result["recipient"] = self.recipient
+        return result
     }
 }

@@ -10,6 +10,8 @@ open class RingOut_Request_CountryInfo: Mappable {
         `id` <- map["id"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        return result
     }
 }

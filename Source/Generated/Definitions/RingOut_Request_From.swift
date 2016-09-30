@@ -13,6 +13,9 @@ open class RingOut_Request_From: Mappable {
         `forwardingNumberId` <- map["forwardingNumberId"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["phoneNumber"] = self.phoneNumber
+        result["forwardingNumberId"] = self.forwardingNumberId
+        return result
     }
 }

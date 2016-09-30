@@ -22,6 +22,12 @@ open class ProfileImageInfo: Mappable {
         `scales` <- map["scales"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["etag"] = self.etag
+        result["lastModified"] = self.lastModified
+        result["contentType"] = self.contentType
+        result["scales"] = self.scales
+        return result
     }
 }

@@ -19,6 +19,11 @@ open class RuleInfo_ForwardingNumberInfo: Mappable {
         `label` <- map["label"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["id"] = self.id
+        result["phoneNumber"] = self.phoneNumber
+        result["label"] = self.label
+        return result
     }
 }

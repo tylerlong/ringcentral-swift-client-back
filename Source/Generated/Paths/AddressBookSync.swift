@@ -31,7 +31,12 @@ open class AddressBookSync: Model {
             `nextPageUri` <- map["nextPageUri"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["records"] = self.records
+            result["syncInfo"] = self.syncInfo
+            result["nextPageId"] = self.nextPageId
+            result["nextPageUri"] = self.nextPageUri
+            return result
         }
     }
 }

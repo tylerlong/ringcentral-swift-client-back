@@ -19,6 +19,11 @@ open class ExternalUserInfo: Mappable {
         `userType` <- map["userType"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["accountId"] = self.accountId
+        result["userId"] = self.userId
+        result["userToken"] = self.userToken
+        result["userType"] = self.userType
+        return result
     }
 }

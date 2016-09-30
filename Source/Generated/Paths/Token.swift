@@ -43,7 +43,16 @@ open class Token: Model {
             `endpoint_id` <- map["endpoint_id"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["access_token"] = self.access_token
+            result["expires_in"] = self.expires_in
+            result["refresh_token"] = self.refresh_token
+            result["refresh_token_expires_in"] = self.refresh_token_expires_in
+            result["scope"] = self.scope
+            result["token_type"] = self.token_type
+            result["owner_id"] = self.owner_id
+            result["endpoint_id"] = self.endpoint_id
+            return result
         }
     }
 }

@@ -22,6 +22,12 @@ open class CustomGreetingInfo: Mappable {
         `contentUri` <- map["contentUri"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["id"] = self.id
+        result["type"] = self.type
+        result["contentType"] = self.contentType
+        result["contentUri"] = self.contentUri
+        return result
     }
 }

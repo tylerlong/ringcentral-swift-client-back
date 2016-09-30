@@ -16,6 +16,10 @@ open class MeetingScheduleInfo: Mappable {
         `timeZone` <- map["timeZone"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["startTime"] = self.startTime
+        result["durationInMinutes"] = self.durationInMinutes
+        result["timeZone"] = self.timeZone
+        return result
     }
 }

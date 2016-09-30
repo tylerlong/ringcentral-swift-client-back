@@ -16,6 +16,10 @@ open class RuleInfo: Mappable {
         `forwardingNumbers` <- map["forwardingNumbers"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["index"] = self.index
+        result["ringCount"] = self.ringCount
+        result["forwardingNumbers"] = self.forwardingNumbers
+        return result
     }
 }

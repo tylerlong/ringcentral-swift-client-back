@@ -16,6 +16,10 @@ open class ServicePlanInfo: Mappable {
         `edition` <- map["edition"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["name"] = self.name
+        result["edition"] = self.edition
+        return result
     }
 }

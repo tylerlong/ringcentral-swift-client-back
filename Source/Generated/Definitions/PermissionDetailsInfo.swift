@@ -10,6 +10,8 @@ open class PermissionDetailsInfo: Mappable {
         `permission` <- map["permission"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["permission"] = self.permission
+        return result
     }
 }

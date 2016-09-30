@@ -16,6 +16,10 @@ open class CountryInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["name"] = self.name
+        return result
     }
 }

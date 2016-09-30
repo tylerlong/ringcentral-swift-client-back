@@ -43,6 +43,19 @@ open class MeetingInfo: Mappable {
         `audioOptions` <- map["audioOptions"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["id"] = self.id
+        result["topic"] = self.topic
+        result["meetingType"] = self.meetingType
+        result["password"] = self.password
+        result["status"] = self.status
+        result["links"] = self.links
+        result["schedule"] = self.schedule
+        result["allowJoinBeforeHost"] = self.allowJoinBeforeHost
+        result["startHostVideo"] = self.startHostVideo
+        result["startParticipantsVideo"] = self.startParticipantsVideo
+        result["audioOptions"] = self.audioOptions
+        return result
     }
 }

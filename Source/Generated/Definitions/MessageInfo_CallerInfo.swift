@@ -25,6 +25,13 @@ open class MessageInfo_CallerInfo: Mappable {
         `phoneNumber` <- map["phoneNumber"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["extensionNumber"] = self.extensionNumber
+        result["location"] = self.location
+        result["messageStatus"] = self.messageStatus
+        result["faxErrorCode"] = self.faxErrorCode
+        result["name"] = self.name
+        result["phoneNumber"] = self.phoneNumber
+        return result
     }
 }

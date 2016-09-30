@@ -28,7 +28,11 @@ open class DialingPlan: Model {
             `navigation` <- map["navigation"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["records"] = self.records
+            result["paging"] = self.paging
+            result["navigation"] = self.navigation
+            return result
         }
     }
 }

@@ -13,6 +13,9 @@ open class StatusInfo: Mappable {
         `reason` <- map["reason"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["comment"] = self.comment
+        result["reason"] = self.reason
+        return result
     }
 }

@@ -28,6 +28,14 @@ open class WeeklyScheduleInfo: Mappable {
         `sunday` <- map["sunday"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["monday"] = self.monday
+        result["tuesday"] = self.tuesday
+        result["wednesday"] = self.wednesday
+        result["thursday"] = self.thursday
+        result["friday"] = self.friday
+        result["saturday"] = self.saturday
+        result["sunday"] = self.sunday
+        return result
     }
 }

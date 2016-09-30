@@ -25,6 +25,13 @@ open class PagingInfo: Mappable {
         `totalElements` <- map["totalElements"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["page"] = self.page
+        result["perPage"] = self.perPage
+        result["pageStart"] = self.pageStart
+        result["pageEnd"] = self.pageEnd
+        result["totalPages"] = self.totalPages
+        result["totalElements"] = self.totalElements
+        return result
     }
 }

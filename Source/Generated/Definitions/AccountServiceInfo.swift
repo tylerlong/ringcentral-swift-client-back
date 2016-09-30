@@ -28,6 +28,14 @@ open class AccountServiceInfo: Mappable {
         `limits` <- map["limits"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["servicePlanName"] = self.servicePlanName
+        result["brand"] = self.brand
+        result["servicePlan"] = self.servicePlan
+        result["billingPlan"] = self.billingPlan
+        result["serviceFeatures"] = self.serviceFeatures
+        result["limits"] = self.limits
+        return result
     }
 }

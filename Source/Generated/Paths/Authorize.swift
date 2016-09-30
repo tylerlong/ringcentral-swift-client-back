@@ -28,7 +28,11 @@ open class Authorize: Model {
             `state` <- map["state"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["code"] = self.code
+            result["expires_in"] = self.expires_in
+            result["state"] = self.state
+            return result
         }
     }
 }

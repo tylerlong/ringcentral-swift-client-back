@@ -13,6 +13,9 @@ open class TimeInterval: Mappable {
         `to` <- map["to"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["from"] = self.from
+        result["to"] = self.to
+        return result
     }
 }

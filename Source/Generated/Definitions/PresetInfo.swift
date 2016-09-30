@@ -16,6 +16,10 @@ open class PresetInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["id"] = self.id
+        result["name"] = self.name
+        return result
     }
 }

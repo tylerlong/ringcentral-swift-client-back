@@ -19,6 +19,11 @@ open class Department_Response_ExtensionInfo: Mappable {
         `partnerId` <- map["partnerId"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["extensionNumber"] = self.extensionNumber
+        result["partnerId"] = self.partnerId
+        return result
     }
 }

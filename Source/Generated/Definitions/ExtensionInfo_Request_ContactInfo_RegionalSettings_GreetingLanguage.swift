@@ -10,6 +10,8 @@ open class ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage: 
         `id` <- map["id"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        return result
     }
 }

@@ -16,6 +16,10 @@ open class RingOutStatusInfo: Mappable {
         `calleeStatus` <- map["calleeStatus"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["callStatus"] = self.callStatus
+        result["callerStatus"] = self.callerStatus
+        result["calleeStatus"] = self.calleeStatus
+        return result
     }
 }

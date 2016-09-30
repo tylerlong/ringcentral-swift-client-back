@@ -28,6 +28,14 @@ open class DeliveryMode: Mappable {
         `encryptionKey` <- map["encryptionKey"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["transportType"] = self.transportType
+        result["encryption"] = self.encryption
+        result["address"] = self.address
+        result["subscriberKey"] = self.subscriberKey
+        result["secretKey"] = self.secretKey
+        result["encryptionAlgorithm"] = self.encryptionAlgorithm
+        result["encryptionKey"] = self.encryptionKey
+        return result
     }
 }

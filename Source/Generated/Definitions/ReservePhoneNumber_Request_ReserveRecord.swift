@@ -13,6 +13,9 @@ open class ReservePhoneNumber_Request_ReserveRecord: Mappable {
         `reservedTill` <- map["reservedTill"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["phoneNumber"] = self.phoneNumber
+        result["reservedTill"] = self.reservedTill
+        return result
     }
 }

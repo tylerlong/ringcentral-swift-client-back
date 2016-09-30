@@ -16,6 +16,10 @@ open class ExtensionServiceFeatureInfo: Mappable {
         `reason` <- map["reason"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["enabled"] = self.enabled
+        result["featureName"] = self.featureName
+        result["reason"] = self.reason
+        return result
     }
 }

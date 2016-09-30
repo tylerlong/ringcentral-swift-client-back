@@ -28,6 +28,14 @@ open class LanguageInfo: Mappable {
         `ui` <- map["ui"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["greeting"] = self.greeting
+        result["formattingLocale"] = self.formattingLocale
+        result["localeCode"] = self.localeCode
+        result["name"] = self.name
+        result["ui"] = self.ui
+        return result
     }
 }

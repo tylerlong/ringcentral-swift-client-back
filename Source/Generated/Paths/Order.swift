@@ -22,7 +22,9 @@ open class Order: Model {
             `devices` <- map["devices"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["devices"] = self.devices
+            return result
         }
     }
     // Get Order by ID
@@ -46,7 +48,11 @@ open class Order: Model {
             `devices` <- map["devices"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["id"] = self.id
+            result["uri"] = self.uri
+            result["devices"] = self.devices
+            return result
         }
     }
 }

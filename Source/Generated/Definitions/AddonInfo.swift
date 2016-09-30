@@ -13,6 +13,9 @@ open class AddonInfo: Mappable {
         `count` <- map["count"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["count"] = self.count
+        return result
     }
 }

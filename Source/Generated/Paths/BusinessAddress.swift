@@ -31,7 +31,12 @@ open class BusinessAddress: Model {
             `businessAddress` <- map["businessAddress"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["uri"] = self.uri
+            result["company"] = self.company
+            result["email"] = self.email
+            result["businessAddress"] = self.businessAddress
+            return result
         }
     }
     // Update Company Business Address
@@ -58,7 +63,12 @@ open class BusinessAddress: Model {
             `businessAddress` <- map["businessAddress"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["uri"] = self.uri
+            result["company"] = self.company
+            result["email"] = self.email
+            result["businessAddress"] = self.businessAddress
+            return result
         }
     }
 }

@@ -22,6 +22,12 @@ open class ConferencingInfo_PhoneNumberInfo: Mappable {
         `phoneNumber` <- map["phoneNumber"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["country"] = self.country
+        result["default"] = self.default
+        result["hasGreeting"] = self.hasGreeting
+        result["location"] = self.location
+        result["phoneNumber"] = self.phoneNumber
+        return result
     }
 }

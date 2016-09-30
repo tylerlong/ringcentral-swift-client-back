@@ -13,6 +13,9 @@ open class Conferencing_Request_PhoneNumber: Mappable {
         `default` <- map["default"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["phoneNumber"] = self.phoneNumber
+        result["default"] = self.default
+        return result
     }
 }

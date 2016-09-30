@@ -16,6 +16,10 @@ open class ScheduleInfo: Mappable {
         `ref` <- map["ref"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["weeklyRanges"] = self.weeklyRanges
+        result["ranges"] = self.ranges
+        result["ref"] = self.ref
+        return result
     }
 }

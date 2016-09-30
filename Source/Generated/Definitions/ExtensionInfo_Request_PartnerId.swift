@@ -10,6 +10,8 @@ open class ExtensionInfo_Request_PartnerId: Mappable {
         `partnerId` <- map["partnerId"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["partnerId"] = self.partnerId
+        return result
     }
 }

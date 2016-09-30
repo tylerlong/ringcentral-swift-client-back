@@ -34,7 +34,13 @@ open class CustomData: Model {
             `attachment` <- map["attachment"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["id"] = self.id
+            result["uri"] = self.uri
+            result["value"] = self.value
+            result["lastModifiedTime"] = self.lastModifiedTime
+            result["attachment"] = self.attachment
+            return result
         }
     }
 }

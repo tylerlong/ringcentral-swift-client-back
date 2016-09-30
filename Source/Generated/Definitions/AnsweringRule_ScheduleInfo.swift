@@ -13,6 +13,9 @@ open class AnsweringRule_ScheduleInfo: Mappable {
         `ranges` <- map["ranges"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["weeklyRanges"] = self.weeklyRanges
+        result["ranges"] = self.ranges
+        return result
     }
 }

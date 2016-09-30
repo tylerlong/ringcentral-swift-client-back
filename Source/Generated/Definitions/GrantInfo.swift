@@ -19,6 +19,11 @@ open class GrantInfo: Mappable {
         `callMonitoring` <- map["callMonitoring"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["extension"] = self.extension
+        result["callPickup"] = self.callPickup
+        result["callMonitoring"] = self.callMonitoring
+        return result
     }
 }

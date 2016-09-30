@@ -16,6 +16,10 @@ open class GreetingLanguageInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["localeCode"] = self.localeCode
+        result["name"] = self.name
+        return result
     }
 }

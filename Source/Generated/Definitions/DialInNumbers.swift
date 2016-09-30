@@ -19,6 +19,11 @@ open class DialInNumbers: Mappable {
         `country` <- map["country"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["phoneNumber"] = self.phoneNumber
+        result["formattedNumber"] = self.formattedNumber
+        result["location"] = self.location
+        result["country"] = self.country
+        return result
     }
 }

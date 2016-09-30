@@ -13,6 +13,9 @@ open class GreetingInfo: Mappable {
         `preset` <- map["preset"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["type"] = self.type
+        result["preset"] = self.preset
+        return result
     }
 }

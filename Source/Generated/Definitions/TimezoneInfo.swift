@@ -19,6 +19,11 @@ open class TimezoneInfo: Mappable {
         `description` <- map["description"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["name"] = self.name
+        result["description"] = self.description
+        return result
     }
 }

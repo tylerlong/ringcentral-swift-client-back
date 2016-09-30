@@ -55,6 +55,23 @@ open class ExtensionInfo: Mappable {
         `type` <- map["type"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["contact"] = self.contact
+        result["departments"] = self.departments
+        result["extensionNumber"] = self.extensionNumber
+        result["name"] = self.name
+        result["partnerId"] = self.partnerId
+        result["permissions"] = self.permissions
+        result["profileImage"] = self.profileImage
+        result["references"] = self.references
+        result["regionalSettings"] = self.regionalSettings
+        result["serviceFeatures"] = self.serviceFeatures
+        result["setupWizardState"] = self.setupWizardState
+        result["status"] = self.status
+        result["statusInfo"] = self.statusInfo
+        result["type"] = self.type
+        return result
     }
 }

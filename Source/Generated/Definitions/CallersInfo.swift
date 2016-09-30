@@ -13,6 +13,9 @@ open class CallersInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["callerId"] = self.callerId
+        result["name"] = self.name
+        return result
     }
 }

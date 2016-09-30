@@ -13,6 +13,9 @@ open class StateInfo_CountryInfo: Mappable {
         `uri` <- map["uri"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        return result
     }
 }

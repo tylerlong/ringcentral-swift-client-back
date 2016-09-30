@@ -16,6 +16,10 @@ open class BrandInfo: Mappable {
         `homeCountry` <- map["homeCountry"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["name"] = self.name
+        result["homeCountry"] = self.homeCountry
+        return result
     }
 }

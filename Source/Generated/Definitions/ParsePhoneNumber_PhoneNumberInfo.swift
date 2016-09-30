@@ -34,6 +34,16 @@ open class ParsePhoneNumber_PhoneNumberInfo: Mappable {
         `normalized` <- map["normalized"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["areaCode"] = self.areaCode
+        result["country"] = self.country
+        result["dialable"] = self.dialable
+        result["e164"] = self.e164
+        result["formattedInternational"] = self.formattedInternational
+        result["formattedNational"] = self.formattedNational
+        result["originalString"] = self.originalString
+        result["special"] = self.special
+        result["normalized"] = self.normalized
+        return result
     }
 }

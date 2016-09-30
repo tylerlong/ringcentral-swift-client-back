@@ -25,7 +25,10 @@ open class MessageSync: Model {
             `syncInfo` <- map["syncInfo"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["records"] = self.records
+            result["syncInfo"] = self.syncInfo
+            return result
         }
     }
 }

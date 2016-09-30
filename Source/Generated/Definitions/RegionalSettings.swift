@@ -22,6 +22,12 @@ open class RegionalSettings: Mappable {
         `formattingLocale` <- map["formattingLocale"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["homeCountry"] = self.homeCountry
+        result["timezone"] = self.timezone
+        result["language"] = self.language
+        result["greetingLanguage"] = self.greetingLanguage
+        result["formattingLocale"] = self.formattingLocale
+        return result
     }
 }

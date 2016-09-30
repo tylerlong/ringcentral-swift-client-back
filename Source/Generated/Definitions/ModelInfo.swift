@@ -16,6 +16,10 @@ open class ModelInfo: Mappable {
         `addons` <- map["addons"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["name"] = self.name
+        result["addons"] = self.addons
+        return result
     }
 }

@@ -31,7 +31,12 @@ open class Check: Model {
             `scopes` <- map["scopes"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["uri"] = self.uri
+            result["successful"] = self.successful
+            result["details"] = self.details
+            result["scopes"] = self.scopes
+            return result
         }
     }
 }

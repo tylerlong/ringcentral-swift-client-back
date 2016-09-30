@@ -19,6 +19,11 @@ open class BlockedNumberInfo: Mappable {
         `phoneNumber` <- map["phoneNumber"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["name"] = self.name
+        result["phoneNumber"] = self.phoneNumber
+        return result
     }
 }

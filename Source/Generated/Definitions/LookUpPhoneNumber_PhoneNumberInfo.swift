@@ -19,6 +19,11 @@ open class LookUpPhoneNumber_PhoneNumberInfo: Mappable {
         `rank` <- map["rank"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["phoneNumber"] = self.phoneNumber
+        result["formattedNumber"] = self.formattedNumber
+        result["vanityPattern"] = self.vanityPattern
+        result["rank"] = self.rank
+        return result
     }
 }

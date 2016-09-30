@@ -10,6 +10,8 @@ open class BusinessHour_ScheduleInfo: Mappable {
         `weeklyRanges` <- map["weeklyRanges"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["weeklyRanges"] = self.weeklyRanges
+        return result
     }
 }

@@ -37,7 +37,12 @@ open class AnsweringRule: Model {
             `navigation` <- map["navigation"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["uri"] = self.uri
+            result["records"] = self.records
+            result["paging"] = self.paging
+            result["navigation"] = self.navigation
+            return result
         }
     }
     // Delete Answering Rule by ID

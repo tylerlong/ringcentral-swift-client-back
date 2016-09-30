@@ -13,6 +13,9 @@ open class ReferenceInfo: Mappable {
         `type` <- map["type"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["ref"] = self.ref
+        result["type"] = self.type
+        return result
     }
 }

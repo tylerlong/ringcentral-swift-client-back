@@ -10,6 +10,8 @@ open class RingOut_Request_To: Mappable {
         `phoneNumber` <- map["phoneNumber"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["phoneNumber"] = self.phoneNumber
+        return result
     }
 }

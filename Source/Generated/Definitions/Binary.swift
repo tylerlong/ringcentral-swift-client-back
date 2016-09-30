@@ -10,6 +10,8 @@ open class Binary: Mappable {
         `data` <- map["data"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["data"] = self.data
+        return result
     }
 }

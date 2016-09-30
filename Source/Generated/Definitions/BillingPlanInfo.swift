@@ -22,6 +22,12 @@ open class BillingPlanInfo: Mappable {
         `type` <- map["type"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["name"] = self.name
+        result["durationUnit"] = self.durationUnit
+        result["duration"] = self.duration
+        result["type"] = self.type
+        return result
     }
 }

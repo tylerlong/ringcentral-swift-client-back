@@ -28,7 +28,11 @@ open class Country: Model {
             `paging` <- map["paging"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["records"] = self.records
+            result["navigation"] = self.navigation
+            result["paging"] = self.paging
+            return result
         }
     }
     // Get Country by ID

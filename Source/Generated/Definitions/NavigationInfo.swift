@@ -19,6 +19,11 @@ open class NavigationInfo: Mappable {
         `lastPage` <- map["lastPage"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["firstPage"] = self.firstPage
+        result["nextPage"] = self.nextPage
+        result["previousPage"] = self.previousPage
+        result["lastPage"] = self.lastPage
+        return result
     }
 }

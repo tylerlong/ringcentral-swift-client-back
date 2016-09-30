@@ -13,6 +13,9 @@ open class RecipientInfo: Mappable {
         `id` <- map["id"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        result["id"] = self.id
+        return result
     }
 }

@@ -16,6 +16,10 @@ open class PresenceInfo_ExtensionInfo: Mappable {
         `extensionNumber` <- map["extensionNumber"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["extensionNumber"] = self.extensionNumber
+        return result
     }
 }

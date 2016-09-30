@@ -55,7 +55,20 @@ open class Parse: Model {
             `country` <- map["country"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["uri"] = self.uri
+            result["homeCountry"] = self.homeCountry
+            result["phoneNumbers"] = self.phoneNumbers
+            result["originalString"] = self.originalString
+            result["areaCode"] = self.areaCode
+            result["formattedNational"] = self.formattedNational
+            result["formattedInternational"] = self.formattedInternational
+            result["dialable"] = self.dialable
+            result["e164"] = self.e164
+            result["special"] = self.special
+            result["normalized"] = self.normalized
+            result["country"] = self.country
+            return result
         }
     }
 }

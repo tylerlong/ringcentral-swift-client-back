@@ -25,7 +25,10 @@ open class Lookup: Model {
             `records` <- map["records"]
         }
         open func toParameters() -> Parameters {
-            return [:]
+            var result = [String: Any]()
+            result["uri"] = self.uri
+            result["records"] = self.records
+            return result
         }
     }
 }

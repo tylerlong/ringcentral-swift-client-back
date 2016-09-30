@@ -10,6 +10,8 @@ open class Page: Mappable {
         `uri` <- map["uri"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["uri"] = self.uri
+        return result
     }
 }

@@ -13,6 +13,9 @@ open class ShippingMethod: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["name"] = self.name
+        return result
     }
 }

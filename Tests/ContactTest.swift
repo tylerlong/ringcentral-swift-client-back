@@ -65,23 +65,26 @@ class ContactTest: BaseTest {
 
         // search
         let expectation6 = expectation(description: "expectation6")
-        var contact: PersonalContactInfo? = nil
         addressBook.contact().list(parameters: ["phoneNumber": phoneNumber]) { list, error in
             XCTAssertNil(error)
             XCTAssertNotNil(list)
-            XCTAssertTrue(1 == list!.paging!.totalElements!)
-            contact = list!.records!.first!
-            expectation6.fulfill()
+            XCTAssertTrue(list!.paging!.totalElements! >= 1)
+            let contact = list!.records!.sorted { $0.id! > $1.id! }.first!
+
+
+            // update
+            contact.lastName = "Liu";
+            addressBook.contact("\(contact.id!)").put(parameters: contact.toParameters()) { contact2, error in
+                XCTAssertNil(error)
+                XCTAssertNotNil(contact2)
+                XCTAssertTrue("Liu" == contact2!.lastName)
+                expectation6.fulfill()
+            }
+
         }
         sleep(1)
 
-        // update
-//        contact!.lastName = "Liu";
-//        addressBook.contact("\(contact!.id!)").put(parameters: contact!) { contact2, error in
-//            XCTAssertNil(error)
-//            XCTAssertNotNil(contact2)
-//            XCTAssertTrue("Liu" == contact2!.lastName)
-//        }
+
 
 
         waitForExpectations(timeout: 20) { error in

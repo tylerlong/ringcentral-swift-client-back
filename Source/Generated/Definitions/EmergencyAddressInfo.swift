@@ -28,6 +28,14 @@ open class EmergencyAddressInfo: Mappable {
         `country` <- map["country"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["customerName"] = self.customerName
+        result["street"] = self.street
+        result["street2"] = self.street2
+        result["city"] = self.city
+        result["state"] = self.state
+        result["zip"] = self.zip
+        result["country"] = self.country
+        return result
     }
 }

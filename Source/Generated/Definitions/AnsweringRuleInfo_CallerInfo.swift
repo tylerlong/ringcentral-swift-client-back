@@ -13,6 +13,9 @@ open class AnsweringRuleInfo_CallerInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["callerId"] = self.callerId
+        result["name"] = self.name
+        return result
     }
 }

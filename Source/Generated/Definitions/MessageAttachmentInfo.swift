@@ -22,6 +22,12 @@ open class MessageAttachmentInfo: Mappable {
         `vmDuration` <- map["vmDuration"]
     }
     open func toParameters() -> Parameters {
-        return [:]
+        var result = [String: Any]()
+        result["id"] = self.id
+        result["uri"] = self.uri
+        result["type"] = self.type
+        result["contentType"] = self.contentType
+        result["vmDuration"] = self.vmDuration
+        return result
     }
 }
