@@ -25,9 +25,10 @@ class ContactTest: BaseTest {
             for item in list!.records! {
                 addressBook.contact("\(item.id!)").delete() { error in
                     XCTAssertNil(error)
+                    expectation1.fulfill()
                 }
             }
-            expectation1.fulfill()
+
         }
         sleep(5)
 
@@ -78,13 +79,22 @@ class ContactTest: BaseTest {
                 XCTAssertNil(error)
                 XCTAssertNotNil(contact2)
                 XCTAssertTrue("Liu" == contact2!.lastName)
-                expectation6.fulfill()
+
+
+                // get
+                addressBook.contact("\(contact.id!)").get(){ contact3, error in
+                    XCTAssertNil(error)
+                    XCTAssertNotNil(contact3)
+                    XCTAssertTrue("Liu" == contact3!.lastName)
+                    XCTAssertTrue("Tyler" == contact3!.firstName)
+                    expectation6.fulfill()
+                }
+
+
             }
 
         }
         sleep(1)
-
-
 
 
         waitForExpectations(timeout: 20) { error in

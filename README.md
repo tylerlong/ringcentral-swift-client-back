@@ -38,6 +38,6 @@ This project is released under the MIT license.
 
 ## todo
 
-1. support request body and query params
 1. binary data downloading & uploading
 1. write doc about how to use
+1. AwaitKit
