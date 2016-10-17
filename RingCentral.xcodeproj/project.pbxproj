@@ -10,6 +10,9 @@
 		87410DA31D9A8FCD00AD2DE7 /* UrlBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */; };
 		875500D81DB4666A0089B0EA /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D71DB4666A0089B0EA /* SubscriptionService.swift */; };
 		875500DB1DB468790089B0EA /* SubscriptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D91DB468540089B0EA /* SubscriptionTest.swift */; };
+		875500DD1DB494E10089B0EA /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875500DC1DB494E10089B0EA /* PubNub.framework */; };
+		875500DE1DB494F00089B0EA /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875500DC1DB494E10089B0EA /* PubNub.framework */; };
+		875500DF1DB495050089B0EA /* PubNub.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 875500DC1DB494E10089B0EA /* PubNub.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8760261F1D9A4E7B002A7850 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Model.swift */; };
 		879186601D9CE39C00349515 /* Account_ServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791865F1D9CE39C00349515 /* Account_ServiceInfo.swift */; };
 		879186621D9CE3C100349515 /* MeetingServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879186611D9CE3C100349515 /* MeetingServiceInfo.swift */; };
@@ -427,6 +430,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				875500DF1DB495050089B0EA /* PubNub.framework in CopyFiles */,
 				879ADF1F1D98FCD1008E7735 /* Alamofire.framework in CopyFiles */,
 				879ADF1D1D98F53A008E7735 /* ObjectMapper.framework in CopyFiles */,
 			);
@@ -438,6 +442,7 @@
 		87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlBuilderTest.swift; path = Tests/UrlBuilderTest.swift; sourceTree = "<group>"; };
 		875500D71DB4666A0089B0EA /* SubscriptionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionService.swift; path = Source/SubscriptionService.swift; sourceTree = "<group>"; };
 		875500D91DB468540089B0EA /* SubscriptionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionTest.swift; path = Tests/SubscriptionTest.swift; sourceTree = "<group>"; };
+		875500DC1DB494E10089B0EA /* PubNub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PubNub.framework; path = Carthage/Build/Mac/PubNub.framework; sourceTree = "<group>"; };
 		8760261E1D9A4E7B002A7850 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/Model.swift; sourceTree = "<group>"; };
 		8791865F1D9CE39C00349515 /* Account_ServiceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account_ServiceInfo.swift; path = Source/Generated/Definitions/Account_ServiceInfo.swift; sourceTree = "<group>"; };
 		879186611D9CE3C100349515 /* MeetingServiceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetingServiceInfo.swift; path = Source/Generated/Definitions/MeetingServiceInfo.swift; sourceTree = "<group>"; };
@@ -663,6 +668,7 @@
 			files = (
 				879ADEFD1D98C7D6008E7735 /* Alamofire.framework in Frameworks */,
 				879ADEFE1D98C7D6008E7735 /* ObjectMapper.framework in Frameworks */,
+				875500DD1DB494E10089B0EA /* PubNub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +699,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875500DE1DB494F00089B0EA /* PubNub.framework in Frameworks */,
 				879ADF081D98E646008E7735 /* RingCentral.framework in Frameworks */,
 				879ADF191D98F4D7008E7735 /* Alamofire.framework in Frameworks */,
 				879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */,
@@ -783,6 +790,7 @@
 		879ADEFA1D98C7D5008E7735 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				875500DC1DB494E10089B0EA /* PubNub.framework */,
 				87D30AB71D9E5616009CC0E7 /* ObjectMapper.framework */,
 				87D30AB81D9E5616009CC0E7 /* Alamofire.framework */,
 				879ADEFB1D98C7D6008E7735 /* Alamofire.framework */,
