@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire"
 github "Hearst-DD/ObjectMapper"
 github "pubnub/objective-c"
+github "duemunk/Async"

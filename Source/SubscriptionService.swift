@@ -1,12 +1,51 @@
 import PubNub
+import Alamofire
+import Async
+
+
+extension Subscription {
+
+    public func new() -> SubscriptionService {
+        return SubscriptionService(rc)
+    }
+
+}
+
 
 open class SubscriptionService: NSObject, PNObjectEventListener {
 
     var rc: RestClient!
     var pubnub: PubNub?
-    var subscriptionInfo: SubscriptionInfo?
+
     public var eventFilters: [String] = []
-    public var callback: ((String) -> Void)? = nil
+    public var listeners: [(String) -> Void] = []
+
+    var parameters: Parameters {
+        get {
+            let deliveryMode: Parameters = ["transportType": "PubNub", "encryption": true]
+            return ["eventFilters": eventFilters, "deliveryMode": deliveryMode]
+        }
+    }
+
+    var _subscriptionInfo: SubscriptionInfo?
+    var renewScheduled = false
+    var subscriptionInfo: SubscriptionInfo? {
+        get {
+            return _subscriptionInfo
+        }
+        set(value) {
+            _subscriptionInfo = value
+            if _subscriptionInfo != nil && !renewScheduled {
+                Async.background(after: Double(_subscriptionInfo!.expiresIn! - 120)) {
+                    self.renew() { error in
+                        self.renewScheduled = false
+                    }
+
+                }
+                renewScheduled = true
+            }
+        }
+    }
 
     public init(_ rc: RestClient) {
         self.rc = rc
@@ -14,23 +53,50 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
 
     public func client(_ client: PubNub, didReceiveMessage message: PNMessageResult) {
         let base64Message = message.data.message as! String
-        print(base64Message)
-    }
-
-    open func register() {
-        if alive() {
-            renew()
-        } else {
-            subscribe()
+        for listener in listeners {
+            listener(base64Message)
         }
     }
 
-    open func subscribe() {
-
+    open func register(callback: @escaping (_ error: HTTPError?) -> Void) {
+        if alive() {
+            renew(callback: callback)
+        } else {
+            subscribe(callback: callback)
+        }
     }
 
-    open func renew() {
+    open func subscribe(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.restapi("v1.0").subscription().post(parameters: parameters) { subscriptionInfo, error in
+            if let error = error {
+                return callback(error)
+            }
+            self.subscriptionInfo = subscriptionInfo
 
+
+            let configuration = PNConfiguration(publishKey: "", subscribeKey: subscriptionInfo!.deliveryMode!.subscriberKey!)
+            self.pubnub = PubNub.clientWithConfiguration(configuration)
+            self.pubnub!.addListener(self)
+            self.pubnub!.subscribeToChannels([subscriptionInfo!.deliveryMode!.address!], withPresence: true)
+
+            callback(nil)
+        }
+    }
+
+    open func renew(callback: @escaping (_ error: HTTPError?) -> Void) {
+        if !alive() { // Remove() has been called
+            return callback(HTTPError(statusCode: -1, message: "Subscription has been removed"))
+        }
+        rc.restapi("v1.0").subscription(subscriptionInfo!.id!).put(parameters: parameters) { subscriptionInfo, error in
+            if let error = error {
+                if error.statusCode == 404 {
+                    return self.subscribe(callback: callback)
+                }
+                return callback(error)
+            }
+            self.subscriptionInfo = subscriptionInfo
+            callback(nil)
+        }
     }
 
     func alive() -> Bool {
@@ -44,15 +110,6 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
             }
         }
         return false
-    }
-
-}
-
-
-extension Subscription {
-
-    public func new() -> SubscriptionService {
-        return SubscriptionService(rc)
     }
 
 }
