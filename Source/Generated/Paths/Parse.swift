@@ -8,9 +8,27 @@ open class Parse: Model {
         }
     }
     // Parse Phone Number
-    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters) { (t: PostResponse?, error) in
+    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: PostResponse?, error) in
             callback(t, error)
+        }
+    }
+    open class PostParameters: Mappable {
+        // Internal identifier of a home country. The default value is ISO code (ISO 3166) of the user's home country or brand country, if the user is undefined
+        open var `homeCountry`: String?
+        // The default value is "False". If "True", the numbers that are closer to the home country are given higher priority
+        open var `nationalAsPriority`: Bool?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `homeCountry` <- map["homeCountry"]
+            `nationalAsPriority` <- map["nationalAsPriority"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["homeCountry"] = self.homeCountry
+            result["nationalAsPriority"] = self.nationalAsPriority
+            return result
         }
     }
     open class PostResponse: Mappable {

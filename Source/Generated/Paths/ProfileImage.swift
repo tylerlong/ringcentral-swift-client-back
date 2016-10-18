@@ -14,14 +14,14 @@ open class ProfileImage: Model {
         }
     }
     // Update Profile Image
-    open func put(parameters: Parameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.putString(self.endpoint(), parameters: parameters) { string, error in
+    open func put(parameters: Binary? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.putString(self.endpoint(), parameters: parameters?.toParameters()) { string, error in
             callback(error)
         }
     }
     // Update Profile Image (same as PUT)
-    open func post(parameters: Parameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.postString(self.endpoint(), parameters: parameters) { string, error in
+    open func post(parameters: Binary? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.postString(self.endpoint(), parameters: parameters?.toParameters()) { string, error in
             callback(error)
         }
     }

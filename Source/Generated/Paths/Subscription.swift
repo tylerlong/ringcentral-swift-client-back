@@ -8,9 +8,27 @@ open class Subscription: Model {
         }
     }
     // Create New Subscription
-    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters) { (t: SubscriptionInfo?, error) in
+    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: SubscriptionInfo?, error) in
             callback(t, error)
+        }
+    }
+    open class PostParameters: Mappable {
+        // Mandatory. Collection of URIs to API resources (see Event Types for details). For APNS transport type only message event filter is available
+        open var `eventFilters`: [String]?
+        // Notification delivery settings
+        open var `deliveryMode`: Subscription_Request_DeliveryMode?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `eventFilters` <- map["eventFilters"]
+            `deliveryMode` <- map["deliveryMode"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["eventFilters"] = self.eventFilters
+            result["deliveryMode"] = self.deliveryMode
+            return result
         }
     }
     // Cancel Subscription by ID
@@ -26,9 +44,23 @@ open class Subscription: Model {
         }
     }
     // Update/Renew Subscription by ID
-    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters) { (t: SubscriptionInfo?, error) in
+    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: SubscriptionInfo?, error) in
             callback(t, error)
+        }
+    }
+    open class PutParameters: Mappable {
+        // Collection of URIs to API resources (see Event Types). Mandatory field
+        open var `eventFilters`: [String]?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `eventFilters` <- map["eventFilters"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["eventFilters"] = self.eventFilters
+            return result
         }
     }
 }

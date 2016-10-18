@@ -80,9 +80,35 @@ open class Extension: Model {
         return Sms(parent: self)
     }
     // Get Extension List
-    open func list(parameters: Parameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
+    open func list(parameters: ListParameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ListResponse?, error) in
             callback(t, error)
+        }
+    }
+    open class ListParameters: Mappable {
+        // Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'
+        open var `page`: Int?
+        // Indicates the page size (number of items). If not specified, the value is '100' by default.
+        open var `perPage`: Int?
+        // Extension current state. Multiple values are supported. If 'Unassigned' is specified, then extensions without extensionNumber are returned. If not specified, then all extensions are returned
+        open var `status`: String?
+        // Extension type. Multiple values are supported
+        open var `type`: String?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `page` <- map["page"]
+            `perPage` <- map["perPage"]
+            `status` <- map["status"]
+            `type` <- map["type"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["page"] = self.page
+            result["perPage"] = self.perPage
+            result["status"] = self.status
+            result["type"] = self.type
+            return result
         }
     }
     open class ListResponse: Mappable {
@@ -114,8 +140,8 @@ open class Extension: Model {
         }
     }
     // Update Extension by ID
-    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: ExtensionInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters) { (t: ExtensionInfo?, error) in
+    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: ExtensionInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: ExtensionInfo?, error) in
             callback(t, error)
         }
     }

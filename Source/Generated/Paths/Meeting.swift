@@ -14,9 +14,51 @@ open class Meeting: Model {
         return End(parent: self)
     }
     // Create Meeting
-    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters) { (t: MeetingInfo?, error) in
+    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: MeetingInfo?, error) in
             callback(t, error)
+        }
+    }
+    open class PostParameters: Mappable {
+        // Topic of a meeting
+        open var `topic`: String?
+        // Type of a meeting. 'Instant' - meeting that is instantly started as soon as the host creates it; 'Scheduled' - common scheduled meeting; 'Recurring' - a recurring meeting. If the specified meeting type is 'Scheduled' then schedule property is mandatory for request
+        open var `meetingType`: String?
+        // Password required to join a meeting. Max number of characters is 10
+        open var `password`: String?
+        // Schedule of a meeting
+        open var `schedule`: MeetingScheduleInfo?
+        // If 'True' then the meeting can be joined and started by any participant (not host only). Supported for the meetings of 'Scheduled' and 'Recurring' type.
+        open var `allowJoinBeforeHost`: Bool?
+        // Enables starting video when host joins the meeting
+        open var `startHostVideo`: Bool?
+        // Enables starting video when participants join the meeting
+        open var `startParticipantsVideo`: Bool?
+        // Meeting audio options. Possible values are 'Phone', 'ComputerAudio'
+        open var `audioOptions`: [String]?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `topic` <- map["topic"]
+            `meetingType` <- map["meetingType"]
+            `password` <- map["password"]
+            `schedule` <- map["schedule"]
+            `allowJoinBeforeHost` <- map["allowJoinBeforeHost"]
+            `startHostVideo` <- map["startHostVideo"]
+            `startParticipantsVideo` <- map["startParticipantsVideo"]
+            `audioOptions` <- map["audioOptions"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["topic"] = self.topic
+            result["meetingType"] = self.meetingType
+            result["password"] = self.password
+            result["schedule"] = self.schedule
+            result["allowJoinBeforeHost"] = self.allowJoinBeforeHost
+            result["startHostVideo"] = self.startHostVideo
+            result["startParticipantsVideo"] = self.startParticipantsVideo
+            result["audioOptions"] = self.audioOptions
+            return result
         }
     }
     // Get Meetings List
@@ -64,9 +106,51 @@ open class Meeting: Model {
         }
     }
     // Update Meeting
-    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters) { (t: MeetingInfo?, error) in
+    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: MeetingInfo?, error) in
             callback(t, error)
+        }
+    }
+    open class PutParameters: Mappable {
+        // Topic of a meeting
+        open var `topic`: String?
+        // Type of a meeting. 'Instant' - meeting that is instantly started as soon as the host creates it; 'Scheduled' - common scheduled meeting; 'Recurring' - a recurring meeting. If the specified meeting type is 'Scheduled' then schedule property is mandatory for request
+        open var `meetingType`: String?
+        // Password required to join a meeting. Max number of characters is 10
+        open var `password`: String?
+        // Schedule of a meeting
+        open var `schedule`: MeetingScheduleInfo?
+        // If 'True' then the meeting can be joined and started by any participant (not host only). Supported for the meetings of 'Scheduled' and 'Recurring' type.
+        open var `allowJoinBeforeHost`: Bool?
+        // Enables starting video when host joins the meeting
+        open var `startHostVideo`: Bool?
+        // Enables starting video when participants join the meeting
+        open var `startParticipantsVideo`: Bool?
+        // Meeting audio options. Possible values are 'Phone', 'ComputerAudio'
+        open var `audioOptions`: [String]?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `topic` <- map["topic"]
+            `meetingType` <- map["meetingType"]
+            `password` <- map["password"]
+            `schedule` <- map["schedule"]
+            `allowJoinBeforeHost` <- map["allowJoinBeforeHost"]
+            `startHostVideo` <- map["startHostVideo"]
+            `startParticipantsVideo` <- map["startParticipantsVideo"]
+            `audioOptions` <- map["audioOptions"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["topic"] = self.topic
+            result["meetingType"] = self.meetingType
+            result["password"] = self.password
+            result["schedule"] = self.schedule
+            result["allowJoinBeforeHost"] = self.allowJoinBeforeHost
+            result["startHostVideo"] = self.startHostVideo
+            result["startParticipantsVideo"] = self.startParticipantsVideo
+            result["audioOptions"] = self.audioOptions
+            return result
         }
     }
 }

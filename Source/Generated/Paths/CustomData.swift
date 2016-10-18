@@ -8,9 +8,27 @@ open class CustomData: Model {
         }
     }
     // Update Custom Data by Key
-    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters) { (t: PutResponse?, error) in
+    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: PutResponse?, error) in
             callback(t, error)
+        }
+    }
+    open class PutParameters: Mappable {
+        // Custom data access key. Optional. If specified, must match the custom key in the URL
+        open var `id`: String?
+        // Description of custom data. Mandatory for create, if there is no attachment specified. Maximum length is limited to 256 symbols
+        open var `value`: String?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `id` <- map["id"]
+            `value` <- map["value"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["id"] = self.id
+            result["value"] = self.value
+            return result
         }
     }
     open class PutResponse: Mappable {

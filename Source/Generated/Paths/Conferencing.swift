@@ -8,15 +8,47 @@ open class Conferencing: Model {
         }
     }
     // Get Conferencing info
-    open func get(parameters: Parameters? = nil, callback: @escaping (_ t: ConferencingInfo?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters) { (t: ConferencingInfo?, error) in
+    open func get(parameters: GetParameters? = nil, callback: @escaping (_ t: ConferencingInfo?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ConferencingInfo?, error) in
             callback(t, error)
         }
     }
+    open class GetParameters: Mappable {
+        // Internal identifier of a country. If not specified, the response is returned for the brand country
+        open var `countryId`: String?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `countryId` <- map["countryId"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["countryId"] = self.countryId
+            return result
+        }
+    }
     // Update Conferencing info
-    open func put(parameters: Parameters? = nil, callback: @escaping (_ t: ConferencingInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters) { (t: ConferencingInfo?, error) in
+    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: ConferencingInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: ConferencingInfo?, error) in
             callback(t, error)
+        }
+    }
+    open class PutParameters: Mappable {
+        // Multiple dial-in phone numbers to connect to audio conference service, relevant for user's brand. Each number is given with the country and location information, in order to let the user choose the less expensive way to connect to a conference. The first number in the list is the primary conference number, that is default and domestic
+        open var `phoneNumbers`: [Conferencing_Request_PhoneNumber]?
+        // Determines if host user allows conference participants to join before the host
+        open var `allowJoinBeforeHost`: Bool?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `phoneNumbers` <- map["phoneNumbers"]
+            `allowJoinBeforeHost` <- map["allowJoinBeforeHost"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["phoneNumbers"] = self.phoneNumbers
+            result["allowJoinBeforeHost"] = self.allowJoinBeforeHost
+            return result
         }
     }
 }

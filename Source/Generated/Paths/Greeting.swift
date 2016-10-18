@@ -8,9 +8,27 @@ open class Greeting: Model {
         }
     }
     // Create Custom Greeting
-    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters) { (t: CustomGreetingInfo?, error) in
+    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: CustomGreetingInfo?, error) in
             callback(t, error)
+        }
+    }
+    open class PostParameters: Mappable {
+        // Type of a greeting, specifying the case when the greeting is played. See also Greeting Types
+        open var `type`: String?
+        // Information on an answering rule that the greeting is applied to
+        open var `answeringRule`: CustomGreetingInfo_AnsweringRuleInfo?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `type` <- map["type"]
+            `answeringRule` <- map["answeringRule"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["type"] = self.type
+            result["answeringRule"] = self.answeringRule
+            return result
         }
     }
     // Get Custom Greeting by ID

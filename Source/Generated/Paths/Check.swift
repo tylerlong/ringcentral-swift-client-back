@@ -8,9 +8,27 @@ open class Check: Model {
         }
     }
     // Check User Permissions
-    open func get(parameters: Parameters? = nil, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters) { (t: GetResponse?, error) in
+    open func get(parameters: GetParameters? = nil, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: GetResponse?, error) in
             callback(t, error)
+        }
+    }
+    open class GetParameters: Mappable {
+        // Permission to check
+        open var `permissionId`: String?
+        // Optional. Internal identifier of an extension for which user permissions are to be checked. The default value is the currently logged-in extension
+        open var `targetExtensionId`: String?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `permissionId` <- map["permissionId"]
+            `targetExtensionId` <- map["targetExtensionId"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["permissionId"] = self.permissionId
+            result["targetExtensionId"] = self.targetExtensionId
+            return result
         }
     }
     open class GetResponse: Mappable {

@@ -8,9 +8,39 @@ open class Location: Model {
         }
     }
     // Get Location List
-    open func list(parameters: Parameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
+    open func list(parameters: ListParameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ListResponse?, error) in
             callback(t, error)
+        }
+    }
+    open class ListParameters: Mappable {
+        // Sorts results by the specified property. The default value is 'City'
+        open var `orderBy`: String?
+        // Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'.
+        open var `page`: Int?
+        // Indicates the page size (number of items). If not specified, the value is '100' by default.
+        open var `perPage`: Int?
+        // Internal identifier of a state
+        open var `stateId`: String?
+        // Specifies if nxx codes are returned
+        open var `withNxx`: Bool?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `orderBy` <- map["orderBy"]
+            `page` <- map["page"]
+            `perPage` <- map["perPage"]
+            `stateId` <- map["stateId"]
+            `withNxx` <- map["withNxx"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["orderBy"] = self.orderBy
+            result["page"] = self.page
+            result["perPage"] = self.perPage
+            result["stateId"] = self.stateId
+            result["withNxx"] = self.withNxx
+            return result
         }
     }
     open class ListResponse: Mappable {

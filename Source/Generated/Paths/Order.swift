@@ -8,9 +8,23 @@ open class Order: Model {
         }
     }
     // Create New Order
-    open func post(parameters: Parameters? = nil, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters) { (t: PostResponse?, error) in
+    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: PostResponse?, error) in
             callback(t, error)
+        }
+    }
+    open class PostParameters: Mappable {
+        // List of devices to order
+        open var `devices`: [DeviceInfo]?
+        required public init?(map: Map) {
+        }
+        open func mapping(map: Map) {
+            `devices` <- map["devices"]
+        }
+        open func toParameters() -> Parameters {
+            var result = [String: Any]()
+            result["devices"] = self.devices
+            return result
         }
     }
     open class PostResponse: Mappable {
