@@ -12,6 +12,16 @@ open class BillingPlanInfo: Mappable {
     open var `duration`: String?
     // Billing plan type
     open var `type`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, name: String? = nil, durationUnit: String? = nil, duration: String? = nil, type: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.name = `name`
+        self.durationUnit = `durationUnit`
+        self.duration = `duration`
+        self.type = `type`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

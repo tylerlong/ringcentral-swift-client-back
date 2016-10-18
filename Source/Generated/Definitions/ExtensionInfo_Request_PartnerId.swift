@@ -4,6 +4,12 @@ import Alamofire
 open class ExtensionInfo_Request_PartnerId: Mappable {
     // Extension partner identifier
     open var `partnerId`: String?
+    public init() {
+    }
+    convenience public init(partnerId: String? = nil) {
+        self.init()
+        self.partnerId = `partnerId`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

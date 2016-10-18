@@ -12,6 +12,16 @@ open class ShippingInfo: Mappable {
     open var `method`: [ShippingMethod]?
     // Shipping address for the order. If it coincides with the Emergency Service Address, then can be omitted. By default the same value as the emergencyServiceAddress. Multiple addresses can be specified; in case an order contains several devices, they can be delivered to different addresses
     open var `address`: [ShippingAddress]?
+    public init() {
+    }
+    convenience public init(status: String? = nil, carrier: String? = nil, trackingNumber: String? = nil, method: [ShippingMethod]? = nil, address: [ShippingAddress]? = nil) {
+        self.init()
+        self.status = `status`
+        self.carrier = `carrier`
+        self.trackingNumber = `trackingNumber`
+        self.method = `method`
+        self.address = `address`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -25,6 +25,15 @@ open class Recording: Model {
         open var `contentType`: String?
         // Recorded call duration
         open var `duration`: Int?
+        public init() {
+        }
+        convenience public init(id: Int? = nil, contentUri: String? = nil, contentType: String? = nil, duration: Int? = nil) {
+            self.init()
+            self.id = `id`
+            self.contentUri = `contentUri`
+            self.contentType = `contentType`
+            self.duration = `duration`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

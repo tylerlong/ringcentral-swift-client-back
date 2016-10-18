@@ -10,6 +10,15 @@ open class RecordingInfo: Mappable {
     open var `type`: String?
     // Link to the call recording binary content
     open var `contentUri`: String?
+    public init() {
+    }
+    convenience public init(id: Int? = nil, uri: String? = nil, type: String? = nil, contentUri: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.type = `type`
+        self.contentUri = `contentUri`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -6,6 +6,13 @@ open class LinksInfo: Mappable {
     open var `startUri`: String?
     // Link to join a meeting
     open var `joinUri`: String?
+    public init() {
+    }
+    convenience public init(startUri: String? = nil, joinUri: String? = nil) {
+        self.init()
+        self.startUri = `startUri`
+        self.joinUri = `joinUri`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

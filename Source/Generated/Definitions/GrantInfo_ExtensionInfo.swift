@@ -10,6 +10,15 @@ open class GrantInfo_ExtensionInfo: Mappable {
     open var `extensionNumber`: String?
     // Extension type
     open var `type`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, extensionNumber: String? = nil, type: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.extensionNumber = `extensionNumber`
+        self.type = `type`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

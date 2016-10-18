@@ -18,6 +18,19 @@ open class FullCountryInfo: Mappable {
     open var `numberSelling`: Bool?
     // Specifies whether login with the phone numbers of this country is enabled or not
     open var `loginAllowed`: Bool?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, callingCode: String? = nil, emergencyCalling: Bool? = nil, isoCode: String? = nil, name: String? = nil, numberSelling: Bool? = nil, loginAllowed: Bool? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.callingCode = `callingCode`
+        self.emergencyCalling = `emergencyCalling`
+        self.isoCode = `isoCode`
+        self.name = `name`
+        self.numberSelling = `numberSelling`
+        self.loginAllowed = `loginAllowed`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -12,6 +12,16 @@ open class ForwardingInfo: Mappable {
     open var `ringingMode`: String?
     // Information on a call forwarding rule
     open var `rules`: [RuleInfo]?
+    public init() {
+    }
+    convenience public init(notifyMySoftPhones: Bool? = nil, notifyAdminSoftPhones: Bool? = nil, softPhonesRingCount: Int? = nil, ringingMode: String? = nil, rules: [RuleInfo]? = nil) {
+        self.init()
+        self.notifyMySoftPhones = `notifyMySoftPhones`
+        self.notifyAdminSoftPhones = `notifyAdminSoftPhones`
+        self.softPhonesRingCount = `softPhonesRingCount`
+        self.ringingMode = `ringingMode`
+        self.rules = `rules`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

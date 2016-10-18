@@ -32,6 +32,15 @@ open class CompanyPager: Model {
         open var `text`: String?
         // Optional if replyOn parameter is specified. Receiver of a pager message. The extensionNumber property must be filled
         open var `to`: [CallerInfo]?
+        public init() {
+        }
+        convenience public init(from: CallerInfo? = nil, replyOn: Int? = nil, text: String? = nil, to: [CallerInfo]? = nil) {
+            self.init()
+            self.from = `from`
+            self.replyOn = `replyOn`
+            self.text = `text`
+            self.to = `to`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

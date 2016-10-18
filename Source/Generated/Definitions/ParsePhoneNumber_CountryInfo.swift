@@ -14,6 +14,17 @@ open class ParsePhoneNumber_CountryInfo: Mappable {
     open var `isoCode`: String?
     // Official name of a country
     open var `name`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, callingCode: String? = nil, emergencyCalling: Bool? = nil, isoCode: String? = nil, name: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.callingCode = `callingCode`
+        self.emergencyCalling = `emergencyCalling`
+        self.isoCode = `isoCode`
+        self.name = `name`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

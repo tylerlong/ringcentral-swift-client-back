@@ -6,6 +6,13 @@ open class LegInfo_ExtensionInfo: Mappable {
     open var `id`: Int?
     // Canonical URI of an extension
     open var `uri`: String?
+    public init() {
+    }
+    convenience public init(id: Int? = nil, uri: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

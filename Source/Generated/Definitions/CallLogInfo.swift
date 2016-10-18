@@ -26,6 +26,23 @@ open class CallLogInfo: Mappable {
     open var `duration`: Int?
     // Call recording data. Returned if the call is recorded
     open var `recording`: RecordingInfo?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, sessionId: String? = nil, from: CallerInfo? = nil, to: CallerInfo? = nil, type: String? = nil, direction: String? = nil, action: String? = nil, result: String? = nil, startTime: String? = nil, duration: Int? = nil, recording: RecordingInfo? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.sessionId = `sessionId`
+        self.from = `from`
+        self.to = `to`
+        self.type = `type`
+        self.direction = `direction`
+        self.action = `action`
+        self.result = `result`
+        self.startTime = `startTime`
+        self.duration = `duration`
+        self.recording = `recording`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

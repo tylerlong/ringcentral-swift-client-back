@@ -22,6 +22,21 @@ open class PhoneNumberInfo: Mappable {
     open var `type`: String?
     // Usage type of the phone number
     open var `usageType`: String?
+    public init() {
+    }
+    convenience public init(id: Int? = nil, country: CountryInfo? = nil, extension: PhoneNumberInfo_ExtensionInfo? = nil, features: [String]? = nil, location: String? = nil, paymentType: String? = nil, phoneNumber: String? = nil, status: String? = nil, type: String? = nil, usageType: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.country = `country`
+        self.extension = `extension`
+        self.features = `features`
+        self.location = `location`
+        self.paymentType = `paymentType`
+        self.phoneNumber = `phoneNumber`
+        self.status = `status`
+        self.type = `type`
+        self.usageType = `usageType`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

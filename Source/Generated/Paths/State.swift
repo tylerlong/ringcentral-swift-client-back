@@ -32,6 +32,15 @@ open class State: Model {
         open var `perPage`: Int?
         // If 'True', the list of states with phone numbers available for buying is returned. The default value is 'False'
         open var `withPhoneNumbers`: Bool?
+        public init() {
+        }
+        convenience public init(countryId: Int? = nil, page: Int? = nil, perPage: Int? = nil, withPhoneNumbers: Bool? = nil) {
+            self.init()
+            self.countryId = `countryId`
+            self.page = `page`
+            self.perPage = `perPage`
+            self.withPhoneNumbers = `withPhoneNumbers`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -56,6 +65,14 @@ open class State: Model {
         open var `navigation`: NavigationInfo?
         // Information on paging
         open var `paging`: PagingInfo?
+        public init() {
+        }
+        convenience public init(records: [StateInfo]? = nil, navigation: NavigationInfo? = nil, paging: PagingInfo? = nil) {
+            self.init()
+            self.records = `records`
+            self.navigation = `navigation`
+            self.paging = `paging`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

@@ -10,6 +10,15 @@ open class ExternalUserInfo: Mappable {
     open var `userToken`: String?
     // Meeting account user type
     open var `userType`: Int?
+    public init() {
+    }
+    convenience public init(accountId: String? = nil, userId: String? = nil, userToken: String? = nil, userType: Int? = nil) {
+        self.init()
+        self.accountId = `accountId`
+        self.userId = `userId`
+        self.userToken = `userToken`
+        self.userType = `userType`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

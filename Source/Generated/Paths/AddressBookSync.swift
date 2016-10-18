@@ -32,6 +32,15 @@ open class AddressBookSync: Model {
         open var `perPage`: Int?
         // Internal identifier of a page. It can be obtained from the 'nextPageId' parameter passed in response body
         open var `pageId`: Int?
+        public init() {
+        }
+        convenience public init(syncType: String? = nil, syncToken: String? = nil, perPage: Int? = nil, pageId: Int? = nil) {
+            self.init()
+            self.syncType = `syncType`
+            self.syncToken = `syncToken`
+            self.perPage = `perPage`
+            self.pageId = `pageId`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -58,6 +67,15 @@ open class AddressBookSync: Model {
         open var `nextPageId`: Int?
         // URL of the next page, if any
         open var `nextPageUri`: String?
+        public init() {
+        }
+        convenience public init(records: [PersonalContactInfo]? = nil, syncInfo: SyncInfo? = nil, nextPageId: Int? = nil, nextPageUri: String? = nil) {
+            self.init()
+            self.records = `records`
+            self.syncInfo = `syncInfo`
+            self.nextPageId = `nextPageId`
+            self.nextPageUri = `nextPageUri`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

@@ -6,6 +6,13 @@ open class RingOutInfo: Mappable {
     open var `id`: String?
     // RingOut status information
     open var `status`: RingOutStatusInfo?
+    public init() {
+    }
+    convenience public init(id: String? = nil, status: RingOutStatusInfo? = nil) {
+        self.init()
+        self.id = `id`
+        self.status = `status`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -6,6 +6,13 @@ open class ReferenceInfo: Mappable {
     open var `ref`: String?
     // Type of external identifier
     open var `type`: String?
+    public init() {
+    }
+    convenience public init(ref: String? = nil, type: String? = nil) {
+        self.init()
+        self.ref = `ref`
+        self.type = `type`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

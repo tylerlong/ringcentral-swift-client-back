@@ -104,6 +104,15 @@ open class Extension: Model {
         open var `status`: String?
         // Extension type. Multiple values are supported
         open var `type`: String?
+        public init() {
+        }
+        convenience public init(page: Int? = nil, perPage: Int? = nil, status: String? = nil, type: String? = nil) {
+            self.init()
+            self.page = `page`
+            self.perPage = `perPage`
+            self.status = `status`
+            self.type = `type`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -128,6 +137,14 @@ open class Extension: Model {
         open var `navigation`: NavigationInfo?
         // Information on paging
         open var `paging`: PagingInfo?
+        public init() {
+        }
+        convenience public init(records: [ExtensionInfo]? = nil, navigation: NavigationInfo? = nil, paging: PagingInfo? = nil) {
+            self.init()
+            self.records = `records`
+            self.navigation = `navigation`
+            self.paging = `paging`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

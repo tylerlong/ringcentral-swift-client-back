@@ -8,6 +8,14 @@ open class RingOutStatusInfo: Mappable {
     open var `callerStatus`: String?
     // Status of a called party
     open var `calleeStatus`: String?
+    public init() {
+    }
+    convenience public init(callStatus: String? = nil, callerStatus: String? = nil, calleeStatus: String? = nil) {
+        self.init()
+        self.callStatus = `callStatus`
+        self.callerStatus = `callerStatus`
+        self.calleeStatus = `calleeStatus`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

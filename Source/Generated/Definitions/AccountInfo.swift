@@ -20,6 +20,20 @@ open class AccountInfo: Mappable {
     open var `status`: String?
     // Status information (reason, comment, lifetime). Returned for 'Disabled' status only
     open var `statusInfo`: StatusInfo?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, mainNumber: String? = nil, operator: ExtensionInfo? = nil, partnerId: String? = nil, serviceInfo: Account_ServiceInfo? = nil, setupWizardState: String? = nil, status: String? = nil, statusInfo: StatusInfo? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.mainNumber = `mainNumber`
+        self.operator = `operator`
+        self.partnerId = `partnerId`
+        self.serviceInfo = `serviceInfo`
+        self.setupWizardState = `setupWizardState`
+        self.status = `status`
+        self.statusInfo = `statusInfo`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

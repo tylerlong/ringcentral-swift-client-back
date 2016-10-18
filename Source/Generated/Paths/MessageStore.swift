@@ -49,6 +49,22 @@ open class MessageStore: Model {
         open var `perPage`: Int?
         // The phone number. If specified, messages are returned for this particular phone number only
         open var `phoneNumber`: String?
+        public init() {
+        }
+        convenience public init(availability: String? = nil, conversationId: Int? = nil, dateFrom: String? = nil, dateTo: String? = nil, direction: String? = nil, distinctConversations: Bool? = nil, messageType: String? = nil, readStatus: String? = nil, page: Int? = nil, perPage: Int? = nil, phoneNumber: String? = nil) {
+            self.init()
+            self.availability = `availability`
+            self.conversationId = `conversationId`
+            self.dateFrom = `dateFrom`
+            self.dateTo = `dateTo`
+            self.direction = `direction`
+            self.distinctConversations = `distinctConversations`
+            self.messageType = `messageType`
+            self.readStatus = `readStatus`
+            self.page = `page`
+            self.perPage = `perPage`
+            self.phoneNumber = `phoneNumber`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -87,6 +103,14 @@ open class MessageStore: Model {
         open var `navigation`: NavigationInfo?
         // Information on paging
         open var `paging`: PagingInfo?
+        public init() {
+        }
+        convenience public init(records: [MessageInfo]? = nil, navigation: NavigationInfo? = nil, paging: PagingInfo? = nil) {
+            self.init()
+            self.records = `records`
+            self.navigation = `navigation`
+            self.paging = `paging`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -123,6 +147,13 @@ open class MessageStore: Model {
         open var `purge`: Bool?
         // Internal identifier of a message thread
         open var `conversationId`: Int?
+        public init() {
+        }
+        convenience public init(purge: Bool? = nil, conversationId: Int? = nil) {
+            self.init()
+            self.purge = `purge`
+            self.conversationId = `conversationId`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -161,6 +192,12 @@ open class MessageStore: Model {
     open class PutParameters: Mappable {
         // Read status of a message to be changed. Multiple values are accepted
         open var `readStatus`: String?
+        public init() {
+        }
+        convenience public init(readStatus: String? = nil) {
+            self.init()
+            self.readStatus = `readStatus`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

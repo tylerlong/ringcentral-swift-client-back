@@ -6,6 +6,13 @@ open class ExtensionInfo_Request_StatusInfo: Mappable {
     open var `status`: String?
     // Extension status information, only for the 'Disabled' status
     open var `statusInfo`: StatusInfo?
+    public init() {
+    }
+    convenience public init(status: String? = nil, statusInfo: StatusInfo? = nil) {
+        self.init()
+        self.status = `status`
+        self.statusInfo = `statusInfo`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

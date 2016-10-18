@@ -12,6 +12,16 @@ open class MessageAttachmentInfo: Mappable {
     open var `contentType`: String?
     // Voicemail only Duration of the voicemail in seconds
     open var `vmDuration`: Int?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, type: String? = nil, contentType: String? = nil, vmDuration: Int? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.type = `type`
+        self.contentType = `contentType`
+        self.vmDuration = `vmDuration`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -6,6 +6,13 @@ open class VoicemailInfo: Mappable {
     open var `enabled`: Bool?
     // Recipient data
     open var `recipient`: RecipientInfo?
+    public init() {
+    }
+    convenience public init(enabled: Bool? = nil, recipient: RecipientInfo? = nil) {
+        self.init()
+        self.enabled = `enabled`
+        self.recipient = `recipient`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

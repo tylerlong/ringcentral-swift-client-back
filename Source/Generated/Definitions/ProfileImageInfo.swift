@@ -12,6 +12,16 @@ open class ProfileImageInfo: Mappable {
     open var `contentType`: String?
     // List of URIs to profile images in different dimensions
     open var `scales`: [ImageUri]?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, etag: String? = nil, lastModified: String? = nil, contentType: String? = nil, scales: [ImageUri]? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.etag = `etag`
+        self.lastModified = `lastModified`
+        self.contentType = `contentType`
+        self.scales = `scales`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

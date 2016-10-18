@@ -18,6 +18,19 @@ open class ConferencingInfo: Mappable {
     open var `tapToJoinUri`: String?
     // List of multiple dial-in phone numbers to connect to audio conference service, relevant for user's brand. Each number is given with the country and location information, in order to let the user choose the less expensive way to connect to a conference. The first number in the list is the primary conference number, that is default and domestic
     open var `phoneNumbers`: [ConferencingInfo_PhoneNumberInfo]?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, allowJoinBeforeHost: Bool? = nil, hostCode: String? = nil, mode: String? = nil, participantCode: String? = nil, phoneNumber: String? = nil, tapToJoinUri: String? = nil, phoneNumbers: [ConferencingInfo_PhoneNumberInfo]? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.allowJoinBeforeHost = `allowJoinBeforeHost`
+        self.hostCode = `hostCode`
+        self.mode = `mode`
+        self.participantCode = `participantCode`
+        self.phoneNumber = `phoneNumber`
+        self.tapToJoinUri = `tapToJoinUri`
+        self.phoneNumbers = `phoneNumbers`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

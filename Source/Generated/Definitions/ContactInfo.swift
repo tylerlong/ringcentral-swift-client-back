@@ -14,6 +14,17 @@ open class ContactInfo: Mappable {
     open var `businessPhone`: String?
     // Business address of extension user company
     open var `businessAddress`: ContactAddressInfo?
+    public init() {
+    }
+    convenience public init(firstName: String? = nil, lastName: String? = nil, company: String? = nil, email: String? = nil, businessPhone: String? = nil, businessAddress: ContactAddressInfo? = nil) {
+        self.init()
+        self.firstName = `firstName`
+        self.lastName = `lastName`
+        self.company = `company`
+        self.email = `email`
+        self.businessPhone = `businessPhone`
+        self.businessAddress = `businessAddress`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

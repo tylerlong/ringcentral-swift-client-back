@@ -10,6 +10,15 @@ open class ServerInfo: Mappable {
     open var `serverVersion`: String?
     // Server revision
     open var `serverRevision`: String?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, apiVersions: [VersionInfo]? = nil, serverVersion: String? = nil, serverRevision: String? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.apiVersions = `apiVersions`
+        self.serverVersion = `serverVersion`
+        self.serverRevision = `serverRevision`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

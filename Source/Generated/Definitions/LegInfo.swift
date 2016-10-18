@@ -26,6 +26,23 @@ open class LegInfo: Mappable {
     open var `transport`: String?
     // Call recording data. Returned if the call is recorded
     open var `recording`: RecordingInfo?
+    public init() {
+    }
+    convenience public init(action: String? = nil, direction: String? = nil, duration: Int? = nil, extension: LegInfo_ExtensionInfo? = nil, legType: String? = nil, startTime: String? = nil, type: String? = nil, result: String? = nil, from: CallerInfo? = nil, to: CallerInfo? = nil, transport: String? = nil, recording: RecordingInfo? = nil) {
+        self.init()
+        self.action = `action`
+        self.direction = `direction`
+        self.duration = `duration`
+        self.extension = `extension`
+        self.legType = `legType`
+        self.startTime = `startTime`
+        self.type = `type`
+        self.result = `result`
+        self.from = `from`
+        self.to = `to`
+        self.transport = `transport`
+        self.recording = `recording`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

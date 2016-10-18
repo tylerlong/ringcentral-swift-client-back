@@ -14,6 +14,17 @@ open class ReservePhoneNumber_Response_ReserveRecord: Mappable {
     open var `status`: String?
     // The error code in case of reservation/un-reservation failure
     open var `error`: String?
+    public init() {
+    }
+    convenience public init(phoneNumber: String? = nil, formattedNumber: String? = nil, reservedTill: String? = nil, reservationId: String? = nil, status: String? = nil, error: String? = nil) {
+        self.init()
+        self.phoneNumber = `phoneNumber`
+        self.formattedNumber = `formattedNumber`
+        self.reservedTill = `reservedTill`
+        self.reservationId = `reservationId`
+        self.status = `status`
+        self.error = `error`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

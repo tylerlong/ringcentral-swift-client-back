@@ -10,6 +10,15 @@ open class RuleInfo_ForwardingNumberInfo: Mappable {
     open var `phoneNumber`: String?
     // Title of a forwarding number
     open var `label`: String?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, id: String? = nil, phoneNumber: String? = nil, label: String? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.id = `id`
+        self.phoneNumber = `phoneNumber`
+        self.label = `label`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -36,6 +36,17 @@ open class Fax: Model {
         open var `coverPageText`: String?
         // Internal identifier of the original fax message which needs to be resent. Mandatory for resend fax request
         open var `originalMessageId`: String?
+        public init() {
+        }
+        convenience public init(to: [CallerInfo]? = nil, faxResolution: String? = nil, sendTime: String? = nil, coverIndex: Int? = nil, coverPageText: String? = nil, originalMessageId: String? = nil) {
+            self.init()
+            self.to = `to`
+            self.faxResolution = `faxResolution`
+            self.sendTime = `sendTime`
+            self.coverIndex = `coverIndex`
+            self.coverPageText = `coverPageText`
+            self.originalMessageId = `originalMessageId`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

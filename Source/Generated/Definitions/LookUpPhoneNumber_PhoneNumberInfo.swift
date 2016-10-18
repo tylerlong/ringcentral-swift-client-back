@@ -10,6 +10,15 @@ open class LookUpPhoneNumber_PhoneNumberInfo: Mappable {
     open var `vanityPattern`: String?
     // The value is returned if the extendedSearch parameter is true. '10' is the closest match
     open var `rank`: Int?
+    public init() {
+    }
+    convenience public init(phoneNumber: String? = nil, formattedNumber: String? = nil, vanityPattern: String? = nil, rank: Int? = nil) {
+        self.init()
+        self.phoneNumber = `phoneNumber`
+        self.formattedNumber = `formattedNumber`
+        self.vanityPattern = `vanityPattern`
+        self.rank = `rank`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

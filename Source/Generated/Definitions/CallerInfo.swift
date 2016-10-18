@@ -10,6 +10,15 @@ open class CallerInfo: Mappable {
     open var `location`: String?
     // Symbolic name associated with a party. If the phone does not belong to the known extension, only the location is returned, the name is not determined then
     open var `name`: String?
+    public init() {
+    }
+    convenience public init(phoneNumber: String? = nil, extensionNumber: String? = nil, location: String? = nil, name: String? = nil) {
+        self.init()
+        self.phoneNumber = `phoneNumber`
+        self.extensionNumber = `extensionNumber`
+        self.location = `location`
+        self.name = `name`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

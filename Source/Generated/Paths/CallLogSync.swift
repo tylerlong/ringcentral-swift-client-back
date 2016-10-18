@@ -34,6 +34,16 @@ open class CallLogSync: Model {
         open var `recordCount`: Int?
         // Type of calls to be returned. The default value is 'All'
         open var `statusGroup`: String?
+        public init() {
+        }
+        convenience public init(syncType: String? = nil, syncToken: String? = nil, dateFrom: String? = nil, recordCount: Int? = nil, statusGroup: String? = nil) {
+            self.init()
+            self.syncType = `syncType`
+            self.syncToken = `syncToken`
+            self.dateFrom = `dateFrom`
+            self.recordCount = `recordCount`
+            self.statusGroup = `statusGroup`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -58,6 +68,13 @@ open class CallLogSync: Model {
         open var `records`: [CallLogRecord]?
         // Sync type, token and time
         open var `syncInfo`: SyncInfo?
+        public init() {
+        }
+        convenience public init(records: [CallLogRecord]? = nil, syncInfo: SyncInfo? = nil) {
+            self.init()
+            self.records = `records`
+            self.syncInfo = `syncInfo`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

@@ -6,6 +6,13 @@ open class RingOut_Request_From: Mappable {
     open var `phoneNumber`: String?
     // Internal identifier of a forwarding number; returned in response in the id field. Can be specified instead of the phoneNumber attribute
     open var `forwardingNumberId`: String?
+    public init() {
+    }
+    convenience public init(phoneNumber: String? = nil, forwardingNumberId: String? = nil) {
+        self.init()
+        self.phoneNumber = `phoneNumber`
+        self.forwardingNumberId = `forwardingNumberId`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

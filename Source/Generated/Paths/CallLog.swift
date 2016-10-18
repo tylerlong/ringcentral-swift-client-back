@@ -44,6 +44,21 @@ open class CallLog: Model {
         open var `page`: Int?
         // Indicates the page size (number of items). If not specified, the value is '100' by default.
         open var `perPage`: Int?
+        public init() {
+        }
+        convenience public init(extensionNumber: String? = nil, phoneNumber: String? = nil, direction: String? = nil, type: String? = nil, view: String? = nil, withRecording: Bool? = nil, dateFrom: String? = nil, dateTo: String? = nil, page: Int? = nil, perPage: Int? = nil) {
+            self.init()
+            self.extensionNumber = `extensionNumber`
+            self.phoneNumber = `phoneNumber`
+            self.direction = `direction`
+            self.type = `type`
+            self.view = `view`
+            self.withRecording = `withRecording`
+            self.dateFrom = `dateFrom`
+            self.dateTo = `dateTo`
+            self.page = `page`
+            self.perPage = `perPage`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -80,6 +95,14 @@ open class CallLog: Model {
         open var `navigation`: NavigationInfo?
         // Information on paging
         open var `paging`: PagingInfo?
+        public init() {
+        }
+        convenience public init(records: [CallLogRecord]? = nil, navigation: NavigationInfo? = nil, paging: PagingInfo? = nil) {
+            self.init()
+            self.records = `records`
+            self.navigation = `navigation`
+            self.paging = `paging`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -120,6 +143,12 @@ open class CallLog: Model {
     open class DeleteParameters: Mappable {
         // The end datetime for records deletion in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time
         open var `dateTo`: String?
+        public init() {
+        }
+        convenience public init(dateTo: String? = nil) {
+            self.init()
+            self.dateTo = `dateTo`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

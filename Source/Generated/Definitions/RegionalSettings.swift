@@ -12,6 +12,16 @@ open class RegionalSettings: Mappable {
     open var `greetingLanguage`: GreetingLanguageInfo?
     // Formatting language preferences for numbers, dates and currencies
     open var `formattingLocale`: FormattingLocaleInfo?
+    public init() {
+    }
+    convenience public init(homeCountry: CountryInfo? = nil, timezone: TimezoneInfo? = nil, language: LanguageInfo? = nil, greetingLanguage: GreetingLanguageInfo? = nil, formattingLocale: FormattingLocaleInfo? = nil) {
+        self.init()
+        self.homeCountry = `homeCountry`
+        self.timezone = `timezone`
+        self.language = `language`
+        self.greetingLanguage = `greetingLanguage`
+        self.formattingLocale = `formattingLocale`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

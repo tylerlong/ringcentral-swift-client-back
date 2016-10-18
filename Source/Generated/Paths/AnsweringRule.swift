@@ -44,6 +44,21 @@ open class AnsweringRule: Model {
         open var `unconditionalForwarding`: UnconditionalForwardingInfo?
         // Specifies whether to take a voicemail and who should do it
         open var `voiceMail`: VoicemailInfo?
+        public init() {
+        }
+        convenience public init(enabled: Bool? = nil, type: String? = nil, name: String? = nil, callers: [CallersInfo]? = nil, calledNumbers: [CalledNumberInfo]? = nil, schedule: AnsweringRule_ScheduleInfo? = nil, callHandlingAction: String? = nil, forwarding: ForwardingInfo? = nil, unconditionalForwarding: UnconditionalForwardingInfo? = nil, voiceMail: VoicemailInfo? = nil) {
+            self.init()
+            self.enabled = `enabled`
+            self.type = `type`
+            self.name = `name`
+            self.callers = `callers`
+            self.calledNumbers = `calledNumbers`
+            self.schedule = `schedule`
+            self.callHandlingAction = `callHandlingAction`
+            self.forwarding = `forwarding`
+            self.unconditionalForwarding = `unconditionalForwarding`
+            self.voiceMail = `voiceMail`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -88,6 +103,15 @@ open class AnsweringRule: Model {
         open var `paging`: PagingInfo?
         // Information on navigation
         open var `navigation`: NavigationInfo?
+        public init() {
+        }
+        convenience public init(uri: String? = nil, records: [AnsweringRuleInfo]? = nil, paging: PagingInfo? = nil, navigation: NavigationInfo? = nil) {
+            self.init()
+            self.uri = `uri`
+            self.records = `records`
+            self.paging = `paging`
+            self.navigation = `navigation`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -142,6 +166,15 @@ open class AnsweringRule: Model {
         open var `forwarding`: ForwardingInfo?
         // Predefined greetings applied for an answering rule
         open var `greetings`: [GreetingInfo]?
+        public init() {
+        }
+        convenience public init(enabled: Bool? = nil, name: String? = nil, forwarding: ForwardingInfo? = nil, greetings: [GreetingInfo]? = nil) {
+            self.init()
+            self.enabled = `enabled`
+            self.name = `name`
+            self.forwarding = `forwarding`
+            self.greetings = `greetings`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

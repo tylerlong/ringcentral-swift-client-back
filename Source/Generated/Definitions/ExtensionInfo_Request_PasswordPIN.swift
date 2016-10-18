@@ -6,6 +6,13 @@ open class ExtensionInfo_Request_PasswordPIN: Mappable {
     open var `password`: String?
     // IVR PIN
     open var `ivrPin`: String?
+    public init() {
+    }
+    convenience public init(password: String? = nil, ivrPin: String? = nil) {
+        self.init()
+        self.password = `password`
+        self.ivrPin = `ivrPin`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

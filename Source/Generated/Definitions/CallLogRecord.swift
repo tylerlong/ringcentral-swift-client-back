@@ -32,6 +32,26 @@ open class CallLogRecord: Mappable {
     open var `transport`: String?
     // For 'Detailed' view only. Leg description
     open var `legs`: [LegInfo]?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, sessionId: String? = nil, from: CallerInfo? = nil, to: CallerInfo? = nil, type: String? = nil, direction: String? = nil, action: String? = nil, result: String? = nil, startTime: String? = nil, duration: Int? = nil, recording: RecordingInfo? = nil, lastModifiedTime: String? = nil, transport: String? = nil, legs: [LegInfo]? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.sessionId = `sessionId`
+        self.from = `from`
+        self.to = `to`
+        self.type = `type`
+        self.direction = `direction`
+        self.action = `action`
+        self.result = `result`
+        self.startTime = `startTime`
+        self.duration = `duration`
+        self.recording = `recording`
+        self.lastModifiedTime = `lastModifiedTime`
+        self.transport = `transport`
+        self.legs = `legs`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

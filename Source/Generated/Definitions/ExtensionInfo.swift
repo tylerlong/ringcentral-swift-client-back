@@ -34,6 +34,27 @@ open class ExtensionInfo: Mappable {
     open var `statusInfo`: StatusInfo?
     // Extension type
     open var `type`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, contact: ContactInfo? = nil, departments: [DepartmentInfo]? = nil, extensionNumber: String? = nil, name: String? = nil, partnerId: String? = nil, permissions: ExtensionPermissions? = nil, profileImage: ProfileImageInfo? = nil, references: [ReferenceInfo]? = nil, regionalSettings: RegionalSettings? = nil, serviceFeatures: [ExtensionServiceFeatureInfo]? = nil, setupWizardState: String? = nil, status: String? = nil, statusInfo: StatusInfo? = nil, type: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.contact = `contact`
+        self.departments = `departments`
+        self.extensionNumber = `extensionNumber`
+        self.name = `name`
+        self.partnerId = `partnerId`
+        self.permissions = `permissions`
+        self.profileImage = `profileImage`
+        self.references = `references`
+        self.regionalSettings = `regionalSettings`
+        self.serviceFeatures = `serviceFeatures`
+        self.setupWizardState = `setupWizardState`
+        self.status = `status`
+        self.statusInfo = `statusInfo`
+        self.type = `type`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

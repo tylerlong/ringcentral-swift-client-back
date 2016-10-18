@@ -26,6 +26,12 @@ open class Order: Model {
     open class PostParameters: Mappable {
         // List of devices to order
         open var `devices`: [DeviceInfo]?
+        public init() {
+        }
+        convenience public init(devices: [DeviceInfo]? = nil) {
+            self.init()
+            self.devices = `devices`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -40,6 +46,12 @@ open class Order: Model {
     open class PostResponse: Mappable {
         // List of the ordered devices
         open var `devices`: [DeviceInfo]?
+        public init() {
+        }
+        convenience public init(devices: [DeviceInfo]? = nil) {
+            self.init()
+            self.devices = `devices`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -64,6 +76,14 @@ open class Order: Model {
         open var `uri`: String?
         // List of the ordered devices
         open var `devices`: [DeviceInfo]?
+        public init() {
+        }
+        convenience public init(id: String? = nil, uri: String? = nil, devices: [DeviceInfo]? = nil) {
+            self.init()
+            self.id = `id`
+            self.uri = `uri`
+            self.devices = `devices`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

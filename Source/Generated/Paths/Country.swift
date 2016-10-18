@@ -32,6 +32,15 @@ open class Country: Model {
         open var `page`: Int?
         // Indicates the page size (number of items). If not specified, the value is '100' by default
         open var `perPage`: Int?
+        public init() {
+        }
+        convenience public init(loginAllowed: Bool? = nil, numberSelling: Bool? = nil, page: Int? = nil, perPage: Int? = nil) {
+            self.init()
+            self.loginAllowed = `loginAllowed`
+            self.numberSelling = `numberSelling`
+            self.page = `page`
+            self.perPage = `perPage`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -56,6 +65,14 @@ open class Country: Model {
         open var `navigation`: NavigationInfo?
         // Information on paging
         open var `paging`: PagingInfo?
+        public init() {
+        }
+        convenience public init(records: [FullCountryInfo]? = nil, navigation: NavigationInfo? = nil, paging: PagingInfo? = nil) {
+            self.init()
+            self.records = `records`
+            self.navigation = `navigation`
+            self.paging = `paging`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

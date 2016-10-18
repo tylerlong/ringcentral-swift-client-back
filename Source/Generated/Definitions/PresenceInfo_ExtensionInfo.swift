@@ -8,6 +8,14 @@ open class PresenceInfo_ExtensionInfo: Mappable {
     open var `uri`: String?
     // Extension number (usually 3 or 4 digits)
     open var `extensionNumber`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, extensionNumber: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.extensionNumber = `extensionNumber`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

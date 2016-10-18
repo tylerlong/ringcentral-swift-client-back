@@ -10,6 +10,15 @@ open class ExtensionInfo_Request_ContactInfo_RegionalSettings: Mappable {
     open var `greetingLanguage`: ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage?
     // Formatting language preferences for numbers, dates and currencies
     open var `formattingLocale`: ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale?
+    public init() {
+    }
+    convenience public init(timezone: ExtensionInfo_Request_ContactInfo_RegionalSettings_Timezone? = nil, language: ExtensionInfo_Request_ContactInfo_RegionalSettings_Language? = nil, greetingLanguage: ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage? = nil, formattingLocale: ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale? = nil) {
+        self.init()
+        self.timezone = `timezone`
+        self.language = `language`
+        self.greetingLanguage = `greetingLanguage`
+        self.formattingLocale = `formattingLocale`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

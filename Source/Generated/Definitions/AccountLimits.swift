@@ -8,6 +8,14 @@ open class AccountLimits: Mappable {
     open var `meetingSize`: Int?
     // The maximum number of extensions which can be included in the list of users monitored for Presence
     open var `maxMonitoredExtensionsPerUser`: Int?
+    public init() {
+    }
+    convenience public init(freeSoftPhoneLinesPerExtension: Int? = nil, meetingSize: Int? = nil, maxMonitoredExtensionsPerUser: Int? = nil) {
+        self.init()
+        self.freeSoftPhoneLinesPerExtension = `freeSoftPhoneLinesPerExtension`
+        self.meetingSize = `meetingSize`
+        self.maxMonitoredExtensionsPerUser = `maxMonitoredExtensionsPerUser`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

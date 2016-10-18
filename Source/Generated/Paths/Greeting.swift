@@ -28,6 +28,13 @@ open class Greeting: Model {
         open var `type`: String?
         // Information on an answering rule that the greeting is applied to
         open var `answeringRule`: CustomGreetingInfo_AnsweringRuleInfo?
+        public init() {
+        }
+        convenience public init(type: String? = nil, answeringRule: CustomGreetingInfo_AnsweringRuleInfo? = nil) {
+            self.init()
+            self.type = `type`
+            self.answeringRule = `answeringRule`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

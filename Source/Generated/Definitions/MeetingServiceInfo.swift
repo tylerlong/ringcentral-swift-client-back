@@ -12,6 +12,16 @@ open class MeetingServiceInfo: Mappable {
     open var `externalUserInfo`: ExternalUserInfo?
     // Dial-in numbers data
     open var `dialInNumbers`: DialInNumbers?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, supportUri: String? = nil, intlDialInNumbersUri: String? = nil, externalUserInfo: ExternalUserInfo? = nil, dialInNumbers: DialInNumbers? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.supportUri = `supportUri`
+        self.intlDialInNumbersUri = `intlDialInNumbersUri`
+        self.externalUserInfo = `externalUserInfo`
+        self.dialInNumbers = `dialInNumbers`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

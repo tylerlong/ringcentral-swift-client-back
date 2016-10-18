@@ -28,6 +28,24 @@ open class DeviceInfo: Mappable {
     open var `shipping`: ShippingInfo?
     // Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either "model" structure, or "boxBillingId" must be specified for HardPhone
     open var `boxBillingId`: Int?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, sku: String? = nil, type: String? = nil, name: String? = nil, serial: String? = nil, computerName: String? = nil, model: ModelInfo? = nil, extension: DeviceInfo_ExtensionInfo? = nil, emergencyServiceAddress: EmergencyAddressInfo? = nil, phoneLines: PhoneLinesInfo? = nil, shipping: ShippingInfo? = nil, boxBillingId: Int? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.sku = `sku`
+        self.type = `type`
+        self.name = `name`
+        self.serial = `serial`
+        self.computerName = `computerName`
+        self.model = `model`
+        self.extension = `extension`
+        self.emergencyServiceAddress = `emergencyServiceAddress`
+        self.phoneLines = `phoneLines`
+        self.shipping = `shipping`
+        self.boxBillingId = `boxBillingId`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

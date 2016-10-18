@@ -26,6 +26,12 @@ open class Conferencing: Model {
     open class GetParameters: Mappable {
         // Internal identifier of a country. If not specified, the response is returned for the brand country
         open var `countryId`: String?
+        public init() {
+        }
+        convenience public init(countryId: String? = nil) {
+            self.init()
+            self.countryId = `countryId`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -58,6 +64,13 @@ open class Conferencing: Model {
         open var `phoneNumbers`: [Conferencing_Request_PhoneNumber]?
         // Determines if host user allows conference participants to join before the host
         open var `allowJoinBeforeHost`: Bool?
+        public init() {
+        }
+        convenience public init(phoneNumbers: [Conferencing_Request_PhoneNumber]? = nil, allowJoinBeforeHost: Bool? = nil) {
+            self.init()
+            self.phoneNumbers = `phoneNumbers`
+            self.allowJoinBeforeHost = `allowJoinBeforeHost`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

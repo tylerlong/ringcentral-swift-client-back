@@ -12,6 +12,16 @@ open class DialInNumbers_CountryInfo: Mappable {
     open var `isoCode`: String?
     // Official name of a country
     open var `name`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, callingCode: String? = nil, isoCode: String? = nil, name: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.callingCode = `callingCode`
+        self.isoCode = `isoCode`
+        self.name = `name`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -22,6 +22,15 @@ open class BusinessAddress: Model {
         open var `email`: String?
         // Company business address
         open var `businessAddress`: BusinessAddressInfo?
+        public init() {
+        }
+        convenience public init(uri: String? = nil, company: String? = nil, email: String? = nil, businessAddress: BusinessAddressInfo? = nil) {
+            self.init()
+            self.uri = `uri`
+            self.company = `company`
+            self.email = `email`
+            self.businessAddress = `businessAddress`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -62,6 +71,14 @@ open class BusinessAddress: Model {
         open var `email`: String?
         // Company business address
         open var `businessAddress`: BusinessAddressInfo?
+        public init() {
+        }
+        convenience public init(company: String? = nil, email: String? = nil, businessAddress: BusinessAddressInfo? = nil) {
+            self.init()
+            self.company = `company`
+            self.email = `email`
+            self.businessAddress = `businessAddress`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -86,6 +103,15 @@ open class BusinessAddress: Model {
         open var `email`: String?
         // Company business address
         open var `businessAddress`: BusinessAddressInfo?
+        public init() {
+        }
+        convenience public init(uri: String? = nil, company: String? = nil, email: String? = nil, businessAddress: BusinessAddressInfo? = nil) {
+            self.init()
+            self.uri = `uri`
+            self.company = `company`
+            self.email = `email`
+            self.businessAddress = `businessAddress`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

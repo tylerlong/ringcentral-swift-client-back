@@ -20,6 +20,20 @@ open class ParsePhoneNumber_PhoneNumberInfo: Mappable {
     open var `special`: Bool?
     // E.164 (11-digits) format of a phone number without the plus sign ('+')
     open var `normalized`: String?
+    public init() {
+    }
+    convenience public init(areaCode: String? = nil, country: [ParsePhoneNumber_CountryInfo]? = nil, dialable: String? = nil, e164: String? = nil, formattedInternational: String? = nil, formattedNational: String? = nil, originalString: String? = nil, special: Bool? = nil, normalized: String? = nil) {
+        self.init()
+        self.areaCode = `areaCode`
+        self.country = `country`
+        self.dialable = `dialable`
+        self.e164 = `e164`
+        self.formattedInternational = `formattedInternational`
+        self.formattedNational = `formattedNational`
+        self.originalString = `originalString`
+        self.special = `special`
+        self.normalized = `normalized`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -32,6 +32,15 @@ open class Authorize: Model {
         open var `redirect_uri`: String?
         // Optional, recommended. An opaque value used by the client to maintain state between the request and callback. The authorization server includes this value when redirecting the user-agent back to the client. The parameter should be used for preventing cross-site request forgery
         open var `state`: String?
+        public init() {
+        }
+        convenience public init(response_type: String? = nil, client_id: String? = nil, redirect_uri: String? = nil, state: String? = nil) {
+            self.init()
+            self.response_type = `response_type`
+            self.client_id = `client_id`
+            self.redirect_uri = `redirect_uri`
+            self.state = `state`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -56,6 +65,14 @@ open class Authorize: Model {
         open var `expires_in`: Int?
         // This parameter will be included in response if it was specified in the client authorization request. The value will be copied from the one received from the client
         open var `state`: String?
+        public init() {
+        }
+        convenience public init(code: String? = nil, expires_in: Int? = nil, state: String? = nil) {
+            self.init()
+            self.code = `code`
+            self.expires_in = `expires_in`
+            self.state = `state`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

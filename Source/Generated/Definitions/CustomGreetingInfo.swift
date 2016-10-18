@@ -12,6 +12,16 @@ open class CustomGreetingInfo: Mappable {
     open var `contentType`: String?
     // Link to a greeting content (audio file)
     open var `contentUri`: String?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, id: String? = nil, type: String? = nil, contentType: String? = nil, contentUri: String? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.id = `id`
+        self.type = `type`
+        self.contentType = `contentType`
+        self.contentUri = `contentUri`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

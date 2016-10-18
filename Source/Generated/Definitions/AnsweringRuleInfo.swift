@@ -28,6 +28,24 @@ open class AnsweringRuleInfo: Mappable {
     open var `voicemail`: VoicemailInfo?
     // Predefined greetings applied for an answering rule
     open var `greetings`: [GreetingInfo]?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, id: String? = nil, type: String? = nil, name: String? = nil, enabled: Bool? = nil, schedule: ScheduleInfo? = nil, calledNumbers: [AnsweringRuleInfo_CalleeInfo]? = nil, callers: [AnsweringRuleInfo_CallerInfo]? = nil, callHandlingAction: String? = nil, forwarding: ForwardingInfo? = nil, unconditionalForwarding: UnconditionalForwardingInfo? = nil, voicemail: VoicemailInfo? = nil, greetings: [GreetingInfo]? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.id = `id`
+        self.type = `type`
+        self.name = `name`
+        self.enabled = `enabled`
+        self.schedule = `schedule`
+        self.calledNumbers = `calledNumbers`
+        self.callers = `callers`
+        self.callHandlingAction = `callHandlingAction`
+        self.forwarding = `forwarding`
+        self.unconditionalForwarding = `unconditionalForwarding`
+        self.voicemail = `voicemail`
+        self.greetings = `greetings`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

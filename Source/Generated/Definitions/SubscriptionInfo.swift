@@ -18,6 +18,19 @@ open class SubscriptionInfo: Mappable {
     open var `creationTime`: String?
     // Delivery mode data
     open var `deliveryMode`: DeliveryMode?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, eventFilters: [String]? = nil, expirationTime: String? = nil, expiresIn: Int? = nil, status: String? = nil, creationTime: String? = nil, deliveryMode: DeliveryMode? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.eventFilters = `eventFilters`
+        self.expirationTime = `expirationTime`
+        self.expiresIn = `expiresIn`
+        self.status = `status`
+        self.creationTime = `creationTime`
+        self.deliveryMode = `deliveryMode`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

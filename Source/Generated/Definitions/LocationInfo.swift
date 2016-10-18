@@ -14,6 +14,17 @@ open class LocationInfo: Mappable {
     open var `nxx`: String?
     // ID and URI of the state this location belongs to, see State Info
     open var `state`: String?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, areaCode: String? = nil, city: String? = nil, npa: String? = nil, nxx: String? = nil, state: String? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.areaCode = `areaCode`
+        self.city = `city`
+        self.npa = `npa`
+        self.nxx = `nxx`
+        self.state = `state`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

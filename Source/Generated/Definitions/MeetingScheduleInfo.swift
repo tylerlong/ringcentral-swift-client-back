@@ -8,6 +8,14 @@ open class MeetingScheduleInfo: Mappable {
     open var `durationInMinutes`: Int?
     // Timezone of a meeting
     open var `timeZone`: MeetingScheduleInfo_TimezoneInfo?
+    public init() {
+    }
+    convenience public init(startTime: String? = nil, durationInMinutes: Int? = nil, timeZone: MeetingScheduleInfo_TimezoneInfo? = nil) {
+        self.init()
+        self.startTime = `startTime`
+        self.durationInMinutes = `durationInMinutes`
+        self.timeZone = `timeZone`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

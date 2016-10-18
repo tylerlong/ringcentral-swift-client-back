@@ -14,6 +14,17 @@ open class MessageInfo_CallerInfo: Mappable {
     open var `name`: String?
     // Phone number of a party. Usually it is a plain number including country and area code like 18661234567. But sometimes it could be returned from database with some formatting applied, for example (866)123-4567. This property is filled in all cases where parties communicate by means of global phone numbers, for example when calling to direct numbers or sending/receiving SMS
     open var `phoneNumber`: String?
+    public init() {
+    }
+    convenience public init(extensionNumber: String? = nil, location: String? = nil, messageStatus: String? = nil, faxErrorCode: String? = nil, name: String? = nil, phoneNumber: String? = nil) {
+        self.init()
+        self.extensionNumber = `extensionNumber`
+        self.location = `location`
+        self.messageStatus = `messageStatus`
+        self.faxErrorCode = `faxErrorCode`
+        self.name = `name`
+        self.phoneNumber = `phoneNumber`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

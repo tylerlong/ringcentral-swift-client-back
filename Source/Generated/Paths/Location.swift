@@ -34,6 +34,16 @@ open class Location: Model {
         open var `stateId`: String?
         // Specifies if nxx codes are returned
         open var `withNxx`: Bool?
+        public init() {
+        }
+        convenience public init(orderBy: String? = nil, page: Int? = nil, perPage: Int? = nil, stateId: String? = nil, withNxx: Bool? = nil) {
+            self.init()
+            self.orderBy = `orderBy`
+            self.page = `page`
+            self.perPage = `perPage`
+            self.stateId = `stateId`
+            self.withNxx = `withNxx`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -60,6 +70,14 @@ open class Location: Model {
         open var `navigation`: NavigationInfo?
         // Information on paging
         open var `paging`: PagingInfo?
+        public init() {
+        }
+        convenience public init(records: [LocationInfo]? = nil, navigation: NavigationInfo? = nil, paging: PagingInfo? = nil) {
+            self.init()
+            self.records = `records`
+            self.navigation = `navigation`
+            self.paging = `paging`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

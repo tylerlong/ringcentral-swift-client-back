@@ -21,6 +21,13 @@ open class AuthzProfile: Model {
         open var `uri`: String?
         // List of user permissions granted
         open var `permissions`: [UserPermission]?
+        public init() {
+        }
+        convenience public init(uri: String? = nil, permissions: [UserPermission]? = nil) {
+            self.init()
+            self.uri = `uri`
+            self.permissions = `permissions`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

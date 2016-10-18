@@ -6,6 +6,13 @@ open class GreetingInfo: Mappable {
     open var `type`: String?
     // Predefined greeting information
     open var `preset`: PresetInfo?
+    public init() {
+    }
+    convenience public init(type: String? = nil, preset: PresetInfo? = nil) {
+        self.init()
+        self.type = `type`
+        self.preset = `preset`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -6,6 +6,13 @@ open class UserPermission: Mappable {
     open var `permission`: UserPermissionInfo?
     // List of active scopes for permission
     open var `scopes`: [String]?
+    public init() {
+    }
+    convenience public init(permission: UserPermissionInfo? = nil, scopes: [String]? = nil) {
+        self.init()
+        self.permission = `permission`
+        self.scopes = `scopes`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

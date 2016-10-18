@@ -16,6 +16,18 @@ open class WeeklyScheduleInfo: Mappable {
     open var `saturday`: [TimeInterval]?
     // Time intervals for a particular day
     open var `sunday`: [TimeInterval]?
+    public init() {
+    }
+    convenience public init(monday: [TimeInterval]? = nil, tuesday: [TimeInterval]? = nil, wednesday: [TimeInterval]? = nil, thursday: [TimeInterval]? = nil, friday: [TimeInterval]? = nil, saturday: [TimeInterval]? = nil, sunday: [TimeInterval]? = nil) {
+        self.init()
+        self.monday = `monday`
+        self.tuesday = `tuesday`
+        self.wednesday = `wednesday`
+        self.thursday = `thursday`
+        self.friday = `friday`
+        self.saturday = `saturday`
+        self.sunday = `sunday`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

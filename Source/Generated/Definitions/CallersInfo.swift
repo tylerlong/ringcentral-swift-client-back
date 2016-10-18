@@ -6,6 +6,13 @@ open class CallersInfo: Mappable {
     open var `callerId`: String?
     // Contact name of a caller
     open var `name`: String?
+    public init() {
+    }
+    convenience public init(callerId: String? = nil, name: String? = nil) {
+        self.init()
+        self.callerId = `callerId`
+        self.name = `name`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

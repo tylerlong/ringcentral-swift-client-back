@@ -8,6 +8,14 @@ open class BrandInfo: Mappable {
     open var `name`: String?
     // Home country information
     open var `homeCountry`: CountryInfo?
+    public init() {
+    }
+    convenience public init(id: String? = nil, name: String? = nil, homeCountry: CountryInfo? = nil) {
+        self.init()
+        self.id = `id`
+        self.name = `name`
+        self.homeCountry = `homeCountry`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

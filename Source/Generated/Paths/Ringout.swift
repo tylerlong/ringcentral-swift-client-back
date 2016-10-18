@@ -34,6 +34,16 @@ open class Ringout: Model {
         open var `playPrompt`: Bool?
         // Optional. Dialing plan country data. If not specified, then extension home country is applied by default
         open var `country`: RingOut_Request_CountryInfo?
+        public init() {
+        }
+        convenience public init(from: RingOut_Request_From? = nil, to: RingOut_Request_To? = nil, callerId: RingOut_Request_To? = nil, playPrompt: Bool? = nil, country: RingOut_Request_CountryInfo? = nil) {
+            self.init()
+            self.from = `from`
+            self.to = `to`
+            self.callerId = `callerId`
+            self.playPrompt = `playPrompt`
+            self.country = `country`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

@@ -8,6 +8,14 @@ open class DepartmentInfo: Mappable {
     open var `uri`: String?
     // Number of a department extension
     open var `extensionNumber`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, extensionNumber: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.extensionNumber = `extensionNumber`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

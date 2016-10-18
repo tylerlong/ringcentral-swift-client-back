@@ -10,6 +10,15 @@ open class DialInNumbers: Mappable {
     open var `location`: String?
     // Country resource corresponding to the dial-in number
     open var `country`: DialInNumbers_CountryInfo?
+    public init() {
+    }
+    convenience public init(phoneNumber: String? = nil, formattedNumber: String? = nil, location: String? = nil, country: DialInNumbers_CountryInfo? = nil) {
+        self.init()
+        self.phoneNumber = `phoneNumber`
+        self.formattedNumber = `formattedNumber`
+        self.location = `location`
+        self.country = `country`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

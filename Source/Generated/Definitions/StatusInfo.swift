@@ -6,6 +6,13 @@ open class StatusInfo: Mappable {
     open var `comment`: String?
     // Type of suspension
     open var `reason`: String?
+    public init() {
+    }
+    convenience public init(comment: String? = nil, reason: String? = nil) {
+        self.init()
+        self.comment = `comment`
+        self.reason = `reason`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -30,6 +30,14 @@ open class Sms: Model {
         open var `to`: [CallerInfo]?
         // Text of a message. Max length is 1000 symbols (2-byte UTF-16 encoded). If a character is encoded in 4 bytes in UTF-16 it is treated as 2 characters, thus restricting the maximum message length to 500 symbols
         open var `text`: String?
+        public init() {
+        }
+        convenience public init(from: CallerInfo? = nil, to: [CallerInfo]? = nil, text: String? = nil) {
+            self.init()
+            self.from = `from`
+            self.to = `to`
+            self.text = `text`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

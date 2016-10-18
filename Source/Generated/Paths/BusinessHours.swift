@@ -18,6 +18,13 @@ open class BusinessHours: Model {
         open var `uri`: String?
         // Schedule when an answering rule is applied
         open var `schedule`: BusinessHour_ScheduleInfo?
+        public init() {
+        }
+        convenience public init(uri: String? = nil, schedule: BusinessHour_ScheduleInfo? = nil) {
+            self.init()
+            self.uri = `uri`
+            self.schedule = `schedule`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

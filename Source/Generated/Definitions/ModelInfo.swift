@@ -8,6 +8,14 @@ open class ModelInfo: Mappable {
     open var `name`: String?
     // Addons description
     open var `addons`: [AddonInfo]?
+    public init() {
+    }
+    convenience public init(id: String? = nil, name: String? = nil, addons: [AddonInfo]? = nil) {
+        self.init()
+        self.id = `id`
+        self.name = `name`
+        self.addons = `addons`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

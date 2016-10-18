@@ -28,6 +28,13 @@ open class Parse: Model {
         open var `homeCountry`: String?
         // The default value is "False". If "True", the numbers that are closer to the home country are given higher priority
         open var `nationalAsPriority`: Bool?
+        public init() {
+        }
+        convenience public init(homeCountry: String? = nil, nationalAsPriority: Bool? = nil) {
+            self.init()
+            self.homeCountry = `homeCountry`
+            self.nationalAsPriority = `nationalAsPriority`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -66,6 +73,23 @@ open class Parse: Model {
         open var `normalized`: String?
         // Information on a country the phone number belongs to
         open var `country`: [ParsePhoneNumber_CountryInfo]?
+        public init() {
+        }
+        convenience public init(uri: String? = nil, homeCountry: [ParsePhoneNumber_CountryInfo]? = nil, phoneNumbers: [ParsePhoneNumber_PhoneNumberInfo]? = nil, originalString: String? = nil, areaCode: String? = nil, formattedNational: String? = nil, formattedInternational: String? = nil, dialable: String? = nil, e164: String? = nil, special: Bool? = nil, normalized: String? = nil, country: [ParsePhoneNumber_CountryInfo]? = nil) {
+            self.init()
+            self.uri = `uri`
+            self.homeCountry = `homeCountry`
+            self.phoneNumbers = `phoneNumbers`
+            self.originalString = `originalString`
+            self.areaCode = `areaCode`
+            self.formattedNational = `formattedNational`
+            self.formattedInternational = `formattedInternational`
+            self.dialable = `dialable`
+            self.e164 = `e164`
+            self.special = `special`
+            self.normalized = `normalized`
+            self.country = `country`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

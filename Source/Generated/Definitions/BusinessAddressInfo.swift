@@ -12,6 +12,16 @@ open class BusinessAddressInfo: Mappable {
     open var `street`: String?
     // Zip code
     open var `zip`: String?
+    public init() {
+    }
+    convenience public init(country: String? = nil, state: String? = nil, city: String? = nil, street: String? = nil, zip: String? = nil) {
+        self.init()
+        self.country = `country`
+        self.state = `state`
+        self.city = `city`
+        self.street = `street`
+        self.zip = `zip`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -16,6 +16,18 @@ open class DeliveryMode: Mappable {
     open var `encryptionAlgorithm`: String?
     // Key for notification message decryption (for PubNub transport type only)
     open var `encryptionKey`: String?
+    public init() {
+    }
+    convenience public init(transportType: String? = nil, encryption: Bool? = nil, address: String? = nil, subscriberKey: String? = nil, secretKey: String? = nil, encryptionAlgorithm: String? = nil, encryptionKey: String? = nil) {
+        self.init()
+        self.transportType = `transportType`
+        self.encryption = `encryption`
+        self.address = `address`
+        self.subscriberKey = `subscriberKey`
+        self.secretKey = `secretKey`
+        self.encryptionAlgorithm = `encryptionAlgorithm`
+        self.encryptionKey = `encryptionKey`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

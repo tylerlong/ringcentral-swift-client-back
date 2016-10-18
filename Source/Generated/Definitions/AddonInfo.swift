@@ -6,6 +6,13 @@ open class AddonInfo: Mappable {
     open var `id`: String?
     // Number of addons. For HardPhones of certain types, which are compatible with such addon identifier
     open var `count`: Int?
+    public init() {
+    }
+    convenience public init(id: String? = nil, count: Int? = nil) {
+        self.init()
+        self.id = `id`
+        self.count = `count`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

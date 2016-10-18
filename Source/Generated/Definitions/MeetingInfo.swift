@@ -26,6 +26,23 @@ open class MeetingInfo: Mappable {
     open var `startParticipantsVideo`: Bool?
     // Meeting audio options. Possible values are 'Phone', 'ComputerAudio'
     open var `audioOptions`: [String]?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, id: String? = nil, topic: String? = nil, meetingType: String? = nil, password: String? = nil, status: String? = nil, links: LinksInfo? = nil, schedule: MeetingScheduleInfo? = nil, allowJoinBeforeHost: Bool? = nil, startHostVideo: Bool? = nil, startParticipantsVideo: Bool? = nil, audioOptions: [String]? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.id = `id`
+        self.topic = `topic`
+        self.meetingType = `meetingType`
+        self.password = `password`
+        self.status = `status`
+        self.links = `links`
+        self.schedule = `schedule`
+        self.allowJoinBeforeHost = `allowJoinBeforeHost`
+        self.startHostVideo = `startHostVideo`
+        self.startParticipantsVideo = `startParticipantsVideo`
+        self.audioOptions = `audioOptions`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

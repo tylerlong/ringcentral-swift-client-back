@@ -6,6 +6,13 @@ open class RecipientInfo: Mappable {
     open var `uri`: String?
     // Internal identifier of a recipient extension
     open var `id`: String?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, id: String? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.id = `id`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

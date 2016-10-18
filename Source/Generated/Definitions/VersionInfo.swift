@@ -10,6 +10,15 @@ open class VersionInfo: Mappable {
     open var `releaseDate`: String?
     // URI part determining the current version
     open var `uriString`: String?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, versionString: String? = nil, releaseDate: String? = nil, uriString: String? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.versionString = `versionString`
+        self.releaseDate = `releaseDate`
+        self.uriString = `uriString`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

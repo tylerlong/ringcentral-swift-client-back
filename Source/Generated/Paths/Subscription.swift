@@ -28,6 +28,13 @@ open class Subscription: Model {
         open var `eventFilters`: [String]?
         // Notification delivery settings
         open var `deliveryMode`: Subscription_Request_DeliveryMode?
+        public init() {
+        }
+        convenience public init(eventFilters: [String]? = nil, deliveryMode: Subscription_Request_DeliveryMode? = nil) {
+            self.init()
+            self.eventFilters = `eventFilters`
+            self.deliveryMode = `deliveryMode`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -72,6 +79,12 @@ open class Subscription: Model {
     open class PutParameters: Mappable {
         // Collection of URIs to API resources (see Event Types). Mandatory field
         open var `eventFilters`: [String]?
+        public init() {
+        }
+        convenience public init(eventFilters: [String]? = nil) {
+            self.init()
+            self.eventFilters = `eventFilters`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

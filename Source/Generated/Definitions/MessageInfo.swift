@@ -46,6 +46,33 @@ open class MessageInfo: Mappable {
     open var `type`: String?
     // Voicemail only. Status of voicemail to text transcription. If VoicemailToText feature is not activated for account, the 'NotAvailable' value is returned
     open var `vmTranscriptionStatus`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, attachments: [MessageAttachmentInfo]? = nil, availability: String? = nil, conversationId: Int? = nil, creationTime: String? = nil, deliveryErrorCode: String? = nil, direction: String? = nil, faxPageCount: Int? = nil, faxResolution: String? = nil, from: MessageInfo_CallerInfo? = nil, lastModifiedTime: String? = nil, messageStatus: String? = nil, pgToDepartment: Bool? = nil, priority: String? = nil, readStatus: String? = nil, smsDeliveryTime: String? = nil, smsSendingAttemptsCount: Int? = nil, subject: String? = nil, to: [MessageInfo_CallerInfo]? = nil, type: String? = nil, vmTranscriptionStatus: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.attachments = `attachments`
+        self.availability = `availability`
+        self.conversationId = `conversationId`
+        self.creationTime = `creationTime`
+        self.deliveryErrorCode = `deliveryErrorCode`
+        self.direction = `direction`
+        self.faxPageCount = `faxPageCount`
+        self.faxResolution = `faxResolution`
+        self.from = `from`
+        self.lastModifiedTime = `lastModifiedTime`
+        self.messageStatus = `messageStatus`
+        self.pgToDepartment = `pgToDepartment`
+        self.priority = `priority`
+        self.readStatus = `readStatus`
+        self.smsDeliveryTime = `smsDeliveryTime`
+        self.smsSendingAttemptsCount = `smsSendingAttemptsCount`
+        self.subject = `subject`
+        self.to = `to`
+        self.type = `type`
+        self.vmTranscriptionStatus = `vmTranscriptionStatus`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

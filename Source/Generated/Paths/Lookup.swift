@@ -48,6 +48,23 @@ open class Lookup: Model {
         open var `perPage`: Int?
         // Specifies if SMS activation is available for the number. If specified, it is taken into account in all returned phone numbers both in the phone numbers satisfying to parameters of lookup and in alternative phone numbers (in case when extendedSearch is specified). If not specified, the value is null.
         open var `smsEnabled`: Bool?
+        public init() {
+        }
+        convenience public init(areaCode: Int? = nil, countryCode: String? = nil, countryId: String? = nil, exclude: String? = nil, extendedSearch: Bool? = nil, line: String? = nil, numberPattern: String? = nil, nxx: String? = nil, npa: String? = nil, paymentType: String? = nil, perPage: Int? = nil, smsEnabled: Bool? = nil) {
+            self.init()
+            self.areaCode = `areaCode`
+            self.countryCode = `countryCode`
+            self.countryId = `countryId`
+            self.exclude = `exclude`
+            self.extendedSearch = `extendedSearch`
+            self.line = `line`
+            self.numberPattern = `numberPattern`
+            self.nxx = `nxx`
+            self.npa = `npa`
+            self.paymentType = `paymentType`
+            self.perPage = `perPage`
+            self.smsEnabled = `smsEnabled`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -86,6 +103,13 @@ open class Lookup: Model {
         open var `uri`: String?
         // List of phone numbers filtered by the specified criteria
         open var `records`: [LookUpPhoneNumber_PhoneNumberInfo]?
+        public init() {
+        }
+        convenience public init(uri: String? = nil, records: [LookUpPhoneNumber_PhoneNumberInfo]? = nil) {
+            self.init()
+            self.uri = `uri`
+            self.records = `records`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

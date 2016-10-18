@@ -6,6 +6,13 @@ open class TimeInterval: Mappable {
     open var `from`: String?
     // Time in format hh:mm
     open var `to`: String?
+    public init() {
+    }
+    convenience public init(from: String? = nil, to: String? = nil) {
+        self.init()
+        self.from = `from`
+        self.to = `to`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

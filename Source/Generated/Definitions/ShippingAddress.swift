@@ -16,6 +16,18 @@ open class ShippingAddress: Mappable {
     open var `zip`: String?
     // Country name
     open var `country`: String?
+    public init() {
+    }
+    convenience public init(customerName: String? = nil, street: String? = nil, street2: String? = nil, city: String? = nil, state: String? = nil, zip: String? = nil, country: String? = nil) {
+        self.init()
+        self.customerName = `customerName`
+        self.street = `street`
+        self.street2 = `street2`
+        self.city = `city`
+        self.state = `state`
+        self.zip = `zip`
+        self.country = `country`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

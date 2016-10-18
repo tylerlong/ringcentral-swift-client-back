@@ -10,6 +10,15 @@ open class GrantInfo: Mappable {
     open var `callPickup`: Bool?
     // Specifies if monitoring of other extensions' calls is allowed for the extension. If 'CallMonitoring' feature is disabled for the given extension, the flag is not returned
     open var `callMonitoring`: Bool?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, extension: GrantInfo_ExtensionInfo? = nil, callPickup: Bool? = nil, callMonitoring: Bool? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.extension = `extension`
+        self.callPickup = `callPickup`
+        self.callMonitoring = `callMonitoring`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

@@ -8,6 +8,14 @@ open class FormattingLocaleInfo: Mappable {
     open var `localeCode`: String?
     // Official name of a formatting language
     open var `name`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, localeCode: String? = nil, name: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.localeCode = `localeCode`
+        self.name = `name`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

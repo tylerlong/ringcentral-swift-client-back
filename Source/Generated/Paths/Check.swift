@@ -28,6 +28,13 @@ open class Check: Model {
         open var `permissionId`: String?
         // Optional. Internal identifier of an extension for which user permissions are to be checked. The default value is the currently logged-in extension
         open var `targetExtensionId`: String?
+        public init() {
+        }
+        convenience public init(permissionId: String? = nil, targetExtensionId: String? = nil) {
+            self.init()
+            self.permissionId = `permissionId`
+            self.targetExtensionId = `targetExtensionId`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -50,6 +57,15 @@ open class Check: Model {
         open var `details`: PermissionDetailsInfo?
         // List of active scopes for permission. Returned if successful is 'True'
         open var `scopes`: [String]?
+        public init() {
+        }
+        convenience public init(uri: String? = nil, successful: Bool? = nil, details: PermissionDetailsInfo? = nil, scopes: [String]? = nil) {
+            self.init()
+            self.uri = `uri`
+            self.successful = `successful`
+            self.details = `details`
+            self.scopes = `scopes`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

@@ -12,6 +12,16 @@ open class GroupInfo: Mappable {
     open var `groupName`: String?
     // Notes for a group
     open var `notes`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, contactsCount: Int? = nil, groupName: String? = nil, notes: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.contactsCount = `contactsCount`
+        self.groupName = `groupName`
+        self.notes = `notes`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

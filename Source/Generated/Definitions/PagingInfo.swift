@@ -14,6 +14,17 @@ open class PagingInfo: Mappable {
     open var `totalPages`: Int?
     // The total number of elements in a dataset. May be omitted for some resource due to performance reasons
     open var `totalElements`: Int?
+    public init() {
+    }
+    convenience public init(page: Int? = nil, perPage: Int? = nil, pageStart: Int? = nil, pageEnd: Int? = nil, totalPages: Int? = nil, totalElements: Int? = nil) {
+        self.init()
+        self.page = `page`
+        self.perPage = `perPage`
+        self.pageStart = `pageStart`
+        self.pageEnd = `pageEnd`
+        self.totalPages = `totalPages`
+        self.totalElements = `totalElements`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

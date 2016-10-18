@@ -22,6 +22,21 @@ open class PresenceInfo: Mappable {
     open var `telephonyStatus`: String?
     // User-defined presence status (as previously published by the user)
     open var `userStatus`: String?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, allowSeeMyPresence: Bool? = nil, dndStatus: String? = nil, extension: PresenceInfo_ExtensionInfo? = nil, message: String? = nil, pickUpCallsOnHold: Bool? = nil, presenceStatus: String? = nil, ringOnMonitoredCall: Bool? = nil, telephonyStatus: String? = nil, userStatus: String? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.allowSeeMyPresence = `allowSeeMyPresence`
+        self.dndStatus = `dndStatus`
+        self.extension = `extension`
+        self.message = `message`
+        self.pickUpCallsOnHold = `pickUpCallsOnHold`
+        self.presenceStatus = `presenceStatus`
+        self.ringOnMonitoredCall = `ringOnMonitoredCall`
+        self.telephonyStatus = `telephonyStatus`
+        self.userStatus = `userStatus`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

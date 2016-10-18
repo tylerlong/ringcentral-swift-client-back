@@ -26,6 +26,12 @@ open class Revoke: Model {
     open class PostParameters: Mappable {
         // Active access or refresh token to be revoked
         open var `token`: String?
+        public init() {
+        }
+        convenience public init(token: String? = nil) {
+            self.init()
+            self.token = `token`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

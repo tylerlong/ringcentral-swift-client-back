@@ -10,6 +10,15 @@ open class BlockedNumberInfo: Mappable {
     open var `name`: String?
     // Phone number to be blocked
     open var `phoneNumber`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, name: String? = nil, phoneNumber: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.name = `name`
+        self.phoneNumber = `phoneNumber`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

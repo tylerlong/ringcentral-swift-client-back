@@ -12,6 +12,16 @@ open class ConferencingInfo_PhoneNumberInfo: Mappable {
     open var `location`: String?
     // Dial-in phone number to connect to a conference
     open var `phoneNumber`: String?
+    public init() {
+    }
+    convenience public init(country: ConferencingInfo_PhoneNumberInfo_CountryInfo? = nil, default: Bool? = nil, hasGreeting: Bool? = nil, location: String? = nil, phoneNumber: String? = nil) {
+        self.init()
+        self.country = `country`
+        self.default = `default`
+        self.hasGreeting = `hasGreeting`
+        self.location = `location`
+        self.phoneNumber = `phoneNumber`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

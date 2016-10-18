@@ -16,6 +16,18 @@ open class LanguageInfo: Mappable {
     open var `name`: String?
     // Indicates whether a language is available as UI language
     open var `ui`: Bool?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil, greeting: Bool? = nil, formattingLocale: Bool? = nil, localeCode: String? = nil, name: String? = nil, ui: Bool? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+        self.greeting = `greeting`
+        self.formattingLocale = `formattingLocale`
+        self.localeCode = `localeCode`
+        self.name = `name`
+        self.ui = `ui`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

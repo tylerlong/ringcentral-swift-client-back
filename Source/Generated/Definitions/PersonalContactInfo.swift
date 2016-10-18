@@ -62,6 +62,41 @@ open class PersonalContactInfo: Mappable {
     open var `webPage`: String?
     // Notes of a personal contact
     open var `notes`: String?
+    public init() {
+    }
+    convenience public init(id: Int? = nil, url: String? = nil, availability: String? = nil, firstName: String? = nil, lastName: String? = nil, middleName: String? = nil, nickName: String? = nil, company: String? = nil, jobTitle: String? = nil, homePhone: String? = nil, homePhone2: String? = nil, businessPhone: String? = nil, businessPhone2: String? = nil, mobilePhone: String? = nil, businessFax: String? = nil, companyPhone: String? = nil, assistantPhone: String? = nil, carPhone: String? = nil, otherPhone: String? = nil, otherFax: String? = nil, callbackPhone: String? = nil, email: String? = nil, email2: String? = nil, email3: String? = nil, homeAddress: ContactAddressInfo? = nil, businessAddress: ContactAddressInfo? = nil, otherAddress: ContactAddressInfo? = nil, birthday: String? = nil, webPage: String? = nil, notes: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.url = `url`
+        self.availability = `availability`
+        self.firstName = `firstName`
+        self.lastName = `lastName`
+        self.middleName = `middleName`
+        self.nickName = `nickName`
+        self.company = `company`
+        self.jobTitle = `jobTitle`
+        self.homePhone = `homePhone`
+        self.homePhone2 = `homePhone2`
+        self.businessPhone = `businessPhone`
+        self.businessPhone2 = `businessPhone2`
+        self.mobilePhone = `mobilePhone`
+        self.businessFax = `businessFax`
+        self.companyPhone = `companyPhone`
+        self.assistantPhone = `assistantPhone`
+        self.carPhone = `carPhone`
+        self.otherPhone = `otherPhone`
+        self.otherFax = `otherFax`
+        self.callbackPhone = `callbackPhone`
+        self.email = `email`
+        self.email2 = `email2`
+        self.email3 = `email3`
+        self.homeAddress = `homeAddress`
+        self.businessAddress = `businessAddress`
+        self.otherAddress = `otherAddress`
+        self.birthday = `birthday`
+        self.webPage = `webPage`
+        self.notes = `notes`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

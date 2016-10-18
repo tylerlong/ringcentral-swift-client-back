@@ -42,6 +42,20 @@ open class MessageSync: Model {
         open var `syncToken`: String?
         // Type of message synchronization
         open var `syncType`: String?
+        public init() {
+        }
+        convenience public init(conversationId: Int? = nil, dateFrom: String? = nil, dateTo: String? = nil, direction: String? = nil, distinctConversations: Bool? = nil, messageType: String? = nil, recordCount: Int? = nil, syncToken: String? = nil, syncType: String? = nil) {
+            self.init()
+            self.conversationId = `conversationId`
+            self.dateFrom = `dateFrom`
+            self.dateTo = `dateTo`
+            self.direction = `direction`
+            self.distinctConversations = `distinctConversations`
+            self.messageType = `messageType`
+            self.recordCount = `recordCount`
+            self.syncToken = `syncToken`
+            self.syncType = `syncType`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
@@ -74,6 +88,13 @@ open class MessageSync: Model {
         open var `records`: [MessageInfo]?
         // Sync type, token and time
         open var `syncInfo`: SyncInfo?
+        public init() {
+        }
+        convenience public init(records: [MessageInfo]? = nil, syncInfo: SyncInfo? = nil) {
+            self.init()
+            self.records = `records`
+            self.syncInfo = `syncInfo`
+        }
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {

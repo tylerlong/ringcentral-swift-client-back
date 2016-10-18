@@ -6,6 +6,13 @@ open class TargetServicePlanInfo: Mappable {
     open var `id`: String?
     // Name of a target service plan
     open var `name`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, name: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.name = `name`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

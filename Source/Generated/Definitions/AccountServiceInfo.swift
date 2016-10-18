@@ -16,6 +16,18 @@ open class AccountServiceInfo: Mappable {
     open var `serviceFeatures`: [ServiceFeatureInfo]?
     // Limits which are effective for the account
     open var `limits`: [AccountLimits]?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, servicePlanName: String? = nil, brand: BrandInfo? = nil, servicePlan: ServicePlanInfo? = nil, billingPlan: BillingPlanInfo? = nil, serviceFeatures: [ServiceFeatureInfo]? = nil, limits: [AccountLimits]? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.servicePlanName = `servicePlanName`
+        self.brand = `brand`
+        self.servicePlan = `servicePlan`
+        self.billingPlan = `billingPlan`
+        self.serviceFeatures = `serviceFeatures`
+        self.limits = `limits`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

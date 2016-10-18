@@ -6,6 +6,13 @@ open class UserPermissionInfo: Mappable {
     open var `id`: String?
     // Canonical URI of a permission resource
     open var `uri`: String?
+    public init() {
+    }
+    convenience public init(id: String? = nil, uri: String? = nil) {
+        self.init()
+        self.id = `id`
+        self.uri = `uri`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {

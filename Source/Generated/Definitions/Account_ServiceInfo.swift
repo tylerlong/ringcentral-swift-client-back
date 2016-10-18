@@ -12,6 +12,16 @@ open class Account_ServiceInfo: Mappable {
     open var `servicePlan`: ServicePlanInfo?
     // Information on account target service plan
     open var `targetServicePlan`: TargetServicePlanInfo?
+    public init() {
+    }
+    convenience public init(uri: String? = nil, billingPlan: BillingPlanInfo? = nil, brand: BrandInfo? = nil, servicePlan: ServicePlanInfo? = nil, targetServicePlan: TargetServicePlanInfo? = nil) {
+        self.init()
+        self.uri = `uri`
+        self.billingPlan = `billingPlan`
+        self.brand = `brand`
+        self.servicePlan = `servicePlan`
+        self.targetServicePlan = `targetServicePlan`
+    }
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
