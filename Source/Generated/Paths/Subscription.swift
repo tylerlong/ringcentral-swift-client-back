@@ -8,10 +8,20 @@ open class Subscription: Model {
         }
     }
     // Create New Subscription
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: SubscriptionInfo?, error) in
+    open func post(callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: SubscriptionInfo?, error) in
             callback(t, error)
         }
+    }
+    // Create New Subscription
+    open func post(parameters: Parameters, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: SubscriptionInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Create New Subscription
+    open func post(parameters: PostParameters, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Mandatory. Collection of URIs to API resources (see Event Types for details). For APNS transport type only message event filter is available
@@ -44,10 +54,20 @@ open class Subscription: Model {
         }
     }
     // Update/Renew Subscription by ID
-    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: SubscriptionInfo?, error) in
+    open func put(callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: SubscriptionInfo?, error) in
             callback(t, error)
         }
+    }
+    // Update/Renew Subscription by ID
+    open func put(parameters: Parameters, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: SubscriptionInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Update/Renew Subscription by ID
+    open func put(parameters: PutParameters, callback: @escaping (_ t: SubscriptionInfo?, _ error: HTTPError?) -> Void) {
+        put(parameters: parameters.toParameters(), callback: callback)
     }
     open class PutParameters: Mappable {
         // Collection of URIs to API resources (see Event Types). Mandatory field

@@ -8,16 +8,36 @@ open class Contact: Model {
         }
     }
     // Create New Contact
-    open func post(parameters: PersonalContactInfo? = nil, callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: PersonalContactInfo?, error) in
+    open func post(callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: PersonalContactInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Create New Contact
+    open func post(parameters: Parameters, callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: PersonalContactInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Create New Contact
+    open func post(parameters: PersonalContactInfo, callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
+    }
+    // Get Contact List
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
     // Get Contact List
-    open func list(parameters: ListParameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ListResponse?, error) in
+    open func list(parameters: Parameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
             callback(t, error)
         }
+    }
+    // Get Contact List
+    open func list(parameters: ListParameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        list(parameters: parameters.toParameters(), callback: callback)
     }
     open class ListParameters: Mappable {
         // Phone number in E.164 (11-digits) format with or without plus '+'. Multiple values are supported
@@ -84,9 +104,19 @@ open class Contact: Model {
         }
     }
     // Update Contact by ID
-    open func put(parameters: PersonalContactInfo? = nil, callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: PersonalContactInfo?, error) in
+    open func put(callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: PersonalContactInfo?, error) in
             callback(t, error)
         }
+    }
+    // Update Contact by ID
+    open func put(parameters: Parameters, callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: PersonalContactInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Update Contact by ID
+    open func put(parameters: PersonalContactInfo, callback: @escaping (_ t: PersonalContactInfo?, _ error: HTTPError?) -> Void) {
+        put(parameters: parameters.toParameters(), callback: callback)
     }
 }

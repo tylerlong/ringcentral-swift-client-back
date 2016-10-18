@@ -8,10 +8,20 @@ open class BlockedNumber: Model {
         }
     }
     // Add New Blocked Number
-    open func post(parameters: BlockedNumberInfo? = nil, callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: BlockedNumberInfo?, error) in
+    open func post(callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: BlockedNumberInfo?, error) in
             callback(t, error)
         }
+    }
+    // Add New Blocked Number
+    open func post(parameters: Parameters, callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: BlockedNumberInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Add New Blocked Number
+    open func post(parameters: BlockedNumberInfo, callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     // Get Blocked Number List
     open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
@@ -54,9 +64,19 @@ open class BlockedNumber: Model {
         }
     }
     // Update Blocked Number Label
-    open func put(parameters: BlockedNumberInfo? = nil, callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: BlockedNumberInfo?, error) in
+    open func put(callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: BlockedNumberInfo?, error) in
             callback(t, error)
         }
+    }
+    // Update Blocked Number Label
+    open func put(parameters: Parameters, callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: BlockedNumberInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Update Blocked Number Label
+    open func put(parameters: BlockedNumberInfo, callback: @escaping (_ t: BlockedNumberInfo?, _ error: HTTPError?) -> Void) {
+        put(parameters: parameters.toParameters(), callback: callback)
     }
 }

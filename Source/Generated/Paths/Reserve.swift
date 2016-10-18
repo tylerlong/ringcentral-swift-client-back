@@ -8,10 +8,20 @@ open class Reserve: Model {
         }
     }
     // Reserve Phone Number
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: PostResponse?, error) in
+    open func post(callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: PostResponse?, error) in
             callback(t, error)
         }
+    }
+    // Reserve Phone Number
+    open func post(parameters: Parameters, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: PostResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Reserve Phone Number
+    open func post(parameters: PostParameters, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Phone numbers to be reserved/un-reserved

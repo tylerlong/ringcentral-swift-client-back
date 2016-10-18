@@ -8,10 +8,20 @@ open class Location: Model {
         }
     }
     // Get Location List
-    open func list(parameters: ListParameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ListResponse?, error) in
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
+    }
+    // Get Location List
+    open func list(parameters: Parameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Get Location List
+    open func list(parameters: ListParameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        list(parameters: parameters.toParameters(), callback: callback)
     }
     open class ListParameters: Mappable {
         // Sorts results by the specified property. The default value is 'City'

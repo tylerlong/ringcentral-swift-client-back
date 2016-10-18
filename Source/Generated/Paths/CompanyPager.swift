@@ -8,10 +8,20 @@ open class CompanyPager: Model {
         }
     }
     // Create and Send Pager Message
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: MessageInfo?, error) in
+    open func post(callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: MessageInfo?, error) in
             callback(t, error)
         }
+    }
+    // Create and Send Pager Message
+    open func post(parameters: Parameters, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: MessageInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Create and Send Pager Message
+    open func post(parameters: PostParameters, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Sender of a pager message. The extensionNumber property must be filled

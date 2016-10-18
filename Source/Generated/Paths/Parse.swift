@@ -8,10 +8,20 @@ open class Parse: Model {
         }
     }
     // Parse Phone Number
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: PostResponse?, error) in
+    open func post(callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: PostResponse?, error) in
             callback(t, error)
         }
+    }
+    // Parse Phone Number
+    open func post(parameters: Parameters, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: PostResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Parse Phone Number
+    open func post(parameters: PostParameters, callback: @escaping (_ t: PostResponse?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Internal identifier of a home country. The default value is ISO code (ISO 3166) of the user's home country or brand country, if the user is undefined

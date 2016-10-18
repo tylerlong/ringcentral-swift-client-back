@@ -8,10 +8,20 @@ open class Fax: Model {
         }
     }
     // Create and Send Fax Message
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: MessageInfo?, error) in
+    open func post(callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: MessageInfo?, error) in
             callback(t, error)
         }
+    }
+    // Create and Send Fax Message
+    open func post(parameters: Parameters, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: MessageInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Create and Send Fax Message
+    open func post(parameters: PostParameters, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Recipient information. Phone number property is mandatory. Optional for resend fax request

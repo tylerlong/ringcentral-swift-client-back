@@ -8,10 +8,20 @@ open class Ringout: Model {
         }
     }
     // Initiate RingOut Call
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: RingOutInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: RingOutInfo?, error) in
+    open func post(callback: @escaping (_ t: RingOutInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: RingOutInfo?, error) in
             callback(t, error)
         }
+    }
+    // Initiate RingOut Call
+    open func post(parameters: Parameters, callback: @escaping (_ t: RingOutInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: RingOutInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Initiate RingOut Call
+    open func post(parameters: PostParameters, callback: @escaping (_ t: RingOutInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Phone number of the caller. This number corresponds to the 1st leg of the RingOut call. This number can be one of user's configured forwarding numbers or arbitrary number

@@ -8,10 +8,20 @@ open class Revoke: Model {
         }
     }
     // OAuth2 Revoke Token
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.postString(self.endpoint(), parameters: parameters?.toParameters()) { string, error in
+    open func post(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.postString(self.endpoint()) { string, error in
             callback(error)
         }
+    }
+    // OAuth2 Revoke Token
+    open func post(parameters: Parameters, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.postString(self.endpoint(), parameters: parameters) { string, error in
+            callback(error)
+        }
+    }
+    // OAuth2 Revoke Token
+    open func post(parameters: PostParameters, callback: @escaping (_ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Active access or refresh token to be revoked

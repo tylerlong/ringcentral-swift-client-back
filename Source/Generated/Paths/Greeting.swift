@@ -8,10 +8,20 @@ open class Greeting: Model {
         }
     }
     // Create Custom Greeting
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: CustomGreetingInfo?, error) in
+    open func post(callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: CustomGreetingInfo?, error) in
             callback(t, error)
         }
+    }
+    // Create Custom Greeting
+    open func post(parameters: Parameters, callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: CustomGreetingInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Create Custom Greeting
+    open func post(parameters: PostParameters, callback: @escaping (_ t: CustomGreetingInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Type of a greeting, specifying the case when the greeting is played. See also Greeting Types

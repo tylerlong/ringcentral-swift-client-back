@@ -8,10 +8,20 @@ open class ActiveCalls: Model {
         }
     }
     // Get Account Active (Recent) Calls
-    open func list(parameters: ListParameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ListResponse?, error) in
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
+    }
+    // Get Account Active (Recent) Calls
+    open func list(parameters: Parameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Get Account Active (Recent) Calls
+    open func list(parameters: ListParameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        list(parameters: parameters.toParameters(), callback: callback)
     }
     open class ListParameters: Mappable {
         // The direction for the result records. It is allowed to specify more than one direction. If not specified, both inbound and outbound records are returned. Multiple values are accepted

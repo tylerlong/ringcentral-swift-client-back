@@ -40,10 +40,20 @@ open class BusinessAddress: Model {
         }
     }
     // Update Company Business Address
-    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: PutResponse?, error) in
+    open func put(callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: PutResponse?, error) in
             callback(t, error)
         }
+    }
+    // Update Company Business Address
+    open func put(parameters: Parameters, callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: PutResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Update Company Business Address
+    open func put(parameters: PutParameters, callback: @escaping (_ t: PutResponse?, _ error: HTTPError?) -> Void) {
+        put(parameters: parameters.toParameters(), callback: callback)
     }
     open class PutParameters: Mappable {
         // Company business name

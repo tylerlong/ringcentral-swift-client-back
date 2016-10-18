@@ -11,10 +11,20 @@ open class MessageStore: Model {
         return Content(parent: self, _id: _id)
     }
     // Get Message List
-    open func list(parameters: ListParameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ListResponse?, error) in
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
+    }
+    // Get Message List
+    open func list(parameters: Parameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Get Message List
+    open func list(parameters: ListParameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        list(parameters: parameters.toParameters(), callback: callback)
     }
     open class ListParameters: Mappable {
         // Specifies the availability status for the resulting messages. Default value is 'Alive'. Multiple values are accepted
@@ -93,10 +103,20 @@ open class MessageStore: Model {
         }
     }
     // Delete Message by ID
-    open func delete(parameters: DeleteParameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.deleteString(self.endpoint(), parameters: parameters?.toParameters()) { string, error in
+    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint()) { string, error in
             callback(error)
         }
+    }
+    // Delete Message by ID
+    open func delete(parameters: Parameters, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint(), parameters: parameters) { string, error in
+            callback(error)
+        }
+    }
+    // Delete Message by ID
+    open func delete(parameters: DeleteParameters, callback: @escaping (_ error: HTTPError?) -> Void) {
+        delete(parameters: parameters.toParameters(), callback: callback)
     }
     open class DeleteParameters: Mappable {
         // If the value is 'True', then the message is purged immediately with all the attachments. The default value is 'False'
@@ -123,10 +143,20 @@ open class MessageStore: Model {
         }
     }
     // Update Message by ID
-    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: MessageInfo?, error) in
+    open func put(callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: MessageInfo?, error) in
             callback(t, error)
         }
+    }
+    // Update Message by ID
+    open func put(parameters: Parameters, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: MessageInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Update Message by ID
+    open func put(parameters: PutParameters, callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        put(parameters: parameters.toParameters(), callback: callback)
     }
     open class PutParameters: Mappable {
         // Read status of a message to be changed. Multiple values are accepted

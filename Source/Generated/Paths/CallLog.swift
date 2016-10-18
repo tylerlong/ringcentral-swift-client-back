@@ -8,10 +8,20 @@ open class CallLog: Model {
         }
     }
     // Get Account Call Log
-    open func list(parameters: ListParameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ListResponse?, error) in
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
+    }
+    // Get Account Call Log
+    open func list(parameters: Parameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Get Account Call Log
+    open func list(parameters: ListParameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        list(parameters: parameters.toParameters(), callback: callback)
     }
     open class ListParameters: Mappable {
         // Extension number of a user. If specified, returns call log for a particular extension only. Cannot be specified together with the phoneNumber filter
@@ -92,10 +102,20 @@ open class CallLog: Model {
         }
     }
     // Delete Extension Call Log
-    open func delete(parameters: DeleteParameters? = nil, callback: @escaping (_ error: HTTPError?) -> Void) {
-        rc.deleteString(self.endpoint(), parameters: parameters?.toParameters()) { string, error in
+    open func delete(callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint()) { string, error in
             callback(error)
         }
+    }
+    // Delete Extension Call Log
+    open func delete(parameters: Parameters, callback: @escaping (_ error: HTTPError?) -> Void) {
+        rc.deleteString(self.endpoint(), parameters: parameters) { string, error in
+            callback(error)
+        }
+    }
+    // Delete Extension Call Log
+    open func delete(parameters: DeleteParameters, callback: @escaping (_ error: HTTPError?) -> Void) {
+        delete(parameters: parameters.toParameters(), callback: callback)
     }
     open class DeleteParameters: Mappable {
         // The end datetime for records deletion in ISO 8601 format including timezone, for example 2016-03-10T18:07:52.534Z. The default value is current time

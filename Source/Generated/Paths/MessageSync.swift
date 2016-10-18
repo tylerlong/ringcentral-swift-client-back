@@ -8,10 +8,20 @@ open class MessageSync: Model {
         }
     }
     // Message Synchronization
-    open func get(parameters: GetParameters? = nil, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: GetResponse?, error) in
+    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GetResponse?, error) in
             callback(t, error)
         }
+    }
+    // Message Synchronization
+    open func get(parameters: Parameters, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: GetResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Message Synchronization
+    open func get(parameters: GetParameters, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        get(parameters: parameters.toParameters(), callback: callback)
     }
     open class GetParameters: Mappable {
         // Conversation identifier for the resulting messages. Meaningful for SMS and Pager messages only.

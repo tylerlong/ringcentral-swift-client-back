@@ -8,10 +8,20 @@ open class ForwardingNumber: Model {
         }
     }
     // Add New Forwarding Number
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: ForwardingNumberInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: ForwardingNumberInfo?, error) in
+    open func post(callback: @escaping (_ t: ForwardingNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: ForwardingNumberInfo?, error) in
             callback(t, error)
         }
+    }
+    // Add New Forwarding Number
+    open func post(parameters: Parameters, callback: @escaping (_ t: ForwardingNumberInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: ForwardingNumberInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Add New Forwarding Number
+    open func post(parameters: PostParameters, callback: @escaping (_ t: ForwardingNumberInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Forwarding/Call flip phone number
@@ -32,10 +42,20 @@ open class ForwardingNumber: Model {
         }
     }
     // Get Forwarding Numbers
-    open func list(parameters: ListParameters? = nil, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: ListResponse?, error) in
+    open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: ListResponse?, error) in
             callback(t, error)
         }
+    }
+    // Get Forwarding Numbers
+    open func list(parameters: Parameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Get Forwarding Numbers
+    open func list(parameters: ListParameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
+        list(parameters: parameters.toParameters(), callback: callback)
     }
     open class ListParameters: Mappable {
         // Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'

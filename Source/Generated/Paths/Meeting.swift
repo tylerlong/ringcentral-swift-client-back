@@ -14,10 +14,20 @@ open class Meeting: Model {
         return End(parent: self)
     }
     // Create Meeting
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: MeetingInfo?, error) in
+    open func post(callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: MeetingInfo?, error) in
             callback(t, error)
         }
+    }
+    // Create Meeting
+    open func post(parameters: Parameters, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: MeetingInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Create Meeting
+    open func post(parameters: PostParameters, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Topic of a meeting
@@ -106,10 +116,20 @@ open class Meeting: Model {
         }
     }
     // Update Meeting
-    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: MeetingInfo?, error) in
+    open func put(callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: MeetingInfo?, error) in
             callback(t, error)
         }
+    }
+    // Update Meeting
+    open func put(parameters: Parameters, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: MeetingInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Update Meeting
+    open func put(parameters: PutParameters, callback: @escaping (_ t: MeetingInfo?, _ error: HTTPError?) -> Void) {
+        put(parameters: parameters.toParameters(), callback: callback)
     }
     open class PutParameters: Mappable {
         // Topic of a meeting

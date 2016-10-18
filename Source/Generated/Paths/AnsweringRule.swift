@@ -8,10 +8,20 @@ open class AnsweringRule: Model {
         }
     }
     // Create Custom Answering Rule
-    open func post(parameters: PostParameters? = nil, callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
-        rc.post(self.endpoint(), parameters: parameters?.toParameters()) { (t: AnsweringRuleInfo?, error) in
+    open func post(callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint()) { (t: AnsweringRuleInfo?, error) in
             callback(t, error)
         }
+    }
+    // Create Custom Answering Rule
+    open func post(parameters: Parameters, callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        rc.post(self.endpoint(), parameters: parameters) { (t: AnsweringRuleInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Create Custom Answering Rule
+    open func post(parameters: PostParameters, callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        post(parameters: parameters.toParameters(), callback: callback)
     }
     open class PostParameters: Mappable {
         // Specifies if the rule is active or inactive. The default value is 'True'
@@ -108,10 +118,20 @@ open class AnsweringRule: Model {
         }
     }
     // Update Answering Rule by ID
-    open func put(parameters: PutParameters? = nil, callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
-        rc.put(self.endpoint(), parameters: parameters?.toParameters()) { (t: AnsweringRuleInfo?, error) in
+    open func put(callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint()) { (t: AnsweringRuleInfo?, error) in
             callback(t, error)
         }
+    }
+    // Update Answering Rule by ID
+    open func put(parameters: Parameters, callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        rc.put(self.endpoint(), parameters: parameters) { (t: AnsweringRuleInfo?, error) in
+            callback(t, error)
+        }
+    }
+    // Update Answering Rule by ID
+    open func put(parameters: PutParameters, callback: @escaping (_ t: AnsweringRuleInfo?, _ error: HTTPError?) -> Void) {
+        put(parameters: parameters.toParameters(), callback: callback)
     }
     open class PutParameters: Mappable {
         // Specifies if the answering rule is active or not

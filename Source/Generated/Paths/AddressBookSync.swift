@@ -8,10 +8,20 @@ open class AddressBookSync: Model {
         }
     }
     // Contacts Synchronization
-    open func get(parameters: GetParameters? = nil, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters?.toParameters()) { (t: GetResponse?, error) in
+    open func get(callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint()) { (t: GetResponse?, error) in
             callback(t, error)
         }
+    }
+    // Contacts Synchronization
+    open func get(parameters: Parameters, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        rc.get(self.endpoint(), parameters: parameters) { (t: GetResponse?, error) in
+            callback(t, error)
+        }
+    }
+    // Contacts Synchronization
+    open func get(parameters: GetParameters, callback: @escaping (_ t: GetResponse?, _ error: HTTPError?) -> Void) {
+        get(parameters: parameters.toParameters(), callback: callback)
     }
     open class GetParameters: Mappable {
         // Type of synchronization. The default value is 'FSync'
