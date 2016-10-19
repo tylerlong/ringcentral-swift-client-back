@@ -54,12 +54,10 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
 
     public func client(_ client: PubNub, didReceiveMessage message: PNMessageResult) {
         let base64Message = message.data.message as! String
-        let encrypted = Array(base64Message.utf8)
-        let padded = PKCS7().add(to: encrypted, blockSize: AES.blockSize)
-        let key: [UInt8] = Array(subscriptionInfo!.deliveryMode!.encryptionKey!.utf8)
-        let iv: [UInt8] = AES.randomIV(AES.blockSize)
-        let decrypted = try! AES(key: key, iv: iv, blockMode: .ECB, padding: PKCS7()).decrypt(padded)
-        let result = String(data: Data(bytes: decrypted), encoding: String.Encoding.utf8)!
+        let encrypted = Data(base64Encoded: base64Message)!.bytes
+        let key = Data(base64Encoded: subscriptionInfo!.deliveryMode!.encryptionKey!)!.bytes
+        let decrypted = try! AES(key: key, iv: nil, blockMode: .ECB, padding: PKCS7()).decrypt(encrypted)
+        let result = String(bytes: decrypted, encoding: String.Encoding.utf8)!
         for listener in listeners {
             listener(result)
         }
