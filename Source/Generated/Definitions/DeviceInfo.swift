@@ -64,20 +64,8 @@ open class DeviceInfo: Mappable {
         `boxBillingId` <- map["boxBillingId"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["sku"] = self.sku
-        result["type"] = self.type
-        result["name"] = self.name
-        result["serial"] = self.serial
-        result["computerName"] = self.computerName
-        result["model"] = self.model
-        result["extension"] = self.extension
-        result["emergencyServiceAddress"] = self.emergencyServiceAddress
-        result["phoneLines"] = self.phoneLines
-        result["shipping"] = self.shipping
-        result["boxBillingId"] = self.boxBillingId
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

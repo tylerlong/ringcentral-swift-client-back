@@ -20,9 +20,8 @@ open class AttachmentInfo: Mappable {
         `contentType` <- map["contentType"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["contentType"] = self.contentType
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

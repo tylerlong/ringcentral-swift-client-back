@@ -42,9 +42,8 @@ open class CustomData: Model {
             `value` <- map["value"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["id"] = self.id
-            result["value"] = self.value
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -79,12 +78,8 @@ open class CustomData: Model {
             `attachment` <- map["attachment"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["id"] = self.id
-            result["uri"] = self.uri
-            result["value"] = self.value
-            result["lastModifiedTime"] = self.lastModifiedTime
-            result["attachment"] = self.attachment
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

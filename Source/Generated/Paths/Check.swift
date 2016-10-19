@@ -42,9 +42,8 @@ open class Check: Model {
             `targetExtensionId` <- map["targetExtensionId"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["permissionId"] = self.permissionId
-            result["targetExtensionId"] = self.targetExtensionId
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -75,11 +74,8 @@ open class Check: Model {
             `scopes` <- map["scopes"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["uri"] = self.uri
-            result["successful"] = self.successful
-            result["details"] = self.details
-            result["scopes"] = self.scopes
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

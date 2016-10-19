@@ -70,16 +70,8 @@ open class MessageSync: Model {
             `syncType` <- map["syncType"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["conversationId"] = self.conversationId
-            result["dateFrom"] = self.dateFrom
-            result["dateTo"] = self.dateTo
-            result["direction"] = self.direction
-            result["distinctConversations"] = self.distinctConversations
-            result["messageType"] = self.messageType
-            result["recordCount"] = self.recordCount
-            result["syncToken"] = self.syncToken
-            result["syncType"] = self.syncType
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -102,9 +94,8 @@ open class MessageSync: Model {
             `syncInfo` <- map["syncInfo"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["syncInfo"] = self.syncInfo
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

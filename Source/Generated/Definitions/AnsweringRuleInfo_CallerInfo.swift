@@ -20,9 +20,8 @@ open class AnsweringRuleInfo_CallerInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["callerId"] = self.callerId
-        result["name"] = self.name
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

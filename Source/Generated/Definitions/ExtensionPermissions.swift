@@ -20,9 +20,8 @@ open class ExtensionPermissions: Mappable {
         `internationalCalling` <- map["internationalCalling"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["admin"] = self.admin
-        result["internationalCalling"] = self.internationalCalling
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

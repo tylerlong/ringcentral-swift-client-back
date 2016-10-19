@@ -20,9 +20,8 @@ open class UserPermission: Mappable {
         `scopes` <- map["scopes"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["permission"] = self.permission
-        result["scopes"] = self.scopes
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

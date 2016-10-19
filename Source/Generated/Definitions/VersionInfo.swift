@@ -28,11 +28,8 @@ open class VersionInfo: Mappable {
         `uriString` <- map["uriString"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["versionString"] = self.versionString
-        result["releaseDate"] = self.releaseDate
-        result["uriString"] = self.uriString
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

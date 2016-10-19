@@ -50,11 +50,8 @@ open class Country: Model {
             `perPage` <- map["perPage"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["loginAllowed"] = self.loginAllowed
-            result["numberSelling"] = self.numberSelling
-            result["page"] = self.page
-            result["perPage"] = self.perPage
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -81,10 +78,8 @@ open class Country: Model {
             `paging` <- map["paging"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["navigation"] = self.navigation
-            result["paging"] = self.paging
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

@@ -40,11 +40,8 @@ open class BusinessAddress: Model {
             `businessAddress` <- map["businessAddress"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["uri"] = self.uri
-            result["company"] = self.company
-            result["email"] = self.email
-            result["businessAddress"] = self.businessAddress
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -87,10 +84,8 @@ open class BusinessAddress: Model {
             `businessAddress` <- map["businessAddress"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["company"] = self.company
-            result["email"] = self.email
-            result["businessAddress"] = self.businessAddress
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -121,11 +116,8 @@ open class BusinessAddress: Model {
             `businessAddress` <- map["businessAddress"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["uri"] = self.uri
-            result["company"] = self.company
-            result["email"] = self.email
-            result["businessAddress"] = self.businessAddress
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

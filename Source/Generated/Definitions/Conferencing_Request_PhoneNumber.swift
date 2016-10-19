@@ -20,9 +20,8 @@ open class Conferencing_Request_PhoneNumber: Mappable {
         `default` <- map["default"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["phoneNumber"] = self.phoneNumber
-        result["default"] = self.default
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

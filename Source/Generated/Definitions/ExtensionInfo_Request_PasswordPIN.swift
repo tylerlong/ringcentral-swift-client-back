@@ -20,9 +20,8 @@ open class ExtensionInfo_Request_PasswordPIN: Mappable {
         `ivrPin` <- map["ivrPin"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["password"] = self.password
-        result["ivrPin"] = self.ivrPin
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

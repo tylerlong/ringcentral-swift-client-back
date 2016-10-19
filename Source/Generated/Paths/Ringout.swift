@@ -54,12 +54,8 @@ open class Ringout: Model {
             `country` <- map["country"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["from"] = self.from
-            result["to"] = self.to
-            result["callerId"] = self.callerId
-            result["playPrompt"] = self.playPrompt
-            result["country"] = self.country
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

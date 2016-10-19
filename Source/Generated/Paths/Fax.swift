@@ -58,13 +58,8 @@ open class Fax: Model {
             `originalMessageId` <- map["originalMessageId"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["to"] = self.to
-            result["faxResolution"] = self.faxResolution
-            result["sendTime"] = self.sendTime
-            result["coverIndex"] = self.coverIndex
-            result["coverPageText"] = self.coverPageText
-            result["originalMessageId"] = self.originalMessageId
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

@@ -72,15 +72,8 @@ open class Meeting: Model {
             `audioOptions` <- map["audioOptions"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["topic"] = self.topic
-            result["meetingType"] = self.meetingType
-            result["password"] = self.password
-            result["schedule"] = self.schedule
-            result["allowJoinBeforeHost"] = self.allowJoinBeforeHost
-            result["startHostVideo"] = self.startHostVideo
-            result["startParticipantsVideo"] = self.startParticipantsVideo
-            result["audioOptions"] = self.audioOptions
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -117,11 +110,8 @@ open class Meeting: Model {
             `navigation` <- map["navigation"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["uri"] = self.uri
-            result["records"] = self.records
-            result["paging"] = self.paging
-            result["navigation"] = self.navigation
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -196,15 +186,8 @@ open class Meeting: Model {
             `audioOptions` <- map["audioOptions"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["topic"] = self.topic
-            result["meetingType"] = self.meetingType
-            result["password"] = self.password
-            result["schedule"] = self.schedule
-            result["allowJoinBeforeHost"] = self.allowJoinBeforeHost
-            result["startHostVideo"] = self.startHostVideo
-            result["startParticipantsVideo"] = self.startParticipantsVideo
-            result["audioOptions"] = self.audioOptions
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

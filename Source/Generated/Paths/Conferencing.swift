@@ -38,8 +38,8 @@ open class Conferencing: Model {
             `countryId` <- map["countryId"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["countryId"] = self.countryId
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -78,9 +78,8 @@ open class Conferencing: Model {
             `allowJoinBeforeHost` <- map["allowJoinBeforeHost"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["phoneNumbers"] = self.phoneNumbers
-            result["allowJoinBeforeHost"] = self.allowJoinBeforeHost
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

@@ -24,10 +24,8 @@ open class SyncInfo: Mappable {
         `syncTime` <- map["syncTime"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["syncType"] = self.syncType
-        result["syncToken"] = self.syncToken
-        result["syncTime"] = self.syncTime
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

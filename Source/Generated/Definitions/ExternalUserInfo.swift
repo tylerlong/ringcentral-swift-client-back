@@ -28,11 +28,8 @@ open class ExternalUserInfo: Mappable {
         `userType` <- map["userType"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["accountId"] = self.accountId
-        result["userId"] = self.userId
-        result["userToken"] = self.userToken
-        result["userType"] = self.userType
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

@@ -74,17 +74,8 @@ open class CallLog: Model {
             `perPage` <- map["perPage"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["extensionNumber"] = self.extensionNumber
-            result["phoneNumber"] = self.phoneNumber
-            result["direction"] = self.direction
-            result["type"] = self.type
-            result["view"] = self.view
-            result["withRecording"] = self.withRecording
-            result["dateFrom"] = self.dateFrom
-            result["dateTo"] = self.dateTo
-            result["page"] = self.page
-            result["perPage"] = self.perPage
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -111,10 +102,8 @@ open class CallLog: Model {
             `paging` <- map["paging"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["navigation"] = self.navigation
-            result["paging"] = self.paging
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -155,8 +144,8 @@ open class CallLog: Model {
             `dateTo` <- map["dateTo"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["dateTo"] = self.dateTo
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

@@ -44,15 +44,8 @@ open class ConferencingInfo: Mappable {
         `phoneNumbers` <- map["phoneNumbers"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["allowJoinBeforeHost"] = self.allowJoinBeforeHost
-        result["hostCode"] = self.hostCode
-        result["mode"] = self.mode
-        result["participantCode"] = self.participantCode
-        result["phoneNumber"] = self.phoneNumber
-        result["tapToJoinUri"] = self.tapToJoinUri
-        result["phoneNumbers"] = self.phoneNumbers
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

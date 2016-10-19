@@ -20,9 +20,8 @@ open class StateInfo_CountryInfo: Mappable {
         `uri` <- map["uri"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

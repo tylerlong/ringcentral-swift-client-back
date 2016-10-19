@@ -40,14 +40,8 @@ open class AccountServiceInfo: Mappable {
         `limits` <- map["limits"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["servicePlanName"] = self.servicePlanName
-        result["brand"] = self.brand
-        result["servicePlan"] = self.servicePlan
-        result["billingPlan"] = self.billingPlan
-        result["serviceFeatures"] = self.serviceFeatures
-        result["limits"] = self.limits
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

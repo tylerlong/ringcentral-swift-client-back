@@ -32,12 +32,8 @@ open class DialingPlanCountryInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["callingCode"] = self.callingCode
-        result["isoCode"] = self.isoCode
-        result["name"] = self.name
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

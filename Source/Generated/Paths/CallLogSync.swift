@@ -54,12 +54,8 @@ open class CallLogSync: Model {
             `statusGroup` <- map["statusGroup"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["syncType"] = self.syncType
-            result["syncToken"] = self.syncToken
-            result["dateFrom"] = self.dateFrom
-            result["recordCount"] = self.recordCount
-            result["statusGroup"] = self.statusGroup
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -82,9 +78,8 @@ open class CallLogSync: Model {
             `syncInfo` <- map["syncInfo"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["syncInfo"] = self.syncInfo
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

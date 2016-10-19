@@ -50,11 +50,8 @@ open class State: Model {
             `withPhoneNumbers` <- map["withPhoneNumbers"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["countryId"] = self.countryId
-            result["page"] = self.page
-            result["perPage"] = self.perPage
-            result["withPhoneNumbers"] = self.withPhoneNumbers
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -81,10 +78,8 @@ open class State: Model {
             `paging` <- map["paging"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["navigation"] = self.navigation
-            result["paging"] = self.paging
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

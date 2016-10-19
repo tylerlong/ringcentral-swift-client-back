@@ -60,19 +60,8 @@ open class LegInfo: Mappable {
         `recording` <- map["recording"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["action"] = self.action
-        result["direction"] = self.direction
-        result["duration"] = self.duration
-        result["extension"] = self.extension
-        result["legType"] = self.legType
-        result["startTime"] = self.startTime
-        result["type"] = self.type
-        result["result"] = self.result
-        result["from"] = self.from
-        result["to"] = self.to
-        result["transport"] = self.transport
-        result["recording"] = self.recording
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

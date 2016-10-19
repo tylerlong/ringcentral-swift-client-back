@@ -28,11 +28,8 @@ open class DeviceInfo_ExtensionInfo: Mappable {
         `partnerId` <- map["partnerId"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["extensionNumber"] = self.extensionNumber
-        result["partnerId"] = self.partnerId
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

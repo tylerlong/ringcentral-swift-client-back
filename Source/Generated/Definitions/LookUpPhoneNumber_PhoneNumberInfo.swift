@@ -28,11 +28,8 @@ open class LookUpPhoneNumber_PhoneNumberInfo: Mappable {
         `rank` <- map["rank"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["phoneNumber"] = self.phoneNumber
-        result["formattedNumber"] = self.formattedNumber
-        result["vanityPattern"] = self.vanityPattern
-        result["rank"] = self.rank
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

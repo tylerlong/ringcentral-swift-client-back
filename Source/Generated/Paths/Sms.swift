@@ -46,10 +46,8 @@ open class Sms: Model {
             `text` <- map["text"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["from"] = self.from
-            result["to"] = self.to
-            result["text"] = self.text
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

@@ -28,11 +28,8 @@ open class ExtensionInfo_Request_ContactInfo_RegionalSettings: Mappable {
         `formattingLocale` <- map["formattingLocale"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["timezone"] = self.timezone
-        result["language"] = self.language
-        result["greetingLanguage"] = self.greetingLanguage
-        result["formattingLocale"] = self.formattingLocale
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

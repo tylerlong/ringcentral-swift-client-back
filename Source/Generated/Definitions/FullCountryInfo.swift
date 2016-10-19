@@ -44,15 +44,8 @@ open class FullCountryInfo: Mappable {
         `loginAllowed` <- map["loginAllowed"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["callingCode"] = self.callingCode
-        result["emergencyCalling"] = self.emergencyCalling
-        result["isoCode"] = self.isoCode
-        result["name"] = self.name
-        result["numberSelling"] = self.numberSelling
-        result["loginAllowed"] = self.loginAllowed
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

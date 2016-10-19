@@ -32,12 +32,8 @@ open class GroupInfo: Mappable {
         `notes` <- map["notes"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["contactsCount"] = self.contactsCount
-        result["groupName"] = self.groupName
-        result["notes"] = self.notes
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

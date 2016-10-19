@@ -36,13 +36,8 @@ open class ForwardingNumberInfo: Mappable {
         `flipNumber` <- map["flipNumber"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["phoneNumber"] = self.phoneNumber
-        result["label"] = self.label
-        result["features"] = self.features
-        result["flipNumber"] = self.flipNumber
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

@@ -24,10 +24,8 @@ open class RuleInfo: Mappable {
         `forwardingNumbers` <- map["forwardingNumbers"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["index"] = self.index
-        result["ringCount"] = self.ringCount
-        result["forwardingNumbers"] = self.forwardingNumbers
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

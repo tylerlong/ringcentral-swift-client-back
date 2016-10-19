@@ -28,11 +28,8 @@ open class RecordingInfo: Mappable {
         `contentUri` <- map["contentUri"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["type"] = self.type
-        result["contentUri"] = self.contentUri
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

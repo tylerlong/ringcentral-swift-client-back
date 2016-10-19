@@ -28,11 +28,8 @@ open class NavigationInfo: Mappable {
         `lastPage` <- map["lastPage"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["firstPage"] = self.firstPage
-        result["nextPage"] = self.nextPage
-        result["previousPage"] = self.previousPage
-        result["lastPage"] = self.lastPage
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

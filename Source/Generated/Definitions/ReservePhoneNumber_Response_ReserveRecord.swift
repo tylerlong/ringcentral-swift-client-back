@@ -36,13 +36,8 @@ open class ReservePhoneNumber_Response_ReserveRecord: Mappable {
         `error` <- map["error"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["phoneNumber"] = self.phoneNumber
-        result["formattedNumber"] = self.formattedNumber
-        result["reservedTill"] = self.reservedTill
-        result["reservationId"] = self.reservationId
-        result["status"] = self.status
-        result["error"] = self.error
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

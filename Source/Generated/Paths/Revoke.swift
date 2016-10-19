@@ -38,8 +38,8 @@ open class Revoke: Model {
             `token` <- map["token"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["token"] = self.token
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

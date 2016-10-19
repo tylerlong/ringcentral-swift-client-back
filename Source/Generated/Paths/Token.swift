@@ -66,15 +66,8 @@ open class Token: Model {
             `endpoint_id` <- map["endpoint_id"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["grant_type"] = self.grant_type
-            result["access_token_ttl"] = self.access_token_ttl
-            result["refresh_token_ttl"] = self.refresh_token_ttl
-            result["username"] = self.username
-            result["extension"] = self.extension
-            result["password"] = self.password
-            result["scope"] = self.scope
-            result["endpoint_id"] = self.endpoint_id
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -121,15 +114,8 @@ open class Token: Model {
             `endpoint_id` <- map["endpoint_id"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["access_token"] = self.access_token
-            result["expires_in"] = self.expires_in
-            result["refresh_token"] = self.refresh_token
-            result["refresh_token_expires_in"] = self.refresh_token_expires_in
-            result["scope"] = self.scope
-            result["token_type"] = self.token_type
-            result["owner_id"] = self.owner_id
-            result["endpoint_id"] = self.endpoint_id
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

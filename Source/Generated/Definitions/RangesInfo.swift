@@ -20,9 +20,8 @@ open class RangesInfo: Mappable {
         `to` <- map["to"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["from"] = self.from
-        result["to"] = self.to
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

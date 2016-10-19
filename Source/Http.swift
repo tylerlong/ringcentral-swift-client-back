@@ -17,6 +17,36 @@ public struct HTTPError {
 }
 
 
+public struct ObjectMapperEncoding: ParameterEncoding {
+
+    public static var `default`: ObjectMapperEncoding { return ObjectMapperEncoding() }
+
+    public init() {
+    }
+
+    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var urlRequest = try urlRequest.asURLRequest()
+        guard let parameters = parameters else { return urlRequest }
+
+        do {
+            if let jsonString = parameters["json-string"] {
+                urlRequest.httpBody = (jsonString as! String).data(using: String.Encoding.utf8)!
+            } else {
+                let data = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                urlRequest.httpBody = data
+            }
+        } catch {
+            throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
+        }
+        if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        }
+
+        return urlRequest
+    }
+}
+
+
 extension RestClient {
 
     // create a new Alamofire request object
@@ -58,10 +88,10 @@ extension RestClient {
     open func getString(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ string: String?, _ error: HTTPError?) -> Void) {
         requestString(endpoint, method: .get, parameters: parameters, encoding: encoding, headers: headers, callback: callback)
     }
-    open func postString(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ string: String?, _ error: HTTPError?) -> Void) {
+    open func postString(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = ObjectMapperEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ string: String?, _ error: HTTPError?) -> Void) {
         requestString(endpoint, method: .post, parameters: parameters, encoding: encoding, headers: headers, callback: callback)
     }
-    open func putString(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ string: String?, _ error: HTTPError?) -> Void) {
+    open func putString(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = ObjectMapperEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ string: String?, _ error: HTTPError?) -> Void) {
         requestString(endpoint, method: .put, parameters: parameters, encoding: encoding, headers: headers, callback: callback)
     }
     open func deleteString(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ string: String?, _ error: HTTPError?) -> Void) {
@@ -82,10 +112,10 @@ extension RestClient {
     open func get<T: Mappable>(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ t: T?, _ error: HTTPError?) -> Void) {
         request(endpoint, method: .get, parameters: parameters, encoding: encoding, headers: headers, callback: callback)
     }
-    open func post<T: Mappable>(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ t: T?, _ error: HTTPError?) -> Void) {
+    open func post<T: Mappable>(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = ObjectMapperEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ t: T?, _ error: HTTPError?) -> Void) {
         request(endpoint, method: .post, parameters: parameters, encoding: encoding, headers: headers, callback: callback)
     }
-    open func put<T: Mappable>(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ t: T?, _ error: HTTPError?) -> Void) {
+    open func put<T: Mappable>(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = ObjectMapperEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ t: T?, _ error: HTTPError?) -> Void) {
         request(endpoint, method: .put, parameters: parameters, encoding: encoding, headers: headers, callback: callback)
     }
     open func delete<T: Mappable>(_ endpoint: String, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ t: T?, _ error: HTTPError?) -> Void) {

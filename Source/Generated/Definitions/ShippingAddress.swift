@@ -40,14 +40,8 @@ open class ShippingAddress: Mappable {
         `country` <- map["country"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["customerName"] = self.customerName
-        result["street"] = self.street
-        result["street2"] = self.street2
-        result["city"] = self.city
-        result["state"] = self.state
-        result["zip"] = self.zip
-        result["country"] = self.country
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

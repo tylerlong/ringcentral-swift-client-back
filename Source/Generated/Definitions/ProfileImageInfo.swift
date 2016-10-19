@@ -32,12 +32,8 @@ open class ProfileImageInfo: Mappable {
         `scales` <- map["scales"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["etag"] = self.etag
-        result["lastModified"] = self.lastModified
-        result["contentType"] = self.contentType
-        result["scales"] = self.scales
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

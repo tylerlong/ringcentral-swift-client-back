@@ -16,8 +16,8 @@ open class ExtensionInfo_Request_PartnerId: Mappable {
         `partnerId` <- map["partnerId"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["partnerId"] = self.partnerId
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

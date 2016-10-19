@@ -50,11 +50,8 @@ open class Authorize: Model {
             `state` <- map["state"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["response_type"] = self.response_type
-            result["client_id"] = self.client_id
-            result["redirect_uri"] = self.redirect_uri
-            result["state"] = self.state
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -81,10 +78,8 @@ open class Authorize: Model {
             `state` <- map["state"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["code"] = self.code
-            result["expires_in"] = self.expires_in
-            result["state"] = self.state
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

@@ -36,13 +36,8 @@ open class LocationInfo: Mappable {
         `state` <- map["state"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["areaCode"] = self.areaCode
-        result["city"] = self.city
-        result["npa"] = self.npa
-        result["nxx"] = self.nxx
-        result["state"] = self.state
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

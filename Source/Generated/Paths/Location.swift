@@ -54,12 +54,8 @@ open class Location: Model {
             `withNxx` <- map["withNxx"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["orderBy"] = self.orderBy
-            result["page"] = self.page
-            result["perPage"] = self.perPage
-            result["stateId"] = self.stateId
-            result["withNxx"] = self.withNxx
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -86,10 +82,8 @@ open class Location: Model {
             `paging` <- map["paging"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["navigation"] = self.navigation
-            result["paging"] = self.paging
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

@@ -28,11 +28,8 @@ open class ExtensionInfo_Request_ContactInfo: Mappable {
         `department` <- map["department"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["contact"] = self.contact
-        result["regionalSettings"] = self.regionalSettings
-        result["setupWizardState"] = self.setupWizardState
-        result["department"] = self.department
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

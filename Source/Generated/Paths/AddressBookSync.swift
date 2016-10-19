@@ -50,11 +50,8 @@ open class AddressBookSync: Model {
             `pageId` <- map["pageId"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["syncType"] = self.syncType
-            result["syncToken"] = self.syncToken
-            result["perPage"] = self.perPage
-            result["pageId"] = self.pageId
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -85,11 +82,8 @@ open class AddressBookSync: Model {
             `nextPageUri` <- map["nextPageUri"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["syncInfo"] = self.syncInfo
-            result["nextPageId"] = self.nextPageId
-            result["nextPageUri"] = self.nextPageUri
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

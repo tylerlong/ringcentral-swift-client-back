@@ -81,18 +81,8 @@ open class MessageStore: Model {
             `phoneNumber` <- map["phoneNumber"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["availability"] = self.availability
-            result["conversationId"] = self.conversationId
-            result["dateFrom"] = self.dateFrom
-            result["dateTo"] = self.dateTo
-            result["direction"] = self.direction
-            result["distinctConversations"] = self.distinctConversations
-            result["messageType"] = self.messageType
-            result["readStatus"] = self.readStatus
-            result["page"] = self.page
-            result["perPage"] = self.perPage
-            result["phoneNumber"] = self.phoneNumber
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -119,10 +109,8 @@ open class MessageStore: Model {
             `paging` <- map["paging"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["navigation"] = self.navigation
-            result["paging"] = self.paging
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -161,9 +149,8 @@ open class MessageStore: Model {
             `conversationId` <- map["conversationId"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["purge"] = self.purge
-            result["conversationId"] = self.conversationId
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -204,8 +191,8 @@ open class MessageStore: Model {
             `readStatus` <- map["readStatus"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["readStatus"] = self.readStatus
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

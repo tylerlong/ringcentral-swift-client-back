@@ -38,8 +38,8 @@ open class Order: Model {
             `devices` <- map["devices"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["devices"] = self.devices
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -58,8 +58,8 @@ open class Order: Model {
             `devices` <- map["devices"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["devices"] = self.devices
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -92,10 +92,8 @@ open class Order: Model {
             `devices` <- map["devices"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["id"] = self.id
-            result["uri"] = self.uri
-            result["devices"] = self.devices
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

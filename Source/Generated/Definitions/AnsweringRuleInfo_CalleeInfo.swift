@@ -16,8 +16,8 @@ open class AnsweringRuleInfo_CalleeInfo: Mappable {
         `phoneNumber` <- map["phoneNumber"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["phoneNumber"] = self.phoneNumber
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

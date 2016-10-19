@@ -32,12 +32,8 @@ open class BusinessAddressInfo: Mappable {
         `zip` <- map["zip"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["country"] = self.country
-        result["state"] = self.state
-        result["city"] = self.city
-        result["street"] = self.street
-        result["zip"] = self.zip
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

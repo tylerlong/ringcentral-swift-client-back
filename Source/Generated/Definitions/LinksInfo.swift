@@ -20,9 +20,8 @@ open class LinksInfo: Mappable {
         `joinUri` <- map["joinUri"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["startUri"] = self.startUri
-        result["joinUri"] = self.joinUri
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

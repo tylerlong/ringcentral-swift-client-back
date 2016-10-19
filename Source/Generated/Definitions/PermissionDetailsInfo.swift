@@ -16,8 +16,8 @@ open class PermissionDetailsInfo: Mappable {
         `permission` <- map["permission"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["permission"] = self.permission
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

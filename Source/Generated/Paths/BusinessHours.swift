@@ -32,9 +32,8 @@ open class BusinessHours: Model {
             `schedule` <- map["schedule"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["uri"] = self.uri
-            result["schedule"] = self.schedule
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

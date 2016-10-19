@@ -20,9 +20,8 @@ open class VoicemailInfo: Mappable {
         `recipient` <- map["recipient"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["enabled"] = self.enabled
-        result["recipient"] = self.recipient
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

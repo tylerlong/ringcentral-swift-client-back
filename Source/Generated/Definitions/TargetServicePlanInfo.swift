@@ -20,9 +20,8 @@ open class TargetServicePlanInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["name"] = self.name
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

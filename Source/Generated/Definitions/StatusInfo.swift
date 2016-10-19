@@ -20,9 +20,8 @@ open class StatusInfo: Mappable {
         `reason` <- map["reason"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["comment"] = self.comment
-        result["reason"] = self.reason
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

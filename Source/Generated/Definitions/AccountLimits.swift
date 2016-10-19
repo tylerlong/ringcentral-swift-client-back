@@ -24,10 +24,8 @@ open class AccountLimits: Mappable {
         `maxMonitoredExtensionsPerUser` <- map["maxMonitoredExtensionsPerUser"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["freeSoftPhoneLinesPerExtension"] = self.freeSoftPhoneLinesPerExtension
-        result["meetingSize"] = self.meetingSize
-        result["maxMonitoredExtensionsPerUser"] = self.maxMonitoredExtensionsPerUser
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

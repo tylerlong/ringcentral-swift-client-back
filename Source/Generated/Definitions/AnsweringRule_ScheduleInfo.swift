@@ -20,9 +20,8 @@ open class AnsweringRule_ScheduleInfo: Mappable {
         `ranges` <- map["ranges"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["weeklyRanges"] = self.weeklyRanges
-        result["ranges"] = self.ranges
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

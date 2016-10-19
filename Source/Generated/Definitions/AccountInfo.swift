@@ -48,16 +48,8 @@ open class AccountInfo: Mappable {
         `statusInfo` <- map["statusInfo"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["mainNumber"] = self.mainNumber
-        result["operator"] = self.operator
-        result["partnerId"] = self.partnerId
-        result["serviceInfo"] = self.serviceInfo
-        result["setupWizardState"] = self.setupWizardState
-        result["status"] = self.status
-        result["statusInfo"] = self.statusInfo
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

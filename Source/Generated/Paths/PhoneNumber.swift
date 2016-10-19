@@ -46,10 +46,8 @@ open class PhoneNumber: Model {
             `perPage` <- map["perPage"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["usageType"] = self.usageType
-            result["page"] = self.page
-            result["perPage"] = self.perPage
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -76,10 +74,8 @@ open class PhoneNumber: Model {
             `paging` <- map["paging"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["records"] = self.records
-            result["navigation"] = self.navigation
-            result["paging"] = self.paging
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

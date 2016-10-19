@@ -20,9 +20,8 @@ open class RingOutInfo: Mappable {
         `status` <- map["status"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["status"] = self.status
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

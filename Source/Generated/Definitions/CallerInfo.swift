@@ -28,11 +28,8 @@ open class CallerInfo: Mappable {
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["phoneNumber"] = self.phoneNumber
-        result["extensionNumber"] = self.extensionNumber
-        result["location"] = self.location
-        result["name"] = self.name
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

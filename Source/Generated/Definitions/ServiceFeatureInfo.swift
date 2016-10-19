@@ -20,9 +20,8 @@ open class ServiceFeatureInfo: Mappable {
         `enabled` <- map["enabled"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["featureName"] = self.featureName
-        result["enabled"] = self.enabled
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

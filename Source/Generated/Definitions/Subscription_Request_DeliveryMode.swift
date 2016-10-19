@@ -20,9 +20,8 @@ open class Subscription_Request_DeliveryMode: Mappable {
         `encryption` <- map["encryption"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["transportType"] = self.transportType
-        result["encryption"] = self.encryption
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

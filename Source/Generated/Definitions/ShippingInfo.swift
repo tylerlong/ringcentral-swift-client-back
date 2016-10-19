@@ -32,12 +32,8 @@ open class ShippingInfo: Mappable {
         `address` <- map["address"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["status"] = self.status
-        result["carrier"] = self.carrier
-        result["trackingNumber"] = self.trackingNumber
-        result["method"] = self.method
-        result["address"] = self.address
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

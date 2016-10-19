@@ -28,11 +28,8 @@ open class RuleInfo_ForwardingNumberInfo: Mappable {
         `label` <- map["label"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["id"] = self.id
-        result["phoneNumber"] = self.phoneNumber
-        result["label"] = self.label
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

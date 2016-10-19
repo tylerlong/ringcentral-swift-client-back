@@ -52,17 +52,8 @@ open class PresenceInfo: Mappable {
         `userStatus` <- map["userStatus"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["allowSeeMyPresence"] = self.allowSeeMyPresence
-        result["dndStatus"] = self.dndStatus
-        result["extension"] = self.extension
-        result["message"] = self.message
-        result["pickUpCallsOnHold"] = self.pickUpCallsOnHold
-        result["presenceStatus"] = self.presenceStatus
-        result["ringOnMonitoredCall"] = self.ringOnMonitoredCall
-        result["telephonyStatus"] = self.telephonyStatus
-        result["userStatus"] = self.userStatus
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

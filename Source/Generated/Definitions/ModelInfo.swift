@@ -24,10 +24,8 @@ open class ModelInfo: Mappable {
         `addons` <- map["addons"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["name"] = self.name
-        result["addons"] = self.addons
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

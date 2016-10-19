@@ -32,12 +32,8 @@ open class MeetingServiceInfo: Mappable {
         `dialInNumbers` <- map["dialInNumbers"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["supportUri"] = self.supportUri
-        result["intlDialInNumbersUri"] = self.intlDialInNumbersUri
-        result["externalUserInfo"] = self.externalUserInfo
-        result["dialInNumbers"] = self.dialInNumbers
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

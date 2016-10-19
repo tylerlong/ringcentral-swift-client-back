@@ -44,15 +44,8 @@ open class SubscriptionInfo: Mappable {
         `deliveryMode` <- map["deliveryMode"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["eventFilters"] = self.eventFilters
-        result["expirationTime"] = self.expirationTime
-        result["expiresIn"] = self.expiresIn
-        result["status"] = self.status
-        result["creationTime"] = self.creationTime
-        result["deliveryMode"] = self.deliveryMode
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

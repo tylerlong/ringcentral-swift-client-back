@@ -16,8 +16,8 @@ open class BusinessHour_ScheduleInfo: Mappable {
         `weeklyRanges` <- map["weeklyRanges"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["weeklyRanges"] = self.weeklyRanges
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

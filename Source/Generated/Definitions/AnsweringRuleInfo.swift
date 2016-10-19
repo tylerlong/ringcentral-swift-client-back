@@ -64,20 +64,8 @@ open class AnsweringRuleInfo: Mappable {
         `greetings` <- map["greetings"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["id"] = self.id
-        result["type"] = self.type
-        result["name"] = self.name
-        result["enabled"] = self.enabled
-        result["schedule"] = self.schedule
-        result["calledNumbers"] = self.calledNumbers
-        result["callers"] = self.callers
-        result["callHandlingAction"] = self.callHandlingAction
-        result["forwarding"] = self.forwarding
-        result["unconditionalForwarding"] = self.unconditionalForwarding
-        result["voicemail"] = self.voicemail
-        result["greetings"] = self.greetings
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

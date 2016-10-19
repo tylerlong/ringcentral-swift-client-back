@@ -44,15 +44,8 @@ open class PhoneLinesInfo_PhoneNumberInfo: Mappable {
         `usageType` <- map["usageType"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["country"] = self.country
-        result["location"] = self.location
-        result["paymentType"] = self.paymentType
-        result["phoneNumber"] = self.phoneNumber
-        result["status"] = self.status
-        result["type"] = self.type
-        result["usageType"] = self.usageType
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

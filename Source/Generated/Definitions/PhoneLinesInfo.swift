@@ -20,9 +20,8 @@ open class PhoneLinesInfo: Mappable {
         `phoneInfo` <- map["phoneInfo"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["lineType"] = self.lineType
-        result["phoneInfo"] = self.phoneInfo
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

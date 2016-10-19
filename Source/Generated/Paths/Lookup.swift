@@ -82,19 +82,8 @@ open class Lookup: Model {
             `smsEnabled` <- map["smsEnabled"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["areaCode"] = self.areaCode
-            result["countryCode"] = self.countryCode
-            result["countryId"] = self.countryId
-            result["exclude"] = self.exclude
-            result["extendedSearch"] = self.extendedSearch
-            result["line"] = self.line
-            result["numberPattern"] = self.numberPattern
-            result["nxx"] = self.nxx
-            result["npa"] = self.npa
-            result["paymentType"] = self.paymentType
-            result["perPage"] = self.perPage
-            result["smsEnabled"] = self.smsEnabled
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -117,9 +106,8 @@ open class Lookup: Model {
             `records` <- map["records"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["uri"] = self.uri
-            result["records"] = self.records
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

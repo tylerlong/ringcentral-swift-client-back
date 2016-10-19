@@ -20,9 +20,8 @@ open class ReferenceInfo: Mappable {
         `type` <- map["type"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["ref"] = self.ref
-        result["type"] = self.type
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

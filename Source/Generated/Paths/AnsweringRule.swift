@@ -74,17 +74,8 @@ open class AnsweringRule: Model {
             `voiceMail` <- map["voiceMail"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["enabled"] = self.enabled
-            result["type"] = self.type
-            result["name"] = self.name
-            result["callers"] = self.callers
-            result["calledNumbers"] = self.calledNumbers
-            result["schedule"] = self.schedule
-            result["callHandlingAction"] = self.callHandlingAction
-            result["forwarding"] = self.forwarding
-            result["unconditionalForwarding"] = self.unconditionalForwarding
-            result["voiceMail"] = self.voiceMail
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -121,11 +112,8 @@ open class AnsweringRule: Model {
             `navigation` <- map["navigation"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["uri"] = self.uri
-            result["records"] = self.records
-            result["paging"] = self.paging
-            result["navigation"] = self.navigation
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -184,11 +172,8 @@ open class AnsweringRule: Model {
             `greetings` <- map["greetings"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["enabled"] = self.enabled
-            result["name"] = self.name
-            result["forwarding"] = self.forwarding
-            result["greetings"] = self.greetings
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

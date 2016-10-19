@@ -28,11 +28,8 @@ open class ServerInfo: Mappable {
         `serverRevision` <- map["serverRevision"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["uri"] = self.uri
-        result["apiVersions"] = self.apiVersions
-        result["serverVersion"] = self.serverVersion
-        result["serverRevision"] = self.serverRevision
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

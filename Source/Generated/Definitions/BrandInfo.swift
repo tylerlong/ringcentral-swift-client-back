@@ -24,10 +24,8 @@ open class BrandInfo: Mappable {
         `homeCountry` <- map["homeCountry"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["name"] = self.name
-        result["homeCountry"] = self.homeCountry
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

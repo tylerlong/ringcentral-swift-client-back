@@ -24,10 +24,8 @@ open class ExtensionInfo_Request_Provision_ContactInfo: Mappable {
         `email` <- map["email"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["firstName"] = self.firstName
-        result["lastName"] = self.lastName
-        result["email"] = self.email
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

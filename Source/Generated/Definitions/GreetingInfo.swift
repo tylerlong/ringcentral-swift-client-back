@@ -20,9 +20,8 @@ open class GreetingInfo: Mappable {
         `preset` <- map["preset"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["type"] = self.type
-        result["preset"] = self.preset
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

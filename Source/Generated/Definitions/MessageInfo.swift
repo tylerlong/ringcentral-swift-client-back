@@ -100,29 +100,8 @@ open class MessageInfo: Mappable {
         `vmTranscriptionStatus` <- map["vmTranscriptionStatus"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
-        result["uri"] = self.uri
-        result["attachments"] = self.attachments
-        result["availability"] = self.availability
-        result["conversationId"] = self.conversationId
-        result["creationTime"] = self.creationTime
-        result["deliveryErrorCode"] = self.deliveryErrorCode
-        result["direction"] = self.direction
-        result["faxPageCount"] = self.faxPageCount
-        result["faxResolution"] = self.faxResolution
-        result["from"] = self.from
-        result["lastModifiedTime"] = self.lastModifiedTime
-        result["messageStatus"] = self.messageStatus
-        result["pgToDepartment"] = self.pgToDepartment
-        result["priority"] = self.priority
-        result["readStatus"] = self.readStatus
-        result["smsDeliveryTime"] = self.smsDeliveryTime
-        result["smsSendingAttemptsCount"] = self.smsSendingAttemptsCount
-        result["subject"] = self.subject
-        result["to"] = self.to
-        result["type"] = self.type
-        result["vmTranscriptionStatus"] = self.vmTranscriptionStatus
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

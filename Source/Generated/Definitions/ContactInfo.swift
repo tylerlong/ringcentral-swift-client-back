@@ -36,13 +36,8 @@ open class ContactInfo: Mappable {
         `businessAddress` <- map["businessAddress"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["firstName"] = self.firstName
-        result["lastName"] = self.lastName
-        result["company"] = self.company
-        result["email"] = self.email
-        result["businessPhone"] = self.businessPhone
-        result["businessAddress"] = self.businessAddress
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

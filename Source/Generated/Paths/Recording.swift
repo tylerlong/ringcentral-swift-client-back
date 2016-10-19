@@ -43,11 +43,8 @@ open class Recording: Model {
             `duration` <- map["duration"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["id"] = self.id
-            result["contentUri"] = self.contentUri
-            result["contentType"] = self.contentType
-            result["duration"] = self.duration
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

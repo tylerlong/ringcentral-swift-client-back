@@ -42,9 +42,8 @@ open class Subscription: Model {
             `deliveryMode` <- map["deliveryMode"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["eventFilters"] = self.eventFilters
-            result["deliveryMode"] = self.deliveryMode
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }
@@ -91,8 +90,8 @@ open class Subscription: Model {
             `eventFilters` <- map["eventFilters"]
         }
         open func toParameters() -> Parameters {
-            var result = [String: Any]()
-            result["eventFilters"] = self.eventFilters
+            var result = [String: String]()
+            result["json-string"] = self.toJSONString(prettyPrint: false)!
             return result
         }
     }

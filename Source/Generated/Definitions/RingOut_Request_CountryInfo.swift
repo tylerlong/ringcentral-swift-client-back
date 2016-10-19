@@ -16,8 +16,8 @@ open class RingOut_Request_CountryInfo: Mappable {
         `id` <- map["id"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["id"] = self.id
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }

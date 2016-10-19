@@ -20,9 +20,8 @@ open class RingOut_Request_From: Mappable {
         `forwardingNumberId` <- map["forwardingNumberId"]
     }
     open func toParameters() -> Parameters {
-        var result = [String: Any]()
-        result["phoneNumber"] = self.phoneNumber
-        result["forwardingNumberId"] = self.forwardingNumberId
+        var result = [String: String]()
+        result["json-string"] = self.toJSONString(prettyPrint: false)!
         return result
     }
 }
