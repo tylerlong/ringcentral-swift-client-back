@@ -33,27 +33,14 @@ class SubscriptionTest: BaseTest {
         }
     }
 
-    func testTemp() {
-        let callerInfo = CallerInfo(phoneNumber: "16506417402")
-        XCTAssertTrue("16506417402" == callerInfo.phoneNumber)
-        print(Config.getInstance().username)
-        print(Config.getInstance().receiver)
-
-        let parameters: Parameters = [
-            "from": ["phoneNumber": Config.getInstance().username!],
-            "to":[["phoneNumber": Config.getInstance().receiver!]],
-            "text": "hello world"
-        ]
-        print(JSONSerialization.isValidJSONObject(parameters))
-        XCTAssertTrue(JSONSerialization.isValidJSONObject(parameters))
-    }
-
     func testSMSNotification() {
         let subscription = rc.restapi("v1.0").subscription().new()
         subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/message-store")
         var count = 0
         subscription.listeners.append { message in
+            print("before")
             print(message)
+            print("after")
             count += 1
         }
 

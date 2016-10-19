@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873B6B141DB71044001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; };
+		873B6B171DB71065001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B151DB71056001D1825 /* CryptoSwift.framework */; };
+		873B6B181DB71070001D1825 /* CryptoSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87410DA31D9A8FCD00AD2DE7 /* UrlBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */; };
 		875500D81DB4666A0089B0EA /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D71DB4666A0089B0EA /* SubscriptionService.swift */; };
 		875500DB1DB468790089B0EA /* SubscriptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D91DB468540089B0EA /* SubscriptionTest.swift */; };
@@ -434,6 +437,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				873B6B181DB71070001D1825 /* CryptoSwift.framework in CopyFiles */,
 				875500E31DB4C6C20089B0EA /* Async.framework in CopyFiles */,
 				875500DF1DB495050089B0EA /* PubNub.framework in CopyFiles */,
 				879ADF1F1D98FCD1008E7735 /* Alamofire.framework in CopyFiles */,
@@ -444,6 +448,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		873B6B131DB71044001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
+		873B6B151DB71056001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlBuilderTest.swift; path = Tests/UrlBuilderTest.swift; sourceTree = "<group>"; };
 		875500D71DB4666A0089B0EA /* SubscriptionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionService.swift; path = Source/SubscriptionService.swift; sourceTree = "<group>"; };
 		875500D91DB468540089B0EA /* SubscriptionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionTest.swift; path = Tests/SubscriptionTest.swift; sourceTree = "<group>"; };
@@ -677,6 +683,7 @@
 				879ADEFE1D98C7D6008E7735 /* ObjectMapper.framework in Frameworks */,
 				875500DD1DB494E10089B0EA /* PubNub.framework in Frameworks */,
 				875500E11DB4C6B00089B0EA /* Async.framework in Frameworks */,
+				873B6B141DB71044001D1825 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +719,7 @@
 				879ADF191D98F4D7008E7735 /* Alamofire.framework in Frameworks */,
 				879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */,
 				875500E21DB4C6BA0089B0EA /* Async.framework in Frameworks */,
+				873B6B171DB71065001D1825 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +729,7 @@
 		879ADEB11D98C3C9008E7735 = {
 			isa = PBXGroup;
 			children = (
+				873B6B151DB71056001D1825 /* CryptoSwift.framework */,
 				879ADEF61D98C723008E7735 /* README.md */,
 				879ADEF41D98C6E5008E7735 /* Cartfile */,
 				879ADEF81D98C766008E7735 /* Cartfile.resolved */,
@@ -800,6 +809,7 @@
 		879ADEFA1D98C7D5008E7735 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				873B6B131DB71044001D1825 /* CryptoSwift.framework */,
 				875500E01DB4C6B00089B0EA /* Async.framework */,
 				875500DC1DB494E10089B0EA /* PubNub.framework */,
 				87D30AB71D9E5616009CC0E7 /* ObjectMapper.framework */,
