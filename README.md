@@ -40,4 +40,4 @@ This project is released under the MIT license.
 
 1. binary data downloading & uploading
 1. write doc about how to use
-1. subscription
+1. setup iOS project

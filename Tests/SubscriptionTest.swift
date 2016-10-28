@@ -82,8 +82,7 @@ class SubscriptionTest: BaseTest {
 
     func testDeserialize() {
         let json = "{\"uuid\":\"ec43ed1b-ae0c-4571-a39a-861c432f31d3\",\"event\":\"/restapi/v1.0/account/130829004/extension/130829004/message-store\",\"timestamp\":\"2016-10-28T06:13:43.720Z\",\"subscriptionId\":\"ada0c29a-a914-4c15-bd52-7c27ac918f56\",\"body\":{\"extensionId\":130829004,\"lastUpdated\":\"2016-10-28T06:13:33.931+0000\",\"changes\":[{\"type\":\"SMS\",\"newCount\":1,\"updatedCount\":0}]}}"
-        let notification = Notification(JSONString: json)!
-        notification.json = json // todo: move this to constructor, convenience constructor
+        let notification = Notification(json: json)!
         XCTAssertTrue("/restapi/v1.0/account/130829004/extension/130829004/message-store" == notification.event!)
         XCTAssertTrue(NotificationType.Message == notification.type!)
         let messageNotification: MessageNotification = notification.downcast()!

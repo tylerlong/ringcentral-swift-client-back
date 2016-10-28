@@ -57,10 +57,9 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
         let encrypted = Data(base64Encoded: base64Message)!.bytes
         let key = Data(base64Encoded: subscriptionInfo!.deliveryMode!.encryptionKey!)!.bytes
         let decrypted = try! AES(key: key, iv: nil, blockMode: .ECB, padding: PKCS7()).decrypt(encrypted)
-        let result = String(bytes: decrypted, encoding: String.Encoding.utf8)!
+        let json = String(bytes: decrypted, encoding: String.Encoding.utf8)!
         for listener in listeners {
-            let notification = Notification(JSONString: result)!
-            notification.json = result
+            let notification = Notification(json: json)!
             listener(notification)
         }
     }

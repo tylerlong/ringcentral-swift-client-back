@@ -58,6 +58,11 @@ open class Notification: INotification {
 
     }
 
+    convenience public init?(json: String) {
+        self.init(JSONString: json)
+        self.json = json
+    }
+
     open func mapping(map: Map) {
         event <- map["event"]
     }
