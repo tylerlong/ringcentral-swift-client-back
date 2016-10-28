@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class MessageChanges: Mappable {
+open class MessageChange: Mappable {
     // Message type
     open var `type`: String?
     // The number of new messages. Can be omitted if the value is zero

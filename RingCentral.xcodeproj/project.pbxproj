@@ -221,7 +221,6 @@
 		872DB6C21DC2F0E600EFA4E2 /* InstantMessageEvent_CallerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AA1DC2F0E600EFA4E2 /* InstantMessageEvent_CallerInfo.swift */; };
 		872DB6C31DC2F0E600EFA4E2 /* InstantMessageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AB1DC2F0E600EFA4E2 /* InstantMessageEvent.swift */; };
 		872DB6C41DC2F0E600EFA4E2 /* InstantMessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AC1DC2F0E600EFA4E2 /* InstantMessageNotification.swift */; };
-		872DB6C51DC2F0E600EFA4E2 /* MessageChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AD1DC2F0E600EFA4E2 /* MessageChanges.swift */; };
 		872DB6C61DC2F0E600EFA4E2 /* MessageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AE1DC2F0E600EFA4E2 /* MessageEvent.swift */; };
 		872DB6C71DC2F0E600EFA4E2 /* MessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AF1DC2F0E600EFA4E2 /* MessageNotification.swift */; };
 		872DB6C81DC2F0E600EFA4E2 /* PresenceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B01DC2F0E600EFA4E2 /* PresenceEvent.swift */; };
@@ -230,6 +229,7 @@
 		872DB6CB1DC2F0E600EFA4E2 /* PresenceLineNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B31DC2F0E600EFA4E2 /* PresenceLineNotification.swift */; };
 		872DB6CC1DC2F0E600EFA4E2 /* PresenceNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B41DC2F0E600EFA4E2 /* PresenceNotification.swift */; };
 		872DB6CD1DC2F0E600EFA4E2 /* SIPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B51DC2F0E600EFA4E2 /* SIPData.swift */; };
+		872DB6CF1DC33E9400EFA4E2 /* MessageChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6CE1DC33E9400EFA4E2 /* MessageChange.swift */; };
 		873B6B141DB71044001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; };
 		873B6B171DB71065001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B151DB71056001D1825 /* CryptoSwift.framework */; };
 		873B6B181DB71070001D1825 /* CryptoSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -487,7 +487,6 @@
 		872DB6AA1DC2F0E600EFA4E2 /* InstantMessageEvent_CallerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstantMessageEvent_CallerInfo.swift; path = Source/Generated/Definitions/InstantMessageEvent_CallerInfo.swift; sourceTree = "<group>"; };
 		872DB6AB1DC2F0E600EFA4E2 /* InstantMessageEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstantMessageEvent.swift; path = Source/Generated/Definitions/InstantMessageEvent.swift; sourceTree = "<group>"; };
 		872DB6AC1DC2F0E600EFA4E2 /* InstantMessageNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstantMessageNotification.swift; path = Source/Generated/Definitions/InstantMessageNotification.swift; sourceTree = "<group>"; };
-		872DB6AD1DC2F0E600EFA4E2 /* MessageChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageChanges.swift; path = Source/Generated/Definitions/MessageChanges.swift; sourceTree = "<group>"; };
 		872DB6AE1DC2F0E600EFA4E2 /* MessageEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageEvent.swift; path = Source/Generated/Definitions/MessageEvent.swift; sourceTree = "<group>"; };
 		872DB6AF1DC2F0E600EFA4E2 /* MessageNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageNotification.swift; path = Source/Generated/Definitions/MessageNotification.swift; sourceTree = "<group>"; };
 		872DB6B01DC2F0E600EFA4E2 /* PresenceEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresenceEvent.swift; path = Source/Generated/Definitions/PresenceEvent.swift; sourceTree = "<group>"; };
@@ -496,6 +495,7 @@
 		872DB6B31DC2F0E600EFA4E2 /* PresenceLineNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresenceLineNotification.swift; path = Source/Generated/Definitions/PresenceLineNotification.swift; sourceTree = "<group>"; };
 		872DB6B41DC2F0E600EFA4E2 /* PresenceNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresenceNotification.swift; path = Source/Generated/Definitions/PresenceNotification.swift; sourceTree = "<group>"; };
 		872DB6B51DC2F0E600EFA4E2 /* SIPData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SIPData.swift; path = Source/Generated/Definitions/SIPData.swift; sourceTree = "<group>"; };
+		872DB6CE1DC33E9400EFA4E2 /* MessageChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageChange.swift; path = Source/Generated/Definitions/MessageChange.swift; sourceTree = "<group>"; };
 		873B6B131DB71044001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		873B6B151DB71056001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlBuilderTest.swift; path = Tests/UrlBuilderTest.swift; sourceTree = "<group>"; };
@@ -893,6 +893,7 @@
 		87EAD4271D9BA68200BE2FAA /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
+				872DB6CE1DC33E9400EFA4E2 /* MessageChange.swift */,
 				872DB69E1DC2F0E600EFA4E2 /* DetailedPresenceEvent_ActiveCallInfo.swift */,
 				872DB69F1DC2F0E600EFA4E2 /* DetailedPresenceEvent.swift */,
 				872DB6A01DC2F0E600EFA4E2 /* DetailedPresenceNotification.swift */,
@@ -908,7 +909,6 @@
 				872DB6AA1DC2F0E600EFA4E2 /* InstantMessageEvent_CallerInfo.swift */,
 				872DB6AB1DC2F0E600EFA4E2 /* InstantMessageEvent.swift */,
 				872DB6AC1DC2F0E600EFA4E2 /* InstantMessageNotification.swift */,
-				872DB6AD1DC2F0E600EFA4E2 /* MessageChanges.swift */,
 				872DB6AE1DC2F0E600EFA4E2 /* MessageEvent.swift */,
 				872DB6AF1DC2F0E600EFA4E2 /* MessageNotification.swift */,
 				872DB6B01DC2F0E600EFA4E2 /* PresenceEvent.swift */,
@@ -1497,7 +1497,6 @@
 				872DB68A1DC2E42D00EFA4E2 /* TimeInterval.swift in Sources */,
 				872DB68B1DC2E42D00EFA4E2 /* TimezoneInfo.swift in Sources */,
 				872DB68C1DC2E42D00EFA4E2 /* UnconditionalForwardingInfo.swift in Sources */,
-				872DB6C51DC2F0E600EFA4E2 /* MessageChanges.swift in Sources */,
 				872DB68D1DC2E42D00EFA4E2 /* UserPermission.swift in Sources */,
 				872DB68E1DC2E42D00EFA4E2 /* UserPermissionInfo.swift in Sources */,
 				872DB68F1DC2E42D00EFA4E2 /* VersionInfo.swift in Sources */,
@@ -1520,6 +1519,7 @@
 				872DB5E21DC2E41E00EFA4E2 /* CallLogSync.swift in Sources */,
 				872DB5E31DC2E41E00EFA4E2 /* Check.swift in Sources */,
 				872DB6BD1DC2F0E600EFA4E2 /* ExtensionInfoNotification.swift in Sources */,
+				872DB6CF1DC33E9400EFA4E2 /* MessageChange.swift in Sources */,
 				872DB5E41DC2E41E00EFA4E2 /* ClientInfo.swift in Sources */,
 				872DB5E51DC2E41E00EFA4E2 /* CompanyPager.swift in Sources */,
 				872DB5E61DC2E41E00EFA4E2 /* Conferencing.swift in Sources */,
