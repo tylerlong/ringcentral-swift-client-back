@@ -110,6 +110,7 @@ open class Notification: INotification {
         }
     }
 
+    // todo: any better way ? such as `as!` ?
     open func downcast<T: INotification>() -> T? {
         if let json = self.json {
             return T(JSONString: json)

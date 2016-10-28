@@ -14,21 +14,32 @@ The recommended way to install this framework is via [Carthage](https://github.c
 
 Add the following to your Cartfile:
 
-```
-github "tylerlong/ringcentral-swift-client"
-```
+
+    github "tylerlong/ringcentral-swift-client"
 
 
-## Compile the project
+## Quick Start
 
-```shell
-git clone https://github.com/tylerlong/ringcentral-swift-client.git RingCentral
-cd RingCentral
-carthage update --platform mac
-open RingCentral.xcworkspace
-```
-
-Then you can compile the project in XCode.
+    let rc = RestClient(appKey: "", appSecret: "", production: false)
+    rc.authorize("username", ext: "", password: ) { token, error in
+        if error == nil {
+            print("Authorized!")
+            let parameters = Sms.PostParameters(
+                from: CallerInfo(phoneNumber: "123456789"),
+                to: [CallerInfo(phoneNumber: "123456789")],
+                text: "hello world"
+            )
+            rc.restapi("v1.0").account("~").extension("~").sms().post(parameters: parameters) { messageInfo, error in
+                if error == nil {
+                    print("SMS sent!")
+                } else {
+                    print("Failed to send SMS")
+                }
+            }
+        } else {
+            print("Failed to authorize!")
+        }
+    }
 
 
 ## License
@@ -39,5 +50,3 @@ This project is released under the MIT license.
 ## todo
 
 1. binary data downloading & uploading
-1. write doc about how to use
-1. setup iOS project

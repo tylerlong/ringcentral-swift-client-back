@@ -230,6 +230,225 @@
 		872DB6CC1DC2F0E600EFA4E2 /* PresenceNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B41DC2F0E600EFA4E2 /* PresenceNotification.swift */; };
 		872DB6CD1DC2F0E600EFA4E2 /* SIPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B51DC2F0E600EFA4E2 /* SIPData.swift */; };
 		872DB6CF1DC33E9400EFA4E2 /* MessageChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6CE1DC33E9400EFA4E2 /* MessageChange.swift */; };
+		872DB6D11DC3553C00EFA4E2 /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DB6D01DC3553C00EFA4E2 /* PubNub.framework */; };
+		872DB6D31DC3554900EFA4E2 /* Async.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DB6D21DC3554900EFA4E2 /* Async.framework */; };
+		872DB6D51DC3555D00EFA4E2 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DB6D41DC3555D00EFA4E2 /* CryptoSwift.framework */; };
+		872DB6D61DC3558500EFA4E2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4291D9BA69E00BE2FAA /* Account.swift */; };
+		872DB6D71DC3558500EFA4E2 /* ActiveCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42A1D9BA69E00BE2FAA /* ActiveCalls.swift */; };
+		872DB6D81DC3558500EFA4E2 /* AddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42B1D9BA69E00BE2FAA /* AddressBook.swift */; };
+		872DB6D91DC3558500EFA4E2 /* AddressBookSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42C1D9BA69E00BE2FAA /* AddressBookSync.swift */; };
+		872DB6DA1DC3558500EFA4E2 /* AnsweringRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42D1D9BA69E00BE2FAA /* AnsweringRule.swift */; };
+		872DB6DB1DC3558500EFA4E2 /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42E1D9BA69E00BE2FAA /* Authorize.swift */; };
+		872DB6DC1DC3558500EFA4E2 /* AuthzProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42F1D9BA69E00BE2FAA /* AuthzProfile.swift */; };
+		872DB6DD1DC3558500EFA4E2 /* BlockedNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4301D9BA69E00BE2FAA /* BlockedNumber.swift */; };
+		872DB6DE1DC3558500EFA4E2 /* BusinessAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4311D9BA69E00BE2FAA /* BusinessAddress.swift */; };
+		872DB6DF1DC3558500EFA4E2 /* BusinessHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4321D9BA69E00BE2FAA /* BusinessHours.swift */; };
+		872DB6E01DC3558500EFA4E2 /* CallLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4331D9BA69E00BE2FAA /* CallLog.swift */; };
+		872DB6E11DC3558500EFA4E2 /* CallLogSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4341D9BA69E00BE2FAA /* CallLogSync.swift */; };
+		872DB6E21DC3558500EFA4E2 /* Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4351D9BA69E00BE2FAA /* Check.swift */; };
+		872DB6E31DC3558500EFA4E2 /* ClientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4361D9BA69E00BE2FAA /* ClientInfo.swift */; };
+		872DB6E41DC3558500EFA4E2 /* CompanyPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4371D9BA69E00BE2FAA /* CompanyPager.swift */; };
+		872DB6E51DC3558500EFA4E2 /* Conferencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4381D9BA69E00BE2FAA /* Conferencing.swift */; };
+		872DB6E61DC3558500EFA4E2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4391D9BA69E00BE2FAA /* Contact.swift */; };
+		872DB6E71DC3558500EFA4E2 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43A1D9BA69E00BE2FAA /* Content.swift */; };
+		872DB6E81DC3558500EFA4E2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43B1D9BA69E00BE2FAA /* Country.swift */; };
+		872DB6E91DC3558500EFA4E2 /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43C1D9BA69E00BE2FAA /* CustomData.swift */; };
+		872DB6EA1DC3558500EFA4E2 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43D1D9BA69E00BE2FAA /* Department.swift */; };
+		872DB6EB1DC3558500EFA4E2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43E1D9BA69E00BE2FAA /* Device.swift */; };
+		872DB6EC1DC3558500EFA4E2 /* DialingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43F1D9BA69E00BE2FAA /* DialingPlan.swift */; };
+		872DB6ED1DC3558500EFA4E2 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4401D9BA69E00BE2FAA /* Dictionary.swift */; };
+		872DB6EE1DC3558500EFA4E2 /* End.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4411D9BA69E00BE2FAA /* End.swift */; };
+		872DB6EF1DC3558500EFA4E2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4421D9BA69E00BE2FAA /* Extension.swift */; };
+		872DB6F01DC3558500EFA4E2 /* Fax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4431D9BA69E00BE2FAA /* Fax.swift */; };
+		872DB6F11DC3558500EFA4E2 /* ForwardingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4441D9BA69E00BE2FAA /* ForwardingNumber.swift */; };
+		872DB6F21DC3558500EFA4E2 /* Grant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4451D9BA69E00BE2FAA /* Grant.swift */; };
+		872DB6F31DC3558500EFA4E2 /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4461D9BA69E00BE2FAA /* Greeting.swift */; };
+		872DB6F41DC3558500EFA4E2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4471D9BA69E00BE2FAA /* Group.swift */; };
+		872DB6F51DC3558500EFA4E2 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4481D9BA69E00BE2FAA /* Language.swift */; };
+		872DB6F61DC3558600EFA4E2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4491D9BA69E00BE2FAA /* Location.swift */; };
+		872DB6F71DC3558600EFA4E2 /* Lookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44A1D9BA69E00BE2FAA /* Lookup.swift */; };
+		872DB6F81DC3558600EFA4E2 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44B1D9BA69E00BE2FAA /* Meeting.swift */; };
+		872DB6F91DC3558600EFA4E2 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44C1D9BA69E00BE2FAA /* Members.swift */; };
+		872DB6FA1DC3558600EFA4E2 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44D1D9BA69E00BE2FAA /* MessageStore.swift */; };
+		872DB6FB1DC3558600EFA4E2 /* MessageSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44E1D9BA69E00BE2FAA /* MessageSync.swift */; };
+		872DB6FC1DC3558600EFA4E2 /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44F1D9BA69E00BE2FAA /* NumberParser.swift */; };
+		872DB6FD1DC3558600EFA4E2 /* NumberPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4501D9BA69E00BE2FAA /* NumberPool.swift */; };
+		872DB6FE1DC3558600EFA4E2 /* Oauth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4511D9BA69E00BE2FAA /* Oauth.swift */; };
+		872DB6FF1DC3558600EFA4E2 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4521D9BA69E00BE2FAA /* Order.swift */; };
+		872DB7001DC3558600EFA4E2 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4531D9BA69E00BE2FAA /* Parse.swift */; };
+		872DB7011DC3558600EFA4E2 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4541D9BA69E00BE2FAA /* PhoneNumber.swift */; };
+		872DB7021DC3558600EFA4E2 /* Presence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4551D9BA69E00BE2FAA /* Presence.swift */; };
+		872DB7031DC3558600EFA4E2 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4561D9BA69E00BE2FAA /* ProfileImage.swift */; };
+		872DB7041DC3558600EFA4E2 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4571D9BA69E00BE2FAA /* Recording.swift */; };
+		872DB7051DC3558600EFA4E2 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4581D9BA69E00BE2FAA /* Reserve.swift */; };
+		872DB7061DC3558600EFA4E2 /* Restapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4591D9BA69E00BE2FAA /* Restapi.swift */; };
+		872DB7071DC3558600EFA4E2 /* Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45A1D9BA69E00BE2FAA /* Revoke.swift */; };
+		872DB7081DC3558600EFA4E2 /* Ringout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45B1D9BA69E00BE2FAA /* Ringout.swift */; };
+		872DB7091DC3558600EFA4E2 /* ServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45C1D9BA69E00BE2FAA /* ServiceInfo.swift */; };
+		872DB70A1DC3558600EFA4E2 /* Sms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45D1D9BA69E00BE2FAA /* Sms.swift */; };
+		872DB70B1DC3558600EFA4E2 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45E1D9BA69E00BE2FAA /* State.swift */; };
+		872DB70C1DC3558600EFA4E2 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45F1D9BA69E00BE2FAA /* Subscription.swift */; };
+		872DB70D1DC3558600EFA4E2 /* Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4601D9BA69E00BE2FAA /* Timezone.swift */; };
+		872DB70E1DC3558600EFA4E2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4611D9BA69E00BE2FAA /* Token.swift */; };
+		872DB70F1DC3559300EFA4E2 /* MessageChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6CE1DC33E9400EFA4E2 /* MessageChange.swift */; };
+		872DB7101DC3559300EFA4E2 /* DetailedPresenceEvent_ActiveCallInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB69E1DC2F0E600EFA4E2 /* DetailedPresenceEvent_ActiveCallInfo.swift */; };
+		872DB7111DC3559300EFA4E2 /* DetailedPresenceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB69F1DC2F0E600EFA4E2 /* DetailedPresenceEvent.swift */; };
+		872DB7121DC3559300EFA4E2 /* DetailedPresenceNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A01DC2F0E600EFA4E2 /* DetailedPresenceNotification.swift */; };
+		872DB7131DC3559300EFA4E2 /* DetailedPresencewithSIPEvent_ActiveCallInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A11DC2F0E600EFA4E2 /* DetailedPresencewithSIPEvent_ActiveCallInfo.swift */; };
+		872DB7141DC3559300EFA4E2 /* DetailedPresencewithSIPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A21DC2F0E600EFA4E2 /* DetailedPresencewithSIPEvent.swift */; };
+		872DB7151DC3559300EFA4E2 /* DetailedPresenceWithSIPNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A31DC2F0E600EFA4E2 /* DetailedPresenceWithSIPNotification.swift */; };
+		872DB7161DC3559300EFA4E2 /* ExtensionInfoEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A41DC2F0E600EFA4E2 /* ExtensionInfoEvent.swift */; };
+		872DB7171DC3559300EFA4E2 /* ExtensionInfoNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A51DC2F0E600EFA4E2 /* ExtensionInfoNotification.swift */; };
+		872DB7181DC3559300EFA4E2 /* ExtensionListEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A61DC2F0E600EFA4E2 /* ExtensionListEvent.swift */; };
+		872DB7191DC3559300EFA4E2 /* ExtensionListNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A71DC2F0E600EFA4E2 /* ExtensionListNotification.swift */; };
+		872DB71A1DC3559300EFA4E2 /* IncomingCallNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A81DC2F0E600EFA4E2 /* IncomingCallNotification.swift */; };
+		872DB71B1DC3559300EFA4E2 /* InstantMessageAttachmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6A91DC2F0E600EFA4E2 /* InstantMessageAttachmentInfo.swift */; };
+		872DB71C1DC3559300EFA4E2 /* InstantMessageEvent_CallerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AA1DC2F0E600EFA4E2 /* InstantMessageEvent_CallerInfo.swift */; };
+		872DB71D1DC3559300EFA4E2 /* InstantMessageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AB1DC2F0E600EFA4E2 /* InstantMessageEvent.swift */; };
+		872DB71E1DC3559300EFA4E2 /* InstantMessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AC1DC2F0E600EFA4E2 /* InstantMessageNotification.swift */; };
+		872DB71F1DC3559300EFA4E2 /* MessageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AE1DC2F0E600EFA4E2 /* MessageEvent.swift */; };
+		872DB7201DC3559300EFA4E2 /* MessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6AF1DC2F0E600EFA4E2 /* MessageNotification.swift */; };
+		872DB7211DC3559300EFA4E2 /* PresenceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B01DC2F0E600EFA4E2 /* PresenceEvent.swift */; };
+		872DB7221DC3559300EFA4E2 /* PresenceLineEvent_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B11DC2F0E600EFA4E2 /* PresenceLineEvent_ExtensionInfo.swift */; };
+		872DB7231DC3559300EFA4E2 /* PresenceLineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B21DC2F0E600EFA4E2 /* PresenceLineEvent.swift */; };
+		872DB7241DC3559300EFA4E2 /* PresenceLineNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B31DC2F0E600EFA4E2 /* PresenceLineNotification.swift */; };
+		872DB7251DC3559300EFA4E2 /* PresenceNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B41DC2F0E600EFA4E2 /* PresenceNotification.swift */; };
+		872DB7261DC3559300EFA4E2 /* SIPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872DB6B51DC2F0E600EFA4E2 /* SIPData.swift */; };
+		872DB7271DC3559300EFA4E2 /* Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791866B1D9D2B6100349515 /* Binary.swift */; };
+		872DB7281DC3559300EFA4E2 /* MeetingServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879186611D9CE3C100349515 /* MeetingServiceInfo.swift */; };
+		872DB7291DC3559300EFA4E2 /* Account_ServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791865F1D9CE39C00349515 /* Account_ServiceInfo.swift */; };
+		872DB72A1DC3559300EFA4E2 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49B1D9BA6B100BE2FAA /* AccountInfo.swift */; };
+		872DB72B1DC3559300EFA4E2 /* AccountLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49C1D9BA6B100BE2FAA /* AccountLimits.swift */; };
+		872DB72C1DC3559300EFA4E2 /* AccountServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49D1D9BA6B100BE2FAA /* AccountServiceInfo.swift */; };
+		872DB72D1DC3559300EFA4E2 /* AddonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49E1D9BA6B100BE2FAA /* AddonInfo.swift */; };
+		872DB72E1DC3559300EFA4E2 /* AnsweringRule_ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49F1D9BA6B100BE2FAA /* AnsweringRule_ScheduleInfo.swift */; };
+		872DB72F1DC3559300EFA4E2 /* AnsweringRuleInfo_CalleeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A01D9BA6B100BE2FAA /* AnsweringRuleInfo_CalleeInfo.swift */; };
+		872DB7301DC3559300EFA4E2 /* AnsweringRuleInfo_CallerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A11D9BA6B100BE2FAA /* AnsweringRuleInfo_CallerInfo.swift */; };
+		872DB7311DC3559300EFA4E2 /* AnsweringRuleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A21D9BA6B100BE2FAA /* AnsweringRuleInfo.swift */; };
+		872DB7321DC3559300EFA4E2 /* AttachmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A31D9BA6B100BE2FAA /* AttachmentInfo.swift */; };
+		872DB7331DC3559300EFA4E2 /* BillingPlanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A41D9BA6B100BE2FAA /* BillingPlanInfo.swift */; };
+		872DB7341DC3559300EFA4E2 /* BlockedNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A51D9BA6B100BE2FAA /* BlockedNumberInfo.swift */; };
+		872DB7351DC3559300EFA4E2 /* BrandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A61D9BA6B100BE2FAA /* BrandInfo.swift */; };
+		872DB7361DC3559300EFA4E2 /* BusinessAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A71D9BA6B100BE2FAA /* BusinessAddressInfo.swift */; };
+		872DB7371DC3559300EFA4E2 /* BusinessHour_ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A81D9BA6B100BE2FAA /* BusinessHour_ScheduleInfo.swift */; };
+		872DB7381DC3559300EFA4E2 /* CalledNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A91D9BA6B100BE2FAA /* CalledNumberInfo.swift */; };
+		872DB7391DC3559300EFA4E2 /* CallerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AA1D9BA6B100BE2FAA /* CallerInfo.swift */; };
+		872DB73A1DC3559300EFA4E2 /* CallersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AB1D9BA6B100BE2FAA /* CallersInfo.swift */; };
+		872DB73B1DC3559300EFA4E2 /* CallLogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AC1D9BA6B100BE2FAA /* CallLogInfo.swift */; };
+		872DB73C1DC3559300EFA4E2 /* CallLogRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AD1D9BA6B100BE2FAA /* CallLogRecord.swift */; };
+		872DB73D1DC3559300EFA4E2 /* Conferencing_Request_PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AE1D9BA6B100BE2FAA /* Conferencing_Request_PhoneNumber.swift */; };
+		872DB73E1DC3559300EFA4E2 /* ConferencingInfo_PhoneNumberInfo_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AF1D9BA6B100BE2FAA /* ConferencingInfo_PhoneNumberInfo_CountryInfo.swift */; };
+		872DB73F1DC3559300EFA4E2 /* ConferencingInfo_PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B01D9BA6B100BE2FAA /* ConferencingInfo_PhoneNumberInfo.swift */; };
+		872DB7401DC3559300EFA4E2 /* ConferencingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B11D9BA6B100BE2FAA /* ConferencingInfo.swift */; };
+		872DB7411DC3559300EFA4E2 /* ContactAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B21D9BA6B100BE2FAA /* ContactAddressInfo.swift */; };
+		872DB7421DC3559300EFA4E2 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B31D9BA6B100BE2FAA /* ContactInfo.swift */; };
+		872DB7431DC3559300EFA4E2 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B41D9BA6B100BE2FAA /* CountryInfo.swift */; };
+		872DB7441DC3559300EFA4E2 /* CustomGreetingInfo_AnsweringRuleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B51D9BA6B100BE2FAA /* CustomGreetingInfo_AnsweringRuleInfo.swift */; };
+		872DB7451DC3559300EFA4E2 /* CustomGreetingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B61D9BA6B100BE2FAA /* CustomGreetingInfo.swift */; };
+		872DB7461DC3559300EFA4E2 /* DeliveryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B71D9BA6B100BE2FAA /* DeliveryMode.swift */; };
+		872DB7471DC3559300EFA4E2 /* Department_Response_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B81D9BA6B100BE2FAA /* Department_Response_ExtensionInfo.swift */; };
+		872DB7481DC3559300EFA4E2 /* DepartmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B91D9BA6B100BE2FAA /* DepartmentInfo.swift */; };
+		872DB7491DC3559300EFA4E2 /* DeviceInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BA1D9BA6B100BE2FAA /* DeviceInfo_ExtensionInfo.swift */; };
+		872DB74A1DC3559300EFA4E2 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BB1D9BA6B100BE2FAA /* DeviceInfo.swift */; };
+		872DB74B1DC3559300EFA4E2 /* DialingPlanCountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BC1D9BA6B100BE2FAA /* DialingPlanCountryInfo.swift */; };
+		872DB74C1DC3559300EFA4E2 /* DialInNumbers_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BD1D9BA6B100BE2FAA /* DialInNumbers_CountryInfo.swift */; };
+		872DB74D1DC3559300EFA4E2 /* DialInNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BE1D9BA6B100BE2FAA /* DialInNumbers.swift */; };
+		872DB74E1DC3559300EFA4E2 /* EmergencyAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BF1D9BA6B100BE2FAA /* EmergencyAddressInfo.swift */; };
+		872DB74F1DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C01D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale.swift */; };
+		872DB7501DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C11D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage.swift */; };
+		872DB7511DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C21D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Language.swift */; };
+		872DB7521DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C31D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Timezone.swift */; };
+		872DB7531DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C41D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings.swift */; };
+		872DB7541DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C51D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo.swift */; };
+		872DB7551DC3559300EFA4E2 /* ExtensionInfo_Request_PartnerId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C61D9BA6B100BE2FAA /* ExtensionInfo_Request_PartnerId.swift */; };
+		872DB7561DC3559300EFA4E2 /* ExtensionInfo_Request_PasswordPIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C71D9BA6B100BE2FAA /* ExtensionInfo_Request_PasswordPIN.swift */; };
+		872DB7571DC3559300EFA4E2 /* ExtensionInfo_Request_Provision_ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C81D9BA6B100BE2FAA /* ExtensionInfo_Request_Provision_ContactInfo.swift */; };
+		872DB7581DC3559300EFA4E2 /* ExtensionInfo_Request_Provision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C91D9BA6B100BE2FAA /* ExtensionInfo_Request_Provision.swift */; };
+		872DB7591DC3559300EFA4E2 /* ExtensionInfo_Request_StatusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CA1D9BA6B100BE2FAA /* ExtensionInfo_Request_StatusInfo.swift */; };
+		872DB75A1DC3559300EFA4E2 /* ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CB1D9BA6B100BE2FAA /* ExtensionInfo.swift */; };
+		872DB75B1DC3559300EFA4E2 /* ExtensionPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CC1D9BA6B100BE2FAA /* ExtensionPermissions.swift */; };
+		872DB75C1DC3559300EFA4E2 /* ExtensionServiceFeatureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CD1D9BA6B100BE2FAA /* ExtensionServiceFeatureInfo.swift */; };
+		872DB75D1DC3559300EFA4E2 /* ExternalUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CE1D9BA6B100BE2FAA /* ExternalUserInfo.swift */; };
+		872DB75E1DC3559300EFA4E2 /* FormattingLocaleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CF1D9BA6B100BE2FAA /* FormattingLocaleInfo.swift */; };
+		872DB75F1DC3559300EFA4E2 /* ForwardingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D01D9BA6B100BE2FAA /* ForwardingInfo.swift */; };
+		872DB7601DC3559300EFA4E2 /* ForwardingNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D11D9BA6B100BE2FAA /* ForwardingNumberInfo.swift */; };
+		872DB7611DC3559300EFA4E2 /* FullCountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D21D9BA6B100BE2FAA /* FullCountryInfo.swift */; };
+		872DB7621DC3559300EFA4E2 /* GrantInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D31D9BA6B100BE2FAA /* GrantInfo_ExtensionInfo.swift */; };
+		872DB7631DC3559300EFA4E2 /* GrantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D41D9BA6B100BE2FAA /* GrantInfo.swift */; };
+		872DB7641DC3559300EFA4E2 /* GreetingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D51D9BA6B100BE2FAA /* GreetingInfo.swift */; };
+		872DB7651DC3559300EFA4E2 /* GreetingLanguageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D61D9BA6B100BE2FAA /* GreetingLanguageInfo.swift */; };
+		872DB7661DC3559300EFA4E2 /* GroupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D71D9BA6B100BE2FAA /* GroupInfo.swift */; };
+		872DB7671DC3559300EFA4E2 /* ImageUri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D81D9BA6B100BE2FAA /* ImageUri.swift */; };
+		872DB7681DC3559300EFA4E2 /* LanguageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D91D9BA6B100BE2FAA /* LanguageInfo.swift */; };
+		872DB7691DC3559300EFA4E2 /* LegInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DA1D9BA6B100BE2FAA /* LegInfo_ExtensionInfo.swift */; };
+		872DB76A1DC3559300EFA4E2 /* LegInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DB1D9BA6B100BE2FAA /* LegInfo.swift */; };
+		872DB76B1DC3559300EFA4E2 /* LinksInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DC1D9BA6B100BE2FAA /* LinksInfo.swift */; };
+		872DB76C1DC3559300EFA4E2 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DD1D9BA6B100BE2FAA /* LocationInfo.swift */; };
+		872DB76D1DC3559300EFA4E2 /* LookUpPhoneNumber_PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DE1D9BA6B100BE2FAA /* LookUpPhoneNumber_PhoneNumberInfo.swift */; };
+		872DB76E1DC3559300EFA4E2 /* MeetingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DF1D9BA6B100BE2FAA /* MeetingInfo.swift */; };
+		872DB76F1DC3559300EFA4E2 /* MeetingScheduleInfo_TimezoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E01D9BA6B100BE2FAA /* MeetingScheduleInfo_TimezoneInfo.swift */; };
+		872DB7701DC3559300EFA4E2 /* MeetingScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E11D9BA6B100BE2FAA /* MeetingScheduleInfo.swift */; };
+		872DB7711DC3559300EFA4E2 /* MessageAttachmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E21D9BA6B100BE2FAA /* MessageAttachmentInfo.swift */; };
+		872DB7721DC3559300EFA4E2 /* MessageInfo_CallerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E31D9BA6B100BE2FAA /* MessageInfo_CallerInfo.swift */; };
+		872DB7731DC3559300EFA4E2 /* MessageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E41D9BA6B100BE2FAA /* MessageInfo.swift */; };
+		872DB7741DC3559300EFA4E2 /* ModelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E51D9BA6B100BE2FAA /* ModelInfo.swift */; };
+		872DB7751DC3559300EFA4E2 /* NavigationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E61D9BA6B100BE2FAA /* NavigationInfo.swift */; };
+		872DB7761DC3559300EFA4E2 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E71D9BA6B100BE2FAA /* Page.swift */; };
+		872DB7771DC3559300EFA4E2 /* PagingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E81D9BA6B100BE2FAA /* PagingInfo.swift */; };
+		872DB7781DC3559300EFA4E2 /* ParsePhoneNumber_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E91D9BA6B100BE2FAA /* ParsePhoneNumber_CountryInfo.swift */; };
+		872DB7791DC3559300EFA4E2 /* ParsePhoneNumber_PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EA1D9BA6B100BE2FAA /* ParsePhoneNumber_PhoneNumberInfo.swift */; };
+		872DB77A1DC3559300EFA4E2 /* PermissionDetailsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EB1D9BA6B100BE2FAA /* PermissionDetailsInfo.swift */; };
+		872DB77B1DC3559300EFA4E2 /* PermissionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EC1D9BA6B100BE2FAA /* PermissionInfo.swift */; };
+		872DB77C1DC3559300EFA4E2 /* PersonalContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4ED1D9BA6B100BE2FAA /* PersonalContactInfo.swift */; };
+		872DB77D1DC3559300EFA4E2 /* PhoneLinesInfo_PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EE1D9BA6B100BE2FAA /* PhoneLinesInfo_PhoneNumberInfo.swift */; };
+		872DB77E1DC3559300EFA4E2 /* PhoneLinesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EF1D9BA6B100BE2FAA /* PhoneLinesInfo.swift */; };
+		872DB77F1DC3559300EFA4E2 /* PhoneNumberInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F01D9BA6B100BE2FAA /* PhoneNumberInfo_ExtensionInfo.swift */; };
+		872DB7801DC3559300EFA4E2 /* PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F11D9BA6B100BE2FAA /* PhoneNumberInfo.swift */; };
+		872DB7811DC3559300EFA4E2 /* PresenceInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F21D9BA6B100BE2FAA /* PresenceInfo_ExtensionInfo.swift */; };
+		872DB7821DC3559300EFA4E2 /* PresenceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F31D9BA6B100BE2FAA /* PresenceInfo.swift */; };
+		872DB7831DC3559300EFA4E2 /* PresetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F41D9BA6B100BE2FAA /* PresetInfo.swift */; };
+		872DB7841DC3559300EFA4E2 /* ProfileImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F51D9BA6B100BE2FAA /* ProfileImageInfo.swift */; };
+		872DB7851DC3559300EFA4E2 /* RangesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F61D9BA6B100BE2FAA /* RangesInfo.swift */; };
+		872DB7861DC3559300EFA4E2 /* RecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F71D9BA6B100BE2FAA /* RecipientInfo.swift */; };
+		872DB7871DC3559300EFA4E2 /* RecordingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F81D9BA6B100BE2FAA /* RecordingInfo.swift */; };
+		872DB7881DC3559300EFA4E2 /* ReferenceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F91D9BA6B100BE2FAA /* ReferenceInfo.swift */; };
+		872DB7891DC3559300EFA4E2 /* RegionalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FA1D9BA6B100BE2FAA /* RegionalSettings.swift */; };
+		872DB78A1DC3559300EFA4E2 /* ReservePhoneNumber_Request_ReserveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FB1D9BA6B100BE2FAA /* ReservePhoneNumber_Request_ReserveRecord.swift */; };
+		872DB78B1DC3559300EFA4E2 /* ReservePhoneNumber_Response_ReserveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FC1D9BA6B100BE2FAA /* ReservePhoneNumber_Response_ReserveRecord.swift */; };
+		872DB78C1DC3559300EFA4E2 /* RingOut_Request_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FD1D9BA6B100BE2FAA /* RingOut_Request_CountryInfo.swift */; };
+		872DB78D1DC3559300EFA4E2 /* RingOut_Request_From.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FE1D9BA6B100BE2FAA /* RingOut_Request_From.swift */; };
+		872DB78E1DC3559300EFA4E2 /* RingOut_Request_To.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FF1D9BA6B100BE2FAA /* RingOut_Request_To.swift */; };
+		872DB78F1DC3559300EFA4E2 /* RingOutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5001D9BA6B100BE2FAA /* RingOutInfo.swift */; };
+		872DB7901DC3559300EFA4E2 /* RingOutStatusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5011D9BA6B100BE2FAA /* RingOutStatusInfo.swift */; };
+		872DB7911DC3559300EFA4E2 /* RuleInfo_ForwardingNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5021D9BA6B100BE2FAA /* RuleInfo_ForwardingNumberInfo.swift */; };
+		872DB7921DC3559300EFA4E2 /* RuleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5031D9BA6B100BE2FAA /* RuleInfo.swift */; };
+		872DB7931DC3559300EFA4E2 /* ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5041D9BA6B100BE2FAA /* ScheduleInfo.swift */; };
+		872DB7941DC3559300EFA4E2 /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5051D9BA6B100BE2FAA /* ServerInfo.swift */; };
+		872DB7951DC3559300EFA4E2 /* ServiceFeatureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5061D9BA6B100BE2FAA /* ServiceFeatureInfo.swift */; };
+		872DB7961DC3559300EFA4E2 /* ServicePlanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5071D9BA6B100BE2FAA /* ServicePlanInfo.swift */; };
+		872DB7971DC3559300EFA4E2 /* ShippingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5081D9BA6B100BE2FAA /* ShippingAddress.swift */; };
+		872DB7981DC3559300EFA4E2 /* ShippingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5091D9BA6B100BE2FAA /* ShippingInfo.swift */; };
+		872DB7991DC3559300EFA4E2 /* ShippingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50A1D9BA6B100BE2FAA /* ShippingMethod.swift */; };
+		872DB79A1DC3559300EFA4E2 /* StateInfo_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50B1D9BA6B100BE2FAA /* StateInfo_CountryInfo.swift */; };
+		872DB79B1DC3559300EFA4E2 /* StateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50C1D9BA6B100BE2FAA /* StateInfo.swift */; };
+		872DB79C1DC3559300EFA4E2 /* StatusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50D1D9BA6B100BE2FAA /* StatusInfo.swift */; };
+		872DB79D1DC3559300EFA4E2 /* Subscription_Request_DeliveryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50E1D9BA6B100BE2FAA /* Subscription_Request_DeliveryMode.swift */; };
+		872DB79E1DC3559300EFA4E2 /* SubscriptionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50F1D9BA6B100BE2FAA /* SubscriptionInfo.swift */; };
+		872DB79F1DC3559300EFA4E2 /* SyncInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5101D9BA6B100BE2FAA /* SyncInfo.swift */; };
+		872DB7A01DC3559300EFA4E2 /* TargetServicePlanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5111D9BA6B100BE2FAA /* TargetServicePlanInfo.swift */; };
+		872DB7A11DC3559300EFA4E2 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5121D9BA6B100BE2FAA /* TimeInterval.swift */; };
+		872DB7A21DC3559300EFA4E2 /* TimezoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5131D9BA6B100BE2FAA /* TimezoneInfo.swift */; };
+		872DB7A31DC3559300EFA4E2 /* UnconditionalForwardingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5141D9BA6B100BE2FAA /* UnconditionalForwardingInfo.swift */; };
+		872DB7A41DC3559300EFA4E2 /* UserPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5151D9BA6B100BE2FAA /* UserPermission.swift */; };
+		872DB7A51DC3559300EFA4E2 /* UserPermissionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5161D9BA6B100BE2FAA /* UserPermissionInfo.swift */; };
+		872DB7A61DC3559300EFA4E2 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5171D9BA6B100BE2FAA /* VersionInfo.swift */; };
+		872DB7A71DC3559300EFA4E2 /* VoicemailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5181D9BA6B100BE2FAA /* VoicemailInfo.swift */; };
+		872DB7A81DC3559300EFA4E2 /* WeeklyScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5191D9BA6B100BE2FAA /* WeeklyScheduleInfo.swift */; };
+		872DB7A91DC3559F00EFA4E2 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEE1D98C4C0008E7735 /* Http.swift */; };
+		872DB7AA1DC3559F00EFA4E2 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEF1D98C4C0008E7735 /* RestClient.swift */; };
+		872DB7AB1DC3559F00EFA4E2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Model.swift */; };
+		872DB7AC1DC3559F00EFA4E2 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D71DB4666A0089B0EA /* SubscriptionService.swift */; };
+		872DB7AD1DC3559F00EFA4E2 /* Special.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D66801DB65A2E0050C900 /* Special.swift */; };
 		873B6B141DB71044001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; };
 		873B6B171DB71065001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B151DB71056001D1825 /* CryptoSwift.framework */; };
 		873B6B181DB71070001D1825 /* CryptoSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -250,196 +469,6 @@
 		879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; };
 		879ADF1D1D98F53A008E7735 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		879ADF1F1D98FCD1008E7735 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFB1D98C7D6008E7735 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		87D309F91D9E54C1009CC0E7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4291D9BA69E00BE2FAA /* Account.swift */; };
-		87D309FA1D9E54C1009CC0E7 /* ActiveCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42A1D9BA69E00BE2FAA /* ActiveCalls.swift */; };
-		87D309FB1D9E54C1009CC0E7 /* AddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42B1D9BA69E00BE2FAA /* AddressBook.swift */; };
-		87D309FC1D9E54C1009CC0E7 /* AddressBookSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42C1D9BA69E00BE2FAA /* AddressBookSync.swift */; };
-		87D309FD1D9E54C1009CC0E7 /* AnsweringRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42D1D9BA69E00BE2FAA /* AnsweringRule.swift */; };
-		87D309FE1D9E54C1009CC0E7 /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42E1D9BA69E00BE2FAA /* Authorize.swift */; };
-		87D309FF1D9E54C1009CC0E7 /* AuthzProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD42F1D9BA69E00BE2FAA /* AuthzProfile.swift */; };
-		87D30A001D9E54C1009CC0E7 /* BlockedNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4301D9BA69E00BE2FAA /* BlockedNumber.swift */; };
-		87D30A011D9E54C1009CC0E7 /* BusinessAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4311D9BA69E00BE2FAA /* BusinessAddress.swift */; };
-		87D30A021D9E54C1009CC0E7 /* BusinessHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4321D9BA69E00BE2FAA /* BusinessHours.swift */; };
-		87D30A031D9E54C1009CC0E7 /* CallLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4331D9BA69E00BE2FAA /* CallLog.swift */; };
-		87D30A041D9E54C1009CC0E7 /* CallLogSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4341D9BA69E00BE2FAA /* CallLogSync.swift */; };
-		87D30A051D9E54C1009CC0E7 /* Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4351D9BA69E00BE2FAA /* Check.swift */; };
-		87D30A061D9E54C1009CC0E7 /* ClientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4361D9BA69E00BE2FAA /* ClientInfo.swift */; };
-		87D30A071D9E54C1009CC0E7 /* CompanyPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4371D9BA69E00BE2FAA /* CompanyPager.swift */; };
-		87D30A081D9E54C1009CC0E7 /* Conferencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4381D9BA69E00BE2FAA /* Conferencing.swift */; };
-		87D30A091D9E54C1009CC0E7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4391D9BA69E00BE2FAA /* Contact.swift */; };
-		87D30A0A1D9E54C1009CC0E7 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43A1D9BA69E00BE2FAA /* Content.swift */; };
-		87D30A0B1D9E54C1009CC0E7 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43B1D9BA69E00BE2FAA /* Country.swift */; };
-		87D30A0C1D9E54C1009CC0E7 /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43C1D9BA69E00BE2FAA /* CustomData.swift */; };
-		87D30A0D1D9E54C1009CC0E7 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43D1D9BA69E00BE2FAA /* Department.swift */; };
-		87D30A0E1D9E54C1009CC0E7 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43E1D9BA69E00BE2FAA /* Device.swift */; };
-		87D30A0F1D9E54C1009CC0E7 /* DialingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD43F1D9BA69E00BE2FAA /* DialingPlan.swift */; };
-		87D30A101D9E54C1009CC0E7 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4401D9BA69E00BE2FAA /* Dictionary.swift */; };
-		87D30A111D9E54C1009CC0E7 /* End.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4411D9BA69E00BE2FAA /* End.swift */; };
-		87D30A121D9E54C1009CC0E7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4421D9BA69E00BE2FAA /* Extension.swift */; };
-		87D30A131D9E54C1009CC0E7 /* Fax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4431D9BA69E00BE2FAA /* Fax.swift */; };
-		87D30A141D9E54C1009CC0E7 /* ForwardingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4441D9BA69E00BE2FAA /* ForwardingNumber.swift */; };
-		87D30A151D9E54C1009CC0E7 /* Grant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4451D9BA69E00BE2FAA /* Grant.swift */; };
-		87D30A161D9E54C1009CC0E7 /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4461D9BA69E00BE2FAA /* Greeting.swift */; };
-		87D30A171D9E54C1009CC0E7 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4471D9BA69E00BE2FAA /* Group.swift */; };
-		87D30A181D9E54C1009CC0E7 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4481D9BA69E00BE2FAA /* Language.swift */; };
-		87D30A191D9E54C1009CC0E7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4491D9BA69E00BE2FAA /* Location.swift */; };
-		87D30A1A1D9E54C1009CC0E7 /* Lookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44A1D9BA69E00BE2FAA /* Lookup.swift */; };
-		87D30A1B1D9E54C1009CC0E7 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44B1D9BA69E00BE2FAA /* Meeting.swift */; };
-		87D30A1C1D9E54C1009CC0E7 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44C1D9BA69E00BE2FAA /* Members.swift */; };
-		87D30A1D1D9E54C1009CC0E7 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44D1D9BA69E00BE2FAA /* MessageStore.swift */; };
-		87D30A1E1D9E54C1009CC0E7 /* MessageSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44E1D9BA69E00BE2FAA /* MessageSync.swift */; };
-		87D30A1F1D9E54C1009CC0E7 /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD44F1D9BA69E00BE2FAA /* NumberParser.swift */; };
-		87D30A201D9E54C1009CC0E7 /* NumberPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4501D9BA69E00BE2FAA /* NumberPool.swift */; };
-		87D30A211D9E54C1009CC0E7 /* Oauth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4511D9BA69E00BE2FAA /* Oauth.swift */; };
-		87D30A221D9E54C1009CC0E7 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4521D9BA69E00BE2FAA /* Order.swift */; };
-		87D30A231D9E54C1009CC0E7 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4531D9BA69E00BE2FAA /* Parse.swift */; };
-		87D30A241D9E54C1009CC0E7 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4541D9BA69E00BE2FAA /* PhoneNumber.swift */; };
-		87D30A251D9E54C1009CC0E7 /* Presence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4551D9BA69E00BE2FAA /* Presence.swift */; };
-		87D30A261D9E54C1009CC0E7 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4561D9BA69E00BE2FAA /* ProfileImage.swift */; };
-		87D30A271D9E54C1009CC0E7 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4571D9BA69E00BE2FAA /* Recording.swift */; };
-		87D30A281D9E54C1009CC0E7 /* Reserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4581D9BA69E00BE2FAA /* Reserve.swift */; };
-		87D30A291D9E54C1009CC0E7 /* Restapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4591D9BA69E00BE2FAA /* Restapi.swift */; };
-		87D30A2A1D9E54C1009CC0E7 /* Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45A1D9BA69E00BE2FAA /* Revoke.swift */; };
-		87D30A2B1D9E54C1009CC0E7 /* Ringout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45B1D9BA69E00BE2FAA /* Ringout.swift */; };
-		87D30A2C1D9E54C1009CC0E7 /* ServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45C1D9BA69E00BE2FAA /* ServiceInfo.swift */; };
-		87D30A2D1D9E54C1009CC0E7 /* Sms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45D1D9BA69E00BE2FAA /* Sms.swift */; };
-		87D30A2E1D9E54C1009CC0E7 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45E1D9BA69E00BE2FAA /* State.swift */; };
-		87D30A2F1D9E54C1009CC0E7 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD45F1D9BA69E00BE2FAA /* Subscription.swift */; };
-		87D30A301D9E54C1009CC0E7 /* Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4601D9BA69E00BE2FAA /* Timezone.swift */; };
-		87D30A311D9E54C1009CC0E7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4611D9BA69E00BE2FAA /* Token.swift */; };
-		87D30A321D9E54CE009CC0E7 /* Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791866B1D9D2B6100349515 /* Binary.swift */; };
-		87D30A331D9E54CE009CC0E7 /* MeetingServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879186611D9CE3C100349515 /* MeetingServiceInfo.swift */; };
-		87D30A341D9E54CE009CC0E7 /* Account_ServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791865F1D9CE39C00349515 /* Account_ServiceInfo.swift */; };
-		87D30A351D9E54CE009CC0E7 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49B1D9BA6B100BE2FAA /* AccountInfo.swift */; };
-		87D30A361D9E54CE009CC0E7 /* AccountLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49C1D9BA6B100BE2FAA /* AccountLimits.swift */; };
-		87D30A371D9E54CE009CC0E7 /* AccountServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49D1D9BA6B100BE2FAA /* AccountServiceInfo.swift */; };
-		87D30A381D9E54CE009CC0E7 /* AddonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49E1D9BA6B100BE2FAA /* AddonInfo.swift */; };
-		87D30A391D9E54CE009CC0E7 /* AnsweringRule_ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD49F1D9BA6B100BE2FAA /* AnsweringRule_ScheduleInfo.swift */; };
-		87D30A3A1D9E54CE009CC0E7 /* AnsweringRuleInfo_CalleeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A01D9BA6B100BE2FAA /* AnsweringRuleInfo_CalleeInfo.swift */; };
-		87D30A3B1D9E54CE009CC0E7 /* AnsweringRuleInfo_CallerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A11D9BA6B100BE2FAA /* AnsweringRuleInfo_CallerInfo.swift */; };
-		87D30A3C1D9E54CE009CC0E7 /* AnsweringRuleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A21D9BA6B100BE2FAA /* AnsweringRuleInfo.swift */; };
-		87D30A3D1D9E54CE009CC0E7 /* AttachmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A31D9BA6B100BE2FAA /* AttachmentInfo.swift */; };
-		87D30A3E1D9E54CE009CC0E7 /* BillingPlanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A41D9BA6B100BE2FAA /* BillingPlanInfo.swift */; };
-		87D30A3F1D9E54CE009CC0E7 /* BlockedNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A51D9BA6B100BE2FAA /* BlockedNumberInfo.swift */; };
-		87D30A401D9E54CE009CC0E7 /* BrandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A61D9BA6B100BE2FAA /* BrandInfo.swift */; };
-		87D30A411D9E54CE009CC0E7 /* BusinessAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A71D9BA6B100BE2FAA /* BusinessAddressInfo.swift */; };
-		87D30A421D9E54CE009CC0E7 /* BusinessHour_ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A81D9BA6B100BE2FAA /* BusinessHour_ScheduleInfo.swift */; };
-		87D30A431D9E54CE009CC0E7 /* CalledNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4A91D9BA6B100BE2FAA /* CalledNumberInfo.swift */; };
-		87D30A441D9E54CE009CC0E7 /* CallerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AA1D9BA6B100BE2FAA /* CallerInfo.swift */; };
-		87D30A451D9E54CE009CC0E7 /* CallersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AB1D9BA6B100BE2FAA /* CallersInfo.swift */; };
-		87D30A461D9E54CE009CC0E7 /* CallLogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AC1D9BA6B100BE2FAA /* CallLogInfo.swift */; };
-		87D30A471D9E54CE009CC0E7 /* CallLogRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AD1D9BA6B100BE2FAA /* CallLogRecord.swift */; };
-		87D30A481D9E54CE009CC0E7 /* Conferencing_Request_PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AE1D9BA6B100BE2FAA /* Conferencing_Request_PhoneNumber.swift */; };
-		87D30A491D9E54CE009CC0E7 /* ConferencingInfo_PhoneNumberInfo_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4AF1D9BA6B100BE2FAA /* ConferencingInfo_PhoneNumberInfo_CountryInfo.swift */; };
-		87D30A4A1D9E54CE009CC0E7 /* ConferencingInfo_PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B01D9BA6B100BE2FAA /* ConferencingInfo_PhoneNumberInfo.swift */; };
-		87D30A4B1D9E54CE009CC0E7 /* ConferencingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B11D9BA6B100BE2FAA /* ConferencingInfo.swift */; };
-		87D30A4C1D9E54CE009CC0E7 /* ContactAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B21D9BA6B100BE2FAA /* ContactAddressInfo.swift */; };
-		87D30A4D1D9E54CE009CC0E7 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B31D9BA6B100BE2FAA /* ContactInfo.swift */; };
-		87D30A4E1D9E54CE009CC0E7 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B41D9BA6B100BE2FAA /* CountryInfo.swift */; };
-		87D30A4F1D9E54CE009CC0E7 /* CustomGreetingInfo_AnsweringRuleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B51D9BA6B100BE2FAA /* CustomGreetingInfo_AnsweringRuleInfo.swift */; };
-		87D30A501D9E54CE009CC0E7 /* CustomGreetingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B61D9BA6B100BE2FAA /* CustomGreetingInfo.swift */; };
-		87D30A511D9E54CE009CC0E7 /* DeliveryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B71D9BA6B100BE2FAA /* DeliveryMode.swift */; };
-		87D30A521D9E54CE009CC0E7 /* Department_Response_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B81D9BA6B100BE2FAA /* Department_Response_ExtensionInfo.swift */; };
-		87D30A531D9E54CE009CC0E7 /* DepartmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4B91D9BA6B100BE2FAA /* DepartmentInfo.swift */; };
-		87D30A541D9E54CE009CC0E7 /* DeviceInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BA1D9BA6B100BE2FAA /* DeviceInfo_ExtensionInfo.swift */; };
-		87D30A551D9E54CE009CC0E7 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BB1D9BA6B100BE2FAA /* DeviceInfo.swift */; };
-		87D30A561D9E54CE009CC0E7 /* DialingPlanCountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BC1D9BA6B100BE2FAA /* DialingPlanCountryInfo.swift */; };
-		87D30A571D9E54CE009CC0E7 /* DialInNumbers_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BD1D9BA6B100BE2FAA /* DialInNumbers_CountryInfo.swift */; };
-		87D30A581D9E54CE009CC0E7 /* DialInNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BE1D9BA6B100BE2FAA /* DialInNumbers.swift */; };
-		87D30A591D9E54CE009CC0E7 /* EmergencyAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4BF1D9BA6B100BE2FAA /* EmergencyAddressInfo.swift */; };
-		87D30A5A1D9E54CE009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C01D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale.swift */; };
-		87D30A5B1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C11D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage.swift */; };
-		87D30A5C1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C21D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Language.swift */; };
-		87D30A5D1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C31D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Timezone.swift */; };
-		87D30A5E1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C41D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo_RegionalSettings.swift */; };
-		87D30A5F1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C51D9BA6B100BE2FAA /* ExtensionInfo_Request_ContactInfo.swift */; };
-		87D30A601D9E54CF009CC0E7 /* ExtensionInfo_Request_PartnerId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C61D9BA6B100BE2FAA /* ExtensionInfo_Request_PartnerId.swift */; };
-		87D30A611D9E54CF009CC0E7 /* ExtensionInfo_Request_PasswordPIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C71D9BA6B100BE2FAA /* ExtensionInfo_Request_PasswordPIN.swift */; };
-		87D30A621D9E54CF009CC0E7 /* ExtensionInfo_Request_Provision_ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C81D9BA6B100BE2FAA /* ExtensionInfo_Request_Provision_ContactInfo.swift */; };
-		87D30A631D9E54CF009CC0E7 /* ExtensionInfo_Request_Provision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4C91D9BA6B100BE2FAA /* ExtensionInfo_Request_Provision.swift */; };
-		87D30A641D9E54CF009CC0E7 /* ExtensionInfo_Request_StatusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CA1D9BA6B100BE2FAA /* ExtensionInfo_Request_StatusInfo.swift */; };
-		87D30A651D9E54CF009CC0E7 /* ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CB1D9BA6B100BE2FAA /* ExtensionInfo.swift */; };
-		87D30A661D9E54CF009CC0E7 /* ExtensionPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CC1D9BA6B100BE2FAA /* ExtensionPermissions.swift */; };
-		87D30A671D9E54CF009CC0E7 /* ExtensionServiceFeatureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CD1D9BA6B100BE2FAA /* ExtensionServiceFeatureInfo.swift */; };
-		87D30A681D9E54CF009CC0E7 /* ExternalUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CE1D9BA6B100BE2FAA /* ExternalUserInfo.swift */; };
-		87D30A691D9E54CF009CC0E7 /* FormattingLocaleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4CF1D9BA6B100BE2FAA /* FormattingLocaleInfo.swift */; };
-		87D30A6A1D9E54CF009CC0E7 /* ForwardingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D01D9BA6B100BE2FAA /* ForwardingInfo.swift */; };
-		87D30A6B1D9E54CF009CC0E7 /* ForwardingNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D11D9BA6B100BE2FAA /* ForwardingNumberInfo.swift */; };
-		87D30A6C1D9E54CF009CC0E7 /* FullCountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D21D9BA6B100BE2FAA /* FullCountryInfo.swift */; };
-		87D30A6D1D9E54CF009CC0E7 /* GrantInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D31D9BA6B100BE2FAA /* GrantInfo_ExtensionInfo.swift */; };
-		87D30A6E1D9E54CF009CC0E7 /* GrantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D41D9BA6B100BE2FAA /* GrantInfo.swift */; };
-		87D30A6F1D9E54CF009CC0E7 /* GreetingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D51D9BA6B100BE2FAA /* GreetingInfo.swift */; };
-		87D30A701D9E54CF009CC0E7 /* GreetingLanguageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D61D9BA6B100BE2FAA /* GreetingLanguageInfo.swift */; };
-		87D30A711D9E54CF009CC0E7 /* GroupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D71D9BA6B100BE2FAA /* GroupInfo.swift */; };
-		87D30A721D9E54CF009CC0E7 /* ImageUri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D81D9BA6B100BE2FAA /* ImageUri.swift */; };
-		87D30A731D9E54CF009CC0E7 /* LanguageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4D91D9BA6B100BE2FAA /* LanguageInfo.swift */; };
-		87D30A741D9E54CF009CC0E7 /* LegInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DA1D9BA6B100BE2FAA /* LegInfo_ExtensionInfo.swift */; };
-		87D30A751D9E54CF009CC0E7 /* LegInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DB1D9BA6B100BE2FAA /* LegInfo.swift */; };
-		87D30A761D9E54CF009CC0E7 /* LinksInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DC1D9BA6B100BE2FAA /* LinksInfo.swift */; };
-		87D30A771D9E54CF009CC0E7 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DD1D9BA6B100BE2FAA /* LocationInfo.swift */; };
-		87D30A781D9E54CF009CC0E7 /* LookUpPhoneNumber_PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DE1D9BA6B100BE2FAA /* LookUpPhoneNumber_PhoneNumberInfo.swift */; };
-		87D30A791D9E54CF009CC0E7 /* MeetingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4DF1D9BA6B100BE2FAA /* MeetingInfo.swift */; };
-		87D30A7A1D9E54CF009CC0E7 /* MeetingScheduleInfo_TimezoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E01D9BA6B100BE2FAA /* MeetingScheduleInfo_TimezoneInfo.swift */; };
-		87D30A7B1D9E54CF009CC0E7 /* MeetingScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E11D9BA6B100BE2FAA /* MeetingScheduleInfo.swift */; };
-		87D30A7C1D9E54CF009CC0E7 /* MessageAttachmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E21D9BA6B100BE2FAA /* MessageAttachmentInfo.swift */; };
-		87D30A7D1D9E54CF009CC0E7 /* MessageInfo_CallerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E31D9BA6B100BE2FAA /* MessageInfo_CallerInfo.swift */; };
-		87D30A7E1D9E54CF009CC0E7 /* MessageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E41D9BA6B100BE2FAA /* MessageInfo.swift */; };
-		87D30A7F1D9E54CF009CC0E7 /* ModelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E51D9BA6B100BE2FAA /* ModelInfo.swift */; };
-		87D30A801D9E54CF009CC0E7 /* NavigationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E61D9BA6B100BE2FAA /* NavigationInfo.swift */; };
-		87D30A811D9E54CF009CC0E7 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E71D9BA6B100BE2FAA /* Page.swift */; };
-		87D30A821D9E54CF009CC0E7 /* PagingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E81D9BA6B100BE2FAA /* PagingInfo.swift */; };
-		87D30A831D9E54CF009CC0E7 /* ParsePhoneNumber_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4E91D9BA6B100BE2FAA /* ParsePhoneNumber_CountryInfo.swift */; };
-		87D30A841D9E54CF009CC0E7 /* ParsePhoneNumber_PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EA1D9BA6B100BE2FAA /* ParsePhoneNumber_PhoneNumberInfo.swift */; };
-		87D30A851D9E54CF009CC0E7 /* PermissionDetailsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EB1D9BA6B100BE2FAA /* PermissionDetailsInfo.swift */; };
-		87D30A861D9E54CF009CC0E7 /* PermissionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EC1D9BA6B100BE2FAA /* PermissionInfo.swift */; };
-		87D30A871D9E54CF009CC0E7 /* PersonalContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4ED1D9BA6B100BE2FAA /* PersonalContactInfo.swift */; };
-		87D30A881D9E54CF009CC0E7 /* PhoneLinesInfo_PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EE1D9BA6B100BE2FAA /* PhoneLinesInfo_PhoneNumberInfo.swift */; };
-		87D30A891D9E54CF009CC0E7 /* PhoneLinesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4EF1D9BA6B100BE2FAA /* PhoneLinesInfo.swift */; };
-		87D30A8A1D9E54CF009CC0E7 /* PhoneNumberInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F01D9BA6B100BE2FAA /* PhoneNumberInfo_ExtensionInfo.swift */; };
-		87D30A8B1D9E54CF009CC0E7 /* PhoneNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F11D9BA6B100BE2FAA /* PhoneNumberInfo.swift */; };
-		87D30A8C1D9E54CF009CC0E7 /* PresenceInfo_ExtensionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F21D9BA6B100BE2FAA /* PresenceInfo_ExtensionInfo.swift */; };
-		87D30A8D1D9E54CF009CC0E7 /* PresenceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F31D9BA6B100BE2FAA /* PresenceInfo.swift */; };
-		87D30A8E1D9E54CF009CC0E7 /* PresetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F41D9BA6B100BE2FAA /* PresetInfo.swift */; };
-		87D30A8F1D9E54CF009CC0E7 /* ProfileImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F51D9BA6B100BE2FAA /* ProfileImageInfo.swift */; };
-		87D30A901D9E54CF009CC0E7 /* RangesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F61D9BA6B100BE2FAA /* RangesInfo.swift */; };
-		87D30A911D9E54CF009CC0E7 /* RecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F71D9BA6B100BE2FAA /* RecipientInfo.swift */; };
-		87D30A921D9E54CF009CC0E7 /* RecordingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F81D9BA6B100BE2FAA /* RecordingInfo.swift */; };
-		87D30A931D9E54CF009CC0E7 /* ReferenceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4F91D9BA6B100BE2FAA /* ReferenceInfo.swift */; };
-		87D30A941D9E54CF009CC0E7 /* RegionalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FA1D9BA6B100BE2FAA /* RegionalSettings.swift */; };
-		87D30A951D9E54CF009CC0E7 /* ReservePhoneNumber_Request_ReserveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FB1D9BA6B100BE2FAA /* ReservePhoneNumber_Request_ReserveRecord.swift */; };
-		87D30A961D9E54CF009CC0E7 /* ReservePhoneNumber_Response_ReserveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FC1D9BA6B100BE2FAA /* ReservePhoneNumber_Response_ReserveRecord.swift */; };
-		87D30A971D9E54CF009CC0E7 /* RingOut_Request_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FD1D9BA6B100BE2FAA /* RingOut_Request_CountryInfo.swift */; };
-		87D30A981D9E54CF009CC0E7 /* RingOut_Request_From.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FE1D9BA6B100BE2FAA /* RingOut_Request_From.swift */; };
-		87D30A991D9E54CF009CC0E7 /* RingOut_Request_To.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD4FF1D9BA6B100BE2FAA /* RingOut_Request_To.swift */; };
-		87D30A9A1D9E54CF009CC0E7 /* RingOutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5001D9BA6B100BE2FAA /* RingOutInfo.swift */; };
-		87D30A9B1D9E54CF009CC0E7 /* RingOutStatusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5011D9BA6B100BE2FAA /* RingOutStatusInfo.swift */; };
-		87D30A9C1D9E54CF009CC0E7 /* RuleInfo_ForwardingNumberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5021D9BA6B100BE2FAA /* RuleInfo_ForwardingNumberInfo.swift */; };
-		87D30A9D1D9E54CF009CC0E7 /* RuleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5031D9BA6B100BE2FAA /* RuleInfo.swift */; };
-		87D30A9E1D9E54CF009CC0E7 /* ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5041D9BA6B100BE2FAA /* ScheduleInfo.swift */; };
-		87D30A9F1D9E54CF009CC0E7 /* ServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5051D9BA6B100BE2FAA /* ServerInfo.swift */; };
-		87D30AA01D9E54CF009CC0E7 /* ServiceFeatureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5061D9BA6B100BE2FAA /* ServiceFeatureInfo.swift */; };
-		87D30AA11D9E54CF009CC0E7 /* ServicePlanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5071D9BA6B100BE2FAA /* ServicePlanInfo.swift */; };
-		87D30AA21D9E54CF009CC0E7 /* ShippingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5081D9BA6B100BE2FAA /* ShippingAddress.swift */; };
-		87D30AA31D9E54CF009CC0E7 /* ShippingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5091D9BA6B100BE2FAA /* ShippingInfo.swift */; };
-		87D30AA41D9E54CF009CC0E7 /* ShippingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50A1D9BA6B100BE2FAA /* ShippingMethod.swift */; };
-		87D30AA51D9E54CF009CC0E7 /* StateInfo_CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50B1D9BA6B100BE2FAA /* StateInfo_CountryInfo.swift */; };
-		87D30AA61D9E54CF009CC0E7 /* StateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50C1D9BA6B100BE2FAA /* StateInfo.swift */; };
-		87D30AA71D9E54CF009CC0E7 /* StatusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50D1D9BA6B100BE2FAA /* StatusInfo.swift */; };
-		87D30AA81D9E54CF009CC0E7 /* Subscription_Request_DeliveryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50E1D9BA6B100BE2FAA /* Subscription_Request_DeliveryMode.swift */; };
-		87D30AA91D9E54CF009CC0E7 /* SubscriptionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD50F1D9BA6B100BE2FAA /* SubscriptionInfo.swift */; };
-		87D30AAA1D9E54CF009CC0E7 /* SyncInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5101D9BA6B100BE2FAA /* SyncInfo.swift */; };
-		87D30AAB1D9E54CF009CC0E7 /* TargetServicePlanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5111D9BA6B100BE2FAA /* TargetServicePlanInfo.swift */; };
-		87D30AAC1D9E54CF009CC0E7 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5121D9BA6B100BE2FAA /* TimeInterval.swift */; };
-		87D30AAD1D9E54CF009CC0E7 /* TimezoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5131D9BA6B100BE2FAA /* TimezoneInfo.swift */; };
-		87D30AAE1D9E54CF009CC0E7 /* UnconditionalForwardingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5141D9BA6B100BE2FAA /* UnconditionalForwardingInfo.swift */; };
-		87D30AAF1D9E54CF009CC0E7 /* UserPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5151D9BA6B100BE2FAA /* UserPermission.swift */; };
-		87D30AB01D9E54CF009CC0E7 /* UserPermissionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5161D9BA6B100BE2FAA /* UserPermissionInfo.swift */; };
-		87D30AB11D9E54CF009CC0E7 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5171D9BA6B100BE2FAA /* VersionInfo.swift */; };
-		87D30AB21D9E54CF009CC0E7 /* VoicemailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5181D9BA6B100BE2FAA /* VoicemailInfo.swift */; };
-		87D30AB31D9E54CF009CC0E7 /* WeeklyScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EAD5191D9BA6B100BE2FAA /* WeeklyScheduleInfo.swift */; };
-		87D30AB41D9E54D7009CC0E7 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEE1D98C4C0008E7735 /* Http.swift */; };
-		87D30AB51D9E54D7009CC0E7 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEF1D98C4C0008E7735 /* RestClient.swift */; };
-		87D30AB61D9E54D7009CC0E7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Model.swift */; };
 		87D30AB91D9E5616009CC0E7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D30AB71D9E5616009CC0E7 /* ObjectMapper.framework */; };
 		87D30ABA1D9E5616009CC0E7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D30AB81D9E5616009CC0E7 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
@@ -496,6 +525,9 @@
 		872DB6B41DC2F0E600EFA4E2 /* PresenceNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresenceNotification.swift; path = Source/Generated/Definitions/PresenceNotification.swift; sourceTree = "<group>"; };
 		872DB6B51DC2F0E600EFA4E2 /* SIPData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SIPData.swift; path = Source/Generated/Definitions/SIPData.swift; sourceTree = "<group>"; };
 		872DB6CE1DC33E9400EFA4E2 /* MessageChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageChange.swift; path = Source/Generated/Definitions/MessageChange.swift; sourceTree = "<group>"; };
+		872DB6D01DC3553C00EFA4E2 /* PubNub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PubNub.framework; path = Carthage/Build/iOS/PubNub.framework; sourceTree = "<group>"; };
+		872DB6D21DC3554900EFA4E2 /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = Carthage/Build/iOS/Async.framework; sourceTree = "<group>"; };
+		872DB6D41DC3555D00EFA4E2 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		873B6B131DB71044001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		873B6B151DB71056001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlBuilderTest.swift; path = Tests/UrlBuilderTest.swift; sourceTree = "<group>"; };
@@ -741,6 +773,9 @@
 			files = (
 				87D30AB91D9E5616009CC0E7 /* ObjectMapper.framework in Frameworks */,
 				87D30ABA1D9E5616009CC0E7 /* Alamofire.framework in Frameworks */,
+				872DB6D11DC3553C00EFA4E2 /* PubNub.framework in Frameworks */,
+				872DB6D31DC3554900EFA4E2 /* Async.framework in Frameworks */,
+				872DB6D51DC3555D00EFA4E2 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +892,9 @@
 		879ADEFA1D98C7D5008E7735 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				872DB6D41DC3555D00EFA4E2 /* CryptoSwift.framework */,
+				872DB6D21DC3554900EFA4E2 /* Async.framework */,
+				872DB6D01DC3553C00EFA4E2 /* PubNub.framework */,
 				873B6B131DB71044001D1825 /* CryptoSwift.framework */,
 				875500E01DB4C6B00089B0EA /* Async.framework */,
 				875500DC1DB494E10089B0EA /* PubNub.framework */,
@@ -1573,196 +1611,222 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87D30AB41D9E54D7009CC0E7 /* Http.swift in Sources */,
-				87D30AB51D9E54D7009CC0E7 /* RestClient.swift in Sources */,
-				87D30AB61D9E54D7009CC0E7 /* Model.swift in Sources */,
-				87D30A321D9E54CE009CC0E7 /* Binary.swift in Sources */,
-				87D30A331D9E54CE009CC0E7 /* MeetingServiceInfo.swift in Sources */,
-				87D30A341D9E54CE009CC0E7 /* Account_ServiceInfo.swift in Sources */,
-				87D30A351D9E54CE009CC0E7 /* AccountInfo.swift in Sources */,
-				87D30A361D9E54CE009CC0E7 /* AccountLimits.swift in Sources */,
-				87D30A371D9E54CE009CC0E7 /* AccountServiceInfo.swift in Sources */,
-				87D30A381D9E54CE009CC0E7 /* AddonInfo.swift in Sources */,
-				87D30A391D9E54CE009CC0E7 /* AnsweringRule_ScheduleInfo.swift in Sources */,
-				87D30A3A1D9E54CE009CC0E7 /* AnsweringRuleInfo_CalleeInfo.swift in Sources */,
-				87D30A3B1D9E54CE009CC0E7 /* AnsweringRuleInfo_CallerInfo.swift in Sources */,
-				87D30A3C1D9E54CE009CC0E7 /* AnsweringRuleInfo.swift in Sources */,
-				87D30A3D1D9E54CE009CC0E7 /* AttachmentInfo.swift in Sources */,
-				87D30A3E1D9E54CE009CC0E7 /* BillingPlanInfo.swift in Sources */,
-				87D30A3F1D9E54CE009CC0E7 /* BlockedNumberInfo.swift in Sources */,
-				87D30A401D9E54CE009CC0E7 /* BrandInfo.swift in Sources */,
-				87D30A411D9E54CE009CC0E7 /* BusinessAddressInfo.swift in Sources */,
-				87D30A421D9E54CE009CC0E7 /* BusinessHour_ScheduleInfo.swift in Sources */,
-				87D30A431D9E54CE009CC0E7 /* CalledNumberInfo.swift in Sources */,
-				87D30A441D9E54CE009CC0E7 /* CallerInfo.swift in Sources */,
-				87D30A451D9E54CE009CC0E7 /* CallersInfo.swift in Sources */,
-				87D30A461D9E54CE009CC0E7 /* CallLogInfo.swift in Sources */,
-				87D30A471D9E54CE009CC0E7 /* CallLogRecord.swift in Sources */,
-				87D30A481D9E54CE009CC0E7 /* Conferencing_Request_PhoneNumber.swift in Sources */,
-				87D30A491D9E54CE009CC0E7 /* ConferencingInfo_PhoneNumberInfo_CountryInfo.swift in Sources */,
-				87D30A4A1D9E54CE009CC0E7 /* ConferencingInfo_PhoneNumberInfo.swift in Sources */,
-				87D30A4B1D9E54CE009CC0E7 /* ConferencingInfo.swift in Sources */,
-				87D30A4C1D9E54CE009CC0E7 /* ContactAddressInfo.swift in Sources */,
-				87D30A4D1D9E54CE009CC0E7 /* ContactInfo.swift in Sources */,
-				87D30A4E1D9E54CE009CC0E7 /* CountryInfo.swift in Sources */,
-				87D30A4F1D9E54CE009CC0E7 /* CustomGreetingInfo_AnsweringRuleInfo.swift in Sources */,
-				87D30A501D9E54CE009CC0E7 /* CustomGreetingInfo.swift in Sources */,
-				87D30A511D9E54CE009CC0E7 /* DeliveryMode.swift in Sources */,
-				87D30A521D9E54CE009CC0E7 /* Department_Response_ExtensionInfo.swift in Sources */,
-				87D30A531D9E54CE009CC0E7 /* DepartmentInfo.swift in Sources */,
-				87D30A541D9E54CE009CC0E7 /* DeviceInfo_ExtensionInfo.swift in Sources */,
-				87D30A551D9E54CE009CC0E7 /* DeviceInfo.swift in Sources */,
-				87D30A561D9E54CE009CC0E7 /* DialingPlanCountryInfo.swift in Sources */,
-				87D30A571D9E54CE009CC0E7 /* DialInNumbers_CountryInfo.swift in Sources */,
-				87D30A581D9E54CE009CC0E7 /* DialInNumbers.swift in Sources */,
-				87D30A591D9E54CE009CC0E7 /* EmergencyAddressInfo.swift in Sources */,
-				87D30A5A1D9E54CE009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale.swift in Sources */,
-				87D30A5B1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage.swift in Sources */,
-				87D30A5C1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Language.swift in Sources */,
-				87D30A5D1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Timezone.swift in Sources */,
-				87D30A5E1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo_RegionalSettings.swift in Sources */,
-				87D30A5F1D9E54CF009CC0E7 /* ExtensionInfo_Request_ContactInfo.swift in Sources */,
-				87D30A601D9E54CF009CC0E7 /* ExtensionInfo_Request_PartnerId.swift in Sources */,
-				87D30A611D9E54CF009CC0E7 /* ExtensionInfo_Request_PasswordPIN.swift in Sources */,
-				87D30A621D9E54CF009CC0E7 /* ExtensionInfo_Request_Provision_ContactInfo.swift in Sources */,
-				87D30A631D9E54CF009CC0E7 /* ExtensionInfo_Request_Provision.swift in Sources */,
-				87D30A641D9E54CF009CC0E7 /* ExtensionInfo_Request_StatusInfo.swift in Sources */,
-				87D30A651D9E54CF009CC0E7 /* ExtensionInfo.swift in Sources */,
-				87D30A661D9E54CF009CC0E7 /* ExtensionPermissions.swift in Sources */,
-				87D30A671D9E54CF009CC0E7 /* ExtensionServiceFeatureInfo.swift in Sources */,
-				87D30A681D9E54CF009CC0E7 /* ExternalUserInfo.swift in Sources */,
-				87D30A691D9E54CF009CC0E7 /* FormattingLocaleInfo.swift in Sources */,
-				87D30A6A1D9E54CF009CC0E7 /* ForwardingInfo.swift in Sources */,
-				87D30A6B1D9E54CF009CC0E7 /* ForwardingNumberInfo.swift in Sources */,
-				87D30A6C1D9E54CF009CC0E7 /* FullCountryInfo.swift in Sources */,
-				87D30A6D1D9E54CF009CC0E7 /* GrantInfo_ExtensionInfo.swift in Sources */,
-				87D30A6E1D9E54CF009CC0E7 /* GrantInfo.swift in Sources */,
-				87D30A6F1D9E54CF009CC0E7 /* GreetingInfo.swift in Sources */,
-				87D30A701D9E54CF009CC0E7 /* GreetingLanguageInfo.swift in Sources */,
-				87D30A711D9E54CF009CC0E7 /* GroupInfo.swift in Sources */,
-				87D30A721D9E54CF009CC0E7 /* ImageUri.swift in Sources */,
-				87D30A731D9E54CF009CC0E7 /* LanguageInfo.swift in Sources */,
-				87D30A741D9E54CF009CC0E7 /* LegInfo_ExtensionInfo.swift in Sources */,
-				87D30A751D9E54CF009CC0E7 /* LegInfo.swift in Sources */,
-				87D30A761D9E54CF009CC0E7 /* LinksInfo.swift in Sources */,
-				87D30A771D9E54CF009CC0E7 /* LocationInfo.swift in Sources */,
-				87D30A781D9E54CF009CC0E7 /* LookUpPhoneNumber_PhoneNumberInfo.swift in Sources */,
-				87D30A791D9E54CF009CC0E7 /* MeetingInfo.swift in Sources */,
-				87D30A7A1D9E54CF009CC0E7 /* MeetingScheduleInfo_TimezoneInfo.swift in Sources */,
-				87D30A7B1D9E54CF009CC0E7 /* MeetingScheduleInfo.swift in Sources */,
-				87D30A7C1D9E54CF009CC0E7 /* MessageAttachmentInfo.swift in Sources */,
-				87D30A7D1D9E54CF009CC0E7 /* MessageInfo_CallerInfo.swift in Sources */,
-				87D30A7E1D9E54CF009CC0E7 /* MessageInfo.swift in Sources */,
-				87D30A7F1D9E54CF009CC0E7 /* ModelInfo.swift in Sources */,
-				87D30A801D9E54CF009CC0E7 /* NavigationInfo.swift in Sources */,
-				87D30A811D9E54CF009CC0E7 /* Page.swift in Sources */,
-				87D30A821D9E54CF009CC0E7 /* PagingInfo.swift in Sources */,
-				87D30A831D9E54CF009CC0E7 /* ParsePhoneNumber_CountryInfo.swift in Sources */,
-				87D30A841D9E54CF009CC0E7 /* ParsePhoneNumber_PhoneNumberInfo.swift in Sources */,
-				87D30A851D9E54CF009CC0E7 /* PermissionDetailsInfo.swift in Sources */,
-				87D30A861D9E54CF009CC0E7 /* PermissionInfo.swift in Sources */,
-				87D30A871D9E54CF009CC0E7 /* PersonalContactInfo.swift in Sources */,
-				87D30A881D9E54CF009CC0E7 /* PhoneLinesInfo_PhoneNumberInfo.swift in Sources */,
-				87D30A891D9E54CF009CC0E7 /* PhoneLinesInfo.swift in Sources */,
-				87D30A8A1D9E54CF009CC0E7 /* PhoneNumberInfo_ExtensionInfo.swift in Sources */,
-				87D30A8B1D9E54CF009CC0E7 /* PhoneNumberInfo.swift in Sources */,
-				87D30A8C1D9E54CF009CC0E7 /* PresenceInfo_ExtensionInfo.swift in Sources */,
-				87D30A8D1D9E54CF009CC0E7 /* PresenceInfo.swift in Sources */,
-				87D30A8E1D9E54CF009CC0E7 /* PresetInfo.swift in Sources */,
-				87D30A8F1D9E54CF009CC0E7 /* ProfileImageInfo.swift in Sources */,
-				87D30A901D9E54CF009CC0E7 /* RangesInfo.swift in Sources */,
-				87D30A911D9E54CF009CC0E7 /* RecipientInfo.swift in Sources */,
-				87D30A921D9E54CF009CC0E7 /* RecordingInfo.swift in Sources */,
-				87D30A931D9E54CF009CC0E7 /* ReferenceInfo.swift in Sources */,
-				87D30A941D9E54CF009CC0E7 /* RegionalSettings.swift in Sources */,
-				87D30A951D9E54CF009CC0E7 /* ReservePhoneNumber_Request_ReserveRecord.swift in Sources */,
-				87D30A961D9E54CF009CC0E7 /* ReservePhoneNumber_Response_ReserveRecord.swift in Sources */,
-				87D30A971D9E54CF009CC0E7 /* RingOut_Request_CountryInfo.swift in Sources */,
-				87D30A981D9E54CF009CC0E7 /* RingOut_Request_From.swift in Sources */,
-				87D30A991D9E54CF009CC0E7 /* RingOut_Request_To.swift in Sources */,
-				87D30A9A1D9E54CF009CC0E7 /* RingOutInfo.swift in Sources */,
-				87D30A9B1D9E54CF009CC0E7 /* RingOutStatusInfo.swift in Sources */,
-				87D30A9C1D9E54CF009CC0E7 /* RuleInfo_ForwardingNumberInfo.swift in Sources */,
-				87D30A9D1D9E54CF009CC0E7 /* RuleInfo.swift in Sources */,
-				87D30A9E1D9E54CF009CC0E7 /* ScheduleInfo.swift in Sources */,
-				87D30A9F1D9E54CF009CC0E7 /* ServerInfo.swift in Sources */,
-				87D30AA01D9E54CF009CC0E7 /* ServiceFeatureInfo.swift in Sources */,
-				87D30AA11D9E54CF009CC0E7 /* ServicePlanInfo.swift in Sources */,
-				87D30AA21D9E54CF009CC0E7 /* ShippingAddress.swift in Sources */,
-				87D30AA31D9E54CF009CC0E7 /* ShippingInfo.swift in Sources */,
-				87D30AA41D9E54CF009CC0E7 /* ShippingMethod.swift in Sources */,
-				87D30AA51D9E54CF009CC0E7 /* StateInfo_CountryInfo.swift in Sources */,
-				87D30AA61D9E54CF009CC0E7 /* StateInfo.swift in Sources */,
-				87D30AA71D9E54CF009CC0E7 /* StatusInfo.swift in Sources */,
-				87D30AA81D9E54CF009CC0E7 /* Subscription_Request_DeliveryMode.swift in Sources */,
-				87D30AA91D9E54CF009CC0E7 /* SubscriptionInfo.swift in Sources */,
-				87D30AAA1D9E54CF009CC0E7 /* SyncInfo.swift in Sources */,
-				87D30AAB1D9E54CF009CC0E7 /* TargetServicePlanInfo.swift in Sources */,
-				87D30AAC1D9E54CF009CC0E7 /* TimeInterval.swift in Sources */,
-				87D30AAD1D9E54CF009CC0E7 /* TimezoneInfo.swift in Sources */,
-				87D30AAE1D9E54CF009CC0E7 /* UnconditionalForwardingInfo.swift in Sources */,
-				87D30AAF1D9E54CF009CC0E7 /* UserPermission.swift in Sources */,
-				87D30AB01D9E54CF009CC0E7 /* UserPermissionInfo.swift in Sources */,
-				87D30AB11D9E54CF009CC0E7 /* VersionInfo.swift in Sources */,
-				87D30AB21D9E54CF009CC0E7 /* VoicemailInfo.swift in Sources */,
-				87D30AB31D9E54CF009CC0E7 /* WeeklyScheduleInfo.swift in Sources */,
-				87D309F91D9E54C1009CC0E7 /* Account.swift in Sources */,
-				87D309FA1D9E54C1009CC0E7 /* ActiveCalls.swift in Sources */,
-				87D309FB1D9E54C1009CC0E7 /* AddressBook.swift in Sources */,
-				87D309FC1D9E54C1009CC0E7 /* AddressBookSync.swift in Sources */,
-				87D309FD1D9E54C1009CC0E7 /* AnsweringRule.swift in Sources */,
-				87D309FE1D9E54C1009CC0E7 /* Authorize.swift in Sources */,
-				87D309FF1D9E54C1009CC0E7 /* AuthzProfile.swift in Sources */,
-				87D30A001D9E54C1009CC0E7 /* BlockedNumber.swift in Sources */,
-				87D30A011D9E54C1009CC0E7 /* BusinessAddress.swift in Sources */,
-				87D30A021D9E54C1009CC0E7 /* BusinessHours.swift in Sources */,
-				87D30A031D9E54C1009CC0E7 /* CallLog.swift in Sources */,
-				87D30A041D9E54C1009CC0E7 /* CallLogSync.swift in Sources */,
-				87D30A051D9E54C1009CC0E7 /* Check.swift in Sources */,
-				87D30A061D9E54C1009CC0E7 /* ClientInfo.swift in Sources */,
-				87D30A071D9E54C1009CC0E7 /* CompanyPager.swift in Sources */,
-				87D30A081D9E54C1009CC0E7 /* Conferencing.swift in Sources */,
-				87D30A091D9E54C1009CC0E7 /* Contact.swift in Sources */,
-				87D30A0A1D9E54C1009CC0E7 /* Content.swift in Sources */,
-				87D30A0B1D9E54C1009CC0E7 /* Country.swift in Sources */,
-				87D30A0C1D9E54C1009CC0E7 /* CustomData.swift in Sources */,
-				87D30A0D1D9E54C1009CC0E7 /* Department.swift in Sources */,
-				87D30A0E1D9E54C1009CC0E7 /* Device.swift in Sources */,
-				87D30A0F1D9E54C1009CC0E7 /* DialingPlan.swift in Sources */,
-				87D30A101D9E54C1009CC0E7 /* Dictionary.swift in Sources */,
-				87D30A111D9E54C1009CC0E7 /* End.swift in Sources */,
-				87D30A121D9E54C1009CC0E7 /* Extension.swift in Sources */,
-				87D30A131D9E54C1009CC0E7 /* Fax.swift in Sources */,
-				87D30A141D9E54C1009CC0E7 /* ForwardingNumber.swift in Sources */,
-				87D30A151D9E54C1009CC0E7 /* Grant.swift in Sources */,
-				87D30A161D9E54C1009CC0E7 /* Greeting.swift in Sources */,
-				87D30A171D9E54C1009CC0E7 /* Group.swift in Sources */,
-				87D30A181D9E54C1009CC0E7 /* Language.swift in Sources */,
-				87D30A191D9E54C1009CC0E7 /* Location.swift in Sources */,
-				87D30A1A1D9E54C1009CC0E7 /* Lookup.swift in Sources */,
-				87D30A1B1D9E54C1009CC0E7 /* Meeting.swift in Sources */,
-				87D30A1C1D9E54C1009CC0E7 /* Members.swift in Sources */,
-				87D30A1D1D9E54C1009CC0E7 /* MessageStore.swift in Sources */,
-				87D30A1E1D9E54C1009CC0E7 /* MessageSync.swift in Sources */,
-				87D30A1F1D9E54C1009CC0E7 /* NumberParser.swift in Sources */,
-				87D30A201D9E54C1009CC0E7 /* NumberPool.swift in Sources */,
-				87D30A211D9E54C1009CC0E7 /* Oauth.swift in Sources */,
-				87D30A221D9E54C1009CC0E7 /* Order.swift in Sources */,
-				87D30A231D9E54C1009CC0E7 /* Parse.swift in Sources */,
-				87D30A241D9E54C1009CC0E7 /* PhoneNumber.swift in Sources */,
-				87D30A251D9E54C1009CC0E7 /* Presence.swift in Sources */,
-				87D30A261D9E54C1009CC0E7 /* ProfileImage.swift in Sources */,
-				87D30A271D9E54C1009CC0E7 /* Recording.swift in Sources */,
-				87D30A281D9E54C1009CC0E7 /* Reserve.swift in Sources */,
-				87D30A291D9E54C1009CC0E7 /* Restapi.swift in Sources */,
-				87D30A2A1D9E54C1009CC0E7 /* Revoke.swift in Sources */,
-				87D30A2B1D9E54C1009CC0E7 /* Ringout.swift in Sources */,
-				87D30A2C1D9E54C1009CC0E7 /* ServiceInfo.swift in Sources */,
-				87D30A2D1D9E54C1009CC0E7 /* Sms.swift in Sources */,
-				87D30A2E1D9E54C1009CC0E7 /* State.swift in Sources */,
-				87D30A2F1D9E54C1009CC0E7 /* Subscription.swift in Sources */,
-				87D30A301D9E54C1009CC0E7 /* Timezone.swift in Sources */,
-				87D30A311D9E54C1009CC0E7 /* Token.swift in Sources */,
+				872DB7A91DC3559F00EFA4E2 /* Http.swift in Sources */,
+				872DB7AA1DC3559F00EFA4E2 /* RestClient.swift in Sources */,
+				872DB7AB1DC3559F00EFA4E2 /* Model.swift in Sources */,
+				872DB7AC1DC3559F00EFA4E2 /* SubscriptionService.swift in Sources */,
+				872DB7AD1DC3559F00EFA4E2 /* Special.swift in Sources */,
+				872DB70F1DC3559300EFA4E2 /* MessageChange.swift in Sources */,
+				872DB7101DC3559300EFA4E2 /* DetailedPresenceEvent_ActiveCallInfo.swift in Sources */,
+				872DB7111DC3559300EFA4E2 /* DetailedPresenceEvent.swift in Sources */,
+				872DB7121DC3559300EFA4E2 /* DetailedPresenceNotification.swift in Sources */,
+				872DB7131DC3559300EFA4E2 /* DetailedPresencewithSIPEvent_ActiveCallInfo.swift in Sources */,
+				872DB7141DC3559300EFA4E2 /* DetailedPresencewithSIPEvent.swift in Sources */,
+				872DB7151DC3559300EFA4E2 /* DetailedPresenceWithSIPNotification.swift in Sources */,
+				872DB7161DC3559300EFA4E2 /* ExtensionInfoEvent.swift in Sources */,
+				872DB7171DC3559300EFA4E2 /* ExtensionInfoNotification.swift in Sources */,
+				872DB7181DC3559300EFA4E2 /* ExtensionListEvent.swift in Sources */,
+				872DB7191DC3559300EFA4E2 /* ExtensionListNotification.swift in Sources */,
+				872DB71A1DC3559300EFA4E2 /* IncomingCallNotification.swift in Sources */,
+				872DB71B1DC3559300EFA4E2 /* InstantMessageAttachmentInfo.swift in Sources */,
+				872DB71C1DC3559300EFA4E2 /* InstantMessageEvent_CallerInfo.swift in Sources */,
+				872DB71D1DC3559300EFA4E2 /* InstantMessageEvent.swift in Sources */,
+				872DB71E1DC3559300EFA4E2 /* InstantMessageNotification.swift in Sources */,
+				872DB71F1DC3559300EFA4E2 /* MessageEvent.swift in Sources */,
+				872DB7201DC3559300EFA4E2 /* MessageNotification.swift in Sources */,
+				872DB7211DC3559300EFA4E2 /* PresenceEvent.swift in Sources */,
+				872DB7221DC3559300EFA4E2 /* PresenceLineEvent_ExtensionInfo.swift in Sources */,
+				872DB7231DC3559300EFA4E2 /* PresenceLineEvent.swift in Sources */,
+				872DB7241DC3559300EFA4E2 /* PresenceLineNotification.swift in Sources */,
+				872DB7251DC3559300EFA4E2 /* PresenceNotification.swift in Sources */,
+				872DB7261DC3559300EFA4E2 /* SIPData.swift in Sources */,
+				872DB7271DC3559300EFA4E2 /* Binary.swift in Sources */,
+				872DB7281DC3559300EFA4E2 /* MeetingServiceInfo.swift in Sources */,
+				872DB7291DC3559300EFA4E2 /* Account_ServiceInfo.swift in Sources */,
+				872DB72A1DC3559300EFA4E2 /* AccountInfo.swift in Sources */,
+				872DB72B1DC3559300EFA4E2 /* AccountLimits.swift in Sources */,
+				872DB72C1DC3559300EFA4E2 /* AccountServiceInfo.swift in Sources */,
+				872DB72D1DC3559300EFA4E2 /* AddonInfo.swift in Sources */,
+				872DB72E1DC3559300EFA4E2 /* AnsweringRule_ScheduleInfo.swift in Sources */,
+				872DB72F1DC3559300EFA4E2 /* AnsweringRuleInfo_CalleeInfo.swift in Sources */,
+				872DB7301DC3559300EFA4E2 /* AnsweringRuleInfo_CallerInfo.swift in Sources */,
+				872DB7311DC3559300EFA4E2 /* AnsweringRuleInfo.swift in Sources */,
+				872DB7321DC3559300EFA4E2 /* AttachmentInfo.swift in Sources */,
+				872DB7331DC3559300EFA4E2 /* BillingPlanInfo.swift in Sources */,
+				872DB7341DC3559300EFA4E2 /* BlockedNumberInfo.swift in Sources */,
+				872DB7351DC3559300EFA4E2 /* BrandInfo.swift in Sources */,
+				872DB7361DC3559300EFA4E2 /* BusinessAddressInfo.swift in Sources */,
+				872DB7371DC3559300EFA4E2 /* BusinessHour_ScheduleInfo.swift in Sources */,
+				872DB7381DC3559300EFA4E2 /* CalledNumberInfo.swift in Sources */,
+				872DB7391DC3559300EFA4E2 /* CallerInfo.swift in Sources */,
+				872DB73A1DC3559300EFA4E2 /* CallersInfo.swift in Sources */,
+				872DB73B1DC3559300EFA4E2 /* CallLogInfo.swift in Sources */,
+				872DB73C1DC3559300EFA4E2 /* CallLogRecord.swift in Sources */,
+				872DB73D1DC3559300EFA4E2 /* Conferencing_Request_PhoneNumber.swift in Sources */,
+				872DB73E1DC3559300EFA4E2 /* ConferencingInfo_PhoneNumberInfo_CountryInfo.swift in Sources */,
+				872DB73F1DC3559300EFA4E2 /* ConferencingInfo_PhoneNumberInfo.swift in Sources */,
+				872DB7401DC3559300EFA4E2 /* ConferencingInfo.swift in Sources */,
+				872DB7411DC3559300EFA4E2 /* ContactAddressInfo.swift in Sources */,
+				872DB7421DC3559300EFA4E2 /* ContactInfo.swift in Sources */,
+				872DB7431DC3559300EFA4E2 /* CountryInfo.swift in Sources */,
+				872DB7441DC3559300EFA4E2 /* CustomGreetingInfo_AnsweringRuleInfo.swift in Sources */,
+				872DB7451DC3559300EFA4E2 /* CustomGreetingInfo.swift in Sources */,
+				872DB7461DC3559300EFA4E2 /* DeliveryMode.swift in Sources */,
+				872DB7471DC3559300EFA4E2 /* Department_Response_ExtensionInfo.swift in Sources */,
+				872DB7481DC3559300EFA4E2 /* DepartmentInfo.swift in Sources */,
+				872DB7491DC3559300EFA4E2 /* DeviceInfo_ExtensionInfo.swift in Sources */,
+				872DB74A1DC3559300EFA4E2 /* DeviceInfo.swift in Sources */,
+				872DB74B1DC3559300EFA4E2 /* DialingPlanCountryInfo.swift in Sources */,
+				872DB74C1DC3559300EFA4E2 /* DialInNumbers_CountryInfo.swift in Sources */,
+				872DB74D1DC3559300EFA4E2 /* DialInNumbers.swift in Sources */,
+				872DB74E1DC3559300EFA4E2 /* EmergencyAddressInfo.swift in Sources */,
+				872DB74F1DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_FormattingLocale.swift in Sources */,
+				872DB7501DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_GreetingLanguage.swift in Sources */,
+				872DB7511DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Language.swift in Sources */,
+				872DB7521DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings_Timezone.swift in Sources */,
+				872DB7531DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo_RegionalSettings.swift in Sources */,
+				872DB7541DC3559300EFA4E2 /* ExtensionInfo_Request_ContactInfo.swift in Sources */,
+				872DB7551DC3559300EFA4E2 /* ExtensionInfo_Request_PartnerId.swift in Sources */,
+				872DB7561DC3559300EFA4E2 /* ExtensionInfo_Request_PasswordPIN.swift in Sources */,
+				872DB7571DC3559300EFA4E2 /* ExtensionInfo_Request_Provision_ContactInfo.swift in Sources */,
+				872DB7581DC3559300EFA4E2 /* ExtensionInfo_Request_Provision.swift in Sources */,
+				872DB7591DC3559300EFA4E2 /* ExtensionInfo_Request_StatusInfo.swift in Sources */,
+				872DB75A1DC3559300EFA4E2 /* ExtensionInfo.swift in Sources */,
+				872DB75B1DC3559300EFA4E2 /* ExtensionPermissions.swift in Sources */,
+				872DB75C1DC3559300EFA4E2 /* ExtensionServiceFeatureInfo.swift in Sources */,
+				872DB75D1DC3559300EFA4E2 /* ExternalUserInfo.swift in Sources */,
+				872DB75E1DC3559300EFA4E2 /* FormattingLocaleInfo.swift in Sources */,
+				872DB75F1DC3559300EFA4E2 /* ForwardingInfo.swift in Sources */,
+				872DB7601DC3559300EFA4E2 /* ForwardingNumberInfo.swift in Sources */,
+				872DB7611DC3559300EFA4E2 /* FullCountryInfo.swift in Sources */,
+				872DB7621DC3559300EFA4E2 /* GrantInfo_ExtensionInfo.swift in Sources */,
+				872DB7631DC3559300EFA4E2 /* GrantInfo.swift in Sources */,
+				872DB7641DC3559300EFA4E2 /* GreetingInfo.swift in Sources */,
+				872DB7651DC3559300EFA4E2 /* GreetingLanguageInfo.swift in Sources */,
+				872DB7661DC3559300EFA4E2 /* GroupInfo.swift in Sources */,
+				872DB7671DC3559300EFA4E2 /* ImageUri.swift in Sources */,
+				872DB7681DC3559300EFA4E2 /* LanguageInfo.swift in Sources */,
+				872DB7691DC3559300EFA4E2 /* LegInfo_ExtensionInfo.swift in Sources */,
+				872DB76A1DC3559300EFA4E2 /* LegInfo.swift in Sources */,
+				872DB76B1DC3559300EFA4E2 /* LinksInfo.swift in Sources */,
+				872DB76C1DC3559300EFA4E2 /* LocationInfo.swift in Sources */,
+				872DB76D1DC3559300EFA4E2 /* LookUpPhoneNumber_PhoneNumberInfo.swift in Sources */,
+				872DB76E1DC3559300EFA4E2 /* MeetingInfo.swift in Sources */,
+				872DB76F1DC3559300EFA4E2 /* MeetingScheduleInfo_TimezoneInfo.swift in Sources */,
+				872DB7701DC3559300EFA4E2 /* MeetingScheduleInfo.swift in Sources */,
+				872DB7711DC3559300EFA4E2 /* MessageAttachmentInfo.swift in Sources */,
+				872DB7721DC3559300EFA4E2 /* MessageInfo_CallerInfo.swift in Sources */,
+				872DB7731DC3559300EFA4E2 /* MessageInfo.swift in Sources */,
+				872DB7741DC3559300EFA4E2 /* ModelInfo.swift in Sources */,
+				872DB7751DC3559300EFA4E2 /* NavigationInfo.swift in Sources */,
+				872DB7761DC3559300EFA4E2 /* Page.swift in Sources */,
+				872DB7771DC3559300EFA4E2 /* PagingInfo.swift in Sources */,
+				872DB7781DC3559300EFA4E2 /* ParsePhoneNumber_CountryInfo.swift in Sources */,
+				872DB7791DC3559300EFA4E2 /* ParsePhoneNumber_PhoneNumberInfo.swift in Sources */,
+				872DB77A1DC3559300EFA4E2 /* PermissionDetailsInfo.swift in Sources */,
+				872DB77B1DC3559300EFA4E2 /* PermissionInfo.swift in Sources */,
+				872DB77C1DC3559300EFA4E2 /* PersonalContactInfo.swift in Sources */,
+				872DB77D1DC3559300EFA4E2 /* PhoneLinesInfo_PhoneNumberInfo.swift in Sources */,
+				872DB77E1DC3559300EFA4E2 /* PhoneLinesInfo.swift in Sources */,
+				872DB77F1DC3559300EFA4E2 /* PhoneNumberInfo_ExtensionInfo.swift in Sources */,
+				872DB7801DC3559300EFA4E2 /* PhoneNumberInfo.swift in Sources */,
+				872DB7811DC3559300EFA4E2 /* PresenceInfo_ExtensionInfo.swift in Sources */,
+				872DB7821DC3559300EFA4E2 /* PresenceInfo.swift in Sources */,
+				872DB7831DC3559300EFA4E2 /* PresetInfo.swift in Sources */,
+				872DB7841DC3559300EFA4E2 /* ProfileImageInfo.swift in Sources */,
+				872DB7851DC3559300EFA4E2 /* RangesInfo.swift in Sources */,
+				872DB7861DC3559300EFA4E2 /* RecipientInfo.swift in Sources */,
+				872DB7871DC3559300EFA4E2 /* RecordingInfo.swift in Sources */,
+				872DB7881DC3559300EFA4E2 /* ReferenceInfo.swift in Sources */,
+				872DB7891DC3559300EFA4E2 /* RegionalSettings.swift in Sources */,
+				872DB78A1DC3559300EFA4E2 /* ReservePhoneNumber_Request_ReserveRecord.swift in Sources */,
+				872DB78B1DC3559300EFA4E2 /* ReservePhoneNumber_Response_ReserveRecord.swift in Sources */,
+				872DB78C1DC3559300EFA4E2 /* RingOut_Request_CountryInfo.swift in Sources */,
+				872DB78D1DC3559300EFA4E2 /* RingOut_Request_From.swift in Sources */,
+				872DB78E1DC3559300EFA4E2 /* RingOut_Request_To.swift in Sources */,
+				872DB78F1DC3559300EFA4E2 /* RingOutInfo.swift in Sources */,
+				872DB7901DC3559300EFA4E2 /* RingOutStatusInfo.swift in Sources */,
+				872DB7911DC3559300EFA4E2 /* RuleInfo_ForwardingNumberInfo.swift in Sources */,
+				872DB7921DC3559300EFA4E2 /* RuleInfo.swift in Sources */,
+				872DB7931DC3559300EFA4E2 /* ScheduleInfo.swift in Sources */,
+				872DB7941DC3559300EFA4E2 /* ServerInfo.swift in Sources */,
+				872DB7951DC3559300EFA4E2 /* ServiceFeatureInfo.swift in Sources */,
+				872DB7961DC3559300EFA4E2 /* ServicePlanInfo.swift in Sources */,
+				872DB7971DC3559300EFA4E2 /* ShippingAddress.swift in Sources */,
+				872DB7981DC3559300EFA4E2 /* ShippingInfo.swift in Sources */,
+				872DB7991DC3559300EFA4E2 /* ShippingMethod.swift in Sources */,
+				872DB79A1DC3559300EFA4E2 /* StateInfo_CountryInfo.swift in Sources */,
+				872DB79B1DC3559300EFA4E2 /* StateInfo.swift in Sources */,
+				872DB79C1DC3559300EFA4E2 /* StatusInfo.swift in Sources */,
+				872DB79D1DC3559300EFA4E2 /* Subscription_Request_DeliveryMode.swift in Sources */,
+				872DB79E1DC3559300EFA4E2 /* SubscriptionInfo.swift in Sources */,
+				872DB79F1DC3559300EFA4E2 /* SyncInfo.swift in Sources */,
+				872DB7A01DC3559300EFA4E2 /* TargetServicePlanInfo.swift in Sources */,
+				872DB7A11DC3559300EFA4E2 /* TimeInterval.swift in Sources */,
+				872DB7A21DC3559300EFA4E2 /* TimezoneInfo.swift in Sources */,
+				872DB7A31DC3559300EFA4E2 /* UnconditionalForwardingInfo.swift in Sources */,
+				872DB7A41DC3559300EFA4E2 /* UserPermission.swift in Sources */,
+				872DB7A51DC3559300EFA4E2 /* UserPermissionInfo.swift in Sources */,
+				872DB7A61DC3559300EFA4E2 /* VersionInfo.swift in Sources */,
+				872DB7A71DC3559300EFA4E2 /* VoicemailInfo.swift in Sources */,
+				872DB7A81DC3559300EFA4E2 /* WeeklyScheduleInfo.swift in Sources */,
+				872DB6D61DC3558500EFA4E2 /* Account.swift in Sources */,
+				872DB6D71DC3558500EFA4E2 /* ActiveCalls.swift in Sources */,
+				872DB6D81DC3558500EFA4E2 /* AddressBook.swift in Sources */,
+				872DB6D91DC3558500EFA4E2 /* AddressBookSync.swift in Sources */,
+				872DB6DA1DC3558500EFA4E2 /* AnsweringRule.swift in Sources */,
+				872DB6DB1DC3558500EFA4E2 /* Authorize.swift in Sources */,
+				872DB6DC1DC3558500EFA4E2 /* AuthzProfile.swift in Sources */,
+				872DB6DD1DC3558500EFA4E2 /* BlockedNumber.swift in Sources */,
+				872DB6DE1DC3558500EFA4E2 /* BusinessAddress.swift in Sources */,
+				872DB6DF1DC3558500EFA4E2 /* BusinessHours.swift in Sources */,
+				872DB6E01DC3558500EFA4E2 /* CallLog.swift in Sources */,
+				872DB6E11DC3558500EFA4E2 /* CallLogSync.swift in Sources */,
+				872DB6E21DC3558500EFA4E2 /* Check.swift in Sources */,
+				872DB6E31DC3558500EFA4E2 /* ClientInfo.swift in Sources */,
+				872DB6E41DC3558500EFA4E2 /* CompanyPager.swift in Sources */,
+				872DB6E51DC3558500EFA4E2 /* Conferencing.swift in Sources */,
+				872DB6E61DC3558500EFA4E2 /* Contact.swift in Sources */,
+				872DB6E71DC3558500EFA4E2 /* Content.swift in Sources */,
+				872DB6E81DC3558500EFA4E2 /* Country.swift in Sources */,
+				872DB6E91DC3558500EFA4E2 /* CustomData.swift in Sources */,
+				872DB6EA1DC3558500EFA4E2 /* Department.swift in Sources */,
+				872DB6EB1DC3558500EFA4E2 /* Device.swift in Sources */,
+				872DB6EC1DC3558500EFA4E2 /* DialingPlan.swift in Sources */,
+				872DB6ED1DC3558500EFA4E2 /* Dictionary.swift in Sources */,
+				872DB6EE1DC3558500EFA4E2 /* End.swift in Sources */,
+				872DB6EF1DC3558500EFA4E2 /* Extension.swift in Sources */,
+				872DB6F01DC3558500EFA4E2 /* Fax.swift in Sources */,
+				872DB6F11DC3558500EFA4E2 /* ForwardingNumber.swift in Sources */,
+				872DB6F21DC3558500EFA4E2 /* Grant.swift in Sources */,
+				872DB6F31DC3558500EFA4E2 /* Greeting.swift in Sources */,
+				872DB6F41DC3558500EFA4E2 /* Group.swift in Sources */,
+				872DB6F51DC3558500EFA4E2 /* Language.swift in Sources */,
+				872DB6F61DC3558600EFA4E2 /* Location.swift in Sources */,
+				872DB6F71DC3558600EFA4E2 /* Lookup.swift in Sources */,
+				872DB6F81DC3558600EFA4E2 /* Meeting.swift in Sources */,
+				872DB6F91DC3558600EFA4E2 /* Members.swift in Sources */,
+				872DB6FA1DC3558600EFA4E2 /* MessageStore.swift in Sources */,
+				872DB6FB1DC3558600EFA4E2 /* MessageSync.swift in Sources */,
+				872DB6FC1DC3558600EFA4E2 /* NumberParser.swift in Sources */,
+				872DB6FD1DC3558600EFA4E2 /* NumberPool.swift in Sources */,
+				872DB6FE1DC3558600EFA4E2 /* Oauth.swift in Sources */,
+				872DB6FF1DC3558600EFA4E2 /* Order.swift in Sources */,
+				872DB7001DC3558600EFA4E2 /* Parse.swift in Sources */,
+				872DB7011DC3558600EFA4E2 /* PhoneNumber.swift in Sources */,
+				872DB7021DC3558600EFA4E2 /* Presence.swift in Sources */,
+				872DB7031DC3558600EFA4E2 /* ProfileImage.swift in Sources */,
+				872DB7041DC3558600EFA4E2 /* Recording.swift in Sources */,
+				872DB7051DC3558600EFA4E2 /* Reserve.swift in Sources */,
+				872DB7061DC3558600EFA4E2 /* Restapi.swift in Sources */,
+				872DB7071DC3558600EFA4E2 /* Revoke.swift in Sources */,
+				872DB7081DC3558600EFA4E2 /* Ringout.swift in Sources */,
+				872DB7091DC3558600EFA4E2 /* ServiceInfo.swift in Sources */,
+				872DB70A1DC3558600EFA4E2 /* Sms.swift in Sources */,
+				872DB70B1DC3558600EFA4E2 /* State.swift in Sources */,
+				872DB70C1DC3558600EFA4E2 /* Subscription.swift in Sources */,
+				872DB70D1DC3558600EFA4E2 /* Timezone.swift in Sources */,
+				872DB70E1DC3558600EFA4E2 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
