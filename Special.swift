@@ -67,7 +67,21 @@ open class Notification: INotification {
         event <- map["event"]
     }
 
-    // todo: improve this part to support aggregated = true and arbitrary parameter order
+    private func presenceType() -> NotificationType? {
+        if let event = self.event {
+            let urlComponents = NSURLComponents(string: event)!
+            let queryItems = urlComponents.queryItems
+            var result: NotificationType = .Presence
+            if let _ = queryItems?.filter({$0.name == "detailedTelephonyState"}).first {
+                result = .DetailedPresence
+            }
+            if let _ = queryItems?.filter({$0.name == "sipData"}).first {
+                result = .DetailedPresenceWithSIP
+            }
+            return result
+        }
+        return nil
+    }
     open var type: NotificationType? {
         get {
             if let event = self.event {
@@ -76,18 +90,12 @@ open class Notification: INotification {
                     return .InstantMessage
                 case Regex(pattern: "/account/\\d+/extension/\\d+/message-store"):
                     return .Message
-                case Regex(pattern: "/account/\\d+/extension/\\d+/presence/line/presence\\?detailedTelephonyState=true&sipData=true"),
-                     Regex(pattern: "/account/\\d+/extension/\\d+/presence\\?detailedTelephonyState=true&sipData=true"):
-                    return .DetailedPresenceWithSIP
-                case Regex(pattern: "/account/\\d+/extension/\\d+/presence/line/presence\\?detailedTelephonyState=true"),
-                     Regex(pattern: "/account/\\d+/extension/\\d+/presence\\?detailedTelephonyState=true"):
-                    return .DetailedPresence
                 case Regex(pattern: "/account/\\d+/extension/\\d+/presence/line/presence"):
-                    return .Presence
+                    return presenceType()
                 case Regex(pattern: "/account/\\d+/extension/\\d+/presence/line"):
                     return .PresenceLine
                 case Regex(pattern: "/account/\\d+/extension/\\d+/presence"):
-                    return .Presence
+                    return presenceType()
                 case Regex(pattern: "/account/\\d+/extension/\\d+/incoming-call-pickup"):
                     return .IncomingCall
                 case Regex(pattern: "/account/\\d+/extension/\\d+"):

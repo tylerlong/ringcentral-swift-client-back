@@ -9,8 +9,8 @@ class SubscriptionTest: BaseTest {
         let subscription = rc.restapi("v1.0").subscription().new()
         subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/message-store")
         subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true")
-        subscription.listeners.append { message in
-            print(message)
+        subscription.listeners.append { notification in
+            print(notification.json)
         }
         
         let expectation1 = expectation(description: "expectation1")
@@ -88,6 +88,14 @@ class SubscriptionTest: BaseTest {
         let messageNotification: MessageNotification = notification.downcast()!
         XCTAssertNotNil(messageNotification.body!.extensionId)
         XCTAssertTrue(130829004 == messageNotification.body!.extensionId!)
+    }
+
+    func testParseURL() {
+        let url = "/restapi/v1.0/account/130829004/extension/130829004/presence?detailedTelephonyState=true&sipData=true"
+        let urlComponents = NSURLComponents(string: url)!
+        let queryItems = urlComponents.queryItems!
+        let sipData = queryItems.filter({$0.name == "sipData"}).first!
+        XCTAssertTrue("true" == sipData.value!)
     }
 
 }
