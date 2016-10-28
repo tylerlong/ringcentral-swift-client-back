@@ -19,7 +19,7 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
     var pubnub: PubNub?
 
     public var eventFilters: [String] = []
-    public var listeners: [(String) -> Void] = []
+    public var listeners: [(Notification) -> Void] = []
 
     var parameters: Parameters {
         get {
@@ -59,7 +59,9 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
         let decrypted = try! AES(key: key, iv: nil, blockMode: .ECB, padding: PKCS7()).decrypt(encrypted)
         let result = String(bytes: decrypted, encoding: String.Encoding.utf8)!
         for listener in listeners {
-            listener(result)
+            let notification = Notification(JSONString: result)!
+            notification.json = result
+            listener(notification)
         }
     }
 

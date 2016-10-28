@@ -37,10 +37,14 @@ class SubscriptionTest: BaseTest {
         let subscription = rc.restapi("v1.0").subscription().new()
         subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/message-store")
         var count = 0
-        subscription.listeners.append { message in
+        subscription.listeners.append { notification in
             print("before")
-            print(message)
+            print(notification.json)
             print("after")
+            XCTAssertTrue(NotificationType.Message == notification.type!)
+            let messageNotification: MessageNotification = notification.downcast()!
+            XCTAssertNotNil(messageNotification.body)
+            XCTAssertNotNil(messageNotification.body!.extensionId)
             count += 1
         }
 
@@ -72,6 +76,13 @@ class SubscriptionTest: BaseTest {
         waitForExpectations(timeout: 30) { error in
             XCTAssertNil(error)
         }
+    }
+
+    func testDeserialize() {
+        let json = "{\"uuid\":\"ec43ed1b-ae0c-4571-a39a-861c432f31d3\",\"event\":\"/restapi/v1.0/account/130829004/extension/130829004/message-store\",\"timestamp\":\"2016-10-28T06:13:43.720Z\",\"subscriptionId\":\"ada0c29a-a914-4c15-bd52-7c27ac918f56\",\"body\":{\"extensionId\":130829004,\"lastUpdated\":\"2016-10-28T06:13:33.931+0000\",\"changes\":[{\"type\":\"SMS\",\"newCount\":1,\"updatedCount\":0}]}}"
+        let notification = Notification(JSONString: json)!
+        XCTAssertTrue("/restapi/v1.0/account/130829004/extension/130829004/message-store" == notification.event!)
+        XCTAssertTrue(NotificationType.Message == notification.type!)
     }
 
 }
