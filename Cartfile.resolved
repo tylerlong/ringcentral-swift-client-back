@@ -1,5 +1,5 @@
 github "Alamofire/Alamofire" "4.0.1"
 github "duemunk/Async" "2.0.0"
-github "krzyzanowskim/CryptoSwift" "0.6.4"
+github "krzyzanowskim/CryptoSwift" "0.6.5"
 github "Hearst-DD/ObjectMapper" "2.2.0"
 github "pubnub/objective-c" "v4.5.4"

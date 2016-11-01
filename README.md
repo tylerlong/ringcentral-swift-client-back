@@ -42,6 +42,28 @@ Add the following to your Cartfile:
     }
 
 
+## PubNub Subscription
+
+    let subscription = rc.restapi("v1.0").subscription().new()
+    subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/message-store")
+    subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true")
+    subscription.listeners.append { notification in
+        print(notification.json!)
+        switch notification.type! {
+            case .Message:
+                let messageNotification: MessageNotification = notification.downcast()!
+                print(messageNotification.body!.extensionId!)
+                break
+            case .DetailedPresence:
+                let detailedPresenceNotification: DetailedPresenceNotification = notification.downcast()!
+                print(detailedPresenceNotification.body!.extensionId!)
+                break
+            default:
+                break
+        }
+    }
+
+
 ## License
 
 This project is released under the MIT license.

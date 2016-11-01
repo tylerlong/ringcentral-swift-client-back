@@ -10,7 +10,7 @@ class SubscriptionTest: BaseTest {
         subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/message-store")
         subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true")
         subscription.listeners.append { notification in
-            print(notification.json)
+            print(notification.json!)
         }
         
         let expectation1 = expectation(description: "expectation1")
@@ -39,7 +39,7 @@ class SubscriptionTest: BaseTest {
         var count = 0
         subscription.listeners.append { notification in
             print("before")
-            print(notification.json)
+            print(notification.json!)
             print("after")
             XCTAssertTrue(NotificationType.Message == notification.type!)
             let messageNotification: MessageNotification = notification.downcast()!
