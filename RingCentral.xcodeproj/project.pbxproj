@@ -472,6 +472,7 @@
 		87BF19A61DCAC25800A2DF29 /* CallLogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF19A41DCAC15D00A2DF29 /* CallLogTest.swift */; };
 		87D30AB91D9E5616009CC0E7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D30AB71D9E5616009CC0E7 /* ObjectMapper.framework */; };
 		87D30ABA1D9E5616009CC0E7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D30AB81D9E5616009CC0E7 /* Alamofire.framework */; };
+		87DF1DC11DCB2BD5003DF22E /* BinaryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF1DBF1DCB2B32003DF22E /* BinaryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -569,6 +570,7 @@
 		87BF19A41DCAC15D00A2DF29 /* CallLogTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallLogTest.swift; path = Tests/CallLogTest.swift; sourceTree = "<group>"; };
 		87D30AB71D9E5616009CC0E7 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		87D30AB81D9E5616009CC0E7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		87DF1DBF1DCB2B32003DF22E /* BinaryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinaryTest.swift; path = Tests/BinaryTest.swift; sourceTree = "<group>"; };
 		87EAD4291D9BA69E00BE2FAA /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Source/Generated/Paths/Account.swift; sourceTree = "<group>"; };
 		87EAD42A1D9BA69E00BE2FAA /* ActiveCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveCalls.swift; path = Source/Generated/Paths/ActiveCalls.swift; sourceTree = "<group>"; };
 		87EAD42B1D9BA69E00BE2FAA /* AddressBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressBook.swift; path = Source/Generated/Paths/AddressBook.swift; sourceTree = "<group>"; };
@@ -919,6 +921,7 @@
 		879ADF141D98E759008E7735 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				87DF1DBF1DCB2B32003DF22E /* BinaryTest.swift */,
 				875500D91DB468540089B0EA /* SubscriptionTest.swift */,
 				87B128D31D9D3F2100274F1B /* ContactTest.swift */,
 				87EAD59A1D9BAEE200BE2FAA /* Config.swift */,
@@ -1851,6 +1854,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DF1DC11DCB2BD5003DF22E /* BinaryTest.swift in Sources */,
 				87BF19A61DCAC25800A2DF29 /* CallLogTest.swift in Sources */,
 				872DB6971DC2E45400EFA4E2 /* SubscriptionTest.swift in Sources */,
 				872DB6981DC2E45400EFA4E2 /* ContactTest.swift in Sources */,

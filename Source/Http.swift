@@ -118,11 +118,21 @@ extension RestClient {
 
     // request model
     open func request<T: Mappable>(_ endpoint: String, method: HTTPMethod, parameters: Parameters? = nil, encoding: ParameterEncoding = MyURLEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ t: T?, _ error: HTTPError?) -> Void) {
-        requestString(endpoint, method: method, parameters: parameters, encoding: encoding, headers: headers) { string, error in
-            if error != nil {
-                callback(nil, error)
-            } else {
-                callback(T(JSONString: string!), nil)
+        if T.self == Binary.self {
+            requestData(endpoint, method: method, parameters: parameters, encoding: encoding, headers: headers) { data, error in
+                if error != nil {
+                    callback(nil, error)
+                } else {
+                    callback(Binary(data: data) as? T, nil)
+                }
+            }
+        } else {
+            requestString(endpoint, method: method, parameters: parameters, encoding: encoding, headers: headers) { string, error in
+                if error != nil {
+                    callback(nil, error)
+                } else {
+                    callback(T(JSONString: string!), nil)
+                }
             }
         }
     }
