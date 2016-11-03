@@ -41,7 +41,6 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
                     self.renew() { error in
                         self.renewScheduled = false
                     }
-
                 }
                 renewScheduled = true
             }

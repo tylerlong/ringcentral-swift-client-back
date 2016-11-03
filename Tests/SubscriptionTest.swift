@@ -98,4 +98,16 @@ class SubscriptionTest: BaseTest {
         XCTAssertTrue("true" == sipData.value!)
     }
 
+    func testRefresh() {
+        let expectation1 = expectation(description: "expectation1")
+        rc.restapi("v1.0").subscription("an-id-which-does-not-exist-on-server-side").put() { subscriptionInfo, error in
+            XCTAssertNotNil(error)
+            XCTAssertTrue(404 == error!.statusCode)
+            expectation1.fulfill()
+        }
+        waitForExpectations(timeout: 10) { error in
+            XCTAssertNil(error)
+        }
+    }
+
 }
