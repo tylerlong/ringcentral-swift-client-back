@@ -29,7 +29,7 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
     }
 
     var _subscriptionInfo: SubscriptionInfo?
-    var renewScheduled = false
+    private var renewScheduled = false
     var subscriptionInfo: SubscriptionInfo? {
         get {
             return _subscriptionInfo

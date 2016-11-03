@@ -42,6 +42,13 @@ Add the following to your Cartfile:
     }
 
 
+## Token Refresh
+
+By default, there is a background timer calling `rc.refresh()` periodically, so the authorization never expires.
+
+But if you would like to call refresh manually: `rc.autoRefreshToken = false`
+
+
 ## PubNub Subscription
 
     let subscription = rc.restapi("v1.0").subscription().new()

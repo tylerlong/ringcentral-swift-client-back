@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Async
 
 
 open class RestClient {
@@ -18,7 +19,19 @@ open class RestClient {
     open var appKey: String
     open var appSecret: String
     open var server: String
-    open var token: Token.PostResponse?
+    open var autoRefreshToken: Bool = true
+    private var refreshScheduled: Bool = false
+    open var token: Token.PostResponse? {
+        didSet {
+            if autoRefreshToken && token != nil && !refreshScheduled {
+                Async.background(after: Double(token!.expires_in! - 120)) {
+                    self.refreshScheduled = false
+                    self.refresh()
+                }
+                refreshScheduled = true
+            }
+        }
+    }
 
     public init(appKey: String, appSecret: String, server: String) {
         self.appKey = appKey
@@ -44,13 +57,11 @@ open class RestClient {
         ]
         let headers: [String: String] = ["Authorization": basicAuthToken()]
         postString("/restapi/oauth/token", parameters: parameters, encoding: URLEncoding.default, headers: headers) { string, error in
-            if let callback = callback {
-                if error == nil {
-                    self.token = Token.PostResponse(JSONString: string!)
-                    callback(self.token, nil)
-                } else {
-                    callback(nil, error)
-                }
+            if error == nil {
+                self.token = Token.PostResponse(JSONString: string!)
+                callback?(self.token, nil)
+            } else {
+                callback?(nil, error)
             }
         }
     }
@@ -64,13 +75,11 @@ open class RestClient {
             ]
             let headers: [String: String] = ["Authorization": basicAuthToken()]
             postString("/restapi/oauth/token", parameters: parameters, encoding: URLEncoding.default, headers: headers) { string, error in
-                if let callback = callback {
-                    if error == nil {
-                        self.token = Token.PostResponse(JSONString: string!)
-                        callback(self.token, nil)
-                    } else {
-                        callback(nil, error)
-                    }
+                if error == nil {
+                    self.token = Token.PostResponse(JSONString: string!)
+                    callback?(self.token, nil)
+                } else {
+                    callback?(nil, error)
                 }
             }
         }
