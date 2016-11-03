@@ -80,6 +80,8 @@ open class CallLog: Model {
         }
     }
     open class ListResponse: Mappable {
+        // Canonical URI
+        open var `uri`: String?
         // List of call log records
         open var `records`: [CallLogRecord]?
         // Information on navigation
@@ -88,8 +90,9 @@ open class CallLog: Model {
         open var `paging`: PagingInfo?
         public init() {
         }
-        convenience public init(records: [CallLogRecord]? = nil, navigation: NavigationInfo? = nil, paging: PagingInfo? = nil) {
+        convenience public init(uri: String? = nil, records: [CallLogRecord]? = nil, navigation: NavigationInfo? = nil, paging: PagingInfo? = nil) {
             self.init()
+            self.uri = `uri`
             self.records = `records`
             self.navigation = `navigation`
             self.paging = `paging`
@@ -97,6 +100,7 @@ open class CallLog: Model {
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
+            `uri` <- map["uri"]
             `records` <- map["records"]
             `navigation` <- map["navigation"]
             `paging` <- map["paging"]

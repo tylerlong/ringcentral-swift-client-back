@@ -77,13 +77,10 @@ open class SubscriptionService: NSObject, PNObjectEventListener {
                 return callback(error)
             }
             self.subscriptionInfo = subscriptionInfo
-
-
             let configuration = PNConfiguration(publishKey: "", subscribeKey: subscriptionInfo!.deliveryMode!.subscriberKey!)
             self.pubnub = PubNub.clientWithConfiguration(configuration)
             self.pubnub!.addListener(self)
             self.pubnub!.subscribeToChannels([subscriptionInfo!.deliveryMode!.address!], withPresence: true)
-
             callback(nil)
         }
     }

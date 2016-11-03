@@ -469,6 +469,7 @@
 		879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; };
 		879ADF1D1D98F53A008E7735 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFC1D98C7D6008E7735 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		879ADF1F1D98FCD1008E7735 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 879ADEFB1D98C7D6008E7735 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87BF19A61DCAC25800A2DF29 /* CallLogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF19A41DCAC15D00A2DF29 /* CallLogTest.swift */; };
 		87D30AB91D9E5616009CC0E7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D30AB71D9E5616009CC0E7 /* ObjectMapper.framework */; };
 		87D30ABA1D9E5616009CC0E7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D30AB81D9E5616009CC0E7 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
@@ -565,6 +566,7 @@
 		879ADF0F1D98E754008E7735 /* DictionaryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryTest.swift; path = Tests/DictionaryTest.swift; sourceTree = "<group>"; };
 		879ADF101D98E754008E7735 /* RestClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestClientTest.swift; path = Tests/RestClientTest.swift; sourceTree = "<group>"; };
 		87B128D31D9D3F2100274F1B /* ContactTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTest.swift; path = Tests/ContactTest.swift; sourceTree = "<group>"; };
+		87BF19A41DCAC15D00A2DF29 /* CallLogTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallLogTest.swift; path = Tests/CallLogTest.swift; sourceTree = "<group>"; };
 		87D30AB71D9E5616009CC0E7 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		87D30AB81D9E5616009CC0E7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		87EAD4291D9BA69E00BE2FAA /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Source/Generated/Paths/Account.swift; sourceTree = "<group>"; };
@@ -924,6 +926,7 @@
 				879ADF0E1D98E754008E7735 /* BaseTest.swift */,
 				879ADF0F1D98E754008E7735 /* DictionaryTest.swift */,
 				879ADF101D98E754008E7735 /* RestClientTest.swift */,
+				87BF19A41DCAC15D00A2DF29 /* CallLogTest.swift */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -1848,6 +1851,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BF19A61DCAC25800A2DF29 /* CallLogTest.swift in Sources */,
 				872DB6971DC2E45400EFA4E2 /* SubscriptionTest.swift in Sources */,
 				872DB6981DC2E45400EFA4E2 /* ContactTest.swift in Sources */,
 				872DB6991DC2E45400EFA4E2 /* Config.swift in Sources */,
