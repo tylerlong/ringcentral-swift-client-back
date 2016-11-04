@@ -83,3 +83,4 @@ This project is released under the MIT license.
 ## todo
 
 1. binary data upload
+1. test fax sending

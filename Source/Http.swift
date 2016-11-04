@@ -118,7 +118,7 @@ extension RestClient {
 
     // request model
     open func request<T: Mappable>(_ endpoint: String, method: HTTPMethod, parameters: Parameters? = nil, encoding: ParameterEncoding = MyURLEncoding.default, headers: HTTPHeaders? = nil, callback: @escaping (_ t: T?, _ error: HTTPError?) -> Void) {
-        if T.self == Binary.self {
+        if T.self == Binary.self { // download binary data
             requestData(endpoint, method: method, parameters: parameters, encoding: encoding, headers: headers) { data, error in
                 if error != nil {
                     callback(nil, error)

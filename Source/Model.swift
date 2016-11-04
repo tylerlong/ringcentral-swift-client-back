@@ -38,6 +38,7 @@ public protocol iModel {
     var rc: RestClient {get set}
     var pathSegment: String {get}
     func endpoint(withId: Bool) -> String
+    func url(withId: Bool) -> String
 }
 
 extension iModel {
@@ -50,6 +51,10 @@ extension iModel {
             url = url <= _id!
         }
         return "/" + url.trimLeft("/")
+    }
+
+    public func url(withId: Bool = true) -> String {
+        return URL(string: rc.server)!.appendingPathComponent(endpoint(withId: withId)).absoluteString
     }
 }
 
