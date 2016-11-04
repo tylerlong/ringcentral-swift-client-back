@@ -25,7 +25,7 @@ class CallLogTest: BaseTest {
             expectation1.fulfill()
         }
 
-        let listParameters = CallLog.ListParameters(
+        let listParameters = CallLogPath.ListParameters(
             dateFrom: "2006-11-06T02:20:24.4596528Z",
             perPage: 1000
         )

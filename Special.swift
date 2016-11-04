@@ -11,7 +11,7 @@ import ObjectMapper
 
 
 // upload profile image
-extension ProfileImage {
+extension ProfileImagePath {
     open func put(imageData: Data, imageFileName: String, callback: @escaping (_ error: HTTPError?) -> Void) {
         var headers: [String: String] = [:]
         if rc.token != nil {

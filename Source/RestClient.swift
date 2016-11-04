@@ -21,7 +21,7 @@ open class RestClient {
     open var server: String
     open var autoRefreshToken: Bool = true
     private var refreshScheduled: Bool = false
-    open var token: Token.PostResponse? {
+    open var token: TokenInfo? {
         didSet {
             if autoRefreshToken && token != nil && !refreshScheduled {
                 Async.background(after: Double(token!.expires_in! - 120)) {
@@ -48,7 +48,7 @@ open class RestClient {
         return "Basic \(base64Token)"
     }
 
-    open func authorize(_ username: String, ext: String, password: String, callback: ((_ token: Token.PostResponse?, _ error: HTTPError?) -> Void)? = nil) {
+    open func authorize(_ username: String, ext: String, password: String, callback: ((_ token: TokenInfo?, _ error: HTTPError?) -> Void)? = nil) {
         let parameters: [String: String] = [
             "username": username,
             "extension": ext,
@@ -58,7 +58,7 @@ open class RestClient {
         let headers: [String: String] = ["Authorization": basicAuthToken()]
         postString("/restapi/oauth/token", parameters: parameters, encoding: URLEncoding.default, headers: headers) { string, error in
             if error == nil {
-                self.token = Token.PostResponse(JSONString: string!)
+                self.token = TokenInfo(JSONString: string!)
                 callback?(self.token, nil)
             } else {
                 callback?(nil, error)
@@ -66,7 +66,7 @@ open class RestClient {
         }
     }
 
-    open func refresh(callback: ((_ token: Token.PostResponse?, _ error: HTTPError?) -> Void)? = nil) {
+    open func refresh(callback: ((_ token: TokenInfo?, _ error: HTTPError?) -> Void)? = nil) {
         if let token = token {
             let parameters: [String: String] = [
                 "grant_type": "refresh_token",
@@ -76,7 +76,7 @@ open class RestClient {
             let headers: [String: String] = ["Authorization": basicAuthToken()]
             postString("/restapi/oauth/token", parameters: parameters, encoding: URLEncoding.default, headers: headers) { string, error in
                 if error == nil {
-                    self.token = Token.PostResponse(JSONString: string!)
+                    self.token = TokenInfo(JSONString: string!)
                     callback?(self.token, nil)
                 } else {
                     callback?(nil, error)
@@ -97,8 +97,8 @@ open class RestClient {
         }
     }
 
-    open func restapi(_ _id: String? = nil) -> Restapi {
-        return Restapi(parent: Model(parent: nil, _id: nil, rc: self), _id: _id)
+    open func restapi(_ _id: String? = nil) -> RestapiPath {
+        return RestapiPath(parent: Model(parent: nil, _id: nil, rc: self), _id: _id)
     }
 
 }

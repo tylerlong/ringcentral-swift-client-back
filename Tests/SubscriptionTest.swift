@@ -53,7 +53,7 @@ class SubscriptionTest: BaseTest {
         let expectation1 = expectation(description: "expectation1")
         subscription.register() { error in
             XCTAssertNil(error)
-            let parameters = Sms.PostParameters(
+            let parameters = SmsPath.PostParameters(
                 from: CallerInfo(phoneNumber: Config.getInstance().username!),
                 to: [CallerInfo(phoneNumber: Config.getInstance().receiver!)],
                 text: "hello world"

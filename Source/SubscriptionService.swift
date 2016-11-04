@@ -4,7 +4,7 @@ import Async
 import CryptoSwift
 
 
-extension Subscription {
+extension SubscriptionPath {
 
     public func new() -> SubscriptionService {
         return SubscriptionService(rc)
