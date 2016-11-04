@@ -10,6 +10,43 @@ import Alamofire
 import ObjectMapper
 
 
+// upload profile image
+extension ProfileImage {
+    open func put(imageData: Data, imageFileName: String, callback: @escaping (_ error: HTTPError?) -> Void) {
+        var headers: [String: String] = [:]
+        if rc.token != nil {
+            headers["Authorization"] = "Bearer \(rc.token!.access_token!)"
+        }
+        let ext = NSURL(fileURLWithPath: imageFileName).pathExtension
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                multipartFormData.append(imageData, withName: "image", fileName: imageFileName, mimeType: "image/\(ext ?? "png")")
+        },
+            to: self.url(withId: false),
+            headers: headers,
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseString { response in
+                        if 204 == response.response!.statusCode {
+                            callback(nil)
+                        } else {
+                            callback(HTTPError(statusCode: response.response!.statusCode, message: response.result.value!))
+                        }
+                    }
+                case .failure(_):
+                    callback(HTTPError(statusCode: -1, message: "error encoding multipartFormData"))
+                }
+        }
+        )
+    }
+
+    open func post(imageData: Data, imageFileName: String, callback: @escaping (_ error: HTTPError?) -> Void) {
+        put(imageData: imageData, imageFileName: imageFileName, callback: callback)
+    }
+}
+
+
 // Extension put requestBody is an enum
 public protocol ExtensionParameters {
     func toParameters() -> Parameters

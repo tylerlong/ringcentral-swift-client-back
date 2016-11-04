@@ -75,6 +75,17 @@ subscription.listeners.append { notification in
 ```
 
 
+## Upload binary file
+
+```swift
+rc.restapi("v1.0").account("~").extension("~").profileImage().put(imageData: imageData, imageFileName: "test.png") { error in
+    if error == nil {
+        print("Profile image updated")
+    }
+}
+```
+
+
 ## License
 
 This project is released under the MIT license.
@@ -82,5 +93,4 @@ This project is released under the MIT license.
 
 ## todo
 
-1. binary data upload
 1. test fax sending
