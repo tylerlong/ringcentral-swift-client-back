@@ -403,6 +403,7 @@
 		875500E11DB4C6B00089B0EA /* Async.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875500E01DB4C6B00089B0EA /* Async.framework */; };
 		875500E21DB4C6BA0089B0EA /* Async.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875500E01DB4C6B00089B0EA /* Async.framework */; };
 		875500E31DB4C6C20089B0EA /* Async.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 875500E01DB4C6B00089B0EA /* Async.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87748F481DD0185900DDCF21 /* ServiceInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870CCBB41DCC92790064134B /* ServiceInfoTest.swift */; };
 		879ADEC21D98C409008E7735 /* RingCentral_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEC01D98C409008E7735 /* RingCentral_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADECF1D98C41C008E7735 /* RingCentral_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADECD1D98C41C008E7735 /* RingCentral_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADEDC1D98C42B008E7735 /* RingCentral_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEDA1D98C42B008E7735 /* RingCentral_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -507,6 +508,7 @@
 		870CCB761DCC86A10064134B /* TimezonePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimezonePath.swift; path = Source/Generated/Paths/TimezonePath.swift; sourceTree = "<group>"; };
 		870CCB771DCC86A10064134B /* TokenPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenPath.swift; path = Source/Generated/Paths/TokenPath.swift; sourceTree = "<group>"; };
 		870CCBB21DCC89E30064134B /* TokenInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenInfo.swift; path = Source/Generated/Definitions/TokenInfo.swift; sourceTree = "<group>"; };
+		870CCBB41DCC92790064134B /* ServiceInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceInfoTest.swift; path = Tests/ServiceInfoTest.swift; sourceTree = "<group>"; };
 		872DB69E1DC2F0E600EFA4E2 /* DetailedPresenceEvent_ActiveCallInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedPresenceEvent_ActiveCallInfo.swift; path = Source/Generated/Definitions/DetailedPresenceEvent_ActiveCallInfo.swift; sourceTree = "<group>"; };
 		872DB69F1DC2F0E600EFA4E2 /* DetailedPresenceEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedPresenceEvent.swift; path = Source/Generated/Definitions/DetailedPresenceEvent.swift; sourceTree = "<group>"; };
 		872DB6A01DC2F0E600EFA4E2 /* DetailedPresenceNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedPresenceNotification.swift; path = Source/Generated/Definitions/DetailedPresenceNotification.swift; sourceTree = "<group>"; };
@@ -868,6 +870,7 @@
 		879ADF141D98E759008E7735 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				870CCBB41DCC92790064134B /* ServiceInfoTest.swift */,
 				87DF1DBF1DCB2B32003DF22E /* BinaryTest.swift */,
 				875500D91DB468540089B0EA /* SubscriptionTest.swift */,
 				87B128D31D9D3F2100274F1B /* ContactTest.swift */,
@@ -1748,6 +1751,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87748F481DD0185900DDCF21 /* ServiceInfoTest.swift in Sources */,
 				87DF1DC11DCB2BD5003DF22E /* BinaryTest.swift in Sources */,
 				87BF19A61DCAC25800A2DF29 /* CallLogTest.swift in Sources */,
 				872DB6971DC2E45400EFA4E2 /* SubscriptionTest.swift in Sources */,
