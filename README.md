@@ -94,3 +94,5 @@ This project is released under the MIT license.
 ## todo
 
 1. test fax sending
+    1. use multipart/form-data, referece the doc of JS SDK
+1. set default value for account and extension to ~ ?

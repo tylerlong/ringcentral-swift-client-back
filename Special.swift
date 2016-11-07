@@ -21,7 +21,7 @@ extension ProfileImagePath {
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(imageData, withName: "image", fileName: imageFileName, mimeType: "image/\(ext ?? "png")")
-        },
+            },
             to: self.url(withId: false),
             headers: headers,
             encodingCompletion: { encodingResult in
@@ -37,7 +37,7 @@ extension ProfileImagePath {
                 case .failure(_):
                     callback(HTTPError(statusCode: -1, message: "error encoding multipartFormData"))
                 }
-        }
+            }
         )
     }
 

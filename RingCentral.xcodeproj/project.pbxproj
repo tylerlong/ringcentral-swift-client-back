@@ -404,6 +404,7 @@
 		875500E21DB4C6BA0089B0EA /* Async.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875500E01DB4C6B00089B0EA /* Async.framework */; };
 		875500E31DB4C6C20089B0EA /* Async.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 875500E01DB4C6B00089B0EA /* Async.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87748F481DD0185900DDCF21 /* ServiceInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870CCBB41DCC92790064134B /* ServiceInfoTest.swift */; };
+		87748F4B1DD02A2E00DDCF21 /* FaxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87748F491DD02A2400DDCF21 /* FaxTest.swift */; };
 		879ADEC21D98C409008E7735 /* RingCentral_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEC01D98C409008E7735 /* RingCentral_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADECF1D98C41C008E7735 /* RingCentral_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADECD1D98C41C008E7735 /* RingCentral_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADEDC1D98C42B008E7735 /* RingCentral_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEDA1D98C42B008E7735 /* RingCentral_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -544,6 +545,7 @@
 		875500DC1DB494E10089B0EA /* PubNub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PubNub.framework; path = Carthage/Build/Mac/PubNub.framework; sourceTree = "<group>"; };
 		875500E01DB4C6B00089B0EA /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = Carthage/Build/Mac/Async.framework; sourceTree = "<group>"; };
 		8760261E1D9A4E7B002A7850 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/Model.swift; sourceTree = "<group>"; };
+		87748F491DD02A2400DDCF21 /* FaxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaxTest.swift; path = Tests/FaxTest.swift; sourceTree = "<group>"; };
 		878D66801DB65A2E0050C900 /* Special.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Special.swift; sourceTree = "<group>"; };
 		8791865F1D9CE39C00349515 /* Account_ServiceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account_ServiceInfo.swift; path = Source/Generated/Definitions/Account_ServiceInfo.swift; sourceTree = "<group>"; };
 		879186611D9CE3C100349515 /* MeetingServiceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetingServiceInfo.swift; path = Source/Generated/Definitions/MeetingServiceInfo.swift; sourceTree = "<group>"; };
@@ -870,6 +872,7 @@
 		879ADF141D98E759008E7735 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				87748F491DD02A2400DDCF21 /* FaxTest.swift */,
 				870CCBB41DCC92790064134B /* ServiceInfoTest.swift */,
 				87DF1DBF1DCB2B32003DF22E /* BinaryTest.swift */,
 				875500D91DB468540089B0EA /* SubscriptionTest.swift */,
@@ -1751,6 +1754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87748F4B1DD02A2E00DDCF21 /* FaxTest.swift in Sources */,
 				87748F481DD0185900DDCF21 /* ServiceInfoTest.swift in Sources */,
 				87DF1DC11DCB2BD5003DF22E /* BinaryTest.swift in Sources */,
 				87BF19A61DCAC25800A2DF29 /* CallLogTest.swift in Sources */,
