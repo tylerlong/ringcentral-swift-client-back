@@ -10,6 +10,60 @@ import Alamofire
 import ObjectMapper
 
 
+// fax
+public struct Attachment {
+    var fileName: String
+    var contentType: String
+    var data: Data
+    public init(fileName: String, contentType: String, data: Data) {
+        self.fileName = fileName
+        self.contentType = contentType
+        self.data = data
+    }
+}
+extension FaxPath {
+    func post(requestBody: Data, attachments: [Attachment], callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        var headers: [String: String] = [:]
+        if rc.token != nil {
+            headers["Authorization"] = "Bearer \(rc.token!.access_token!)"
+        }
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                multipartFormData.append(requestBody, withName: "json", fileName: "request.json", mimeType: "application/json")
+                for attachment in attachments {
+                    multipartFormData.append(attachment.data, withName: "attachment", fileName: attachment.fileName, mimeType: attachment.contentType)
+                }
+            },
+            to: self.url(withId: false),
+            headers: headers,
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseString { response in
+                        if 200 == response.response!.statusCode {
+                            callback(MessageInfo(JSONString: response.result.value!), nil)
+                        } else {
+                            callback(nil, HTTPError(statusCode: response.response!.statusCode, message: response.result.value!))
+                        }
+                    }
+                case .failure(_):
+                    callback(nil, HTTPError(statusCode: -1, message: "error encoding multipartFormData"))
+                }
+            }
+        )
+    }
+    open func post(parameters: Parameters, attachments: [Attachment], callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        let requestBody = try! JSONSerialization.data(withJSONObject: parameters)
+        post(requestBody: requestBody, attachments: attachments, callback: callback)
+    }
+    open func post(parameters: PostParameters, attachments: [Attachment], callback: @escaping (_ t: MessageInfo?, _ error: HTTPError?) -> Void) {
+        let parametersBody = parameters.toParameters()["json-string"] as! String
+        let requestBody = parametersBody.data(using: String.Encoding.utf8)!
+        post(requestBody: requestBody, attachments: attachments, callback: callback)
+    }
+}
+
+
 // upload profile image
 extension ProfileImagePath {
     open func put(imageData: Data, imageFileName: String, callback: @escaping (_ error: HTTPError?) -> Void) {

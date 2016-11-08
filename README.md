@@ -14,7 +14,6 @@ The recommended way to install this framework is via [Carthage](https://github.c
 
 Add the following to your Cartfile:
 
-
     github "tylerlong/ringcentral-swift-client"
 
 
@@ -75,6 +74,22 @@ subscription.listeners.append { notification in
 ```
 
 
+## Send fax
+
+```swift
+let parameters = FaxPath.PostParameters(to: [CallerInfo(phoneNumber: "1234567890")])
+var attachments: [Attachment] = []
+attachments.append(Attachment(fileName: "test.pdf", contentType: "application/pdf", data: pdfData))
+rc.restapi("v1.0").account("~").extension("~").fax().post(parameters: parameters, attachments: attachments) { messageInfo, error in
+    if error == nil {
+        print("fax sent")
+    } else {
+        print("error sending fax: \(error.message)")
+    }
+}
+```
+
+
 ## Upload binary file
 
 ```swift
@@ -93,6 +108,4 @@ This project is released under the MIT license.
 
 ## todo
 
-1. test fax sending
-    1. use multipart/form-data, referece the doc of JS SDK
 1. set default value for account and extension to ~ ?
