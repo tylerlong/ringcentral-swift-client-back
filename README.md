@@ -17,27 +17,13 @@ Add the following to your Cartfile:
     github "tylerlong/ringcentral-swift-client"
 
 
-## Quick Start
+## Authorization
 
 ```swift
 let rc = RestClient(appKey: "", appSecret: "", production: false)
-rc.authorize("username", ext: "", password: ) { token, error in
+rc.authorize("username", ext: "", password: "password") { token, error in
     if error == nil {
         print("Authorized!")
-        let parameters = Sms.PostParameters(
-            from: CallerInfo(phoneNumber: "123456789"),
-            to: [CallerInfo(phoneNumber: "123456789")],
-            text: "hello world"
-        )
-        rc.restapi("v1.0").account("~").extension("~").sms().post(parameters: parameters) { messageInfo, error in
-            if error == nil {
-                print("SMS sent!")
-            } else {
-                print("Failed to send SMS")
-            }
-        }
-    } else {
-        print("Failed to authorize!")
     }
 }
 ```
@@ -48,6 +34,22 @@ rc.authorize("username", ext: "", password: ) { token, error in
 By default, there is a background timer calling `rc.refresh()` periodically, so the authorization never expires.
 
 But if you would like to call refresh manually: `rc.autoRefreshToken = false`
+
+
+## Send SMS
+
+```swift
+let parameters = SmsPath.PostParameters(
+    from: CallerInfo(phoneNumber: "123456789"),
+    to: [CallerInfo(phoneNumber: "123456789")],
+    text: "hello world"
+)
+rc.restapi("v1.0").account("~").extension("~").sms().post(parameters: parameters) { messageInfo, error in
+    if error == nil {
+        print("SMS sent!")
+    }
+}
+```
 
 
 ## PubNub Subscription
@@ -83,8 +85,6 @@ attachments.append(Attachment(fileName: "test.pdf", contentType: "application/pd
 rc.restapi("v1.0").account("~").extension("~").fax().post(parameters: parameters, attachments: attachments) { messageInfo, error in
     if error == nil {
         print("fax sent")
-    } else {
-        print("error sending fax: \(error.message)")
     }
 }
 ```
