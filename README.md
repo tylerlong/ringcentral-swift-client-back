@@ -108,5 +108,4 @@ This project is released under the MIT license.
 
 ## todo
 
-1. set default value for account and extension to ~ ?
 1. rename "Generated" folder

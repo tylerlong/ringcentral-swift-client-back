@@ -56,7 +56,17 @@ class DefaultValueTest: BaseTest {
     }
 
     func testAccount() {
+        var endpoint = rc.restapi().account().endpoint()
+        XCTAssertTrue("/restapi/v1.0/account/~" == endpoint)
+        endpoint = rc.restapi().account().endpoint(withId: false)
+        XCTAssertTrue("/restapi/v1.0/account" == endpoint)
+    }
 
+    func testExtension() {
+        var endpoint = rc.restapi().account().extension().endpoint()
+        XCTAssertTrue("/restapi/v1.0/account/~/extension/~" == endpoint)
+        endpoint = rc.restapi().account().extension().endpoint(withId: false)
+        XCTAssertTrue("/restapi/v1.0/account/~/extension" == endpoint)
     }
 
 }

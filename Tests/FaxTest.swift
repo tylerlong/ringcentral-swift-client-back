@@ -13,7 +13,7 @@ class FaxTest: BaseTest {
         Alamofire.download("https://cdn.rawgit.com/Alamofire/Alamofire/master/LICENSE").responseData { response in
             if let textData = response.result.value {
                 attachments.append(Attachment(fileName: "MIT.txt", contentType: "text/plain", data: textData))
-                rc.restapi("v1.0").account("~").extension("~").fax().post(parameters: parameters, attachments: attachments) { messageInfo, error in
+                rc.restapi().account().extension().fax().post(parameters: parameters, attachments: attachments) { messageInfo, error in
                     XCTAssertNil(error)
                     expectation1.fulfill()
                 }

@@ -34,7 +34,7 @@ class SubscriptionTest: BaseTest {
     }
 
     func testSMSNotification() {
-        let subscription = rc.restapi("v1.0").subscription().new()
+        let subscription = rc.restapi().subscription().new()
         subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/message-store")
         var count = 0
         subscription.listeners.append { notification in
@@ -63,7 +63,7 @@ class SubscriptionTest: BaseTest {
 //                "to":[["phoneNumber": Config.getInstance().receiver!]],
 //                "text": "hello world"
 //            ]
-            rc.restapi("v1.0").account("~").extension("~").sms().post(parameters: parameters) { messageInfo, error in
+            rc.restapi().account().extension().sms().post(parameters: parameters) { messageInfo, error in
                 XCTAssertNil(error)
                 expectation1.fulfill()
             }

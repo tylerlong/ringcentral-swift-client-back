@@ -14,7 +14,7 @@ class ContactTest: BaseTest {
     func testContact() {
 
         let phoneNumber = "+15889546648"
-        let addressBook = rc.restapi("v1.0").account("~").extension("~").addressBook()
+        let addressBook = rc.restapi().account().extension().addressBook()
         let endpoint = addressBook.endpoint()
         XCTAssertTrue("/restapi/v1.0/account/~/extension/~/address-book" == endpoint)
 
