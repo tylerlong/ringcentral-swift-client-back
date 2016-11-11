@@ -107,5 +107,3 @@ This project is released under the MIT license.
 
 
 ## todo
-
-1. rename "Generated" folder
