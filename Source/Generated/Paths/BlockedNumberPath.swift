@@ -25,7 +25,7 @@ open class BlockedNumberPath: Model {
     }
     // Get Blocked Number List
     open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+        rc.get(self.endpoint(withId: false)) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }

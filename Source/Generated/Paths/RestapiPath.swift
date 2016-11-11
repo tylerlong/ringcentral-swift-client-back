@@ -30,7 +30,7 @@ open class RestapiPath: Model {
     }
     // Get Server Info
     open func list(callback: @escaping (_ t: ServerInfo?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ServerInfo?, error) in
+        rc.get(self.endpoint(withId: false)) { (t: ServerInfo?, error) in
             callback(t, error)
         }
     }

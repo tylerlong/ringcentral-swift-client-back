@@ -9,7 +9,7 @@ open class DevicePath: Model {
     }
     // Get Account Device List
     open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+        rc.get(self.endpoint(withId: false)) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }

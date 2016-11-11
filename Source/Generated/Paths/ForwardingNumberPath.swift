@@ -49,13 +49,13 @@ open class ForwardingNumberPath: Model {
     }
     // Get Forwarding Numbers
     open func list(callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint()) { (t: ListResponse?, error) in
+        rc.get(self.endpoint(withId: false)) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
     // Get Forwarding Numbers
     open func list(parameters: Parameters, callback: @escaping (_ t: ListResponse?, _ error: HTTPError?) -> Void) {
-        rc.get(self.endpoint(), parameters: parameters) { (t: ListResponse?, error) in
+        rc.get(self.endpoint(withId: false), parameters: parameters) { (t: ListResponse?, error) in
             callback(t, error)
         }
     }
