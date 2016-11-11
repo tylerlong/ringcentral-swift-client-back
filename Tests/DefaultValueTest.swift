@@ -22,12 +22,15 @@ class DefaultValueTest: BaseTest {
         let expectation3 = expectation(description: "expectation3")
         rc.restapi().get() { versionInfo, error in
             XCTAssertNil(error)
+            XCTAssertTrue("v1.0" == versionInfo?.uriString)
             expectation3.fulfill()
         }
 
         let expectation4 = expectation(description: "expectation4")
         rc.restapi().list() { serverInfo, error in
             XCTAssertNil(error)
+            XCTAssertTrue(1 == serverInfo?.apiVersions?.count)
+            XCTAssertTrue("v1.0" == serverInfo?.apiVersions?[0].uriString)
             expectation4.fulfill()
         }
 
@@ -40,6 +43,8 @@ class DefaultValueTest: BaseTest {
     func testEndpoint() {
         var endpoint = rc.restapi().endpoint()
         XCTAssertTrue("/restapi/v1.0" == endpoint)
+        endpoint = rc.restapi().endpoint(withId: false)
+        XCTAssertTrue("/restapi" == endpoint)
         endpoint = rc.restapi().account("~").endpoint()
         XCTAssertTrue("/restapi/v1.0/account/~" == endpoint)
         endpoint = rc.restapi().account("~").endpoint(withId: false)
@@ -48,11 +53,10 @@ class DefaultValueTest: BaseTest {
         XCTAssertTrue("/restapi/v1.0/account/~/extension/~" == endpoint)
         endpoint = rc.restapi().account("~").extension("~").endpoint(withId: false)
         XCTAssertTrue("/restapi/v1.0/account/~/extension" == endpoint)
+    }
 
-        endpoint = rc.restapi().endpoint()
-        XCTAssertTrue("/restapi/v1.0" == endpoint)
-        endpoint = rc.restapi().endpoint(withId: false)
-        XCTAssertTrue("/restapi" == endpoint)
+    func testAccount() {
+        
     }
 
 }
