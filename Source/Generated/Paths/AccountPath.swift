@@ -25,7 +25,7 @@ open class AccountPath: Model {
     open func `dialingPlan`() -> DialingPlanPath {
         return DialingPlanPath(parent: self)
     }
-    open func `extension`(_ _id: String? = nil) -> ExtensionPath {
+    open func `extension`(_ _id: String? = "~") -> ExtensionPath {
         return ExtensionPath(parent: self, _id: _id)
     }
     open func `order`(_ _id: String? = nil) -> OrderPath {

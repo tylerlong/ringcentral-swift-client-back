@@ -10,7 +10,7 @@ open class RestapiPath: Model {
     open func `oauth`() -> OauthPath {
         return OauthPath(parent: self)
     }
-    open func `account`(_ _id: String) -> AccountPath {
+    open func `account`(_ _id: String? = "~") -> AccountPath {
         return AccountPath(parent: self, _id: _id)
     }
     open func `clientInfo`() -> ClientInfoPath {
