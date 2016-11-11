@@ -1183,7 +1183,7 @@
 		875500E01DB4C6B00089B0EA /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = Carthage/Build/Mac/Async.framework; sourceTree = "<group>"; };
 		8760261E1D9A4E7B002A7850 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/Model.swift; sourceTree = "<group>"; };
 		87748F491DD02A2400DDCF21 /* FaxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaxTest.swift; path = Tests/FaxTest.swift; sourceTree = "<group>"; };
-		878D66801DB65A2E0050C900 /* Special.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Special.swift; sourceTree = "<group>"; };
+		878D66801DB65A2E0050C900 /* Special.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Special.swift; path = Source/Special.swift; sourceTree = "<group>"; };
 		879ADEBD1D98C409008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEC01D98C409008E7735 /* RingCentral_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_macOS.h; sourceTree = "<group>"; };
 		879ADEC11D98C409008E7735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
