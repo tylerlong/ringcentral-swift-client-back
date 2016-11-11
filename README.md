@@ -44,7 +44,7 @@ let parameters = SmsPath.PostParameters(
     to: [CallerInfo(phoneNumber: "123456789")],
     text: "hello world"
 )
-rc.restapi("v1.0").account("~").extension("~").sms().post(parameters: parameters) { messageInfo, error in
+rc.restapi().account().extension().sms().post(parameters: parameters) { messageInfo, error in
     if error == nil {
         print("SMS sent!")
     }
@@ -55,7 +55,7 @@ rc.restapi("v1.0").account("~").extension("~").sms().post(parameters: parameters
 ## PubNub Subscription
 
 ```swift
-let subscription = rc.restapi("v1.0").subscription().new()
+let subscription = rc.restapi().subscription().new()
 subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/message-store")
 subscription.eventFilters.append("/restapi/v1.0/account/~/extension/~/presence?detailedTelephonyState=true")
 subscription.listeners.append { notification in
@@ -82,7 +82,7 @@ subscription.listeners.append { notification in
 let parameters = FaxPath.PostParameters(to: [CallerInfo(phoneNumber: "1234567890")])
 var attachments: [Attachment] = []
 attachments.append(Attachment(fileName: "test.pdf", contentType: "application/pdf", data: pdfData))
-rc.restapi("v1.0").account("~").extension("~").fax().post(parameters: parameters, attachments: attachments) { messageInfo, error in
+rc.restapi().account().extension().fax().post(parameters: parameters, attachments: attachments) { messageInfo, error in
     if error == nil {
         print("fax sent")
     }
@@ -93,7 +93,7 @@ rc.restapi("v1.0").account("~").extension("~").fax().post(parameters: parameters
 ## Upload binary file
 
 ```swift
-rc.restapi("v1.0").account("~").extension("~").profileImage().put(imageData: imageData, imageFileName: "test.png") { error in
+rc.restapi().account().extension().profileImage().put(imageData: imageData, imageFileName: "test.png") { error in
     if error == nil {
         print("Profile image updated")
     }
