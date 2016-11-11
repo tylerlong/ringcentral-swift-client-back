@@ -97,7 +97,7 @@ open class RestClient {
         }
     }
 
-    open func restapi(_ _id: String? = nil) -> RestapiPath {
+    open func restapi(_ _id: String? = "v1.0") -> RestapiPath {
         return RestapiPath(parent: Model(parent: nil, _id: nil, rc: self), _id: _id)
     }
 

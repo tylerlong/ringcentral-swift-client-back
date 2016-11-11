@@ -235,6 +235,7 @@
 		872DB6D11DC3553C00EFA4E2 /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DB6D01DC3553C00EFA4E2 /* PubNub.framework */; };
 		872DB6D31DC3554900EFA4E2 /* Async.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DB6D21DC3554900EFA4E2 /* Async.framework */; };
 		872DB6D51DC3555D00EFA4E2 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DB6D41DC3555D00EFA4E2 /* CryptoSwift.framework */; };
+		8734DF6D1DD5A7030042951B /* DefaultValueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734DF6B1DD5A6F40042951B /* DefaultValueTest.swift */; };
 		873B6B141DB71044001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; };
 		873B6B171DB71065001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B151DB71056001D1825 /* CryptoSwift.framework */; };
 		873B6B181DB71070001D1825 /* CryptoSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -1042,6 +1043,7 @@
 		872DB6D01DC3553C00EFA4E2 /* PubNub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PubNub.framework; path = Carthage/Build/iOS/PubNub.framework; sourceTree = "<group>"; };
 		872DB6D21DC3554900EFA4E2 /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = Carthage/Build/iOS/Async.framework; sourceTree = "<group>"; };
 		872DB6D41DC3555D00EFA4E2 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		8734DF6B1DD5A6F40042951B /* DefaultValueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultValueTest.swift; path = Tests/DefaultValueTest.swift; sourceTree = "<group>"; };
 		873B6B131DB71044001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		873B6B151DB71056001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlBuilderTest.swift; path = Tests/UrlBuilderTest.swift; sourceTree = "<group>"; };
@@ -1407,6 +1409,7 @@
 		879ADF141D98E759008E7735 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8734DF6B1DD5A6F40042951B /* DefaultValueTest.swift */,
 				87748F491DD02A2400DDCF21 /* FaxTest.swift */,
 				870CCBB41DCC92790064134B /* ServiceInfoTest.swift */,
 				87DF1DBF1DCB2B32003DF22E /* BinaryTest.swift */,
@@ -2784,6 +2787,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8734DF6D1DD5A7030042951B /* DefaultValueTest.swift in Sources */,
 				87748F4B1DD02A2E00DDCF21 /* FaxTest.swift in Sources */,
 				87748F481DD0185900DDCF21 /* ServiceInfoTest.swift in Sources */,
 				87DF1DC11DCB2BD5003DF22E /* BinaryTest.swift in Sources */,
