@@ -15,10 +15,10 @@ open class AccountServiceInfo: Mappable {
     // Service features information, see Service Feature List
     open var `serviceFeatures`: [ServiceFeatureInfo]?
     // Limits which are effective for the account
-    open var `limits`: [AccountLimits]?
+    open var `limits`: AccountLimits?
     public init() {
     }
-    convenience public init(uri: String? = nil, servicePlanName: String? = nil, brand: BrandInfo? = nil, servicePlan: ServicePlanInfo? = nil, billingPlan: BillingPlanInfo? = nil, serviceFeatures: [ServiceFeatureInfo]? = nil, limits: [AccountLimits]? = nil) {
+    convenience public init(uri: String? = nil, servicePlanName: String? = nil, brand: BrandInfo? = nil, servicePlan: ServicePlanInfo? = nil, billingPlan: BillingPlanInfo? = nil, serviceFeatures: [ServiceFeatureInfo]? = nil, limits: AccountLimits? = nil) {
         self.init()
         self.uri = `uri`
         self.servicePlanName = `servicePlanName`

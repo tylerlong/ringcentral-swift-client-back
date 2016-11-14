@@ -12,6 +12,7 @@ class ServiceInfoTest: BaseTest {
             let feature = serviceInfo!.serviceFeatures![0]
             XCTAssertTrue("FaxReceiving" == feature.featureName!)
             XCTAssertTrue(true == feature.enabled!)
+            XCTAssertNotNil(serviceInfo?.limits)
             expectation1.fulfill()
         }
 
