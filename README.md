@@ -104,6 +104,3 @@ rc.restapi().account().extension().profileImage().put(imageData: imageData, imag
 ## License
 
 This project is released under the MIT license.
-
-
-## todo
