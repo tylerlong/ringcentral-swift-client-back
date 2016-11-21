@@ -32,16 +32,16 @@ func <= (left: String, right: String) -> String {
 }
 
 
-public protocol iModel {
+public protocol IPath {
     var _id: String? {get set}
-    var parent: iModel? {get set}
+    var parent: IPath? {get set}
     var rc: RestClient {get set}
     var pathSegment: String {get}
     func endpoint(withId: Bool) -> String
     func url(withId: Bool) -> String
 }
 
-extension iModel {
+extension IPath {
     public func endpoint(withId: Bool = true) -> String {
         if parent == nil {
             return ""
@@ -59,18 +59,18 @@ extension iModel {
 }
 
 
-open class PathSegment: iModel {
+open class PathSegment: IPath {
     public var pathSegment: String {
         return ""
     }
 
-    public var parent: iModel?
+    public var parent: IPath?
 
     public var _id: String?
 
     public var rc: RestClient
 
-    public init(parent: iModel?, _id: String? = nil, rc: RestClient? = nil) {
+    public init(parent: IPath?, _id: String? = nil, rc: RestClient? = nil) {
         self.parent = parent
         self._id = _id
         if rc == nil {
