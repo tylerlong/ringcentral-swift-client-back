@@ -928,6 +928,7 @@
 		87F3F6571DD1D67F005850AE /* Special.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D66801DB65A2E0050C900 /* Special.swift */; };
 		87F5C7271DE2EBDE00A0D681 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F5C7261DE2EBDE00A0D681 /* Dollar.framework */; };
 		87F5C7281DE2EBEE00A0D681 /* Dollar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87F5C7261DE2EBDE00A0D681 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87F5C72B1DE2F86600A0D681 /* AuthorizationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F5C7291DE2F85900A0D681 /* AuthorizationTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1228,6 +1229,7 @@
 		87F3F5771DD1D66B005850AE /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = Carthage/Build/tvOS/Async.framework; sourceTree = "<group>"; };
 		87F3F5781DD1D66B005850AE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		87F5C7261DE2EBDE00A0D681 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/Mac/Dollar.framework; sourceTree = "<group>"; };
+		87F5C7291DE2F85900A0D681 /* AuthorizationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationTest.swift; path = Tests/AuthorizationTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1643,6 +1645,7 @@
 		879ADF141D98E759008E7735 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				87F5C7291DE2F85900A0D681 /* AuthorizationTest.swift */,
 				8734DF6B1DD5A6F40042951B /* DefaultValueTest.swift */,
 				87748F491DD02A2400DDCF21 /* FaxTest.swift */,
 				870CCBB41DCC92790064134B /* ServiceInfoTest.swift */,
@@ -2785,6 +2788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F5C72B1DE2F86600A0D681 /* AuthorizationTest.swift in Sources */,
 				8734DF6D1DD5A7030042951B /* DefaultValueTest.swift in Sources */,
 				87748F4B1DD02A2E00DDCF21 /* FaxTest.swift in Sources */,
 				87748F481DD0185900DDCF21 /* ServiceInfoTest.swift in Sources */,
