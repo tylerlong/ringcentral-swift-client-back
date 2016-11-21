@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class AuthorizePath: Model {
+open class AuthorizePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "authorize"

@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class RevokePath: Model {
+open class RevokePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "revoke"

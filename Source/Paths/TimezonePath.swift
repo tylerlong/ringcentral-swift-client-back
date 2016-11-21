@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class TimezonePath: Model {
+open class TimezonePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "timezone"

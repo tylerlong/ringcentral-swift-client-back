@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class MessageStorePath: Model {
+open class MessageStorePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "message-store"

@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class BusinessHoursPath: Model {
+open class BusinessHoursPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "business-hours"

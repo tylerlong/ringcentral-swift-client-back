@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class LocationPath: Model {
+open class LocationPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "location"

@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class AddressBookSyncPath: Model {
+open class AddressBookSyncPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "address-book-sync"

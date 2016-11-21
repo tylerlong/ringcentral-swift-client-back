@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class CheckPath: Model {
+open class CheckPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "check"

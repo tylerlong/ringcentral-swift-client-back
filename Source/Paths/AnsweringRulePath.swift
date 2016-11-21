@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class AnsweringRulePath: Model {
+open class AnsweringRulePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "answering-rule"

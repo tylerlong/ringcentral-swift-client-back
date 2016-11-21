@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class CompanyPagerPath: Model {
+open class CompanyPagerPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "company-pager"

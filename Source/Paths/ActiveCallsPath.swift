@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class ActiveCallsPath: Model {
+open class ActiveCallsPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "active-calls"

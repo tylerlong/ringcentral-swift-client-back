@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class MeetingServiceInfoPath: Model {
+open class MeetingServiceInfoPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "meeting/service-info"

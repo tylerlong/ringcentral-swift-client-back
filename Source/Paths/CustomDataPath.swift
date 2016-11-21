@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class CustomDataPath: Model {
+open class CustomDataPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "custom-data"

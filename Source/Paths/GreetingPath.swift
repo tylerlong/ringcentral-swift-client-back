@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class GreetingPath: Model {
+open class GreetingPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "greeting"

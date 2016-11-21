@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class ForwardingNumberPath: Model {
+open class ForwardingNumberPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "forwarding-number"

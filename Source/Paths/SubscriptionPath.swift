@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class SubscriptionPath: Model {
+open class SubscriptionPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "subscription"

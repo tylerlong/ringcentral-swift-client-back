@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class CallLogPath: Model {
+open class CallLogPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "call-log"

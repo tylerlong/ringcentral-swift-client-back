@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class RestapiPath: Model {
+open class RestapiPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "restapi"

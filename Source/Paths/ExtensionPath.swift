@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class ExtensionPath: Model {
+open class ExtensionPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "extension"

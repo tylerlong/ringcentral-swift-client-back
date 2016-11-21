@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class LanguagePath: Model {
+open class LanguagePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "language"

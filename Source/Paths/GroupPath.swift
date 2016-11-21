@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class GroupPath: Model {
+open class GroupPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "group"

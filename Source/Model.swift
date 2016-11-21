@@ -59,7 +59,7 @@ extension iModel {
 }
 
 
-open class Model: iModel {
+open class PathSegment: iModel {
     public var pathSegment: String {
         return ""
     }

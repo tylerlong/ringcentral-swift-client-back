@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class MessageSyncPath: Model {
+open class MessageSyncPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "message-sync"

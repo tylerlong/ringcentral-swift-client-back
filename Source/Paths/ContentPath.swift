@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class ContentPath: Model {
+open class ContentPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "content"

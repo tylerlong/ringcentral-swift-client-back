@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class DictionaryPath: Model {
+open class DictionaryPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "dictionary"

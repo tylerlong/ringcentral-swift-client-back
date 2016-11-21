@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class PhoneNumberPath: Model {
+open class PhoneNumberPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "phone-number"

@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class TokenPath: Model {
+open class TokenPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "token"

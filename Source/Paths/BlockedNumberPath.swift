@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class BlockedNumberPath: Model {
+open class BlockedNumberPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "blocked-number"

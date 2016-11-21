@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class RingoutPath: Model {
+open class RingoutPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "ringout"

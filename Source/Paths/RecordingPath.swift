@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class RecordingPath: Model {
+open class RecordingPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "recording"

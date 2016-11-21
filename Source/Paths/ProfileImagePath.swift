@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class ProfileImagePath: Model {
+open class ProfileImagePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "profile-image"

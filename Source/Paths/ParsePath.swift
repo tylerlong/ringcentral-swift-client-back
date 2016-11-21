@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class ParsePath: Model {
+open class ParsePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "parse"

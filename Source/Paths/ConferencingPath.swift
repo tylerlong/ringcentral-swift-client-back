@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class ConferencingPath: Model {
+open class ConferencingPath: PathSegment {
     public override var pathSegment: String {
         get{
             return "conferencing"

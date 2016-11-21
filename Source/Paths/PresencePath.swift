@@ -1,7 +1,7 @@
 import Foundation
 import ObjectMapper
 import Alamofire
-open class PresencePath: Model {
+open class PresencePath: PathSegment {
     public override var pathSegment: String {
         get{
             return "presence"
