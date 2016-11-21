@@ -926,6 +926,8 @@
 		87F3F6551DD1D67F005850AE /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Path.swift */; };
 		87F3F6561DD1D67F005850AE /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D71DB4666A0089B0EA /* SubscriptionService.swift */; };
 		87F3F6571DD1D67F005850AE /* Special.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D66801DB65A2E0050C900 /* Special.swift */; };
+		87F5C7271DE2EBDE00A0D681 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F5C7261DE2EBDE00A0D681 /* Dollar.framework */; };
+		87F5C7281DE2EBEE00A0D681 /* Dollar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87F5C7261DE2EBDE00A0D681 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -945,6 +947,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				87F5C7281DE2EBEE00A0D681 /* Dollar.framework in CopyFiles */,
 				873B6B181DB71070001D1825 /* CryptoSwift.framework in CopyFiles */,
 				875500E31DB4C6C20089B0EA /* Async.framework in CopyFiles */,
 				875500DF1DB495050089B0EA /* PubNub.framework in CopyFiles */,
@@ -1224,6 +1227,7 @@
 		87F3F5761DD1D66B005850AE /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/tvOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		87F3F5771DD1D66B005850AE /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = Carthage/Build/tvOS/Async.framework; sourceTree = "<group>"; };
 		87F3F5781DD1D66B005850AE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		87F5C7261DE2EBDE00A0D681 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/Mac/Dollar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1285,6 +1289,7 @@
 				879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */,
 				875500E21DB4C6BA0089B0EA /* Async.framework in Frameworks */,
 				873B6B171DB71065001D1825 /* CryptoSwift.framework in Frameworks */,
+				87F5C7271DE2EBDE00A0D681 /* Dollar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1602,6 +1607,7 @@
 		879ADEFA1D98C7D5008E7735 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				87F5C7261DE2EBDE00A0D681 /* Dollar.framework */,
 				87F3F5741DD1D66B005850AE /* ObjectMapper.framework */,
 				87F3F5751DD1D66B005850AE /* PubNub.framework */,
 				87F3F5761DD1D66B005850AE /* CryptoSwift.framework */,
