@@ -71,10 +71,10 @@ extension ProfileImagePath {
         if rc.token != nil {
             headers["Authorization"] = "Bearer \(rc.token!.access_token!)"
         }
-        let ext = NSURL(fileURLWithPath: imageFileName).pathExtension
+        let ext = URL(fileURLWithPath: imageFileName).pathExtension
         Alamofire.upload(
             multipartFormData: { multipartFormData in
-                multipartFormData.append(imageData, withName: "image", fileName: imageFileName, mimeType: "image/\(ext ?? "png")")
+                multipartFormData.append(imageData, withName: "image", fileName: imageFileName, mimeType: "image/\(ext)")
             },
             to: self.url(withId: false),
             headers: headers,
@@ -160,7 +160,7 @@ open class Notification: INotification {
 
     private func presenceType() -> NotificationType? {
         if let event = self.event {
-            let urlComponents = NSURLComponents(string: event)!
+            let urlComponents = URLComponents(string: event)!
             let queryItems = urlComponents.queryItems
             var result: NotificationType = .Presence
             if let _ = queryItems?.filter({$0.name == "detailedTelephonyState"}).first {
