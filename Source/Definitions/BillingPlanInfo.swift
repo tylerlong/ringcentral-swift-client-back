@@ -25,7 +25,7 @@ open class BillingPlanInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `name` <- map["name"]
         `durationUnit` <- map["durationUnit"]
         `duration` <- map["duration"]

@@ -3,7 +3,7 @@ import ObjectMapper
 import Alamofire
 open class PhoneNumberInfo: Mappable {
     // Internal identifier of a phone number
-    open var `id`: Int?
+    open var `id`: String?
     // Brief information on a phone number country
     open var `country`: CountryInfo?
     // Information on the extension, to which the phone number is assigned. Returned only for the request of Account phone number list
@@ -24,7 +24,7 @@ open class PhoneNumberInfo: Mappable {
     open var `usageType`: String?
     public init() {
     }
-    convenience public init(id: Int? = nil, country: CountryInfo? = nil, extension: PhoneNumberInfo_ExtensionInfo? = nil, features: [String]? = nil, location: String? = nil, paymentType: String? = nil, phoneNumber: String? = nil, status: String? = nil, type: String? = nil, usageType: String? = nil) {
+    convenience public init(id: String? = nil, country: CountryInfo? = nil, extension: PhoneNumberInfo_ExtensionInfo? = nil, features: [String]? = nil, location: String? = nil, paymentType: String? = nil, phoneNumber: String? = nil, status: String? = nil, type: String? = nil, usageType: String? = nil) {
         self.init()
         self.id = `id`
         self.country = `country`
@@ -40,7 +40,7 @@ open class PhoneNumberInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `country` <- map["country"]
         `extension` <- map["extension"]
         `features` <- map["features"]

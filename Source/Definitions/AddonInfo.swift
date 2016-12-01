@@ -16,7 +16,7 @@ open class AddonInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `count` <- map["count"]
     }
     open func toParameters() -> Parameters {

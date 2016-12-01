@@ -38,7 +38,7 @@ open class CustomDataPath: PathSegment {
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
-            `id` <- map["id"]
+            `id` <- (map["id"], StringTransform())
             `value` <- map["value"]
         }
         open func toParameters() -> Parameters {
@@ -71,7 +71,7 @@ open class CustomDataPath: PathSegment {
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
-            `id` <- map["id"]
+            `id` <- (map["id"], StringTransform())
             `uri` <- map["uri"]
             `value` <- map["value"]
             `lastModifiedTime` <- map["lastModifiedTime"]

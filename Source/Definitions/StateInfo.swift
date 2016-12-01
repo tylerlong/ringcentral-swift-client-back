@@ -25,7 +25,7 @@ open class StateInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
         `country` <- map["country"]
         `isoCode` <- map["isoCode"]

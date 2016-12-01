@@ -34,7 +34,7 @@ open class SubscriptionInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
         `eventFilters` <- map["eventFilters"]
         `expirationTime` <- map["expirationTime"]

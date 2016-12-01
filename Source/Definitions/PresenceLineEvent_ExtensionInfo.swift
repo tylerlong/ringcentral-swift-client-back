@@ -13,7 +13,7 @@ open class PresenceLineEvent_ExtensionInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
     }
     open func toParameters() -> Parameters {
         var result = [String: String]()

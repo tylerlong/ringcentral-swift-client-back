@@ -16,7 +16,7 @@ open class ShippingMethod: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `name` <- map["name"]
     }
     open func toParameters() -> Parameters {

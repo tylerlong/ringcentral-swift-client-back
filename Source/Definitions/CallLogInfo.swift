@@ -46,7 +46,7 @@ open class CallLogInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
         `sessionId` <- map["sessionId"]
         `from` <- map["from"]

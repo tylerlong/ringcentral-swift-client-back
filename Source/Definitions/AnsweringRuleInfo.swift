@@ -50,7 +50,7 @@ open class AnsweringRuleInfo: Mappable {
     }
     open func mapping(map: Map) {
         `uri` <- map["uri"]
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `type` <- map["type"]
         `name` <- map["name"]
         `enabled` <- map["enabled"]

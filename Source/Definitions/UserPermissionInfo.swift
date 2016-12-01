@@ -16,7 +16,7 @@ open class UserPermissionInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
     }
     open func toParameters() -> Parameters {

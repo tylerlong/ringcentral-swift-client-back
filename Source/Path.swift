@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 
 extension String {
@@ -78,5 +79,17 @@ open class PathSegment: IPath {
         } else {
             self.rc = rc!
         }
+    }
+}
+
+
+/// A transform which converts JSON to `String`.
+struct StringTransform: TransformType {
+    func transformFromJSON(_ value: Any?) -> String? {
+        return "\(value)"
+    }
+    
+    func transformToJSON(_ value: String?) -> Any? {
+        return value
     }
 }

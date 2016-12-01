@@ -3,7 +3,7 @@ import ObjectMapper
 import Alamofire
 open class PersonalContactInfo: Mappable {
     // Standard resource properties ID
-    open var `id`: Int?
+    open var `id`: String?
     // Canonical URI
     open var `url`: String?
     // This property has a special meaning only on Address Book Sync (e.g. a contact can be 'Deleted'). For simple contact list reading it has always the default value - 'Alive'
@@ -64,7 +64,7 @@ open class PersonalContactInfo: Mappable {
     open var `notes`: String?
     public init() {
     }
-    convenience public init(id: Int? = nil, url: String? = nil, availability: String? = nil, firstName: String? = nil, lastName: String? = nil, middleName: String? = nil, nickName: String? = nil, company: String? = nil, jobTitle: String? = nil, homePhone: String? = nil, homePhone2: String? = nil, businessPhone: String? = nil, businessPhone2: String? = nil, mobilePhone: String? = nil, businessFax: String? = nil, companyPhone: String? = nil, assistantPhone: String? = nil, carPhone: String? = nil, otherPhone: String? = nil, otherFax: String? = nil, callbackPhone: String? = nil, email: String? = nil, email2: String? = nil, email3: String? = nil, homeAddress: ContactAddressInfo? = nil, businessAddress: ContactAddressInfo? = nil, otherAddress: ContactAddressInfo? = nil, birthday: String? = nil, webPage: String? = nil, notes: String? = nil) {
+    convenience public init(id: String? = nil, url: String? = nil, availability: String? = nil, firstName: String? = nil, lastName: String? = nil, middleName: String? = nil, nickName: String? = nil, company: String? = nil, jobTitle: String? = nil, homePhone: String? = nil, homePhone2: String? = nil, businessPhone: String? = nil, businessPhone2: String? = nil, mobilePhone: String? = nil, businessFax: String? = nil, companyPhone: String? = nil, assistantPhone: String? = nil, carPhone: String? = nil, otherPhone: String? = nil, otherFax: String? = nil, callbackPhone: String? = nil, email: String? = nil, email2: String? = nil, email3: String? = nil, homeAddress: ContactAddressInfo? = nil, businessAddress: ContactAddressInfo? = nil, otherAddress: ContactAddressInfo? = nil, birthday: String? = nil, webPage: String? = nil, notes: String? = nil) {
         self.init()
         self.id = `id`
         self.url = `url`
@@ -100,7 +100,7 @@ open class PersonalContactInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `url` <- map["url"]
         `availability` <- map["availability"]
         `firstName` <- map["firstName"]

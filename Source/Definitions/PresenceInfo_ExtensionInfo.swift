@@ -19,7 +19,7 @@ open class PresenceInfo_ExtensionInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
         `extensionNumber` <- map["extensionNumber"]
     }

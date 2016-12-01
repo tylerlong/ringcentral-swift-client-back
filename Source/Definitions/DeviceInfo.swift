@@ -49,7 +49,7 @@ open class DeviceInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
         `sku` <- map["sku"]
         `type` <- map["type"]

@@ -3,7 +3,7 @@ import ObjectMapper
 import Alamofire
 open class RecordingInfo: Mappable {
     // Internal identifier of the call recording
-    open var `id`: Int?
+    open var `id`: String?
     // Link to the call recording metadata resource
     open var `uri`: String?
     // Indicates recording mode used
@@ -12,7 +12,7 @@ open class RecordingInfo: Mappable {
     open var `contentUri`: String?
     public init() {
     }
-    convenience public init(id: Int? = nil, uri: String? = nil, type: String? = nil, contentUri: String? = nil) {
+    convenience public init(id: String? = nil, uri: String? = nil, type: String? = nil, contentUri: String? = nil) {
         self.init()
         self.id = `id`
         self.uri = `uri`
@@ -22,7 +22,7 @@ open class RecordingInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
         `type` <- map["type"]
         `contentUri` <- map["contentUri"]

@@ -26,7 +26,7 @@ open class CustomGreetingInfo: Mappable {
     }
     open func mapping(map: Map) {
         `uri` <- map["uri"]
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `type` <- map["type"]
         `contentType` <- map["contentType"]
         `contentUri` <- map["contentUri"]

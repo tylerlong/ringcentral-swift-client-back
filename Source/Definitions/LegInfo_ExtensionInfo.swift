@@ -3,12 +3,12 @@ import ObjectMapper
 import Alamofire
 open class LegInfo_ExtensionInfo: Mappable {
     // Internal identifier of an extension
-    open var `id`: Int?
+    open var `id`: String?
     // Canonical URI of an extension
     open var `uri`: String?
     public init() {
     }
-    convenience public init(id: Int? = nil, uri: String? = nil) {
+    convenience public init(id: String? = nil, uri: String? = nil) {
         self.init()
         self.id = `id`
         self.uri = `uri`
@@ -16,7 +16,7 @@ open class LegInfo_ExtensionInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
     }
     open func toParameters() -> Parameters {

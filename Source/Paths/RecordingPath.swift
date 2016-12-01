@@ -18,7 +18,7 @@ open class RecordingPath: PathSegment {
     }
     open class GetResponse: Mappable {
         // Internal identifier of the call recording
-        open var `id`: Int?
+        open var `id`: String?
         // Link to the call recording binary content
         open var `contentUri`: String?
         // Call recording file format. Supported format is audio/x-wav
@@ -27,7 +27,7 @@ open class RecordingPath: PathSegment {
         open var `duration`: Int?
         public init() {
         }
-        convenience public init(id: Int? = nil, contentUri: String? = nil, contentType: String? = nil, duration: Int? = nil) {
+        convenience public init(id: String? = nil, contentUri: String? = nil, contentType: String? = nil, duration: Int? = nil) {
             self.init()
             self.id = `id`
             self.contentUri = `contentUri`
@@ -37,7 +37,7 @@ open class RecordingPath: PathSegment {
         required public init?(map: Map) {
         }
         open func mapping(map: Map) {
-            `id` <- map["id"]
+            `id` <- (map["id"], StringTransform())
             `contentUri` <- map["contentUri"]
             `contentType` <- map["contentType"]
             `duration` <- map["duration"]

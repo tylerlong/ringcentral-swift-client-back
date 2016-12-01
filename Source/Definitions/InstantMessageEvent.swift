@@ -52,7 +52,7 @@ open class InstantMessageEvent: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `to` <- map["to"]
         `from` <- map["from"]
         `type` <- map["type"]

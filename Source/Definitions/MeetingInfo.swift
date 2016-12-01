@@ -47,7 +47,7 @@ open class MeetingInfo: Mappable {
     }
     open func mapping(map: Map) {
         `uri` <- map["uri"]
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `topic` <- map["topic"]
         `meetingType` <- map["meetingType"]
         `password` <- map["password"]

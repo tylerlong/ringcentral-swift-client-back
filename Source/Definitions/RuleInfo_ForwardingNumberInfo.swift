@@ -23,7 +23,7 @@ open class RuleInfo_ForwardingNumberInfo: Mappable {
     }
     open func mapping(map: Map) {
         `uri` <- map["uri"]
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `phoneNumber` <- map["phoneNumber"]
         `label` <- map["label"]
     }

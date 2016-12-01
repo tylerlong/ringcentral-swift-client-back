@@ -19,7 +19,7 @@ open class InstantMessageAttachmentInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `type` <- map["type"]
         `contentType` <- map["contentType"]
     }

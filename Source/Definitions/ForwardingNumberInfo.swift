@@ -28,7 +28,7 @@ open class ForwardingNumberInfo: Mappable {
     required public init?(map: Map) {
     }
     open func mapping(map: Map) {
-        `id` <- map["id"]
+        `id` <- (map["id"], StringTransform())
         `uri` <- map["uri"]
         `phoneNumber` <- map["phoneNumber"]
         `label` <- map["label"]
