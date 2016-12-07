@@ -227,8 +227,6 @@
 		8734E1171DD5CC210042951B /* SubscriptionPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734E0DD1DD5CC210042951B /* SubscriptionPath.swift */; };
 		8734E1181DD5CC210042951B /* TimezonePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734E0DE1DD5CC210042951B /* TimezonePath.swift */; };
 		8734E1191DD5CC210042951B /* TokenPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734E0DF1DD5CC210042951B /* TokenPath.swift */; };
-		873B6B141DB71044001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; };
-		873B6B171DB71065001D1825 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B151DB71056001D1825 /* CryptoSwift.framework */; };
 		873B6B181DB71070001D1825 /* CryptoSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		875500DD1DB494E10089B0EA /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875500DC1DB494E10089B0EA /* PubNub.framework */; };
 		875500DE1DB494F00089B0EA /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875500DC1DB494E10089B0EA /* PubNub.framework */; };
@@ -909,6 +907,8 @@
 		878BC57D1DF7F0CA009F28B3 /* DictionaryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF0F1D98E754008E7735 /* DictionaryTest.swift */; };
 		878BC57E1DF7F0CA009F28B3 /* RestClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADF101D98E754008E7735 /* RestClientTest.swift */; };
 		878BC57F1DF7F0CA009F28B3 /* CallLogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF19A41DCAC15D00A2DF29 /* CallLogTest.swift */; };
+		878BC5821DF7F6B0009F28B3 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; };
+		878BC5831DF7F6CC009F28B3 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873B6B131DB71044001D1825 /* CryptoSwift.framework */; };
 		879ADEC21D98C409008E7735 /* RingCentral_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEC01D98C409008E7735 /* RingCentral_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADECF1D98C41C008E7735 /* RingCentral_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADECD1D98C41C008E7735 /* RingCentral_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADEDC1D98C42B008E7735 /* RingCentral_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEDA1D98C42B008E7735 /* RingCentral_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1184,7 +1184,6 @@
 		8734E0DE1DD5CC210042951B /* TimezonePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimezonePath.swift; path = Source/Paths/TimezonePath.swift; sourceTree = "<group>"; };
 		8734E0DF1DD5CC210042951B /* TokenPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenPath.swift; path = Source/Paths/TokenPath.swift; sourceTree = "<group>"; };
 		873B6B131DB71044001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
-		873B6B151DB71056001D1825 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		87410DA11D9A8F4000AD2DE7 /* UrlBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlBuilderTest.swift; path = Tests/UrlBuilderTest.swift; sourceTree = "<group>"; };
 		875500D71DB4666A0089B0EA /* SubscriptionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionService.swift; path = Source/SubscriptionService.swift; sourceTree = "<group>"; };
 		875500D91DB468540089B0EA /* SubscriptionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionTest.swift; path = Tests/SubscriptionTest.swift; sourceTree = "<group>"; };
@@ -1193,6 +1192,7 @@
 		87748F491DD02A2400DDCF21 /* FaxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaxTest.swift; path = Tests/FaxTest.swift; sourceTree = "<group>"; };
 		878BC2DD1DF7EA56009F28B3 /* IPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IPath.swift; path = Source/Path/IPath.swift; sourceTree = "<group>"; };
 		878BC2DE1DF7EA56009F28B3 /* PathSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathSegment.swift; path = Source/Path/PathSegment.swift; sourceTree = "<group>"; };
+		878BC5801DF7F20A009F28B3 /* dev-notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "dev-notes.md"; sourceTree = "<group>"; };
 		878D66801DB65A2E0050C900 /* Special.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Special.swift; path = Source/Special.swift; sourceTree = "<group>"; };
 		879ADEBD1D98C409008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEC01D98C409008E7735 /* RingCentral_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_macOS.h; sourceTree = "<group>"; };
@@ -1244,11 +1244,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878BC5821DF7F6B0009F28B3 /* CryptoSwift.framework in Frameworks */,
 				879ADEFD1D98C7D6008E7735 /* Alamofire.framework in Frameworks */,
 				879ADEFE1D98C7D6008E7735 /* ObjectMapper.framework in Frameworks */,
 				875500DD1DB494E10089B0EA /* PubNub.framework in Frameworks */,
 				875500E11DB4C6B00089B0EA /* Async.framework in Frameworks */,
-				873B6B141DB71044001D1825 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1292,12 +1292,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878BC5831DF7F6CC009F28B3 /* CryptoSwift.framework in Frameworks */,
 				875500DE1DB494F00089B0EA /* PubNub.framework in Frameworks */,
 				879ADF081D98E646008E7735 /* RingCentral.framework in Frameworks */,
 				879ADF191D98F4D7008E7735 /* Alamofire.framework in Frameworks */,
 				879ADF1A1D98F4D7008E7735 /* ObjectMapper.framework in Frameworks */,
 				875500E21DB4C6BA0089B0EA /* Async.framework in Frameworks */,
-				873B6B171DB71065001D1825 /* CryptoSwift.framework in Frameworks */,
 				87F5C7271DE2EBDE00A0D681 /* Dollar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1544,8 +1544,8 @@
 		879ADEB11D98C3C9008E7735 = {
 			isa = PBXGroup;
 			children = (
-				873B6B151DB71056001D1825 /* CryptoSwift.framework */,
 				879ADEF61D98C723008E7735 /* README.md */,
+				878BC5801DF7F20A009F28B3 /* dev-notes.md */,
 				879ADEF41D98C6E5008E7735 /* Cartfile */,
 				879ADEF81D98C766008E7735 /* Cartfile.resolved */,
 				879ADEF31D98C4C5008E7735 /* Source */,
