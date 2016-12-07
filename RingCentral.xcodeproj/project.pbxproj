@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		872DB6921DC2E43600EFA4E2 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEE1D98C4C0008E7735 /* Http.swift */; };
 		872DB6931DC2E43600EFA4E2 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEF1D98C4C0008E7735 /* RestClient.swift */; };
-		872DB6941DC2E43600EFA4E2 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Path.swift */; };
 		872DB6951DC2E43600EFA4E2 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D71DB4666A0089B0EA /* SubscriptionService.swift */; };
 		872DB6961DC2E43600EFA4E2 /* Special.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D66801DB65A2E0050C900 /* Special.swift */; };
 		872DB6971DC2E45400EFA4E2 /* SubscriptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D91DB468540089B0EA /* SubscriptionTest.swift */; };
@@ -886,6 +885,8 @@
 		875500E31DB4C6C20089B0EA /* Async.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 875500E01DB4C6B00089B0EA /* Async.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87748F481DD0185900DDCF21 /* ServiceInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870CCBB41DCC92790064134B /* ServiceInfoTest.swift */; };
 		87748F4B1DD02A2E00DDCF21 /* FaxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87748F491DD02A2400DDCF21 /* FaxTest.swift */; };
+		878BC2DF1DF7EA56009F28B3 /* IPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878BC2DD1DF7EA56009F28B3 /* IPath.swift */; };
+		878BC2E01DF7EA56009F28B3 /* PathSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878BC2DE1DF7EA56009F28B3 /* PathSegment.swift */; };
 		879ADEC21D98C409008E7735 /* RingCentral_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEC01D98C409008E7735 /* RingCentral_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADECF1D98C41C008E7735 /* RingCentral_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADECD1D98C41C008E7735 /* RingCentral_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879ADEDC1D98C42B008E7735 /* RingCentral_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 879ADEDA1D98C42B008E7735 /* RingCentral_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -903,12 +904,10 @@
 		87DF1DC11DCB2BD5003DF22E /* BinaryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF1DBF1DCB2B32003DF22E /* BinaryTest.swift */; };
 		87F3F48B1DD1CD0C005850AE /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEE1D98C4C0008E7735 /* Http.swift */; };
 		87F3F48C1DD1CD0C005850AE /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEF1D98C4C0008E7735 /* RestClient.swift */; };
-		87F3F48D1DD1CD0C005850AE /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Path.swift */; };
 		87F3F48E1DD1CD0C005850AE /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D71DB4666A0089B0EA /* SubscriptionService.swift */; };
 		87F3F48F1DD1CD0C005850AE /* Special.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D66801DB65A2E0050C900 /* Special.swift */; };
 		87F3F5651DD1D04B005850AE /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEE1D98C4C0008E7735 /* Http.swift */; };
 		87F3F5661DD1D04B005850AE /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEF1D98C4C0008E7735 /* RestClient.swift */; };
-		87F3F5671DD1D04B005850AE /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Path.swift */; };
 		87F3F5681DD1D04B005850AE /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D71DB4666A0089B0EA /* SubscriptionService.swift */; };
 		87F3F5691DD1D04B005850AE /* Special.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D66801DB65A2E0050C900 /* Special.swift */; };
 		87F3F56F1DD1D3D8005850AE /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F3F56A1DD1D3D8005850AE /* ObjectMapper.framework */; };
@@ -923,7 +922,6 @@
 		87F3F57D1DD1D66B005850AE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F3F5781DD1D66B005850AE /* Alamofire.framework */; };
 		87F3F6531DD1D67F005850AE /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEE1D98C4C0008E7735 /* Http.swift */; };
 		87F3F6541DD1D67F005850AE /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879ADEEF1D98C4C0008E7735 /* RestClient.swift */; };
-		87F3F6551DD1D67F005850AE /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760261E1D9A4E7B002A7850 /* Path.swift */; };
 		87F3F6561DD1D67F005850AE /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875500D71DB4666A0089B0EA /* SubscriptionService.swift */; };
 		87F3F6571DD1D67F005850AE /* Special.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878D66801DB65A2E0050C900 /* Special.swift */; };
 		87F5C7271DE2EBDE00A0D681 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F5C7261DE2EBDE00A0D681 /* Dollar.framework */; };
@@ -1186,8 +1184,9 @@
 		875500D91DB468540089B0EA /* SubscriptionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionTest.swift; path = Tests/SubscriptionTest.swift; sourceTree = "<group>"; };
 		875500DC1DB494E10089B0EA /* PubNub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PubNub.framework; path = Carthage/Build/Mac/PubNub.framework; sourceTree = "<group>"; };
 		875500E01DB4C6B00089B0EA /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = Carthage/Build/Mac/Async.framework; sourceTree = "<group>"; };
-		8760261E1D9A4E7B002A7850 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Path.swift; path = Source/Path.swift; sourceTree = "<group>"; };
 		87748F491DD02A2400DDCF21 /* FaxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaxTest.swift; path = Tests/FaxTest.swift; sourceTree = "<group>"; };
+		878BC2DD1DF7EA56009F28B3 /* IPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IPath.swift; path = Source/Path/IPath.swift; sourceTree = "<group>"; };
+		878BC2DE1DF7EA56009F28B3 /* PathSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathSegment.swift; path = Source/Path/PathSegment.swift; sourceTree = "<group>"; };
 		878D66801DB65A2E0050C900 /* Special.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Special.swift; path = Source/Special.swift; sourceTree = "<group>"; };
 		879ADEBD1D98C409008E7735 /* RingCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RingCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879ADEC01D98C409008E7735 /* RingCentral_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingCentral_macOS.h; sourceTree = "<group>"; };
@@ -1527,6 +1526,15 @@
 			name = Paths;
 			sourceTree = "<group>";
 		};
+		878BC2DC1DF7EA49009F28B3 /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				878BC2DD1DF7EA56009F28B3 /* IPath.swift */,
+				878BC2DE1DF7EA56009F28B3 /* PathSegment.swift */,
+			);
+			name = Path;
+			sourceTree = "<group>";
+		};
 		879ADEB11D98C3C9008E7735 = {
 			isa = PBXGroup;
 			children = (
@@ -1597,11 +1605,11 @@
 		879ADEF31D98C4C5008E7735 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				878BC2DC1DF7EA49009F28B3 /* Path */,
 				8734DF6F1DD5CC020042951B /* Paths */,
 				8734DF6E1DD5CBF60042951B /* Definitions */,
 				879ADEEE1D98C4C0008E7735 /* Http.swift */,
 				879ADEEF1D98C4C0008E7735 /* RestClient.swift */,
-				8760261E1D9A4E7B002A7850 /* Path.swift */,
 				875500D71DB4666A0089B0EA /* SubscriptionService.swift */,
 				878D66801DB65A2E0050C900 /* Special.swift */,
 			);
@@ -1927,6 +1935,7 @@
 				8734E0601DD5CC120042951B /* MeetingInfo.swift in Sources */,
 				8734E08C1DD5CC120042951B /* RuleInfo_ForwardingNumberInfo.swift in Sources */,
 				872DB6931DC2E43600EFA4E2 /* RestClient.swift in Sources */,
+				878BC2E01DF7EA56009F28B3 /* PathSegment.swift in Sources */,
 				8734E05B1DD5CC120042951B /* LegInfo_ExtensionInfo.swift in Sources */,
 				8734E08E1DD5CC120042951B /* ScheduleInfo.swift in Sources */,
 				8734E0891DD5CC120042951B /* RingOut_Request_To.swift in Sources */,
@@ -1952,7 +1961,6 @@
 				8734E0841DD5CC120042951B /* RegionalSettings.swift in Sources */,
 				8734E0271DD5CC120042951B /* CustomGreetingInfo_AnsweringRuleInfo.swift in Sources */,
 				8734E0831DD5CC120042951B /* ReferenceInfo.swift in Sources */,
-				872DB6941DC2E43600EFA4E2 /* Path.swift in Sources */,
 				8734E0331DD5CC120042951B /* DeviceInfo.swift in Sources */,
 				8734E02C1DD5CC120042951B /* DetailedPresenceEvent_ActiveCallInfo.swift in Sources */,
 				8734E0851DD5CC120042951B /* ReservePhoneNumber_Request_ReserveRecord.swift in Sources */,
@@ -2029,6 +2037,7 @@
 				8734E0521DD5CC120042951B /* GreetingLanguageInfo.swift in Sources */,
 				8734E0371DD5CC120042951B /* EmergencyAddressInfo.swift in Sources */,
 				8734E0211DD5CC120042951B /* ConferencingInfo_PhoneNumberInfo_CountryInfo.swift in Sources */,
+				878BC2DF1DF7EA56009F28B3 /* IPath.swift in Sources */,
 				8734E0FC1DD5CC210042951B /* GrantPath.swift in Sources */,
 				8734E0751DD5CC120042951B /* PhoneNumberInfo_ExtensionInfo.swift in Sources */,
 				8734E06A1DD5CC120042951B /* ModelInfo.swift in Sources */,
@@ -2331,7 +2340,6 @@
 				8734E3981DD5CC8A0042951B /* WeeklyScheduleInfo.swift in Sources */,
 				87F3F48B1DD1CD0C005850AE /* Http.swift in Sources */,
 				87F3F48C1DD1CD0C005850AE /* RestClient.swift in Sources */,
-				87F3F48D1DD1CD0C005850AE /* Path.swift in Sources */,
 				87F3F48E1DD1CD0C005850AE /* SubscriptionService.swift in Sources */,
 				87F3F48F1DD1CD0C005850AE /* Special.swift in Sources */,
 			);
@@ -2556,7 +2564,6 @@
 				8734E2C31DD5CC7A0042951B /* WeeklyScheduleInfo.swift in Sources */,
 				87F3F5651DD1D04B005850AE /* Http.swift in Sources */,
 				87F3F5661DD1D04B005850AE /* RestClient.swift in Sources */,
-				87F3F5671DD1D04B005850AE /* Path.swift in Sources */,
 				87F3F5681DD1D04B005850AE /* SubscriptionService.swift in Sources */,
 				87F3F5691DD1D04B005850AE /* Special.swift in Sources */,
 			);
@@ -2781,7 +2788,6 @@
 				8734E1EE1DD5CC6B0042951B /* WeeklyScheduleInfo.swift in Sources */,
 				87F3F6531DD1D67F005850AE /* Http.swift in Sources */,
 				87F3F6541DD1D67F005850AE /* RestClient.swift in Sources */,
-				87F3F6551DD1D67F005850AE /* Path.swift in Sources */,
 				87F3F6561DD1D67F005850AE /* SubscriptionService.swift in Sources */,
 				87F3F6571DD1D67F005850AE /* Special.swift in Sources */,
 			);

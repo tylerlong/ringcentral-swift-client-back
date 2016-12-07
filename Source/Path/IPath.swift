@@ -1,13 +1,4 @@
-//
-//  Model.swift
-//  RingCentral
-//
-//  Created by Tyler Liu on 9/27/16.
-//
-//
-
 import Foundation
-import ObjectMapper
 
 
 extension String {
@@ -56,40 +47,5 @@ extension IPath {
 
     public func url(withId: Bool = true) -> String {
         return URL(string: rc.server)!.appendingPathComponent(endpoint(withId: withId)).absoluteString
-    }
-}
-
-
-open class PathSegment: IPath {
-    public var pathSegment: String {
-        return ""
-    }
-
-    public var parent: IPath?
-
-    public var _id: String?
-
-    public var rc: RestClient
-
-    public init(parent: IPath?, _id: String? = nil, rc: RestClient? = nil) {
-        self.parent = parent
-        self._id = _id
-        if rc == nil {
-            self.rc = parent!.rc
-        } else {
-            self.rc = rc!
-        }
-    }
-}
-
-
-/// A transform which converts JSON to `String`.
-struct StringTransform: TransformType {
-    func transformFromJSON(_ value: Any?) -> String? {
-        return "\(value)"
-    }
-    
-    func transformToJSON(_ value: String?) -> Any? {
-        return value
     }
 }

@@ -10,6 +10,22 @@ import Alamofire
 import ObjectMapper
 
 
+// We need to map integer IDs to string IDs
+struct StringTransform: TransformType {
+    func transformFromJSON(_ value: Any?) -> String? {
+        if value == nil {
+            return ""
+        } else {
+            return "\(value!)"
+        }
+    }
+
+    func transformToJSON(_ value: String?) -> Any? {
+        return value
+    }
+}
+
+
 // fax
 public struct Attachment {
     var fileName: String
